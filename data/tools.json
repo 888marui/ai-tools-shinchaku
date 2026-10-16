@@ -358,5 +358,124 @@
   "added": "2026-10-16",
   "checked": "2026-10-16",
   "affiliate": null
+ },
+ {
+  "slug": "sarashina-service",
+  "name": "Sarashinaサービス（無償ベータ版）",
+  "category": "チャットAI",
+  "url": "https://www.sbintuitions.co.jp/news/press/20261013_01/",
+  "summary": "SB Intuitionsの国産生成AI「Sarashina」を無料で試せるサービス。6つのAIモデルを使えるAPI機能と、Web上でAIとの対話や翻訳を体験できるチャット機能があります（2026年10月13日提供開始）。",
+  "uses": [
+   "AIとの対話・文章作成",
+   "日英・英日の翻訳",
+   "開発者のAPI利用（埋め込み・リランクなど）"
+  ],
+  "pricing": "無償ベータ版（レート制限あり）",
+  "japanese": "対応（国産AI・日本語の公式発表）",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "gemini-4-argon",
+  "name": "Gemini 4 Argon",
+  "category": "チャットAI",
+  "url": "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-argon-gemini/",
+  "summary": "Googleの最新モデル。推論・コーディング・長時間かかるタスクの処理が強化され、Geminiアプリでは席を外している間に作業を進める「タスク」機能も使えます（2026年10月14日にGeminiアプリで提供開始）。",
+  "uses": [
+   "複雑な質問への回答",
+   "コーディング",
+   "長い作業をGeminiに任せる"
+  ],
+  "pricing": "GeminiアプリはGoogle AI Pro／Ultraの利用者向け。APIは入力100万トークンあたり$2・出力$10（2026年11月30日までの導入価格、公式発表）",
+  "japanese": "対応（日本語の公式ブログで案内）",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "gemini-agent-workspace",
+  "name": "Gemini agent（Gemini at Work 2026）",
+  "category": "業務効率化",
+  "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+  "summary": "Googleが2026年10月8日に発表した仕事向けのAIエージェント。Gmail・ドライブ・ドキュメント・スプレッドシート・カレンダーなどの中で、調べもの、資料作成、コードの作成と実行まで1つの入力欄から任せられます。",
+  "uses": [
+   "Workspace内での資料・メール作成",
+   "社内情報をもとにした質問への回答",
+   "コード作成と実行"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "deep-review",
+  "name": "Deep Review",
+  "category": "リサーチ",
+  "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+  "summary": "Google Researchが2026年10月14日に一般公開した、技術文書を検証してフィードバックするAIシステム。論文の査読支援から始まり、Googleドキュメントやプレゼン資料などの確認にも対応を広げています。",
+  "uses": [
+   "論文の投稿前チェック",
+   "技術文書の主張・整合性の確認",
+   "資料のレビュー"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "muse-spark-open",
+  "name": "Muse Spark Open",
+  "category": "開発",
+  "url": "https://research.meta.ai/blog/muse-spark-open",
+  "summary": "Metaが2026年10月15日に重みを公開したオープンモデル。コーディングや長い手順の作業向けで、100万トークンの文脈に対応。Hugging Faceからダウンロードでき、複数のAPI事業者経由でも使えます。",
+  "uses": [
+   "コーディング支援",
+   "エージェント開発",
+   "自前環境でのモデル運用"
+  ],
+  "pricing": "未確認（重みは公開、API利用は各事業者の料金）",
+  "japanese": "未確認",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "canly-aio",
+  "name": "カンリーAIO分析（β版）",
+  "category": "業務効率化",
+  "url": "https://lp.can-ly.com/aio-analytics",
+  "summary": "ChatGPTやGeminiなどの生成AIの回答で、自社・自店がどう扱われているかを分析するサービス。スコアの推移や競合との比較をダッシュボードで確認できます（2026年10月16日β版提供開始）。",
+  "uses": [
+   "AI検索での店舗の見え方の確認",
+   "競合との比較",
+   "MEO・SEO改善の検討"
+  ],
+  "pricing": "未確認（期間限定の特別価格あり・問い合わせ制）",
+  "japanese": "対応（日本企業の日本語サービス）",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "madoless",
+  "name": "マドレス",
+  "category": "業務効率化",
+  "url": "https://corp.opro.net/news/2026/10/madoless.html",
+  "summary": "オプロが2026年10月13日に提供を始めた、手続き業務に特化したAIエージェント基盤。相談内容から当てはまる手続きを導き、必要書類と入力内容を根拠とともに示します。第一弾は公共機関・金融機関向け。",
+  "uses": [
+   "自治体の手続き案内",
+   "金融機関の相談窓口",
+   "必要書類の確認と入力支援"
+  ],
+  "pricing": "未確認",
+  "japanese": "対応（日本企業の日本語サービス）",
+  "added": "2026-10-16",
+  "checked": "2026-10-16",
+  "affiliate": null
  }
 ]
