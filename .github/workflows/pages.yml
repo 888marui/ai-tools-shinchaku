@@ -1,4 +1,4 @@
-name: Deploy Pages
+name: GitHub Pages redirect to Cloudflare
 on:
   push: {branches: [main]}
   workflow_dispatch:
@@ -12,9 +12,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: {node-version: 20}
-      - run: node build.js
+      - run: node build.js && node redirect.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with: {path: dist}
+        with: {path: gh-redirect}
       - id: d
         uses: actions/deploy-pages@v4

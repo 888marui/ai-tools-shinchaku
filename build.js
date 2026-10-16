@@ -1,5 +1,5 @@
 const fs=require('fs'),path=require('path');
-const SITE='AIツール新着便',BASE=process.env.BASE_URL||'https://888marui.github.io/ai-tools-shinchaku';
+const SITE='AIツール新着便',BASE=process.env.BASE_URL||'https://ai-tools-shinchaku.pages.dev';
 const OUT='dist';fs.rmSync(OUT,{recursive:true,force:true});
 const tools=JSON.parse(fs.readFileSync('data/tools.json','utf8')).sort((a,b)=>b.added.localeCompare(a.added));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
