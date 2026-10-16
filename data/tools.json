@@ -13,7 +13,8 @@
   "pricing": "未確認",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "gemini",
@@ -29,7 +30,8 @@
   "pricing": "無料（￥0）／Google AI Plus ￥725／Pro ￥2,900／Ultra ￥14,500〜（月額・公式料金ページ 2026/10/16確認）",
   "japanese": "日本語の料金ページあり（日本円表示）",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "copilot",
@@ -45,7 +47,8 @@
   "pricing": "未確認",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "genspark",
@@ -61,7 +64,8 @@
   "pricing": "無料で試せる旨の表記あり",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "felo",
@@ -77,7 +81,8 @@
   "pricing": "無料で使える旨の表記あり",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "napkin",
@@ -93,7 +98,8 @@
   "pricing": "Free $0（週500AIクレジット）／Plus $9／Pro $22（1人あたり月額・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "heygen",
@@ -109,7 +115,8 @@
   "pricing": "Free $0／Creator $29／Pro $49／Business $149（月額・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "suno",
@@ -125,7 +132,8 @@
   "pricing": "Free $0／Pro $8／Premier $24（年払い時の月額・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "elevenlabs",
@@ -141,7 +149,8 @@
   "pricing": "Free $0／Starter $6／Creator $22／Pro $99／Scale $299／Business $990（月額・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "runway",
@@ -157,7 +166,8 @@
   "pricing": "Free $0（125クレジット）／Standard $12〜（月額・年払い・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "luma",
@@ -173,7 +183,8 @@
   "pricing": "Plus $30／Pro $90／Ultra $300（月額・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "krea",
@@ -189,7 +200,8 @@
   "pricing": "Free（1日100ユニット）／有料 $9〜$200（月額・年払い割引あり・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "capcut",
@@ -205,7 +217,8 @@
   "pricing": "無料で利用可。有料プランあり（AI動画生成は1秒あたり$0.12〜などの従量表示・公式料金ページ確認）",
   "japanese": "日本語の料金ページあり",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "descript",
@@ -221,7 +234,8 @@
   "pricing": "Free $0／Hobbyist $16〜／Creator $24〜／Business $50〜（1人あたり月額・年払い時・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "notion-ai",
@@ -237,23 +251,28 @@
   "pricing": "Free ¥0／Plus ¥1,650／Business ¥3,150（1人あたり月額・公式料金ページ確認。AIの範囲はプランで異なる）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "notta",
   "name": "Notta",
   "category": "議事録・文字起こし",
-  "url": "https://www.notta.ai",
-  "summary": "会議やインタビュー、録音を文字起こしし、要約やアクションプランを作るAIノートテイカー。",
+  "url": "https://www.notta.ai/",
+  "summary": "オンライン会議・対面・電話・音声ファイルの会話を文字起こしし、AIが要点・話者・決定事項・タスクを整理するAI議事録ツール。議事録やフォローメールの下書きも作れます。",
   "uses": [
-   "会議の議事録",
-   "インタビューの文字起こし",
-   "要約"
+   "Web会議・対面会議の文字起こしと議事録作成",
+   "動画・音声ファイルの文字起こし",
+   "要約・翻訳・過去の会議内容の検索"
   ],
-  "pricing": "Free $0／Pro $8.17（年払い時の月額）／Business $16.67（公式料金ページ確認）",
-  "japanese": "未確認",
+  "pricing": "フリー：0円（クレジットカード登録不要、文字起こし120分/月・1回3分まで、AI要約10回/月）／プレミアム：1,185円/月（年払い・総額14,220円、1,800分/月）／ビジネス：2,508円/月（年払い・総額30,096円、文字起こし時間無制限）／エンタープライズ：要相談。表示はすべて税込。プレミアムは3日間の無料トライアルあり（終了後は年間プランで自動更新）。学生・教職員は50%割引",
+  "japanese": "対応（公式サイトで「日本語特化AIと58言語対応」と明記）",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": {
+   "url": "https://notta.cello.so/poV7STKwa5L",
+   "label": "Nottaを無料で試す"
+  }
  },
  {
   "slug": "rimo",
@@ -269,7 +288,8 @@
   "pricing": "無料ではじめられる／プロ ¥4,950／チーム ¥6,600（月払い・税込・公式料金ページ確認）",
   "japanese": "対応（日本の公式サイト・日本語の料金ページ）",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "deepl-write",
@@ -285,7 +305,8 @@
   "pricing": "無料で試せる旨の表記あり",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "cursor",
@@ -301,7 +322,8 @@
   "pricing": "Free $0／有料 $8〜$200（月額・公式料金ページ 2026/10/16確認）",
   "japanese": "日本語の料金ページあり",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "v0",
@@ -317,7 +339,8 @@
   "pricing": "Free $0（1日7メッセージまで）／Plus $30〜／Business $100（1人あたり月額・公式料金ページ確認）",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  },
  {
   "slug": "manus",
@@ -333,6 +356,7 @@
   "pricing": "未確認",
   "japanese": "未確認",
   "added": "2026-10-16",
-  "checked": "2026-10-16"
+  "checked": "2026-10-16",
+  "affiliate": null
  }
 ]
