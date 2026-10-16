@@ -1,0 +1,52 @@
+name: 無料掲載の申し込み
+description: AIツール新着便へのAIツール掲載（無料）を申し込みます
+title: "[掲載申し込み] "
+labels: ["掲載申し込み"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AIツール新着便への無料掲載の申し込みです。編集部が公式サイトの内容を確認したうえで、順番に掲載します。掲載の可否や掲載内容は編集方針にもとづいて決めます。
+        暗号資産の取引・投資助言・アダルト・ギャンブル・「稼げる」を売りにするツールは掲載していません。
+  - type: input
+    id: name
+    attributes:
+      label: ツール名
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 公式サイトのURL
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: カテゴリ
+      options: [チャットAI, リサーチ, 文章作成, 画像・デザイン, 動画, 音楽・音声, 議事録・文字起こし, 業務効率化, 開発, その他]
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: 何ができるツールか（2〜3行）
+    validations:
+      required: true
+  - type: input
+    id: pricing
+    attributes:
+      label: 料金（公式の料金ページのURLがあれば一緒に）
+  - type: dropdown
+    id: japanese
+    attributes:
+      label: 日本語対応
+      options: [対応している, 対応していない, 一部対応]
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認
+      options:
+        - label: 申し込み者はこのツールの開発・運営に関わっています、または公開情報をもとに紹介をおすすめしています
+          required: true
