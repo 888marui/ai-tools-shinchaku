@@ -1,0 +1,317 @@
+[
+ {
+  "slug": "notebooklm",
+  "name": "NotebookLM（Gemini Notebook）",
+  "category": "リサーチ",
+  "url": "https://notebooklm.google",
+  "summary": "アップロードした資料を読み込み、要点の整理や質問への回答を行うGoogleのAIリサーチツール。公式サイトでは「Gemini Notebook」として紹介されています。",
+  "uses": [
+   "論文・資料の要約",
+   "社内資料への質問",
+   "学習ノート作り"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "gemini",
+  "name": "Google Gemini",
+  "category": "チャットAI",
+  "url": "https://gemini.google.com",
+  "summary": "Googleの対話型AIアシスタント。文章作成、計画づくり、アイデア出しなどを手伝います。",
+  "uses": [
+   "文章の下書き",
+   "旅行・予定の計画",
+   "ブレスト"
+  ],
+  "pricing": "無料で使える旨の表記あり（有料プランの詳細は公式で確認）",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "copilot",
+  "name": "Microsoft Copilot",
+  "category": "チャットAI",
+  "url": "https://copilot.microsoft.com",
+  "summary": "Microsoftの対話型AI。作成・ブレスト・学習・問題解決をチャットで手伝います。",
+  "uses": [
+   "質問・調べもの",
+   "文章作成",
+   "アイデア出し"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "genspark",
+  "name": "Genspark",
+  "category": "業務効率化",
+  "url": "https://www.genspark.ai",
+  "summary": "スライド・文書・画像・動画・コード・デザインを1か所で作れるオールインワンのAIワークスペース。",
+  "uses": [
+   "スライド作成",
+   "資料作り",
+   "画像生成"
+  ],
+  "pricing": "無料で試せる旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "felo",
+  "name": "Felo",
+  "category": "リサーチ",
+  "url": "https://www.felo.ai",
+  "summary": "多言語で検索できるAI検索プラットフォーム。スライド、マインドマップ、文書、画像なども作成できます。",
+  "uses": [
+   "多言語の調べもの",
+   "マインドマップ作成",
+   "スライド作成"
+  ],
+  "pricing": "無料で使える旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "napkin",
+  "name": "Napkin AI",
+  "category": "画像・デザイン",
+  "url": "https://www.napkin.ai",
+  "summary": "文章を図解やビジュアルに変換するAIツール。",
+  "uses": [
+   "資料の図解",
+   "SNS用の図",
+   "プレゼンのビジュアル"
+  ],
+  "pricing": "無料プランの表記あり（詳細は公式で確認）",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "heygen",
+  "name": "HeyGen",
+  "category": "動画",
+  "url": "https://www.heygen.com",
+  "summary": "自分の顔と声のAIアバターで、撮影せずに動画を作れるサービス。",
+  "uses": [
+   "解説動画",
+   "研修動画",
+   "SNS動画"
+  ],
+  "pricing": "無料で試せる旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "suno",
+  "name": "Suno",
+  "category": "音楽・音声",
+  "url": "https://www.suno.com",
+  "summary": "数秒でオリジナル曲を作れるAI音楽生成サービス。",
+  "uses": [
+   "BGM作り",
+   "作曲のアイデア",
+   "趣味の音楽制作"
+  ],
+  "pricing": "無料で作れる旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "elevenlabs",
+  "name": "ElevenLabs",
+  "category": "音楽・音声",
+  "url": "https://elevenlabs.io",
+  "summary": "自然な音声を作るAI音声生成と音声エージェントのプラットフォーム。公式では90以上の言語・5,000以上の声と案内されています。",
+  "uses": [
+   "ナレーション",
+   "動画の吹き替え",
+   "音声エージェント"
+  ],
+  "pricing": "無料プランの表記あり（詳細は公式で確認）",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "runway",
+  "name": "Runway",
+  "category": "動画",
+  "url": "https://runwayml.com",
+  "summary": "AIによる動画生成・編集ツールを提供する企業のサービス。",
+  "uses": [
+   "動画生成",
+   "映像編集",
+   "クリエイティブ制作"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "luma",
+  "name": "Luma",
+  "category": "動画",
+  "url": "https://lumalabs.ai/dream-machine",
+  "summary": "企画から生成・修正まで文脈を保ったまま進められるクリエイター向けAI。動画・画像生成で知られます。",
+  "uses": [
+   "動画生成",
+   "画像生成",
+   "クリエイティブ制作"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "krea",
+  "name": "Krea",
+  "category": "画像・デザイン",
+  "url": "https://www.krea.ai",
+  "summary": "画像や動画の生成・編集・高画質化ができるクリエイティブAIスイート。",
+  "uses": [
+   "画像生成",
+   "画像の高画質化",
+   "動画生成"
+  ],
+  "pricing": "無料で使える旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "capcut",
+  "name": "CapCut",
+  "category": "動画",
+  "url": "https://www.capcut.com",
+  "summary": "AI機能やテンプレートを備えた動画編集ツール。YouTubeやInstagram向けの編集に対応します。",
+  "uses": [
+   "ショート動画編集",
+   "自動字幕",
+   "テンプレート編集"
+  ],
+  "pricing": "無料で使える旨の表記あり（有料機能は公式で確認）",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "descript",
+  "name": "Descript",
+  "category": "動画",
+  "url": "https://www.descript.com",
+  "summary": "文字を編集する感覚で動画・音声を編集できるAIエディター。録音、文字起こし、編集、公開まで対応。",
+  "uses": [
+   "ポッドキャスト編集",
+   "動画編集",
+   "文字起こし"
+  ],
+  "pricing": "無料で試せる旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "notion-ai",
+  "name": "Notion AI",
+  "category": "業務効率化",
+  "url": "https://www.notion.com/product/ai",
+  "summary": "Notionの中で検索・生成・分析・チャットができるAI機能。",
+  "uses": [
+   "議事録の要約",
+   "社内情報の検索",
+   "文章作成"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "notta",
+  "name": "Notta",
+  "category": "議事録・文字起こし",
+  "url": "https://www.notta.ai",
+  "summary": "会議やインタビュー、録音を文字起こしし、要約やアクションプランを作るAIノートテイカー。",
+  "uses": [
+   "会議の議事録",
+   "インタビューの文字起こし",
+   "要約"
+  ],
+  "pricing": "無料で試せる旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "rimo",
+  "name": "Rimo Voice",
+  "category": "議事録・文字起こし",
+  "url": "https://rimo.app",
+  "summary": "対面・オンライン会議の両方を文字起こし・要約できるAI議事録ツール。",
+  "uses": [
+   "会議の議事録",
+   "商談の記録",
+   "要約"
+  ],
+  "pricing": "無料で試せる旨の表記あり（詳細は公式で確認）",
+  "japanese": "対応（公式サイトが日本語）",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "deepl-write",
+  "name": "DeepL Write",
+  "category": "文章作成",
+  "url": "https://www.deepl.com/write",
+  "summary": "文章を明確・正確に整えるAIライティング支援ツール。",
+  "uses": [
+   "メールの推敲",
+   "英文チェック",
+   "文章の言い換え"
+  ],
+  "pricing": "無料で試せる旨の表記あり",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "cursor",
+  "name": "Cursor",
+  "category": "開発",
+  "url": "https://www.cursor.com",
+  "summary": "AIエージェントにコーディング作業を任せられる開発ツール。",
+  "uses": [
+   "アプリ開発",
+   "コード修正",
+   "コードの理解"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "v0",
+  "name": "v0 by Vercel",
+  "category": "開発",
+  "url": "https://v0.app",
+  "summary": "AIと一緒にWebアプリを設計・作成できるVercelのサービス。",
+  "uses": [
+   "Webアプリの試作",
+   "画面デザイン",
+   "LP作成"
+  ],
+  "pricing": "無料プランの表記あり（詳細は公式で確認）",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ },
+ {
+  "slug": "manus",
+  "name": "Manus",
+  "category": "業務効率化",
+  "url": "https://www.manus.im",
+  "summary": "答えるだけでなく、タスクの実行やワークフローの自動化まで行うAIエージェント。",
+  "uses": [
+   "調べものの代行",
+   "作業の自動化",
+   "資料作成"
+  ],
+  "pricing": "未確認",
+  "japanese": "未確認",
+  "added": "2026-10-16"
+ }
+]
