@@ -545,5 +545,39 @@
   "added": "2026-10-17",
   "checked": "2026-10-17",
   "affiliate": null
+ },
+ {
+  "slug": "tinyfish-search-fetch",
+  "name": "TinyFish Search / Fetch",
+  "category": "開発",
+  "url": "https://www.tinyfish.ai/free-search-fetch",
+  "summary": "AIエージェント向けのWeb検索API（Search）と、ページ読み取りAPI（Fetch）。Searchはタイトル・要約・URLをJSONで返し、FetchはURLを実際のブラウザで表示してから、広告やメニューを除いた本文をMarkdown・HTML・JSONで返す。REST API、MCP、Python／TypeScript SDK、CLIから使える。",
+  "uses": [
+   "AIエージェントにWeb検索をさせる",
+   "記事やドキュメントのページを本文だけ取り出してAIに読ませる",
+   "JavaScriptで表示されるページの内容を取得する"
+  ],
+  "pricing": "Search・Fetchは無料（カード登録不要、要アカウント登録とAPIキー）。無料枠はSearch 1分30回・1日12,000回、Fetch 1分150URL・1日1,000URL。Agent・Browser機能は従量課金（公式ブログ・ドキュメント・料金ページ 2026/10/17確認）",
+  "japanese": "検索APIは言語指定で日本語（ja）に対応と公式ドキュメントに記載。サイト・管理画面の日本語版は未確認",
+  "added": "2026-10-17",
+  "checked": "2026-10-17",
+  "affiliate": null
+ },
+ {
+  "slug": "treg-free-webaccess",
+  "name": "Free WebAccess（treg）",
+  "category": "開発",
+  "url": "https://treg.to/web-access",
+  "summary": "AIエージェント用のツールをまとめて呼び出せるオープンソースの「treg」が提供する、Web検索とページ読み取りの仕組み。まず無料のTinyFishで試し、空振りやブロックのときは次の提供元に自動で切り替える。どの提供元が答え、いくらかかったかも結果と一緒に返す。",
+  "uses": [
+   "AIエージェントに無料でWeb検索・ページ読み取りをさせる",
+   "読めなかったページを別の提供元で取り直す",
+   "SNS・通販・レビューなどのデータを1つのAPIで取得する（有料）"
+  ],
+  "pricing": "Web検索とページ読み取りはTinyFish経由で無料。切り替え先の提供元やSNS・通販などのデータは1回ごとの従量課金。新規の認証済みアカウントに1回だけ$1.00の無料分。利用にはtregへのログイン（GitHubまたはメールのワンタイムコード）が必要（公式ページ・GitHub 2026/10/17確認）",
+  "japanese": "未確認",
+  "added": "2026-10-17",
+  "checked": "2026-10-17",
+  "affiliate": null
  }
 ]
