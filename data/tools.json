@@ -10,10 +10,10 @@
    "社内資料への質問",
    "学習ノート作り"
   ],
-  "pricing": "未確認",
-  "japanese": "未確認",
+  "pricing": "無料で利用可（1ノートブックあたりソース50件まで）／Google AI Plus・Pro・Ultraで利用上限とソース数が拡大（Plus 100件・Pro 300件・Ultra 600件、AIプランの料金はGoogle Geminiの項目を参照・公式プランページ 2026/10/17確認）",
+  "japanese": "日本語の公式ページあり",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-17",
   "affiliate": null
  },
  {
@@ -44,10 +44,10 @@
    "文章作成",
    "アイデア出し"
   ],
-  "pricing": "未確認",
-  "japanese": "未確認",
+  "pricing": "無料版あり／Copilot付きの個人向けMicrosoft 365：Personal ¥2,130・Family ¥2,740・Premium ¥3,200（いずれも月額、Premiumは年額¥32,000もあり）・Pro ¥16,000（月額請求のみ）（公式ページ 2026/10/17確認）",
+  "japanese": "日本語の公式ページあり（日本円表示）",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-17",
   "affiliate": null
  },
  {
@@ -147,9 +147,9 @@
    "音声エージェント"
   ],
   "pricing": "Free $0／Starter $6／Creator $22／Pro $99／Scale $299／Business $990（月額・公式料金ページ確認）",
-  "japanese": "未確認",
+  "japanese": "対応（日本語の公式サイトあり、音声の対応言語に日本語を含む）",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-17",
   "affiliate": null
  },
  {
@@ -302,10 +302,10 @@
    "英文チェック",
    "文章の言い換え"
   ],
-  "pricing": "無料で試せる旨の表記あり",
-  "japanese": "未確認",
+  "pricing": "無料版あり／有料のDeepL Write Proあり（公式ヘルプで確認。Write Proの金額は未確認）",
+  "japanese": "対応（公式ヘルプの対応言語に日本語あり。ただし日本語では文体・トーンの切り替えは使えない）",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-17",
   "affiliate": null
  },
  {
@@ -354,9 +354,9 @@
    "資料作成"
   ],
   "pricing": "未確認",
-  "japanese": "未確認",
+  "japanese": "日本語の公式料金ページあり",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-17",
   "affiliate": null
  },
  {
@@ -476,6 +476,74 @@
   "japanese": "対応（日本企業の日本語サービス）",
   "added": "2026-10-16",
   "checked": "2026-10-16",
+  "affiliate": null
+ },
+ {
+  "slug": "chatgpt",
+  "name": "ChatGPT（GPT-6）",
+  "category": "チャットAI",
+  "url": "https://chatgpt.com",
+  "summary": "OpenAIの対話型AI。2026年10月7日にGPT-6が全プランへ順次提供され、答えを図やボタン、グラフなどの操作できる画面で返す「Intelligent UI」が加わった（公式発表）。考えながら答え始めるため、Web検索が必要な質問への回答も早くなったとされる。",
+  "uses": [
+   "質問への回答や文章の下書き",
+   "比較や手順を図・表など見やすい形で確認する",
+   "割り勘計算などその場で使える小さなツールを作ってもらう"
+  ],
+  "pricing": "無料版あり／個人向け有料プラン Go・Plus・Pro、法人向け Business・Enterprise（金額は公式料金ページで表示されるが今回は確認できず）",
+  "japanese": "対応（日本語の公式料金ページあり）",
+  "added": "2026-10-17",
+  "checked": "2026-10-17",
+  "affiliate": null
+ },
+ {
+  "slug": "nano-banana-2-1",
+  "name": "Nano Banana 2.1",
+  "category": "画像・デザイン",
+  "url": "https://deepmind.google/models/gemini-image/flash/",
+  "summary": "Googleの画像生成・編集モデル「Nano Banana 2」の新版（2026年10月6日公開）。公式によると、デザイン性、マスクを使った部分編集、人物や物の一貫性が向上し、画像内の文字も読みやすく描ける。",
+  "uses": [
+   "文字入りのポスターやカード、図解（インフォグラフィック）を作る",
+   "写真の一部だけを指定して編集する",
+   "同じキャラクターや商品を複数の画像で同じ見た目に保つ"
+  ],
+  "pricing": "未確認（Googleの各サービス・APIで提供、料金は提供先ごとに異なる）",
+  "japanese": "未確認",
+  "added": "2026-10-17",
+  "checked": "2026-10-17",
+  "affiliate": null
+ },
+ {
+  "slug": "agent-i-kosodate",
+  "name": "Agent i「子育て」エージェント",
+  "category": "チャットAI",
+  "url": "https://events.yahoo.co.jp/agent-i/",
+  "summary": "LINEヤフーのAIエージェント「Agent i」の子育て向け機能（2026年10月14日提供開始）。子どもの月齢・年齢や住む地域に合わせて、予防接種・健診・自治体の手続きなどのやることリストをAIが作り、悩みをチャットで相談できる。LINEアプリで利用する。",
+  "uses": [
+   "予防接種や健診、役所の手続きを月齢順のTODOで管理する",
+   "母子手帳や通知書を撮影してTODOにする",
+   "子育ての悩みをAIに相談する（Yahoo!知恵袋の回答も表示）"
+  ],
+  "pricing": "未確認",
+  "japanese": "対応（日本企業の日本語サービス）",
+  "added": "2026-10-17",
+  "checked": "2026-10-17",
+  "affiliate": null
+ },
+ {
+  "slug": "japan-ai-browser-assistant",
+  "name": "JAPAN AI ブラウザアシスタント",
+  "category": "業務効率化",
+  "url": "https://prtimes.jp/main/html/rd/p/000000176.000124536.html",
+  "summary": "JAPAN AIのAIエージェントをChrome・Edgeのサイドパネルから使える拡張機能の正式版（2026年10月16日提供開始）。開いているページやPDFの要約、メール返信の下書きに加え、指示するとページ上の入力やクリックもAIが代わりに進める。送信・購入・削除などは毎回確認が入る。",
+  "uses": [
+   "表示中のページやPDFを要約する",
+   "メールの返信文を下書きする",
+   "商談メモから顧客管理システムの情報を更新する"
+  ],
+  "pricing": "追加費用なし（JAPAN AIの利用者向け。利用分はWeb版と同じくクレジットを消費・公式発表）",
+  "japanese": "対応（日本企業の日本語サービス）",
+  "added": "2026-10-17",
+  "checked": "2026-10-17",
   "affiliate": null
  }
 ]
