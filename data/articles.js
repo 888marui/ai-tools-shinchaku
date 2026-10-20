@@ -33,7 +33,7 @@ https://www.jimdo.com/jp/
 https://www.jimdo.com/jp/pricing/
 https://v0.app/pricing
 https://www.conoha.jp/ai/canvas/</code></pre>`},
-{slug:'ai-writing-tool-hikaku',date:'2026-10-20',tools:['value-ai-writer','doraverse','notion-ai','deepl-write'],title:'AIライティングツール比較｜Value AI Writer・Doraverse・Notion AI・DeepL Writeの料金と使い分け',desc:'ブログ記事やビジネス文書に使えるAIライティングツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。SEO記事作成、社内文書、推敲など目的別の選び方をまとめました。',body:`<h1>AIライティングツール比較：Value AI Writer・Doraverse・Notion AI・DeepL Write</h1>${note2}<p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
+{slug:'ai-writing-tool-hikaku',date:'2026-10-20',tools:['value-ai-writer','doraverse','notion-ai','deepl-write'],title:'AIライティングツール比較｜Value AI Writer・Doraverseなど4つの料金',updated:'2026-10-20',desc:'ブログ記事やビジネス文書に使えるAIライティングツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。SEO記事作成、社内文書、推敲など目的別の選び方をまとめました。',body:`<h1>AIライティングツール比較：Value AI Writer・Doraverse・Notion AI・DeepL Write</h1>${note2}<p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>料金</b>／<b>無料で試す</b>／<b>日本語</b>／<b>得意なこと</b></td></tr>
 <tr><th><a href="../../tools/value-ai-writer/">Value AI Writer byGMO</a></th><td>フリー0円（月1記事）／エントリー840円／ベーシック2,800円／プロ10,780円ほか（月額・税込）／フリープランあり／日本語サービス／SEO記事・ブログ記事の作成</td></tr>
 <tr><th><a href="../../tools/doraverse/">Doraverse</a></th><td>Starter $10／Pro $25／Business $30（1ユーザー・月払い、年払いは最大20%割引）／14日間無料トライアル（クレジットカード不要）／日本語の公式サイトあり／複数AIモデルでの執筆・リサーチ、議事録、翻訳</td></tr>
