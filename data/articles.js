@@ -3,6 +3,24 @@ const cta=`<p><a class="cta" href="${N}" rel="sponsored nofollow noopener" targe
 const note=`<p class="muted">料金・機能は2026年10月16日に各公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 const note2=`<p class="muted">更新日：2026年10月20日。料金・機能は2026年10月16〜20日に各公式サイトで確認した内容です（当サイトの各ツールページの「情報確認日」も参照）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 module.exports=[
+{slug:'notebooklm-muryou-jougen',date:'2026-10-20',tools:['notebooklm'],title:'NotebookLM（Gemini Notebook）無料版の上限まとめ｜ソース数・回数',desc:'NotebookLM（Gemini Notebook）を無料で使うときの上限を、Googleの公式ヘルプとブログだけで整理。ノートブック数・ソース数・ファイルサイズと、2026年9月からの利用上限の変更点をまとめました。',body:`<h1>NotebookLM（Gemini Notebook）無料版の上限</h1><p class="muted">2026年10月20日にGoogleの公式ヘルプとブログで確認した内容です。上限は変わることがあるため、使う前に公式ヘルプをご確認ください。「未確認」は公式情報で確認できなかった項目です。</p>
+<h2>名前について</h2><p>Googleの公式ヘルプでは、現在「Gemini Notebook」という名前で説明されています（ヘルプのURLやページ名には「NotebookLM」も残っています）。くわしい基本情報は<a href="../../tools/notebooklm/">NotebookLM（Gemini Notebook）のツールページ</a>にもまとめています。</p>
+<h2>無料（Standard）で決まっている上限</h2><table><tr><th>項目</th><td>無料（Standard）</td></tr>
+<tr><th>ノートブック数</th><td>1ユーザー100件</td></tr>
+<tr><th>ソース数</th><td>1ノートブック50件</td></tr>
+<tr><th>1ソースの大きさ</th><td>最大50万語・ファイルは200MBまで</td></tr></table>
+<p>ノートブックを共有しても、共同編集者のソース上限は変わりません。</p>
+<h2>チャットや音声解説の回数</h2><p>公式の「アップグレード」ヘルプの表では、無料（Standard）はチャット50回/日、音声解説3件/日、動画解説3件/日、レポート10件/日、フラッシュカード10件/日、Deep Research 10件/月と書かれています（日ごとの割り当ては24時間後、月ごとは30日後にリセット）。クイズとマインドマップの無料の回数は、ページ上で確認できなかったため未確認です。</p>
+<p>一方でGoogleは、2026年8月28日の公式ブログで、9月2日から個人アカウント（Webとモバイル）向けに順次、回数ではなく「計算量ベース」の上限に変えると発表しました。質問の複雑さ、チャットの長さ、ソースの数、使う機能で消費量が変わり、5時間ごとに回復し、週ごとの上限もあります。</p>
+<p>そのため、<b>いまの自分のアカウントで何回使えるかは未確認</b>です。右上の「設定」→「Usage（使用量）」で残りの量と回復時刻を確認できます（英語版ヘルプより）。</p>
+<h2>有料プランとの差</h2><p>英語版ヘルプでは、Google AI Plusは無料の2倍、AI Proは4倍、AI UltraはAI Proの5倍または20倍の上限と書かれています。ソース数は、Plus 100件、Pro 300件、Ultra 500件または600件（1ノートブックあたり）です。各プランの日本の料金は、この記事では未確認です。</p>
+<h2>上限に当たったときは</h2><ul><li>5時間ほど待つと回復します（週の上限に達していない場合）。</li><li>使わないソースを外すと、消費量を減らせることがあります（公式ブログでソース数が消費量に関わると説明）。</li><li>動画解説やスライド資料などは、上限に達したとき「後で生成」を選べます（現在はWeb版のみ）。</li></ul>
+<h2>関連</h2><p><a href="../../tools/notebooklm/">NotebookLM（Gemini Notebook）のツールページ</a>／<a href="../chatgpt-igai-ai-hikaku/">ChatGPT以外のAIチャット比較</a>／<a href="../../category/${encodeURIComponent('リサーチ')}/">リサーチのAIツール一覧</a></p>
+<h2>出典（公式）</h2><pre><code>https://support.google.com/notebooklm/answer/16179559?hl=ja
+https://support.google.com/notebooklm/answer/16213268?hl=ja
+https://support.google.com/gemininotebook/answer/16215270?co=GENIE.Platform%3DDesktop&hl=ja
+https://support.google.com/gemininotebook/answer/17670842?co=GENIE.Platform%3DDesktop&hl=en
+https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/</code></pre>`},
 {slug:'conoha-ai-canvas-tsukaikata-ryoukin',date:'2026-10-20',tools:['conoha-ai-canvas'],title:'ConoHa AI Canvas 使い方・料金（2026年10月版）',desc:'ブラウザでStable Diffusionを使えるConoHa AI Canvasの料金（基本料金とWebUI従量課金）、無料時間、支払い方法、使い始めの流れを公式サイトの情報だけでまとめました。',body:`<h1>ConoHa AI Canvas 使い方・料金（2026年10月版）</h1><p class="muted">料金は2026年10月20日に公式料金ページで確認した内容です（表示は税込）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>
 <p>ConoHa AI Canvasは、GMOインターネットグループのConoHaが提供する、ブラウザからStable Diffusionで画像を作れるサービスです。くわしい基本情報は<a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvasのツールページ</a>にもまとめています。</p>
 <p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+D3MEI+50+7RTY1E" rel="sponsored nofollow noopener" target="_blank">ConoHa AI Canvasの公式サイトを見る</a><span class="pr">PR</span><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+D3MEI+50+7RTY1E" width="1" height="1" alt="" style="border:0"></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
@@ -101,6 +119,6 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <h2>目的別の選び方</h2><ul><li><b>調べものの答えに出典がほしい</b>：Felo</li><li><b>自分の資料（PDF・議事録）について質問したい</b>：NotebookLM</li><li><b>Gmail・GoogleドキュメントなどGoogle中心</b>：Gemini</li><li><b>Word・Excel・PowerPoint中心</b>：Copilot</li><li><b>国産AIを試したい</b>：Sarashina</li></ul>
 <h2>使い方のコツ</h2><ol><li>同じ質問を2つのAIに聞き、答えが違うところだけ一次情報（公式サイトなど）で確かめると、誤りに気づきやすくなります。</li><li>「誰向けに・何文字で・箇条書きで」など、出力の形を指定します。</li><li>長い資料は、全文を貼るよりNotebookLMのように資料を読み込むツールが向いています。</li></ol>
 <h2>注意点</h2><ul><li>AIの回答には誤りが含まれることがあります。数字・日付・法律・医療などは必ず一次情報で確認してください。</li><li>仕事の機密情報を入力する前に、各社のデータの扱い（学習への利用の有無、法人向けプランの条件）を確認してください。</li><li>無料版の回数制限や使えるモデルは予告なく変わることがあります。</li></ul>
-<h2>関連</h2><p><a href="../../category/${encodeURIComponent('チャットAI')}/">チャットAIの一覧</a>／<a href="../../category/${encodeURIComponent('リサーチ')}/">リサーチのAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
+<h2>関連</h2><p><a href="../notebooklm-muryou-jougen/">NotebookLM（Gemini Notebook）無料版の上限</a>／<a href="../../category/${encodeURIComponent('チャットAI')}/">チャットAIの一覧</a>／<a href="../../category/${encodeURIComponent('リサーチ')}/">リサーチのAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
 <h2>出典（公式）</h2><ul><li><a href="https://gemini.google.com" rel="noopener">https://gemini.google.com</a></li><li><a href="https://copilot.microsoft.com" rel="noopener">https://copilot.microsoft.com</a></li><li><a href="https://www.felo.ai" rel="noopener">https://www.felo.ai</a></li><li><a href="https://www.genspark.ai" rel="noopener">https://www.genspark.ai</a></li><li><a href="https://notebooklm.google" rel="noopener">https://notebooklm.google</a></li><li><a href="https://chatgpt.com" rel="noopener">https://chatgpt.com</a></li><li><a href="https://www.sbintuitions.co.jp/news/press/20261013_01/" rel="noopener">https://www.sbintuitions.co.jp/news/press/20261013_01/</a></li></ul>`}
 ];
