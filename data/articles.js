@@ -3,6 +3,55 @@ const cta=`<p><a class="cta" href="${N}" rel="sponsored nofollow noopener" targe
 const note=`<p class="muted">料金・機能は2026年10月16日に各公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 const note2=`<p class="muted">更新日：2026年10月20日。料金・機能は2026年10月16〜20日に各公式サイトで確認した内容です（当サイトの各ツールページの「情報確認日」も参照）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 module.exports=[
+{slug:'elevenlabs-muryou-shouyou',date:'2026-10-20',tools:['elevenlabs'],title:'ElevenLabsは無料で商用利用できる？規約と料金プランで確認',desc:'ElevenLabsの無料プランで商用利用できるかを、公式の利用規約と料金ページだけで確認。無料と有料の違い、商用利用に必要なプラン、注意点を短くまとめました。',body:`<h1>ElevenLabsは無料で商用利用できる？</h1><p class="muted">2026年10月20日にElevenLabsの公式の利用規約（英語）と料金ページで確認した内容です。規約や料金は変わることがあるため、使う前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。この記事は法律の助言ではありません。</p>
+<h2>結論</h2><p>公式の利用規約では、<b>無料で使う人（Free User）は非商用の目的だけ</b>で使えると書かれています。<b>有料のサブスクリプションプランの人（Paid User）は商用目的で使える</b>と書かれています。どちらの場合も、禁止用途ポリシー（Prohibited Use Policy）を守る必要があります。</p>
+<h2>無料と有料の違い（料金ページより）</h2><table><tr><th>プラン</th><td><b>月額（税別）</b>／<b>クレジット/月</b>／<b>商用ライセンスの記載</b></td></tr>
+<tr><th>Free</th><td>$0／10,000／記載なし（規約上は非商用のみ）</td></tr>
+<tr><th>Starter</th><td>$6／30,000／「Commercial License」の記載あり</td></tr>
+<tr><th>Creator</th><td>$22（初月$11）／121,000／Starterの内容を含む</td></tr>
+<tr><th>Pro</th><td>$99／600,000／Creatorの内容を含む</td></tr></table>
+<p>このほかScale（$299）、Business（$990）、Enterprise（個別見積もり）があります。日本円での請求額は未確認です。</p>
+<p><a class="cta" href="https://try.elevenlabs.io/q37bimm1e1ov" rel="sponsored nofollow noopener" target="_blank">ElevenLabsを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。当サイトはElevenLabs Creator Affiliate Programの参加者です。</p>
+<h2>注意点</h2><ul><li>規約では、非商用で使う場合は個人のメールアドレスで登録する必要があると書かれています。</li><li>会社のメールアドレスで登録すると、その会社がアカウントの管理者とみなされることがあると書かれています。</li><li>ダウンロードした音声は、サービスの外でも規約の範囲で使えると書かれています。</li><li>無料期間に作った音声を、あとで有料にしてから商用に使えるかどうかは、規約からは読み取れませんでした（未確認）。</li><li>YouTubeの収益化など、個別の使い方が「商用」に当たるかの公式の説明は未確認です。</li><li>他人の声を複製するときは、本人の許可が必要です。</li></ul>
+<h2>関連</h2><p><a href="../../tools/elevenlabs/">ElevenLabsのツールページ</a>／<a href="../ai-yomiage-elevenlabs-voicevox/">AI音声読み上げの選び方（ElevenLabsとVOICEVOX）</a>／<a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a></p>
+<h2>出典（公式）</h2><pre><code>https://elevenlabs.io/terms-of-use
+https://elevenlabs.io/pricing</code></pre>`},
+{slug:'ai-homepage-sakusei-hikaku',date:'2026-10-20',tools:['lolipop-ai-homepage','v0','conoha-ai-canvas'],title:'AIでホームページ作成｜ロリポップ！AIホームページ・ジンドゥーAIビルダー・v0の料金と選び方',desc:'AIでホームページを作れるサービスを、公式サイトで確認した料金・無料期間・日本語対応で比較。お店や個人事業向けのロリポップ！AIホームページとジンドゥーAIビルダー、開発者向けのv0の違いと選び方をまとめました。',body:`<h1>AIでホームページ作成：3つのサービスの比較</h1><p class="muted">2026年10月20日に各公式サイトで確認した内容です。料金は変わることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p><p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
+<h2>比較表</h2><table><tr><th>サービス</th><td><b>料金</b>／<b>無料で試す</b>／<b>日本語</b>／<b>向いている人</b></td></tr>
+<tr><th><a href="../../tools/lolipop-ai-homepage/">ロリポップ！AIホームページ</a></th><td>1,540円（1ヵ月契約）〜660円（36ヵ月契約）／月（税込・1サイト）／10日間無料（クレジットカード不要）／日本語サービス／お店・個人事業のホームページをすぐ公開したい人</td></tr>
+<tr><th>ジンドゥー AI ビルダー</th><td>有料プランの金額は未確認（料金ページの金額表示を取得できず）／無料プランあり（公式FAQ）／日本語サービス（KDDIグループ）／質問に答えて土台を作り、無料から始めたい人</td></tr>
+<tr><th><a href="../../tools/v0/">v0 by Vercel</a></th><td>Free $0（1日7メッセージまで）／Plus $30〜／Business $100（1人あたり月額）／無料プランあり／日本語対応は未確認／Webアプリや画面を試作したい開発者</td></tr></table>
+<h2>ロリポップ！AIホームページ</h2><p>AIとの会話やデザインテンプレートからホームページを作って公開できるサービスです。公式では「最短10分で公開」と案内されています。公開後もAIで修正できます。12ヵ月以上の契約では独自ドメインが初年度無料です（公式サイトより）。</p>
+<p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+H9NMY+348+4SNX5E" rel="sponsored nofollow noopener" target="_blank">ロリポップ！AIホームページを10日間無料で試す</a><span class="pr">PR</span><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+H9NMY+348+4SNX5E" width="1" height="1" alt="" style="border:0"></p>
+<h2>ジンドゥー AI ビルダー</h2><p>公式サイトでは「ナビに従うだけでAIがホームページを作ってくれる」と説明されています。質問に答えると数分でホームページの土台ができ、あとは画像・タイトル・文章を変えて仕上げます。スマホやタブレットでも作成・編集できます。有料プランの契約期間は1ヶ月・1年・2年から選べ、申し込みから14日以内ならキャンセルできます（公式FAQ）。</p>
+<h2>v0 by Vercel</h2><p>AIと一緒にWebアプリを設計・作成できるサービスです。LPや画面の試作に使えますが、コードや公開の仕組みを扱う開発者向けです。ドメインやサーバーの準備が不要な「すぐ公開できる店舗サイト」が目的なら、上の2つの方が手順は少なくなります。</p>
+<h2>選び方</h2><ul><li><b>まず無料で試したい</b>：ロリポップ！AIホームページ（10日間無料）か、ジンドゥーの無料プラン。</li><li><b>独自ドメインで長く使う</b>：ロリポップ！AIホームページの12ヵ月以上契約は独自ドメインが初年度無料。</li><li><b>デザインを自分のコードで作り込みたい</b>：v0。</li></ul>
+<h2>サイトに使う画像もAIで作るなら</h2><p>トップ画像やバナーを自分で作りたい場合は、ブラウザでStable Diffusionを使える<a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvas</a>もあります。料金は<a href="../conoha-ai-canvas-tsukaikata-ryoukin/">ConoHa AI Canvasの使い方・料金</a>にまとめています。無料の方法は<a href="../gazou-seisei-ai-muryou/">無料で使える画像生成AI</a>をご覧ください。</p>
+<h2>注意点</h2><ul><li>AIが作った文章は、営業時間・住所・料金などの事実を必ず自分で確認してから公開しましょう。</li><li>画像を使う場合は、各サービスの商用利用の条件を確認してください。</li></ul>
+<h2>出典（公式）</h2><pre><code>https://lolipop.jp/ai/homepage/
+https://www.jimdo.com/jp/
+https://www.jimdo.com/jp/pricing/
+https://v0.app/pricing
+https://www.conoha.jp/ai/canvas/</code></pre>`},
+{slug:'ai-writing-tool-hikaku',date:'2026-10-20',tools:['value-ai-writer','doraverse','notion-ai','deepl-write'],title:'AIライティングツール比較｜Value AI Writer・Doraverse・Notion AI・DeepL Writeの料金と使い分け',desc:'ブログ記事やビジネス文書に使えるAIライティングツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。SEO記事作成、社内文書、推敲など目的別の選び方をまとめました。',body:`<h1>AIライティングツール比較：Value AI Writer・Doraverse・Notion AI・DeepL Write</h1>${note2}<p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
+<h2>比較表</h2><table><tr><th>ツール</th><td><b>料金</b>／<b>無料で試す</b>／<b>日本語</b>／<b>得意なこと</b></td></tr>
+<tr><th><a href="../../tools/value-ai-writer/">Value AI Writer byGMO</a></th><td>フリー0円（月1記事）／エントリー840円／ベーシック2,800円／プロ10,780円ほか（月額・税込）／フリープランあり／日本語サービス／SEO記事・ブログ記事の作成</td></tr>
+<tr><th><a href="../../tools/doraverse/">Doraverse</a></th><td>Starter $10／Pro $25／Business $30（1ユーザー・月払い、年払いは最大20%割引）／14日間無料トライアル（クレジットカード不要）／日本語の公式サイトあり／複数AIモデルでの執筆・リサーチ、議事録、翻訳</td></tr>
+<tr><th><a href="../../tools/notion-ai/">Notion AI</a></th><td>Free ¥0／Plus ¥1,650／Business ¥3,150（1人あたり月額。AIの範囲はプランで異なる）／Freeプランあり／日本語対応／Notion内の文書作成・要約・検索</td></tr>
+<tr><th><a href="../../tools/deepl-write/">DeepL Write</a></th><td>無料版あり／Write Proの金額は未確認／無料版あり／日本語対応（日本語では文体・トーンの切り替えは不可）／書いた文章の推敲・言い換え</td></tr></table>
+<h2>Value AI Writer byGMO：SEO記事を作りたい人</h2><p>GMOのSEO記事生成AIライティングツールです。ChatGPT-4o・4.1、Claude 4.0、Gemini 2.5 Proに対応し、ブログやオウンドメディアの記事作成に使えます。フリープラン（月1記事）で試せます（公式サイトより）。</p>
+<p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+FHCTM+1JUK+1HL85U" rel="sponsored nofollow noopener" target="_blank">Value AI Writerを無料で試す</a><span class="pr">PR</span><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+FHCTM+1JUK+1HL85U" width="1" height="1" alt="" style="border:0"></p>
+<h2>Doraverse：文章以外の作業もまとめたい人</h2><p>複数のAIモデルでの執筆・リサーチに加え、AI議事録、AI翻訳、画像生成、AIエージェント作成をまとめたビジネス向けAIプラットフォームです。14日間の無料トライアルはクレジットカード不要です（公式サイトより）。</p>
+<p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+GO816+5UU0+5YJRM" rel="sponsored nofollow noopener" target="_blank">Doraverseを14日間無料で試す</a><span class="pr">PR</span><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+GO816+5UU0+5YJRM" width="1" height="1" alt="" style="border:0"></p>
+<h2>Notion AI：Notionで文書を管理している人</h2><p>Notionの中で検索・生成・分析・チャットができるAI機能です。議事録の要約や社内情報の検索にも使えます。</p>
+<h2>DeepL Write：書いた文章を整えたい人</h2><p>文章を明確・正確に整える推敲ツールです。ゼロから記事を書くより、メールや英文のチェックに向いています。</p>
+<h2>選び方</h2><ul><li><b>ブログ・SEO記事</b>：Value AI Writer</li><li><b>執筆＋議事録・翻訳などをまとめて</b>：Doraverse</li><li><b>チームの文書がNotionにある</b>：Notion AI</li><li><b>推敲だけ</b>：DeepL Write（無料版）</li></ul>
+<h2>注意点</h2><ul><li>AIが書いた数字・固有名詞・引用は、必ず一次情報で確認してから公開しましょう。</li><li>会議の文字起こしが目的なら<a href="../mojiokoshi-ai-hikaku/">文字起こしAIツール比較</a>も参考にしてください。</li><li>ChatGPTやGeminiで下書きする方法は<a href="../chatgpt-igai-ai-hikaku/">ChatGPT以外のAIチャット比較</a>にまとめています。</li></ul>
+<h2>出典（公式）</h2><pre><code>https://www.value-domain.com/value-aiwriter/
+https://doraverse.com/ja
+https://www.notion.com/ja/pricing
+https://www.notion.com/product/ai
+https://www.deepl.com/write</code></pre>`},
 {slug:'notebooklm-muryou-jougen',date:'2026-10-20',tools:['notebooklm'],title:'NotebookLM（Gemini Notebook）無料版の上限まとめ｜ソース数・回数',desc:'NotebookLM（Gemini Notebook）を無料で使うときの上限を、Googleの公式ヘルプとブログだけで整理。ノートブック数・ソース数・ファイルサイズと、2026年9月からの利用上限の変更点をまとめました。',body:`<h1>NotebookLM（Gemini Notebook）無料版の上限</h1><p class="muted">2026年10月20日にGoogleの公式ヘルプとブログで確認した内容です。上限は変わることがあるため、使う前に公式ヘルプをご確認ください。「未確認」は公式情報で確認できなかった項目です。</p>
 <h2>名前について</h2><p>Googleの公式ヘルプでは、現在「Gemini Notebook」という名前で説明されています（ヘルプのURLやページ名には「NotebookLM」も残っています）。くわしい基本情報は<a href="../../tools/notebooklm/">NotebookLM（Gemini Notebook）のツールページ</a>にもまとめています。</p>
 <h2>無料（Standard）で決まっている上限</h2><table><tr><th>項目</th><td>無料（Standard）</td></tr>
@@ -34,7 +83,7 @@ https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usag
 <h2>費用をおさえるコツ</h2><ul><li>まずはエントリー（1,100円/月・無料10時間）で試すと、従量課金の目安がつかみやすいです。</li><li>自動終了タイマーを短めにしておくと、起動したままの課金を防げます。</li><li>プラン変更は「申し込みの翌月1日」から反映されます。ストレージ容量を超えているとプランを下げられません。</li></ul>
 <h2>支払い方法</h2><p>クレジットカード（後払い）と、ConoHaチャージ（前払い）が使えます。ConoHaチャージはクレジットカード・銀行振込・Amazon Pay・ペイジー・コンビニ・PayPalで入金できます。ペイジーとコンビニは1件150円の手数料がかかります。</p>
 <h2>注意点</h2><ul><li>画像の商用利用の条件は、使うモデルの規約によって変わります。料金ページでは確認できませんでした（未確認）。</li><li>ConoHaチャージは残高が足りなくなるとサービスが止まります。</li></ul>
-<h2>関連</h2><p><a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvasのツールページ</a>／<a href="../gazou-seisei-ai-muryou/">無料で使える画像生成AI</a>／<a href="../../category/${encodeURIComponent('画像・デザイン')}/">画像・デザインのAIツール一覧</a></p>
+<h2>関連</h2><p><a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvasのツールページ</a>／<a href="../ai-homepage-sakusei-hikaku/">AIでホームページ作成（比較）</a>／<a href="../gazou-seisei-ai-muryou/">無料で使える画像生成AI</a>／<a href="../../category/${encodeURIComponent('画像・デザイン')}/">画像・デザインのAIツール一覧</a></p>
 <h2>出典（公式）</h2><pre><code>https://ai.conoha.jp/canvas/pricing/
 https://www.conoha.jp/ai/canvas/</code></pre>`},
 {slug:'ai-yomiage-elevenlabs-voicevox',date:'2026-10-20',title:'AI音声読み上げの選び方｜ElevenLabsとVOICEVOXの料金・商用利用・日本語対応',desc:'ナレーションや動画の読み上げに使えるElevenLabsとVOICEVOXを、公式サイトで確認した料金・商用利用の条件・日本語対応で比べ、使い方の流れも短くまとめました。',body:`<h1>AI音声読み上げの選び方：ElevenLabsとVOICEVOX</h1><p class="muted">料金・条件は2026年10月20日に各公式サイトで確認した内容です。変更されることがあるため、使う前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>
@@ -48,12 +97,12 @@ https://www.conoha.jp/ai/canvas/</code></pre>`},
 <h3>ElevenLabs</h3><ol><li>公式サイトで無料登録します。</li><li>テキスト読み上げ画面に日本語の文章を入力します。</li><li>声を選び、速度などを調整して「生成」を押します。</li><li>MP3でダウンロードします。</li></ol>
 <h3>VOICEVOX</h3><ol><li>公式サイトから自分のOS用をダウンロードしてインストールします。</li><li>キャラクターを選び、文章を入力します。</li><li>必要ならアクセントや抑揚を調整し、音声を書き出します。</li><li>公開するときは「VOICEVOX:キャラクター名」などのクレジットを、そのキャラクターの規約どおりに入れます（表記の形は各規約で確認してください）。</li></ol>
 <h2>注意点</h2><ul><li>実在の人の声を複製するときは、本人の許可が必要です。各社の規約も守ってください。</li><li>ElevenLabsの料金はドル表記で税別です。日本円の請求額は未確認です。</li><li>無料枠や商用利用の条件は変わることがあります。</li></ul>
-<h2>関連</h2><p><a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a>／<a href="../douga-seisei-ai-hikaku/">動画生成AI比較</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
-<h2>出典（公式）</h2><pre><code>https://elevenlabs.io/pricing
+<h2>関連</h2><p><a href="../elevenlabs-muryou-shouyou/">ElevenLabsは無料で商用利用できる？</a>／<a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a>／<a href="../douga-seisei-ai-hikaku/">動画生成AI比較</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
+<p>ナレーション原稿をAIで書くなら<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>もどうぞ。</p><h2>出典（公式）</h2><pre><code>https://elevenlabs.io/pricing
 https://elevenlabs.io/ja/text-to-speech/japanese
 https://voicevox.hiroshiba.jp/
 https://voicevox.hiroshiba.jp/term/</code></pre>`},
-{slug:'mojiokoshi-ai-hikaku',date:'2026-10-16',title:'文字起こしAIツール比較｜Notta・Rimo Voice・Otter・tl;dvの料金と向いている人',desc:'主要な文字起こし・AI議事録ツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。どんな人に向いているかも整理しました。',body:`<h1>文字起こしAIツール比較：Notta・Rimo Voice・Otter・tl;dv</h1>${note}
+{slug:'mojiokoshi-ai-hikaku',date:'2026-10-16',title:'文字起こしAI比較｜Notta・Rimo Voice・Otter・tl;dvの料金',updated:'2026-10-20',desc:'主要な文字起こし・AI議事録ツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。どんな人に向いているかも整理しました。',body:`<h1>文字起こしAIツール比較：Notta・Rimo Voice・Otter・tl;dv</h1>${note}
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料枠</b>／<b>有料の例</b>／<b>日本語</b></td></tr>
 <tr><th>Notta</th><td>フリー0円（120分/月・1回3分まで）／プレミアム1,185円/月（年払い・税込）／対応（日本語特化AIと58言語対応と明記）</td></tr>
 <tr><th>Rimo Voice</th><td>無料ではじめられる（条件は未確認）／プロ4,950円・チーム6,600円（月払い・税込）／対応（日本語に特化と明記）</td></tr>
@@ -66,7 +115,7 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <h3>tl;dv：Web会議の録画と共有を重視するチーム</h3><p>Web会議の録画・記録向けのツールです。料金はユーロ建てで、日本語対応は公式サイトで確認できませんでした。</p>
 <h2>選び方のまとめ</h2><ul><li>とにかく無料で試したい：Nottaのフリー、Otterの Basic</li><li>日本語の社内会議を会社で導入：Rimo Voice、Notta ビジネス</li><li>英語の会議が多い：Otter</li></ul>
 <p>関連：<a href="../gijiroku-ai-jidouka/">会議の議事録をAIで自動化する方法</a>／<a href="../muryou-mojiokoshi-ai/">無料で使える文字起こしAI</a></p>
-<p class="muted">公式サイト：https://www.notta.ai/ ／ https://rimo.app/ ／ https://otter.ai/pricing ／ https://tldv.io/app/pricing</p>`},
+<p class="muted">公式サイト：https://www.notta.ai/ ／ https://rimo.app/ ／ https://otter.ai/pricing ／ https://tldv.io/app/pricing</p><p>議事録だけでなく文章作成・翻訳もまとめたい場合は<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>（Doraverseなど）も参考にしてください。</p>`},
 {slug:'gijiroku-ai-jidouka',date:'2026-10-16',title:'会議の議事録をAIで自動化する方法｜準備から共有までの手順',desc:'AI議事録ツールで会議の記録・要約・共有を自動化する手順を、録音の同意や確認の注意点とあわせて解説します。',body:`<h1>会議の議事録をAIで自動化する方法</h1>${note}
 <h2>1. どこまで任せるか決める</h2><p>AI議事録ツールに任せられるのは、主に「録音・文字起こし」「要約」「決定事項やタスクの抜き出し」です。最終的な内容の確認は人が行う前提で考えます。AIの文字起こしや要約には誤りが入ることがあります。</p>
 <h2>2. ツールを選ぶ</h2><p>Web会議（Zoom・Teams・Google Meet）に参加して自動で記録するタイプが多く、Notta・Rimo Voice・Otterなどが対応をうたっています。違いは<a href="../mojiokoshi-ai-hikaku/">文字起こしAIツール比較</a>にまとめました。</p>
@@ -81,7 +130,7 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <tr><th>Rimo Voice</th><td>「無料ではじめられる」と記載（上限は未確認）</td></tr></table>
 <h2>どれを選ぶ？</h2><ul><li>短い打ち合わせやメモ、操作感を試したい：Nottaのフリー（1回3分まで）</li><li>英語中心で月の分数を多く使いたい：Otterの Basic</li><li>長い日本語の会議を毎週記録したい：無料枠では足りないことが多いため、有料プランの料金も比べるのがおすすめです（<a href="../mojiokoshi-ai-hikaku/">比較記事</a>）</li></ul>
 <h2>無料で使うときの注意</h2><ul><li>無料枠は月単位でリセットされ、繰り越しはできない場合があります（Otterは繰り越しなしと記載）</li><li>機密情報を扱う場合は、各社のデータの扱い（AI学習への利用など）を公式サイトで確認してください</li></ul>${cta}`},
-{slug:'gazou-seisei-ai-muryou',date:'2026-10-20',title:'無料で使える画像生成AI｜Gemini（Nano Banana）・Krea・Napkin AIの無料枠と使い分け',desc:'画像生成AIを無料で試したい人向けに、Gemini（Nano Banana）・Krea・Napkin AI・Canvaの無料枠、日本語対応、使い方、商用利用の注意点を公式情報をもとに整理しました。',body:`<h1>無料で使える画像生成AI：無料枠と使い分け</h1>${note2}
+{slug:'gazou-seisei-ai-muryou',date:'2026-10-20',title:'無料で使える画像生成AI｜Gemini・Krea・Napkin AIの無料枠',updated:'2026-10-20',desc:'画像生成AIを無料で試したい人向けに、Gemini（Nano Banana）・Krea・Napkin AI・Canvaの無料枠、日本語対応、使い方、商用利用の注意点を公式情報をもとに整理しました。',body:`<h1>無料で使える画像生成AI：無料枠と使い分け</h1>${note2}
 <p>「画像生成AI 無料」で探している人向けに、当サイト掲載ツールのうち無料で始められるものを、公式サイトに書かれている無料枠だけで比べました。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料枠</b>／<b>有料の例</b>／<b>日本語</b>／<b>得意なこと</b></td></tr>
 <tr><th><a href="../../tools/gemini/">Google Gemini</a>（画像は<a href="../../tools/nano-banana-2-1/">Nano Banana</a>系）</th><td>無料（￥0）プランあり。無料での画像生成の回数上限は未確認／Google AI Plus ￥725・Pro ￥2,900（月額）／日本語の料金ページあり／文字入りの画像、写真の部分編集</td></tr>
@@ -92,8 +141,8 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <h2>注意点</h2><ul><li>無料プランは、生成物の公開設定・商用利用・透かしなどの条件が有料と異なる場合があります。規約は変わるため、使うたびに公式ページで確認してください。</li><li>実在の人物・他社のキャラクターやロゴに似せた画像は、権利侵害になるおそれがあります。</li><li>無料枠の回数や単位は、各社の都合で変更されます。</li></ul>
 <h2>有料で枚数を気にせず使いたい場合</h2><p><span class="pr">PR</span> 無料枠では足りない人向けの有料サービスとして、<a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvas</a>があります。Stable Diffusionをブラウザで使え、月額1,100円（税込）〜、生成枚数の上限なしと公式に案内されています（WebUIの利用時間に応じた料金あり。無料プランは未確認）。 <a href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+D3MEI+50+7RTY1E" rel="sponsored nofollow noopener" target="_blank">ConoHa AI Canvasの公式サイト</a><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+D3MEI+50+7RTY1E" width="1" height="1" alt="" style="border:0"></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
 <h2>関連</h2><p><a href="../../category/${encodeURIComponent('画像・デザイン')}/">画像・デザインのAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a>／<a href="../douga-seisei-ai-hikaku/">動画生成AIの比較</a></p>
-<h2>出典（公式）</h2><ul><li><a href="https://gemini.google.com" rel="noopener">https://gemini.google.com</a></li><li><a href="https://deepmind.google/models/gemini-image/flash/" rel="noopener">https://deepmind.google/models/gemini-image/flash/</a></li><li><a href="https://www.krea.ai" rel="noopener">https://www.krea.ai</a></li><li><a href="https://www.napkin.ai" rel="noopener">https://www.napkin.ai</a></li></ul>`},
-{slug:'douga-seisei-ai-hikaku',date:'2026-10-20',title:'動画生成AI比較｜Runway・Luma・HeyGen・CapCut・Descriptの料金・無料枠・向いている用途',desc:'動画生成AI・AI動画編集ツール5つを、公式料金ページで確認した無料枠・有料プラン・日本語対応で比較。ショート動画、アバター解説、映像生成など用途別の選び方と注意点もまとめました。',body:`<h1>動画生成AI比較：Runway・Luma・HeyGen・CapCut・Descript</h1>${note2}
+<p>作った画像でホームページを作るなら<a href="../ai-homepage-sakusei-hikaku/">AIでホームページ作成（比較）</a>もどうぞ。</p><h2>出典（公式）</h2><ul><li><a href="https://gemini.google.com" rel="noopener">https://gemini.google.com</a></li><li><a href="https://deepmind.google/models/gemini-image/flash/" rel="noopener">https://deepmind.google/models/gemini-image/flash/</a></li><li><a href="https://www.krea.ai" rel="noopener">https://www.krea.ai</a></li><li><a href="https://www.napkin.ai" rel="noopener">https://www.napkin.ai</a></li></ul>`},
+{slug:'douga-seisei-ai-hikaku',date:'2026-10-20',title:'動画生成AI比較｜Runway・Luma・HeyGenなど5つの料金と無料枠',updated:'2026-10-20',desc:'動画生成AI・AI動画編集ツール5つを、公式料金ページで確認した無料枠・有料プラン・日本語対応で比較。ショート動画、アバター解説、映像生成など用途別の選び方と注意点もまとめました。',body:`<h1>動画生成AI比較：Runway・Luma・HeyGen・CapCut・Descript</h1>${note2}
 <p>「動画生成AI」と一口に言っても、<b>文章や画像から映像を作るもの</b>（Runway・Luma）、<b>AIアバターが話す解説動画を作るもの</b>（HeyGen）、<b>撮った動画をAIで編集するもの</b>（CapCut・Descript）に分かれます。まず用途を決めてから選ぶのが近道です。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>タイプ</b>／<b>無料枠</b>／<b>有料の例</b>／<b>日本語</b></td></tr>
 <tr><th><a href="../../tools/runway/">Runway</a></th><td>映像生成・編集／Free（125クレジット・1回限り）／Standard $12・Pro $28・Max $76（年払い時の月額）／日本語の公式サイト・料金ページあり</td></tr>
@@ -106,7 +155,7 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <h2>注意点</h2><ul><li>無料枠は透かし（ウォーターマーク）や商用利用の制限がつく場合があります。各社の規約を確認してください。</li><li>Runwayの無料125クレジットは1回限りで、毎月は戻りません（公式料金ページの表記）。</li><li>実在の人物の顔や声を本人の許可なく使うことは避けてください。</li><li>ドル表記の料金は為替や税で日本円の支払額が変わります。</li></ul>
 <h2>関連</h2><p><a href="../../category/${encodeURIComponent('動画')}/">動画のAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a>／<a href="../mojiokoshi-ai-hikaku/">文字起こしAIの比較</a></p>
 <h2>出典（公式）</h2><ul><li><a href="https://runwayml.com" rel="noopener">https://runwayml.com</a></li><li><a href="https://lumalabs.ai/dream-machine" rel="noopener">https://lumalabs.ai/dream-machine</a></li><li><a href="https://www.heygen.com" rel="noopener">https://www.heygen.com</a></li><li><a href="https://www.capcut.com" rel="noopener">https://www.capcut.com</a></li><li><a href="https://www.descript.com" rel="noopener">https://www.descript.com</a></li></ul>`},
-{slug:'chatgpt-igai-ai-hikaku',tools:['gemini','copilot','felo','genspark','notebooklm','chatgpt'],date:'2026-10-20',title:'ChatGPT以外のAIチャット比較｜Gemini・Copilot・Felo・Genspark・NotebookLMの無料版と使い分け',desc:'ChatGPTの代わりやセカンドオピニオンに使えるAIを、公式サイトで確認した無料版・有料プラン・日本語対応で比較。調べもの、資料の読み込み、Office連携など目的別の選び方を紹介します。',body:`<h1>ChatGPT以外のAIチャット比較：無料版と使い分け</h1>${note2}
+{slug:'chatgpt-igai-ai-hikaku',tools:['gemini','copilot','felo','genspark','notebooklm','chatgpt'],date:'2026-10-20',title:'ChatGPT以外のAIチャット比較｜Gemini・Copilotなど無料版の違い',updated:'2026-10-20',desc:'ChatGPTの代わりやセカンドオピニオンに使えるAIを、公式サイトで確認した無料版・有料プラン・日本語対応で比較。調べもの、資料の読み込み、Office連携など目的別の選び方を紹介します。',body:`<h1>ChatGPT以外のAIチャット比較：無料版と使い分け</h1>${note2}
 <p>「ChatGPT 代わり」「ChatGPT 以外」で探す人向けに、無料で始められるAIを目的別に整理しました。1つに絞るより、<b>得意分野で使い分ける</b>のがおすすめです。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料版</b>／<b>有料の例</b>／<b>日本語</b>／<b>向いている使い方</b></td></tr>
 <tr><th><a href="../../tools/chatgpt/">ChatGPT</a>（参考）</th><td>無料版あり／Go・Plus・Pro（金額は未確認）／日本語の公式料金ページあり／汎用</td></tr>
@@ -120,5 +169,5 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <h2>使い方のコツ</h2><ol><li>同じ質問を2つのAIに聞き、答えが違うところだけ一次情報（公式サイトなど）で確かめると、誤りに気づきやすくなります。</li><li>「誰向けに・何文字で・箇条書きで」など、出力の形を指定します。</li><li>長い資料は、全文を貼るよりNotebookLMのように資料を読み込むツールが向いています。</li></ol>
 <h2>注意点</h2><ul><li>AIの回答には誤りが含まれることがあります。数字・日付・法律・医療などは必ず一次情報で確認してください。</li><li>仕事の機密情報を入力する前に、各社のデータの扱い（学習への利用の有無、法人向けプランの条件）を確認してください。</li><li>無料版の回数制限や使えるモデルは予告なく変わることがあります。</li></ul>
 <h2>関連</h2><p><a href="../notebooklm-muryou-jougen/">NotebookLM（Gemini Notebook）無料版の上限</a>／<a href="../../category/${encodeURIComponent('チャットAI')}/">チャットAIの一覧</a>／<a href="../../category/${encodeURIComponent('リサーチ')}/">リサーチのAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
-<h2>出典（公式）</h2><ul><li><a href="https://gemini.google.com" rel="noopener">https://gemini.google.com</a></li><li><a href="https://copilot.microsoft.com" rel="noopener">https://copilot.microsoft.com</a></li><li><a href="https://www.felo.ai" rel="noopener">https://www.felo.ai</a></li><li><a href="https://www.genspark.ai" rel="noopener">https://www.genspark.ai</a></li><li><a href="https://notebooklm.google" rel="noopener">https://notebooklm.google</a></li><li><a href="https://chatgpt.com" rel="noopener">https://chatgpt.com</a></li><li><a href="https://www.sbintuitions.co.jp/news/press/20261013_01/" rel="noopener">https://www.sbintuitions.co.jp/news/press/20261013_01/</a></li></ul>`}
+<p>記事やブログを書くのが目的なら<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>も参考にしてください。</p><h2>出典（公式）</h2><ul><li><a href="https://gemini.google.com" rel="noopener">https://gemini.google.com</a></li><li><a href="https://copilot.microsoft.com" rel="noopener">https://copilot.microsoft.com</a></li><li><a href="https://www.felo.ai" rel="noopener">https://www.felo.ai</a></li><li><a href="https://www.genspark.ai" rel="noopener">https://www.genspark.ai</a></li><li><a href="https://notebooklm.google" rel="noopener">https://notebooklm.google</a></li><li><a href="https://chatgpt.com" rel="noopener">https://chatgpt.com</a></li><li><a href="https://www.sbintuitions.co.jp/news/press/20261013_01/" rel="noopener">https://www.sbintuitions.co.jp/news/press/20261013_01/</a></li></ul>`}
 ];
