@@ -3,6 +3,42 @@ const cta=`<p><a class="cta" href="${N}" rel="sponsored nofollow noopener" targe
 const note=`<p class="muted">更新日：2026年10月20日。料金・機能は2026年10月20日に各公式サイトで確認し直した内容です（初回の確認は2026年10月16日）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 const note2=`<p class="muted">更新日：2026年10月20日。料金・機能は2026年10月16〜20日に各公式サイトで確認した内容です（当サイトの各ツールページの「情報確認日」も参照）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 module.exports=[
+{slug:'ai-blog-jidouka',date:'2026-10-20',tools:['ai-blogkun-gold','rakurin','conoha-ai-canvas'],title:'AIブログ自動化ツール比較｜AIブログくん・ラクリン・ConoHa',desc:'AIブログくん・ラクリン（Rakurin）・ConoHa AI Canvasを、キーワード調査・記事作成・画像・WordPress投稿のどの工程まで自動でできるかで比較。料金は公式サイトで確認した内容だけを載せています。',body:`<h1>AIブログ自動化ツール比較：AIブログくん・ラクリン・ConoHa AI Canvas</h1><p class="muted">公開日：2026年10月20日。料金・機能は2026年10月20日に各公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>
+<h2>どの工程まで自動でできる？</h2><table><tr><th>工程</th><td><b>AIブログくん</b>／<b>ラクリン</b>／<b>ConoHa AI Canvas</b></td></tr>
+<tr><th>キーワード調査</th><td>あり（月間検索数・直近3か月の推移）／あり（キーワード調査・URL調査・周辺キーワード調査）／なし（画像生成サービス）</td></tr>
+<tr><th>記事の作成</th><td>自動（4,000〜8,000字と記載）／自動（超ワンクリック：タイトル・本文・パーマリンク）／なし</td></tr>
+<tr><th>画像</th><td>記事に自動で挿入／未確認／自分で生成（Stable Diffusion）</td></tr>
+<tr><th>タイトル・メタディスクリプション</th><td>自動で作成／作成機能あり／なし</td></tr>
+<tr><th>WordPressへの投稿</th><td>自動投稿／投稿（公開・予約投稿・下書き）／なし</td></tr>
+<tr><th>Googleへの通知</th><td>自動（インデックス送信と記載）／未確認／なし</td></tr>
+<tr><th>毎日の自動運転</th><td>初期設定後は毎日動くと記載／未確認（操作して実行する形）／なし</td></tr></table>
+<p>まとめると、<b>キーワードを決めたあと投稿まで任せたいならAIブログくん</b>、<b>記事は自分で見て選び、作成と投稿をまとめて楽にしたいならラクリン</b>、<b>アイキャッチなどの画像を自分で作りたいならConoHa AI Canvas</b>です。ConoHa AI Canvasは文章を書くツールではないので、ほかの2つと組み合わせて使う形になります。</p>
+<h2>料金はいくら？</h2><table><tr><th>ツール</th><td><b>料金（公式サイトより）</b></td></tr>
+<tr><th>AIブログくん</th><td>無料（3記事まで）／Lite 8,200円/月（〜15記事）／Starter 16,500円/月（〜50記事）。上位版のAIブログくんGOLDの金額は未確認</td></tr>
+<tr><th>ラクリン</th><td>フリー0円/月（毎月約2記事・クレカ登録不要）／シルバー4,980円/月／ゴールド9,980円/月／プラチナ29,980円/月（いずれも税込）</td></tr>
+<tr><th>ConoHa AI Canvas</th><td>エントリー1,100円／スタンダード4,378円／アドバンス9,878円（月額・税込）。無料プランは未確認</td></tr></table>
+<h2>AIブログくん：投稿まで任せたい人</h2><p>キーワードを設定すると、Google検索の分析、記事作成、画像の挿入、WordPressへの投稿、Googleへの通知までを自動で行うと公式サイトに書かれています。記事作成時に参照したURLを確認できるので、内容の確認に使えます。当サイトのリンク先は上位版の<a href="../../tools/ai-blogkun-gold/">AIブログくんGOLD</a>です。</p>
+<h2>ラクリン：作成と投稿をまとめて楽にしたい人</h2><p>ブログ記事づくりに特化したAIライティングツールです。「超ワンクリック」でキーワードからタイトル・本文・パーマリンクを作り、WordPressへの公開・予約投稿・下書きができます。複数キーワードの記事もまとめて作れます。リライトや誤字脱字チェックの機能もあります。くわしくは<a href="../../tools/rakurin/">ラクリンのツールページ</a>をご覧ください。</p>
+<h2>ConoHa AI Canvas：記事の画像を自分で作りたい人</h2><p>Stable Diffusionをブラウザから使えるGMOの画像生成サービスです。記事は書きませんが、アイキャッチや図の素材を作るときに使えます。くわしくは<a href="../conoha-ai-canvas-tsukaikata-ryoukin/">ConoHa AI Canvasの使い方・料金</a>をご覧ください。</p>
+<h2>自動化するときの注意点は？</h2><ul><li>AIが書いた記事には誤りが入ることがあります。公開前に人が事実を確認しましょう。</li><li>中身の薄い記事を大量に公開すると、読者の役に立ちません。テーマと確認の手順を決めてから使いましょう。</li><li>アクセスや収入が増えるかどうかは、ツールでは決まりません。</li></ul>
+<h2>関連</h2><p><a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>／<a href="../conoha-ai-canvas-tsukaikata-ryoukin/">ConoHa AI Canvasの使い方・料金</a>／<a href="../../tools/rakurin/">ラクリンのツールページ</a>／<a href="../../tools/ai-blogkun-gold/">AIブログくんGOLDのツールページ</a></p>
+<h2>出典（公式）</h2><pre><code>https://ai-blogkun.com/
+https://rakurin.net/
+https://www.conoha.jp/ai/canvas/</code></pre>`},
+{slug:'irusiru-hyouban-ryoukin',date:'2026-10-20',tools:['irusiru'],title:'イルシルの評判と料金｜無料プランの範囲と有料プランの違い',desc:'スライド作成AIイルシルの料金（フリー・パーソナル1,848円/月など）、無料プランでできること、公式サイトに書かれた導入実績やセキュリティを出典付きでまとめました。',body:`<h1>イルシルの評判と料金</h1><p class="muted">公開日：2026年10月20日。料金・機能は2026年10月20日に公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。当サイトはイルシルを実際に使ったレビューではなく、公式の情報をまとめた記事です。</p>
+<h2>料金プランは？</h2><table><tr><th>プラン</th><td><b>料金（税込）</b>／<b>AIデザイン生成</b>／<b>資料数</b>／<b>出力</b></td></tr>
+<tr><th>フリー</th><td>無料／3枚/月／3個まで／なし</td></tr>
+<tr><th>パーソナル</th><td>1,848円/月／40枚/月／無制限／PDF・PowerPoint</td></tr>
+<tr><th>パーソナルプラス</th><td>66,000円/年（月あたり5,500円）／200枚/月（1人あたり）／無制限／PDF・PowerPoint</td></tr>
+<tr><th>法人</th><td>応相談／500枚/月（1人あたり）／無制限／PDF・PowerPoint</td></tr></table>
+<p>パーソナル・パーソナルプラスの年間プランを新規で申し込む場合だけ、3日間の無料トライアルがあります。終了後は有料プランに移るので、続けない場合は期間内に解約しましょう。1ヶ月・6ヶ月プランの金額は未確認です。</p>
+<h2>公式サイトに書かれている評判・実績は？</h2><ul><li>2025年4月時点で、国内上場企業1,300社以上、3社に1社が利用していると書かれています（国内上場企業3,958社をもとにした試算）。</li><li>日本で開発している国産サービスで、日本語の見出しや表が崩れにくいことを特長にしています。</li><li>入力した内容は、無料プランを含むすべてのプランで学習に使われないと書かれています。</li><li>情報セキュリティの国際規格ISO/IEC 27001（ISMS）の認証を取得していると書かれています。</li><li>ヘルプサイト・使い方動画・画面のチャットでサポートを受けられます。</li></ul>
+<p>個人ブログなどの体験レビューもありますが、内容は書いた人の使い方によります。当サイトでは、公式サイトで確かめられる情報だけを載せています。</p>
+<h2>使い方の流れは？</h2><ol><li>作りたい資料のテーマや、手元のメモ・議事録を入力します。</li><li>AIがスライドの枚数・並び順・見出し・本文を考えます。</li><li>デザインまで自動で完成します。「グラフを棒グラフにしたい」のようにAIに伝えて直せます。</li></ol>
+<p><a class="cta" href="https://af.moshimo.com/af/c/click?a_id=5855431&p_id=5515&pc_id=15110&pl_id=71207" rel="sponsored nofollow noopener" target="_blank">イルシルを無料ではじめる</a><span class="pr">PR</span><img src="https://i.moshimo.com/af/i/impression?a_id=5855431&p_id=5515&pc_id=15110&pl_id=71207" width="1" height="1" alt="" style="border:0"></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
+<h2>使うときの注意点は？</h2><ul><li>フリープランではPDFやPowerPointに出力できません。資料を外で使うなら有料プランが必要です。</li><li>AIが作った数字やグラフは、元の資料で確認してから使いましょう。</li><li>無料トライアルは自動で有料に切り替わります。</li></ul>
+<h2>関連</h2><p><a href="../ai-slide-sakusei-hikaku/">AIスライド作成ツール比較（イルシル・Gamma・Felo）</a>／<a href="../../tools/irusiru/">イルシルのツールページ</a></p>
+<h2>出典（公式）</h2><pre><code>https://irusiru.jp/</code></pre>`},
 {slug:'ai-slide-sakusei-hikaku',date:'2026-10-20',tools:['irusiru','felo'],title:'AIスライド作成ツール比較｜イルシル・Gamma・Feloの料金と無料枠',desc:'AIでスライドを作れるイルシル・Gamma・Feloを、公式サイトで確認した料金・無料プランの範囲・出力形式で比較。日本語の資料を作りたい人向けの選び方もまとめました。',body:`<h1>AIスライド作成ツール比較：イルシル・Gamma・Felo</h1><p class="muted">料金・機能は2026年10月20日に各公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p><p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。掲載内容は報酬で変えていません。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>料金</b>／<b>無料プラン</b>／<b>出力</b>／<b>日本語</b></td></tr>
 <tr><th>イルシル</th><td>フリー無料／パーソナル1,848円/月（税込）／パーソナルプラス66,000円/年（税込・月あたり5,500円）／法人は応相談／フリーはAIデザイン生成3枚/月・資料3個まで／有料はPDF・PowerPoint（フリーは外部データ出力なし）／国産サービス</td></tr>
@@ -23,7 +59,7 @@ module.exports=[
 <h2>出典（公式）</h2><pre><code>https://irusiru.jp/
 https://gamma.app/ja/pricing
 https://felo.ai/ja/pricing</code></pre>`},
-{slug:'notta-tsukaikata-ryoukin',date:'2026-10-20',tools:['notta'],title:'Notta 使い方・料金（2026年10月版）｜無料プランの制限と有料プランの違い',desc:'AI文字起こし・議事録ツールNottaの料金（フリー・プレミアム・ビジネス）、無料プランの制限（月120分・1回3分など）、無料トライアル、使い方の流れを公式料金ページの情報だけでまとめました。',body:`<h1>Notta 使い方・料金（2026年10月版）</h1><p class="muted">料金・機能は2026年10月20日に公式サイトの料金ページで確認した内容です（表示は税込）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p><p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。</p>
+{slug:'notta-tsukaikata-ryoukin',date:'2026-10-20',updated:'2026-10-20',tools:['notta','tldv'],title:'Notta 使い方・料金（2026年10月版）｜無料プランの制限と有料プランの違い',desc:'AI文字起こし・議事録ツールNottaの料金（フリー・プレミアム・ビジネス）、無料プランの制限（月120分・1回3分など）、無料トライアル、使い方の流れを公式料金ページの情報だけでまとめました。',body:`<h1>Notta 使い方・料金（2026年10月版）</h1><p class="muted">料金・機能は2026年10月20日に公式サイトの料金ページで確認した内容です（表示は税込）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p><p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。</p>
 <p>Nottaは、オンライン会議・対面・電話・音声ファイルの会話を文字起こしし、AIが要点・話者・決定事項・タスクを整理するAI議事録ツールです。公式サイトでは「日本語特化AIと58言語対応」と書かれています。基本情報は<a href="../../tools/notta/">Nottaのツールページ</a>にもまとめています。</p>
 <p><a class="cta" href="${N}" rel="sponsored nofollow noopener" target="_blank">Nottaを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
 <h2>料金プラン（年間プランの月あたり・税込）</h2><table><tr><th>プラン</th><td><b>料金</b>／<b>文字起こし時間</b>／<b>1回の上限</b>／<b>ファイルインポート</b>／<b>AI要約</b></td></tr>
@@ -38,13 +74,14 @@ https://felo.ai/ja/pricing</code></pre>`},
 <h2>無料トライアル</h2><p>プレミアムプランには3日間の無料トライアルがあります。公式の説明では、トライアル終了後は<b>プレミアム年間プランで自動更新（課金）</b>されます。続けない場合は、トライアルが終わる前に解約の手続きが必要です。72時間以内に解約すれば請求は発生しないと書かれています。</p>
 <h2>使い方の流れ</h2><ol><li>公式サイトから無料で登録します（フリープランはクレジットカード登録不要）。</li><li>会話を記録します。Zoom・Teams・Google Meet・Webexの会議の文字起こし、スマホアプリでの対面の録音、音声・動画ファイルの取り込みに対応しています。Web版・アプリ（iOS/Android）・デスクトップ版・Chrome拡張機能があります。</li><li>AIが要点・話者・決定事項・タスクを整理します（AI要約）。議事録やフォローメールの下書きも作れます。</li><li>元の発言を見返して、固有名詞や数字の誤りを直してから共有します。</li></ol>
 <h2>どのプランを選ぶ？</h2><ul><li><b>まず操作感を試したい・短いメモが中心</b>：フリー</li><li><b>個人で毎週の会議や取材を記録したい</b>：プレミアム（月30時間まで）。まず3日間のトライアルで確かめる方法もあります（自動更新に注意）。</li><li><b>チームで共有したい・時間を気にせず使いたい</b>：ビジネス</li></ul><p>ほかのツールと比べたい場合は<a href="../mojiokoshi-ai-hikaku/">文字起こしAI比較</a>、無料枠だけで比べたい場合は<a href="../muryou-mojiokoshi-ai/">無料で使える文字起こしAI</a>をご覧ください。</p>
-<h2>支払い方法</h2><p>JCB・VISA・Mastercard・Discover・American Expressのクレジットカードが使えます。ビジネスプランとエンタープライズプランは銀行振込による請求書払いにも対応しています。アプリ版ではApple IDやGoogle Playでの決済も使えます。</p>
+<h2>Notta以外の選択肢は？</h2><p>Web会議（Zoom・Google Meet・Microsoft Teams）が中心なら、tl;dvも候補です。無料プランでは録画・文字起こしが回数無制限で、AIメモは10会議分までです。有料はプロ ¥36,960/年、ビジネス ¥59,760/年（どちらも1シート・年払い）です。月払いの円建て料金は未確認です（公式料金ページより）。電話や対面の録音もまとめて使いたいならNotta、という分け方ができます。</p><p><a class="cta" href="https://tldv.cello.so/hWETXPHvSAc" rel="sponsored nofollow noopener" target="_blank">tl;dvを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p><h2>支払い方法</h2><p>JCB・VISA・Mastercard・Discover・American Expressのクレジットカードが使えます。ビジネスプランとエンタープライズプランは銀行振込による請求書払いにも対応しています。アプリ版ではApple IDやGoogle Playでの決済も使えます。</p>
 <h2>注意点</h2><ul><li>録音・文字起こしをするときは、参加者に事前に伝えて同意をとりましょう（<a href="../gijiroku-ai-jidouka/">議事録をAIで自動化する方法</a>も参考に）。</li><li>AIの文字起こしや要約には誤りが入ることがあります。大事な数字や名前は元の音声で確認してください。</li><li>料金ページのプラン紹介では「AI学習なし」はエンタープライズの項目に書かれています。ほかのプランでのデータの扱いは、公式のプライバシーポリシーなどで確認してください（未確認）。</li></ul>
 <p><a class="cta" href="${N}" rel="sponsored nofollow noopener" target="_blank">Nottaを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
 <h2>関連</h2><p><a href="../../tools/notta/">Nottaのツールページ</a>／<a href="../mojiokoshi-ai-hikaku/">文字起こしAI比較</a>／<a href="../muryou-mojiokoshi-ai/">無料で使える文字起こしAI</a>／<a href="../../category/${encodeURIComponent('議事録・文字起こし')}/">議事録・文字起こしのAIツール一覧</a></p>
 <h2>出典（公式）</h2><pre><code>https://www.notta.ai/pricing
-https://www.notta.ai/</code></pre>`},
-{slug:'elevenlabs-muryou-shouyou',date:'2026-10-20',tools:['elevenlabs'],title:'ElevenLabsは無料で商用利用できる？規約と料金プランで確認',desc:'ElevenLabsの無料プランで商用利用できるかを、公式の利用規約と料金ページだけで確認。無料と有料の違い、商用利用に必要なプラン、注意点を短くまとめました。',body:`<h1>ElevenLabsは無料で商用利用できる？</h1><p class="muted">2026年10月20日にElevenLabsの公式の利用規約（英語）と料金ページで確認した内容です。規約や料金は変わることがあるため、使う前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。この記事は法律の助言ではありません。</p>
+https://www.notta.ai/
+https://tldv.io/app/pricing</code></pre>`},
+{slug:'elevenlabs-muryou-shouyou',date:'2026-10-20',updated:'2026-10-20',tools:['elevenlabs','fliki'],title:'ElevenLabsは無料で商用利用できる？規約と料金プランで確認',desc:'ElevenLabsの無料プランで商用利用できるかを、公式の利用規約と料金ページだけで確認。無料と有料の違い、商用利用に必要なプラン、注意点を短くまとめました。',body:`<h1>ElevenLabsは無料で商用利用できる？</h1><p class="muted">2026年10月20日にElevenLabsの公式の利用規約（英語）と料金ページで確認した内容です。規約や料金は変わることがあるため、使う前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。この記事は法律の助言ではありません。</p>
 <h2>結論</h2><p>公式の利用規約では、<b>無料で使う人（Free User）は非商用の目的だけ</b>で使えると書かれています。<b>有料のサブスクリプションプランの人（Paid User）は商用目的で使える</b>と書かれています。どちらの場合も、禁止用途ポリシー（Prohibited Use Policy）を守る必要があります。</p>
 <h2>無料と有料の違い（料金ページより）</h2><table><tr><th>プラン</th><td><b>月額（税別）</b>／<b>クレジット/月</b>／<b>商用ライセンスの記載</b></td></tr>
 <tr><th>Free</th><td>$0／10,000／記載なし（規約上は非商用のみ）</td></tr>
@@ -54,9 +91,10 @@ https://www.notta.ai/</code></pre>`},
 <p>このほかScale（$299）、Business（$990）、Enterprise（個別見積もり）があります。日本円での請求額は未確認です。</p>
 <p><a class="cta" href="https://try.elevenlabs.io/q37bimm1e1ov" rel="sponsored nofollow noopener" target="_blank">ElevenLabsを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。当サイトはElevenLabs Creator Affiliate Programの参加者です。</p>
 <h2>注意点</h2><ul><li>規約では、非商用で使う場合は個人のメールアドレスで登録する必要があると書かれています。</li><li>会社のメールアドレスで登録すると、その会社がアカウントの管理者とみなされることがあると書かれています。</li><li>ダウンロードした音声は、サービスの外でも規約の範囲で使えると書かれています。</li><li>無料期間に作った音声を、あとで有料にしてから商用に使えるかどうかは、規約からは読み取れませんでした（未確認）。</li><li>YouTubeの収益化など、個別の使い方が「商用」に当たるかの公式の説明は未確認です。</li><li>他人の声を複製するときは、本人の許可が必要です。</li></ul>
-<h2>関連</h2><p><a href="../../tools/elevenlabs/">ElevenLabsのツールページ</a>／<a href="../ai-yomiage-elevenlabs-voicevox/">AI音声読み上げの選び方（ElevenLabsとVOICEVOX）</a>／<a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a></p>
+<h2>読み上げ音声を動画にしたいときは？</h2><p>作った音声をそのまま動画にしたい場合は、Flikiという方法もあります。台本やブログ記事から、AIナレーション付きの動画を作れるツールです。無料プラン（クレジットカード不要・月3クレジット・720p・透かし入り）があり、商用利用権は有料のStandard以上と書かれています。有料プランの円での金額は未確認です。くわしくは<a href="../../tools/fliki/">Flikiのツールページ</a>をご覧ください。</p><p><a class="cta" href="https://fliki.ai/?via=marui" rel="sponsored nofollow noopener" target="_blank">Flikiを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p><h2>関連</h2><p><a href="../../tools/elevenlabs/">ElevenLabsのツールページ</a>／<a href="../ai-yomiage-elevenlabs-voicevox/">AI音声読み上げの選び方（ElevenLabsとVOICEVOX）</a>／<a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a></p>
 <h2>出典（公式）</h2><pre><code>https://elevenlabs.io/terms-of-use
-https://elevenlabs.io/pricing</code></pre>`},
+https://elevenlabs.io/pricing
+https://fliki.ai/pricing</code></pre>`},
 {slug:'ai-homepage-sakusei-hikaku',date:'2026-10-20',tools:['lolipop-ai-homepage','v0','conoha-ai-canvas'],title:'AIでホームページ作成｜ロリポップ！AIホームページ・ジンドゥーAIビルダー・v0の料金と選び方',desc:'AIでホームページを作れるサービスを、公式サイトで確認した料金・無料期間・日本語対応で比較。お店や個人事業向けのロリポップ！AIホームページとジンドゥーAIビルダー、開発者向けのv0の違いと選び方をまとめました。',body:`<h1>AIでホームページ作成：3つのサービスの比較</h1><p class="muted">2026年10月20日に各公式サイトで確認した内容です。料金は変わることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p><p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
 <h2>比較表</h2><table><tr><th>サービス</th><td><b>料金</b>／<b>無料で試す</b>／<b>日本語</b>／<b>向いている人</b></td></tr>
 <tr><th><a href="../../tools/lolipop-ai-homepage/">ロリポップ！AIホームページ</a></th><td>1,540円（1ヵ月契約）〜660円（36ヵ月契約）／月（税込・1サイト）／10日間無料（クレジットカード不要）／日本語サービス／お店・個人事業のホームページをすぐ公開したい人</td></tr>
@@ -180,20 +218,20 @@ https://www.notta.ai/pricing</code></pre>`},
 <p>関連：<a href="../gijiroku-ai-jidouka/">会議の議事録をAIで自動化する方法</a>／<a href="../muryou-mojiokoshi-ai/">無料で使える文字起こしAI</a></p>
 <p class="muted">公式サイト：https://www.notta.ai/ ／ https://rimo.app/ ／ https://otter.ai/pricing ／ https://tldv.io/app/pricing ／ https://jp.plaud.ai/</p><p>議事録だけでなく文章作成・翻訳もまとめたい場合は<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>（Doraverseなど）も参考にしてください。</p><p>会議の議事録づくりに絞って比べたい場合は<a href="../ai-gijiroku-tool-hikaku/">AI議事録ツール比較：tl;dv・WITH TEAM・Plaud・Notta</a>もご覧ください。</p>
 `},
-{slug:'gijiroku-ai-jidouka',date:'2026-10-16',updated:'2026-10-20',tools:['notta','rimo'],title:'会議の議事録をAIで自動化する方法｜準備から共有までの手順',desc:'AI議事録ツールで会議の記録・要約・共有を自動化する手順を、録音の同意や確認の注意点とあわせて解説します。',body:`<h1>会議の議事録をAIで自動化する方法</h1>${note}
+{slug:'gijiroku-ai-jidouka',date:'2026-10-16',updated:'2026-10-20',tools:['notta','rimo','tldv'],title:'会議の議事録をAIで自動化する方法｜準備から共有までの手順',desc:'AI議事録ツールで会議の記録・要約・共有を自動化する手順を、録音の同意や確認の注意点とあわせて解説します。',body:`<h1>会議の議事録をAIで自動化する方法</h1>${note}
 <h2>1. どこまで任せるか決める</h2><p>AI議事録ツールに任せられるのは、主に「録音・文字起こし」「要約」「決定事項やタスクの抜き出し」です。最終的な内容の確認は人が行う前提で考えます。AIの文字起こしや要約には誤りが入ることがあります。</p>
 <h2>2. ツールを選ぶ</h2><p>Web会議（Zoom・Teams・Google Meet）に参加して自動で記録するタイプが多く、Notta・Rimo（旧Rimo Voice）・Otterなどが対応をうたっています（NottaとRimoはWebexにも対応と記載）。違いは<a href="../mojiokoshi-ai-hikaku/">文字起こしAIツール比較</a>にまとめました。</p>
 <h2>3. 参加者の同意をとる</h2><p>録音・記録することを、会議の冒頭や招待文で参加者に伝えます。社外の人がいる会議では特に大切です。会社の情報管理ルールも確認しましょう。</p>
 <h2>4. 会議ごとの流れ</h2><ol><li>カレンダーとツールを連携し、会議に自動参加させる（または手元で録音する）</li><li>会議後、文字起こしと要約を確認し、固有名詞や数字の誤りを直す</li><li>決定事項とタスクを担当者ごとに整理する</li><li>議事録を共有する（ツールの共有機能や、SlackやNotionなどへの転記）</li></ol>
 <h2>5. 精度を上げるコツ</h2><ul><li>専門用語や社内用語を単語登録する（Notta・Rimo・Otterなどに機能あり。Nottaのフリープランは3単語まで）</li><li>マイクに近い位置で話す、同時に話さない</li><li>要約の型（議題・決定事項・宿題）を決めておく</li></ul>
-<h2>Nottaで始める場合</h2><p>Nottaは要点・話者・決定事項・タスクの整理と議事録の下書きに対応しています。フリープラン（120分/月・1回3分まで）で操作感を確かめ、長い会議に使うならプレミアム（1,185円/月・年払い・税込）以上が目安です。料金や無料プランの制限は<a href="../notta-tsukaikata-ryoukin/">Notta 使い方・料金（2026年10月版）</a>にくわしくまとめました。</p>${cta}`},
-{slug:'muryou-mojiokoshi-ai',date:'2026-10-16',updated:'2026-10-20',tools:['notta','rimo'],title:'無料で使える文字起こしAI｜無料プランの上限を公式サイトで確認',desc:'無料プランがある文字起こしAIの上限（分数・回数）を公式サイトで確認して整理。無料でできること、できないことがわかります。',body:`<h1>無料で使える文字起こしAI</h1>${note}
+<h2>Zoom・Meet・Teamsの会議が中心ならtl;dvも</h2><p>tl;dvは、Zoom・Google Meet・Microsoft Teamsの会議を録画・文字起こしし、要約・決定事項・タスクをAIが作るツールです。無料プランでは録画と文字起こしが回数無制限で、AIメモは10会議分までです（クレジットカード不要・公式料金ページより）。くわしくは<a href="../../tools/tldv/">tl;dvのツールページ</a>をご覧ください。</p><p><a class="cta" href="https://tldv.cello.so/hWETXPHvSAc" rel="sponsored nofollow noopener" target="_blank">tl;dvを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p><h2>Nottaで始める場合</h2><p>Nottaは要点・話者・決定事項・タスクの整理と議事録の下書きに対応しています。フリープラン（120分/月・1回3分まで）で操作感を確かめ、長い会議に使うならプレミアム（1,185円/月・年払い・税込）以上が目安です。料金や無料プランの制限は<a href="../notta-tsukaikata-ryoukin/">Notta 使い方・料金（2026年10月版）</a>にくわしくまとめました。</p>${cta}`},
+{slug:'muryou-mojiokoshi-ai',date:'2026-10-16',updated:'2026-10-20',tools:['notta','rimo','tldv'],title:'無料で使える文字起こしAI｜無料プランの上限を公式サイトで確認',desc:'無料プランがある文字起こしAIの上限（分数・回数）を公式サイトで確認して整理。無料でできること、できないことがわかります。',body:`<h1>無料で使える文字起こしAI</h1>${note}
 <h2>無料プランの比較</h2><table><tr><th>Notta</th><td>フリー：文字起こし120分/月・1回3分まで、ファイルインポート50個/月、AI要約10回/月。クレジットカード登録不要</td></tr>
 <tr><th>Otter</th><td>Basic：月300分の文字起こし、音声・動画ファイルの取り込みは累計3回まで、AIチャットは月20回まで</td></tr>
-<tr><th>tl;dv</th><td>Freeプランあり（上限は未確認）</td></tr>
+<tr><th>tl;dv</th><td>無料プラン：録画・文字起こしは回数無制限、AIメモは10会議分・「AIに尋ねる」は10回分まで。クレジットカード不要</td></tr>
 <tr><th>Rimo（旧Rimo Voice）</th><td>常に無料のプランは未確認。7日間の無料トライアルあり（クレジットカード登録不要）</td></tr></table>
-<h2>どれを選ぶ？</h2><ul><li>短い打ち合わせやメモ、操作感を試したい：Nottaのフリー（1回3分まで。くわしくは<a href="../notta-tsukaikata-ryoukin/">Nottaの使い方・料金</a>）</li><li>英語中心で月の分数を多く使いたい：Otterの Basic</li><li>長い日本語の会議を毎週記録したい：無料枠では足りないことが多いため、有料プランの料金も比べるのがおすすめです（<a href="../mojiokoshi-ai-hikaku/">比較記事</a>）</li></ul>
-<h2>無料で使うときの注意</h2><ul><li>無料枠は月単位でリセットされ、繰り越しはできない場合があります（Otterは繰り越しなしと記載）</li><li>機密情報を扱う場合は、各社のデータの扱い（AI学習への利用など）を公式サイトで確認してください</li><li>Rimoは期間限定の無料トライアルです。期間が終わったあとの扱いは公式サイトで確認してください</li></ul>${cta}<h2>出典（公式）</h2><pre><code>https://www.notta.ai/pricing
+<h2>どれを選ぶ？</h2><ul><li>短い打ち合わせやメモ、操作感を試したい：Nottaのフリー（1回3分まで。くわしくは<a href="../notta-tsukaikata-ryoukin/">Nottaの使い方・料金</a>）</li><li>英語中心で月の分数を多く使いたい：Otterの Basic</li><li>Zoom・Meet・Teamsの会議を回数を気にせず記録したい：tl;dvの無料プラン（AIメモは10会議分まで。<a href="../../tools/tldv/">tl;dvのツールページ</a>）</li><li>長い日本語の会議を毎週記録したい：無料枠では足りないことが多いため、有料プランの料金も比べるのがおすすめです（<a href="../mojiokoshi-ai-hikaku/">比較記事</a>）</li></ul>
+<p><a class="cta" href="https://tldv.cello.so/hWETXPHvSAc" rel="sponsored nofollow noopener" target="_blank">tl;dvを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p><h2>無料で使うときの注意</h2><ul><li>無料枠は月単位でリセットされ、繰り越しはできない場合があります（Otterは繰り越しなしと記載）</li><li>機密情報を扱う場合は、各社のデータの扱い（AI学習への利用など）を公式サイトで確認してください</li><li>Rimoは期間限定の無料トライアルです。期間が終わったあとの扱いは公式サイトで確認してください</li></ul>${cta}<h2>出典（公式）</h2><pre><code>https://www.notta.ai/pricing
 https://otter.ai/pricing
 https://tldv.io/app/pricing
 https://rimo.app/pricing</code></pre>`},
