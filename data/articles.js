@@ -3,6 +3,22 @@ const cta=`<p><a class="cta" href="${N}" rel="sponsored nofollow noopener" targe
 const note=`<p class="muted">料金・機能は2026年10月16日に各公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 const note2=`<p class="muted">更新日：2026年10月20日。料金・機能は2026年10月16〜20日に各公式サイトで確認した内容です（当サイトの各ツールページの「情報確認日」も参照）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 module.exports=[
+{slug:'conoha-ai-canvas-tsukaikata-ryoukin',date:'2026-10-20',tools:['conoha-ai-canvas'],title:'ConoHa AI Canvas 使い方・料金（2026年10月版）',desc:'ブラウザでStable Diffusionを使えるConoHa AI Canvasの料金（基本料金とWebUI従量課金）、無料時間、支払い方法、使い始めの流れを公式サイトの情報だけでまとめました。',body:`<h1>ConoHa AI Canvas 使い方・料金（2026年10月版）</h1><p class="muted">料金は2026年10月20日に公式料金ページで確認した内容です（表示は税込）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>
+<p>ConoHa AI Canvasは、GMOインターネットグループのConoHaが提供する、ブラウザからStable Diffusionで画像を作れるサービスです。くわしい基本情報は<a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvasのツールページ</a>にもまとめています。</p>
+<p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+D3MEI+50+7RTY1E" rel="sponsored nofollow noopener" target="_blank">ConoHa AI Canvasの公式サイトを見る</a><span class="pr">PR</span><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+D3MEI+50+7RTY1E" width="1" height="1" alt="" style="border:0"></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
+<h2>料金のしくみ</h2><p>料金は「月額の基本料金」と「WebUIを起動していた時間の従量課金」の合計です。各プランに毎月の無料時間があり、その範囲ならWebUIの料金はかかりません。</p>
+<table><tr><th>プラン</th><td><b>基本料金（月額・税込）</b>／<b>WebUI無料時間（毎月）</b>／<b>ストレージ</b></td></tr>
+<tr><th>エントリー</th><td>1,100円／10時間／30GB</td></tr>
+<tr><th>スタンダード</th><td>4,378円／50時間／100GB</td></tr>
+<tr><th>アドバンス</th><td>9,878円／100時間／500GB</td></tr></table>
+<ul><li>無料時間を超えた分は6.6円/分です。</li><li>無料時間は月ごとにリセットされます。</li><li>生成する画像の枚数に上限はないと公式に書かれています。</li><li>基本料金が0円の無料プランは、料金ページでは確認できませんでした（未確認）。</li></ul>
+<h2>使い方の流れ</h2><ol><li>公式サイトから申し込み、プランを選びます。</li><li>コントロールパネルからWebUIを起動します（起動している間だけ従量課金の対象です）。</li><li>WebUIで画像を生成します。</li><li>使い終わったらWebUIを終了します。自動終了のタイマーも自分で設定できます。</li></ol>
+<h2>費用をおさえるコツ</h2><ul><li>まずはエントリー（1,100円/月・無料10時間）で試すと、従量課金の目安がつかみやすいです。</li><li>自動終了タイマーを短めにしておくと、起動したままの課金を防げます。</li><li>プラン変更は「申し込みの翌月1日」から反映されます。ストレージ容量を超えているとプランを下げられません。</li></ul>
+<h2>支払い方法</h2><p>クレジットカード（後払い）と、ConoHaチャージ（前払い）が使えます。ConoHaチャージはクレジットカード・銀行振込・Amazon Pay・ペイジー・コンビニ・PayPalで入金できます。ペイジーとコンビニは1件150円の手数料がかかります。</p>
+<h2>注意点</h2><ul><li>画像の商用利用の条件は、使うモデルの規約によって変わります。料金ページでは確認できませんでした（未確認）。</li><li>ConoHaチャージは残高が足りなくなるとサービスが止まります。</li></ul>
+<h2>関連</h2><p><a href="../../tools/conoha-ai-canvas/">ConoHa AI Canvasのツールページ</a>／<a href="../gazou-seisei-ai-muryou/">無料で使える画像生成AI</a>／<a href="../../category/${encodeURIComponent('画像・デザイン')}/">画像・デザインのAIツール一覧</a></p>
+<h2>出典（公式）</h2><pre><code>https://ai.conoha.jp/canvas/pricing/
+https://www.conoha.jp/ai/canvas/</code></pre>`},
 {slug:'ai-yomiage-elevenlabs-voicevox',date:'2026-10-20',title:'AI音声読み上げの選び方｜ElevenLabsとVOICEVOXの料金・商用利用・日本語対応',desc:'ナレーションや動画の読み上げに使えるElevenLabsとVOICEVOXを、公式サイトで確認した料金・商用利用の条件・日本語対応で比べ、使い方の流れも短くまとめました。',body:`<h1>AI音声読み上げの選び方：ElevenLabsとVOICEVOX</h1><p class="muted">料金・条件は2026年10月20日に各公式サイトで確認した内容です。変更されることがあるため、使う前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>料金</b>／<b>商用利用</b>／<b>日本語</b>／<b>使う場所</b></td></tr>
 <tr><th>ElevenLabs</th><td>Free $0/月（10,000クレジット）、Starter $6/月、Creator $22/月（初月$11）、Pro $99/月など（税別）／料金ページでは「Commercial License」はStarter以上に記載／日本語の読み上げページあり（対応言語数は料金表で74、日本語ページで「90以上」と表記が分かれるため未確認）／Webブラウザ</td></tr>
@@ -72,7 +88,7 @@ https://voicevox.hiroshiba.jp/term/</code></pre>`},
 <h2>注意点</h2><ul><li>無料枠は透かし（ウォーターマーク）や商用利用の制限がつく場合があります。各社の規約を確認してください。</li><li>Runwayの無料125クレジットは1回限りで、毎月は戻りません（公式料金ページの表記）。</li><li>実在の人物の顔や声を本人の許可なく使うことは避けてください。</li><li>ドル表記の料金は為替や税で日本円の支払額が変わります。</li></ul>
 <h2>関連</h2><p><a href="../../category/${encodeURIComponent('動画')}/">動画のAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a>／<a href="../mojiokoshi-ai-hikaku/">文字起こしAIの比較</a></p>
 <h2>出典（公式）</h2><ul><li><a href="https://runwayml.com" rel="noopener">https://runwayml.com</a></li><li><a href="https://lumalabs.ai/dream-machine" rel="noopener">https://lumalabs.ai/dream-machine</a></li><li><a href="https://www.heygen.com" rel="noopener">https://www.heygen.com</a></li><li><a href="https://www.capcut.com" rel="noopener">https://www.capcut.com</a></li><li><a href="https://www.descript.com" rel="noopener">https://www.descript.com</a></li></ul>`},
-{slug:'chatgpt-igai-ai-hikaku',date:'2026-10-20',title:'ChatGPT以外のAIチャット比較｜Gemini・Copilot・Felo・Genspark・NotebookLMの無料版と使い分け',desc:'ChatGPTの代わりやセカンドオピニオンに使えるAIを、公式サイトで確認した無料版・有料プラン・日本語対応で比較。調べもの、資料の読み込み、Office連携など目的別の選び方を紹介します。',body:`<h1>ChatGPT以外のAIチャット比較：無料版と使い分け</h1>${note2}
+{slug:'chatgpt-igai-ai-hikaku',tools:['gemini','copilot','felo','genspark','notebooklm','chatgpt'],date:'2026-10-20',title:'ChatGPT以外のAIチャット比較｜Gemini・Copilot・Felo・Genspark・NotebookLMの無料版と使い分け',desc:'ChatGPTの代わりやセカンドオピニオンに使えるAIを、公式サイトで確認した無料版・有料プラン・日本語対応で比較。調べもの、資料の読み込み、Office連携など目的別の選び方を紹介します。',body:`<h1>ChatGPT以外のAIチャット比較：無料版と使い分け</h1>${note2}
 <p>「ChatGPT 代わり」「ChatGPT 以外」で探す人向けに、無料で始められるAIを目的別に整理しました。1つに絞るより、<b>得意分野で使い分ける</b>のがおすすめです。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料版</b>／<b>有料の例</b>／<b>日本語</b>／<b>向いている使い方</b></td></tr>
 <tr><th><a href="../../tools/chatgpt/">ChatGPT</a>（参考）</th><td>無料版あり／Go・Plus・Pro（金額は未確認）／日本語の公式料金ページあり／汎用</td></tr>
