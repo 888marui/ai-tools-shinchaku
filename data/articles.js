@@ -54,12 +54,13 @@ https://www.jimdo.com/jp/
 https://www.jimdo.com/jp/pricing/
 https://v0.app/pricing
 https://www.conoha.jp/ai/canvas/</code></pre>`},
-{slug:'ai-writing-tool-hikaku',date:'2026-10-20',tools:['value-ai-writer','doraverse','notion-ai','deepl-write','rakurin','ai-blogkun-gold','irusiru'],title:'AIライティングツール比較｜Value AI Writer・Doraverseなど4つの料金',updated:'2026-10-20',desc:'ブログ記事やビジネス文書に使えるAIライティングツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。SEO記事作成、社内文書、推敲など目的別の選び方をまとめました。',body:`<h1>AIライティングツール比較：Value AI Writer・Doraverse・Notion AI・DeepL Write</h1>${note2}<p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
+{slug:'ai-writing-tool-hikaku',date:'2026-10-20',tools:['value-ai-writer','doraverse','notion-ai','deepl-write','rakurin','ai-blogkun-gold','irusiru','catchy'],title:'AIライティングツール比較｜Value AI Writer・Doraverseなど4つの料金',updated:'2026-10-20',desc:'ブログ記事やビジネス文書に使えるAIライティングツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。SEO記事作成、社内文書、推敲など目的別の選び方をまとめました。',body:`<h1>AIライティングツール比較：Value AI Writer・Doraverse・Notion AI・DeepL Write</h1>${note2}<p class="muted">PR：この記事にはアフィリエイトリンク（広告）が含まれます。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容や順番は報酬で変えていません。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>料金</b>／<b>無料で試す</b>／<b>日本語</b>／<b>得意なこと</b></td></tr>
 <tr><th><a href="../../tools/value-ai-writer/">Value AI Writer byGMO</a></th><td>フリー0円（月1記事）／エントリー840円／ベーシック2,800円／プロ10,780円ほか（月額・税込）／フリープランあり／日本語サービス／SEO記事・ブログ記事の作成</td></tr>
 <tr><th><a href="../../tools/doraverse/">Doraverse</a></th><td>Starter $10／Pro $25／Business $30（1ユーザー・月払い、年払いは最大20%割引）／14日間無料トライアル（クレジットカード不要）／日本語の公式サイトあり／複数AIモデルでの執筆・リサーチ、議事録、翻訳</td></tr>
 <tr><th><a href="../../tools/notion-ai/">Notion AI</a></th><td>Free ¥0／Plus ¥1,650／Business ¥3,150（1人あたり月額。AIの範囲はプランで異なる）／Freeプランあり／日本語対応／Notion内の文書作成・要約・検索</td></tr>
-<tr><th><a href="../../tools/deepl-write/">DeepL Write</a></th><td>無料版あり／Write Proの金額は未確認／無料版あり／日本語対応（日本語では文体・トーンの切り替えは不可）／書いた文章の推敲・言い換え</td></tr></table>
+<tr><th><a href="../../tools/deepl-write/">DeepL Write</a></th><td>無料版あり／Write Proの金額は未確認／無料版あり／日本語対応（日本語では文体・トーンの切り替えは不可）／書いた文章の推敲・言い換え</td></tr>
+<tr><th><a href="../../tools/catchy/">Catchy（キャッチー）</a></th><td>Free ¥0（毎月10クレジット）／Starter ¥3,000〜/月／Pro ¥9,800/月（無制限）（税込・税抜は未確認）／Freeプランあり（クレカ登録不要）／日本語の国内サービス／100種類以上の生成ツールでキャッチコピー・広告文・記事・メール作成</td></tr></table>
 <h2>Value AI Writer byGMO：SEO記事を作りたい人</h2><p>GMOのSEO記事生成AIライティングツールです。ChatGPT-4o・4.1、Claude 4.0、Gemini 2.5 Proに対応し、ブログやオウンドメディアの記事作成に使えます。フリープラン（月1記事）で試せます（公式サイトより）。</p>
 <p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+FHCTM+1JUK+1HL85U" rel="sponsored nofollow noopener" target="_blank">Value AI Writerを無料で試す</a><span class="pr">PR</span><img src="https://www18.a8.net/0.gif?a8mat=4BEL1J+FHCTM+1JUK+1HL85U" width="1" height="1" alt="" style="border:0"></p>
 <h2>Doraverse：文章以外の作業もまとめたい人</h2><p>複数のAIモデルでの執筆・リサーチに加え、AI議事録、AI翻訳、画像生成、AIエージェント作成をまとめたビジネス向けAIプラットフォームです。14日間の無料トライアルはクレジットカード不要です（公式サイトより）。</p>
@@ -72,7 +73,8 @@ https://www.conoha.jp/ai/canvas/</code></pre>`},
 https://doraverse.com/ja
 https://www.notion.com/ja/pricing
 https://www.notion.com/product/ai
-https://www.deepl.com/write</code></pre>`},
+https://www.deepl.com/write
+https://lp.ai-copywriter.jp/</code></pre>`},
 {slug:'notebooklm-muryou-jougen',date:'2026-10-20',tools:['notebooklm'],title:'NotebookLM（Gemini Notebook）無料版の上限まとめ｜ソース数・回数',desc:'NotebookLM（Gemini Notebook）を無料で使うときの上限を、Googleの公式ヘルプとブログだけで整理。ノートブック数・ソース数・ファイルサイズと、2026年9月からの利用上限の変更点をまとめました。',body:`<h1>NotebookLM（Gemini Notebook）無料版の上限</h1><p class="muted">2026年10月20日にGoogleの公式ヘルプとブログで確認した内容です。上限は変わることがあるため、使う前に公式ヘルプをご確認ください。「未確認」は公式情報で確認できなかった項目です。</p>
 <h2>名前について</h2><p>Googleの公式ヘルプでは、現在「Gemini Notebook」という名前で説明されています（ヘルプのURLやページ名には「NotebookLM」も残っています）。くわしい基本情報は<a href="../../tools/notebooklm/">NotebookLM（Gemini Notebook）のツールページ</a>にもまとめています。</p>
 <h2>無料（Standard）で決まっている上限</h2><table><tr><th>項目</th><td>無料（Standard）</td></tr>
