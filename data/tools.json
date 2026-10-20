@@ -150,7 +150,11 @@
     "japanese": "対応（日本語の公式サイトあり、音声の対応言語に日本語を含む）",
     "added": "2026-10-16",
     "checked": "2026-10-17",
-    "affiliate": null
+    "affiliate": {
+      "url": "https://try.elevenlabs.io/q37bimm1e1ov",
+      "label": "ElevenLabsを無料で試す",
+      "disclosure": "PR：当サイト（AIツール新着便）はElevenLabsの独立したアフィリエイト（ElevenLabs Creator Affiliate Program参加者）です。上のリンクから登録・有料プラン契約があると、運営者が紹介報酬を受け取ることがあります。"
+    }
   },
   {
     "slug": "runway",
