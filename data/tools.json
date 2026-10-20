@@ -14,7 +14,8 @@
   "japanese": "日本語の公式ページあり",
   "added": "2026-10-16",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Google AI Plus（金額はGoogle Geminiの項目を参照）"
  },
  {
   "slug": "gemini",
@@ -31,7 +32,8 @@
   "japanese": "日本語の料金ページあり（日本円表示）",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Google AI Plus ￥725/月"
  },
  {
   "slug": "copilot",
@@ -48,7 +50,8 @@
   "japanese": "日本語の公式ページあり（日本円表示）",
   "added": "2026-10-16",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Microsoft 365 Personal ¥2,130/月"
  },
  {
   "slug": "genspark",
@@ -65,7 +68,8 @@
   "japanese": "対応（日本語の公式サイトあり）",
   "added": "2026-10-16",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "felo",
@@ -82,7 +86,8 @@
   "japanese": "対応（日本語の公式サイト・料金ページあり、円表示）",
   "added": "2026-10-16",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "月額2,099円（年払いは月あたり1,750円）"
  },
  {
   "slug": "napkin",
@@ -99,7 +104,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Plus $9/月（1人あたり）"
  },
  {
   "slug": "heygen",
@@ -116,7 +122,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Creator $29/月"
  },
  {
   "slug": "suno",
@@ -133,7 +140,8 @@
   "japanese": "対応（日本語の公式サイトあり）",
   "added": "2026-10-16",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Pro $8/月（年払い時）"
  },
  {
   "slug": "elevenlabs",
@@ -154,7 +162,8 @@
    "url": "https://try.elevenlabs.io/q37bimm1e1ov",
    "label": "ElevenLabsを無料で試す",
    "disclosure": "PR：当サイト（AIツール新着便）はElevenLabsの独立したアフィリエイト（ElevenLabs Creator Affiliate Program参加者）です。上のリンクから登録・有料プラン契約があると、運営者が紹介報酬を受け取ることがあります。"
-  }
+  },
+  "cheapest": "Starter $6/月"
  },
  {
   "slug": "runway",
@@ -171,7 +180,8 @@
   "japanese": "対応（日本語の公式サイト・料金ページあり）",
   "added": "2026-10-16",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Standard $12/月（年払い時。月払いは$15）"
  },
  {
   "slug": "luma",
@@ -188,7 +198,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Plus $30/月"
  },
  {
   "slug": "krea",
@@ -205,7 +216,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "$9/月〜"
  },
  {
   "slug": "capcut",
@@ -222,7 +234,8 @@
   "japanese": "日本語の料金ページあり",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認（従量表示 $0.12/秒〜あり）"
  },
  {
   "slug": "descript",
@@ -239,7 +252,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Hobbyist $16/月〜（年払い時）"
  },
  {
   "slug": "notion-ai",
@@ -256,7 +270,8 @@
   "japanese": "対応（日本語の公式サイト・料金ページあり）",
   "added": "2026-10-16",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Plus ¥1,650/月（1人あたり）"
  },
  {
   "slug": "notta",
@@ -276,7 +291,8 @@
   "affiliate": {
    "url": "https://notta.cello.so/poV7STKwa5L",
    "label": "Nottaを無料で試す"
-  }
+  },
+  "cheapest": "プレミアム 1,185円/月（年払い・税込）"
  },
  {
   "slug": "rimo",
@@ -293,7 +309,8 @@
   "japanese": "対応（日本語の公式サイト・日本語会話に特化、60以上の言語に対応と明記）",
   "added": "2026-10-16",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Solo $9/月（リリース限定価格）"
  },
  {
   "slug": "deepl-write",
@@ -310,7 +327,8 @@
   "japanese": "対応（公式ヘルプの対応言語に日本語あり。ただし日本語では文体・トーンの切り替えは使えない）",
   "added": "2026-10-16",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "cursor",
@@ -327,7 +345,8 @@
   "japanese": "日本語の料金ページあり",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "$8/月〜"
  },
  {
   "slug": "v0",
@@ -344,7 +363,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Plus $30/月〜"
  },
  {
   "slug": "manus",
@@ -361,7 +381,8 @@
   "japanese": "日本語の公式料金ページあり",
   "added": "2026-10-16",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "sarashina-service",
@@ -378,7 +399,8 @@
   "japanese": "対応（国産AI・日本語の公式発表）",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "gemini-4-argon",
@@ -395,7 +417,8 @@
   "japanese": "対応（日本語の公式ブログで案内）",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "API 入力100万トークンあたり$2・出力$10（導入価格）"
  },
  {
   "slug": "gemini-agent-workspace",
@@ -412,7 +435,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "deep-review",
@@ -429,7 +453,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "muse-spark-open",
@@ -446,7 +471,8 @@
   "japanese": "未確認",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "canly-aio",
@@ -463,7 +489,8 @@
   "japanese": "対応（日本企業の日本語サービス）",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "madoless",
@@ -480,7 +507,8 @@
   "japanese": "対応（日本企業の日本語サービス）",
   "added": "2026-10-16",
   "checked": "2026-10-16",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "chatgpt",
@@ -497,7 +525,8 @@
   "japanese": "対応（日本語の公式料金ページあり）",
   "added": "2026-10-17",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "nano-banana-2-1",
@@ -514,7 +543,8 @@
   "japanese": "未確認",
   "added": "2026-10-17",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "agent-i-kosodate",
@@ -531,7 +561,8 @@
   "japanese": "対応（日本企業の日本語サービス）",
   "added": "2026-10-17",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "japan-ai-browser-assistant",
@@ -548,7 +579,8 @@
   "japanese": "対応（日本企業の日本語サービス）",
   "added": "2026-10-17",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "追加費用なし（JAPAN AI利用者向け）"
  },
  {
   "slug": "tinyfish-search-fetch",
@@ -565,7 +597,8 @@
   "japanese": "検索APIは言語指定で日本語（ja）に対応と公式ドキュメントに記載。サイト・管理画面の日本語版は未確認",
   "added": "2026-10-17",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "従量課金（Agent・Browser機能）"
  },
  {
   "slug": "treg-free-webaccess",
@@ -582,7 +615,8 @@
   "japanese": "未確認",
   "added": "2026-10-17",
   "checked": "2026-10-17",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "従量課金"
  },
  {
   "slug": "japan-ai-search-3",
@@ -599,7 +633,8 @@
   "japanese": "対応（日本の企業向けサービス）",
   "added": "2026-10-20",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "追加の月額料金なし（エンタープライズ契約者向け）"
  },
  {
   "slug": "hitotas-ai",
@@ -616,7 +651,8 @@
   "japanese": "対応（日本の法人向けサービス）",
   "added": "2026-10-20",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "未確認"
  },
  {
   "slug": "orcarouter-agent-tools",
@@ -633,7 +669,8 @@
   "japanese": "対応（FlashLabsが日本市場向けに提供）",
   "added": "2026-10-20",
   "checked": "2026-10-20",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "従量課金（月額なし）"
  },
  {
   "slug": "conoha-ai-canvas",
@@ -655,7 +692,8 @@
    "pixel": "https://www18.a8.net/0.gif?a8mat=4BEL1J+D3MEI+50+7RTY1E"
   },
   "added": "2026-10-20",
-  "checked": "2026-10-20"
+  "checked": "2026-10-20",
+  "cheapest": "エントリー 1,100円/月（税込）"
  },
  {
   "slug": "value-ai-writer",
@@ -676,7 +714,8 @@
    "pixel": "https://www18.a8.net/0.gif?a8mat=4BEL1J+FHCTM+1JUK+1HL85U"
   },
   "added": "2026-10-20",
-  "checked": "2026-10-20"
+  "checked": "2026-10-20",
+  "cheapest": "エントリー 840円/月（税込）"
  },
  {
   "slug": "doraverse",
@@ -698,7 +737,8 @@
    "pixel": "https://www18.a8.net/0.gif?a8mat=4BEL1J+GO816+5UU0+5YJRM"
   },
   "added": "2026-10-20",
-  "checked": "2026-10-20"
+  "checked": "2026-10-20",
+  "cheapest": "Starter $10/月"
  },
  {
   "slug": "lolipop-ai-homepage",
@@ -719,7 +759,8 @@
    "pixel": "https://www18.a8.net/0.gif?a8mat=4BEL1J+H9NMY+348+4SNX5E"
   },
   "added": "2026-10-20",
-  "checked": "2026-10-20"
+  "checked": "2026-10-20",
+  "cheapest": "660円/月（36ヵ月契約・税込）"
  },
  {
   "slug": "fliki",
@@ -741,7 +782,8 @@
    "url": "https://fliki.ai/?via=marui",
    "label": "Flikiを無料で試す",
    "disclosure": "PR：上のボタンはアフィリエイトリンク（広告）です。リンク先で登録・有料プラン契約があると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "未確認"
  },
  {
   "slug": "irusiru",
@@ -763,7 +805,8 @@
    "pixel": "https://i.moshimo.com/af/i/impression?a_id=5855431&p_id=5515&pc_id=15110&pl_id=71207",
    "label": "イルシルを無料ではじめる",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "パーソナル 1,848円/月（税込）"
  },
  {
   "slug": "withteam-ai-mojiokoshi",
@@ -785,7 +828,8 @@
    "pixel": "https://i.moshimo.com/af/i/impression?a_id=5855433&p_id=4456&pc_id=11583&pl_id=60038",
    "label": "WITH TEAM AI文字起こしを試す",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "従量 33円/分（税込・最低66円）"
  },
  {
   "slug": "rakurin",
@@ -807,7 +851,8 @@
    "pixel": "https://i.moshimo.com/af/i/impression?a_id=5855437&p_id=5432&pc_id=14858&pl_id=70483",
    "label": "ラクリンを無料で使う",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "シルバー 4,980円/月（税込）"
  },
  {
   "slug": "ai-blogkun-gold",
@@ -829,7 +874,8 @@
    "pixel": "https://i.moshimo.com/af/i/impression?a_id=5855438&p_id=7624&pc_id=22031&pl_id=95151",
    "label": "AIブログくんGOLDを無料で試す",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "未確認"
  },
  {
   "slug": "tldv",
@@ -851,7 +897,8 @@
    "url": "https://tldv.cello.so/hWETXPHvSAc",
    "label": "tl;dvを無料ではじめる（紹介リンク）",
    "disclosure": "PR：上のボタンはtl;dvの紹介プログラムのリンク（広告）です。リンク先で有料プランの申し込みがあると、運営者が紹介報酬を受け取ることがあります。紹介プログラムの案内では、このリンクから登録した人は30%割引を受けられるとされています（適用条件は未確認・リンク先でご確認ください）。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "プロ ¥36,960/年（1シート）"
  },
  {
   "slug": "catchy",
@@ -869,7 +916,8 @@
   "added": "2026-10-20",
   "checked": "2026-10-20",
   "description": "国産AIライティングツールCatchy（キャッチー）の料金と使い道。100種類以上の生成ツールでキャッチコピーや記事、メールを作成。無料プランは毎月10クレジット、Proは月9,800円で無制限。",
-  "affiliate": null
+  "affiliate": null,
+  "cheapest": "Starter ¥3,000/月〜"
  },
  {
   "slug": "plaud",
@@ -892,7 +940,8 @@
    "pixel": "https://www14.a8.net/0.gif?a8mat=3ZFOPI+E0A8H6+5J4W+5YZ76",
    "label": "Plaud公式ストアで見る（広告）",
    "disclosure": "PR：上のボタンはA8.netのアフィリエイトリンク（広告）です。リンク先で購入があると、運営者が報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "Proプラン 年間¥16,800（税込）※別途デバイス代"
  },
  {
   "slug": "invideo",
@@ -914,6 +963,7 @@
    "url": "https://invideo.sjv.io/0G7OgN",
    "label": "invideo AI公式サイトで見る（広告）",
    "disclosure": "PR：上のボタンはアフィリエイトリンク（広告）です。リンク先で有料プランの契約があると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
-  }
+  },
+  "cheapest": "Starter $20/月（年払いなら月$10相当）"
  }
 ]

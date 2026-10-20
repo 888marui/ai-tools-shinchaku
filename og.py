@@ -1,17 +1,18 @@
 import json,subprocess,os
 from PIL import Image,ImageDraw,ImageFont
-arts=json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./data/articles.js').map(a=>[a.slug,a.title])))"]))
+arts=[(f'tool-{t["slug"]}',t['name']+'とは？使い方・料金') for t in json.load(open('data/tools.json'))]+json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./data/articles.js').map(a=>[a.slug,a.title])))"]))
 F='/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc'
 os.makedirs('static/og',exist_ok=True)
 def wrap(d,t,f,w):
     L=[];c=''
     import re
     for ch in re.findall(r'[A-Za-z0-9;.\-]+(?: (?=[A-Za-z]))?|.',t):
-        if c.endswith('：') or d.textlength(c+ch,font=f)>w: L.append(c);c=ch.lstrip()
+        if c.endswith(('：','？')) or d.textlength(c+ch,font=f)>w: L.append(c);c=ch.lstrip()
         else: c+=ch
     return L+[c]
 for slug,title in arts:
     out=f'static/og/{slug}.png'
+    if os.path.exists(out) and os.path.getmtime(out)>os.path.getmtime('data/tools.json') and slug.startswith('tool-'): continue
     im=Image.new('RGB',(1200,630),'#06C755');d=ImageDraw.Draw(im)
     d.rounded_rectangle((40,40,1160,590),28,fill='white')
     for size in (64,58,52,46):
