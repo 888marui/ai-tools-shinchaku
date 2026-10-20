@@ -323,12 +323,12 @@
    "英文チェック",
    "文章の言い換え"
   ],
-  "pricing": "無料版あり／有料のDeepL Write Proあり（公式ヘルプで確認。Write Proの金額は未確認）",
+  "pricing": "無料版あり／有料のDeepL Write ProはDeepL Proのアドオン。公式料金ページ（https://www.deepl.com/ja/pro）のドイツ向け表示ではユーザーあたり€6.99/月（年払い・VAT込）。日本円での金額は未確認（2026/10/20確認）",
   "japanese": "対応（公式ヘルプの対応言語に日本語あり。ただし日本語では文体・トーンの切り替えは使えない）",
   "added": "2026-10-16",
-  "checked": "2026-10-17",
+  "checked": "2026-10-20",
   "affiliate": null,
-  "cheapest": "未確認"
+  "cheapest": "Write Proアドオン €6.99/月（年払い・VAT込・ドイツ向け表示。日本円は未確認）"
  },
  {
   "slug": "cursor",
