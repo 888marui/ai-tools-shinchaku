@@ -3,6 +3,22 @@ const cta=`<p><a class="cta" href="${N}" rel="sponsored nofollow noopener" targe
 const note=`<p class="muted">料金・機能は2026年10月16日に各公式サイトで確認した内容です。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 const note2=`<p class="muted">更新日：2026年10月20日。料金・機能は2026年10月16〜20日に各公式サイトで確認した内容です（当サイトの各ツールページの「情報確認日」も参照）。変更されることがあるため、申し込み前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>`;
 module.exports=[
+{slug:'ai-yomiage-elevenlabs-voicevox',date:'2026-10-20',title:'AI音声読み上げの選び方｜ElevenLabsとVOICEVOXの料金・商用利用・日本語対応',desc:'ナレーションや動画の読み上げに使えるElevenLabsとVOICEVOXを、公式サイトで確認した料金・商用利用の条件・日本語対応で比べ、使い方の流れも短くまとめました。',body:`<h1>AI音声読み上げの選び方：ElevenLabsとVOICEVOX</h1><p class="muted">料金・条件は2026年10月20日に各公式サイトで確認した内容です。変更されることがあるため、使う前に必ず公式サイトをご確認ください。「未確認」は公式サイトで確認できなかった項目です。</p>
+<h2>比較表</h2><table><tr><th>ツール</th><td><b>料金</b>／<b>商用利用</b>／<b>日本語</b>／<b>使う場所</b></td></tr>
+<tr><th>ElevenLabs</th><td>Free $0/月（10,000クレジット）、Starter $6/月、Creator $22/月（初月$11）、Pro $99/月など（税別）／料金ページでは「Commercial License」はStarter以上に記載／日本語の読み上げページあり（対応言語数は料金表で74、日本語ページで「90以上」と表記が分かれるため未確認）／Webブラウザ</td></tr>
+<tr><th>VOICEVOX</th><td>無料／商用・非商用とも利用可。ただし各キャラクター（音声ライブラリ）の規約に従い、クレジット表記が必要／日本語のソフト／Windows・Mac・Linuxにインストール</td></tr></table>
+<h2>向いている人</h2>
+<h3>ElevenLabs：自然な声や多言語のナレーションがほしい人</h3><p>文章を入力して声を選ぶだけで、MP3で音声を保存できます。声の複製（ボイスクローン）や吹き替えの機能もあります。無料プランで試せますが、商用利用の許可は料金ページ上ではStarter（月$6）以上の項目です。</p>
+<h3>VOICEVOX：無料で日本語の読み上げを作りたい人</h3><p>パソコンに入れて使う無料ソフトです。イントネーションを細かく調整できます。声ごとに利用規約があるので、動画などで使う前に、使うキャラクターの規約を必ず確認してください。</p>
+<h2>使い方の流れ</h2>
+<h3>ElevenLabs</h3><ol><li>公式サイトで無料登録します。</li><li>テキスト読み上げ画面に日本語の文章を入力します。</li><li>声を選び、速度などを調整して「生成」を押します。</li><li>MP3でダウンロードします。</li></ol>
+<h3>VOICEVOX</h3><ol><li>公式サイトから自分のOS用をダウンロードしてインストールします。</li><li>キャラクターを選び、文章を入力します。</li><li>必要ならアクセントや抑揚を調整し、音声を書き出します。</li><li>公開するときは「VOICEVOX:キャラクター名」などのクレジットを、そのキャラクターの規約どおりに入れます（表記の形は各規約で確認してください）。</li></ol>
+<h2>注意点</h2><ul><li>実在の人の声を複製するときは、本人の許可が必要です。各社の規約も守ってください。</li><li>ElevenLabsの料金はドル表記で税別です。日本円の請求額は未確認です。</li><li>無料枠や商用利用の条件は変わることがあります。</li></ul>
+<h2>関連</h2><p><a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a>／<a href="../douga-seisei-ai-hikaku/">動画生成AI比較</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
+<h2>出典（公式）</h2><pre><code>https://elevenlabs.io/pricing
+https://elevenlabs.io/ja/text-to-speech/japanese
+https://voicevox.hiroshiba.jp/
+https://voicevox.hiroshiba.jp/term/</code></pre>`},
 {slug:'mojiokoshi-ai-hikaku',date:'2026-10-16',title:'文字起こしAIツール比較｜Notta・Rimo Voice・Otter・tl;dvの料金と向いている人',desc:'主要な文字起こし・AI議事録ツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。どんな人に向いているかも整理しました。',body:`<h1>文字起こしAIツール比較：Notta・Rimo Voice・Otter・tl;dv</h1>${note}
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料枠</b>／<b>有料の例</b>／<b>日本語</b></td></tr>
 <tr><th>Notta</th><td>フリー0円（120分/月・1回3分まで）／プレミアム1,185円/月（年払い・税込）／対応（日本語特化AIと58言語対応と明記）</td></tr>
