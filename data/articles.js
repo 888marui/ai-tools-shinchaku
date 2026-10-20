@@ -117,12 +117,14 @@ https://www.conoha.jp/ai/canvas/</code></pre>`},
 <h2>使い方の流れ</h2>
 <h3>ElevenLabs</h3><ol><li>公式サイトで無料登録します。</li><li>テキスト読み上げ画面に日本語の文章を入力します。</li><li>声を選び、速度などを調整して「生成」を押します。</li><li>MP3でダウンロードします。</li></ol>
 <h3>VOICEVOX</h3><ol><li>公式サイトから自分のOS用をダウンロードしてインストールします。</li><li>キャラクターを選び、文章を入力します。</li><li>必要ならアクセントや抑揚を調整し、音声を書き出します。</li><li>公開するときは「VOICEVOX:キャラクター名」などのクレジットを、そのキャラクターの規約どおりに入れます（表記の形は各規約で確認してください）。</li></ol>
+<h3>読み上げ音声ごと動画にしたいなら：Fliki</h3><p><a href="https://fliki.ai/?via=marui" rel="sponsored nofollow noopener" target="_blank">Fliki</a><span class="pr">PR</span>は、文章からAIナレーション付きの動画を作れるツールで、音声の対応言語に日本語を含みます（公式サイトの記載）。無料プランは月3クレジット・透かし入りです。詳しくは<a href="../../tools/fliki/">Flikiのページ</a>へ。</p><p class="muted">PR：上のFlikiのリンクはアフィリエイトリンク（広告）です。</p>
 <h2>注意点</h2><ul><li>実在の人の声を複製するときは、本人の許可が必要です。各社の規約も守ってください。</li><li>ElevenLabsの料金はドル表記で税別です。日本円の請求額は未確認です。</li><li>無料枠や商用利用の条件は変わることがあります。</li></ul>
 <h2>関連</h2><p><a href="../elevenlabs-muryou-shouyou/">ElevenLabsは無料で商用利用できる？</a>／<a href="../../category/${encodeURIComponent('音楽・音声')}/">音楽・音声のAIツール一覧</a>／<a href="../douga-seisei-ai-hikaku/">動画生成AI比較</a>／<a href="../../free/">無料で使えるAIツール一覧</a></p>
 <p>ナレーション原稿をAIで書くなら<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>もどうぞ。</p><h2>出典（公式）</h2><pre><code>https://elevenlabs.io/pricing
 https://elevenlabs.io/ja/text-to-speech/japanese
 https://voicevox.hiroshiba.jp/
-https://voicevox.hiroshiba.jp/term/</code></pre>`},
+https://voicevox.hiroshiba.jp/term/
+https://fliki.ai/pricing</code></pre>`},
 {slug:'mojiokoshi-ai-hikaku',date:'2026-10-16',title:'文字起こしAI比較｜Notta・Rimo Voice・Otter・tl;dvの料金',updated:'2026-10-20',desc:'主要な文字起こし・AI議事録ツール4つを、公式サイトで確認した料金・無料枠・日本語対応で比較。どんな人に向いているかも整理しました。',body:`<h1>文字起こしAIツール比較：Notta・Rimo Voice・Otter・tl;dv</h1>${note}
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料枠</b>／<b>有料の例</b>／<b>日本語</b></td></tr>
 <tr><th>Notta</th><td>フリー0円（120分/月・1回3分まで）／プレミアム1,185円/月（年払い・税込）／対応（日本語特化AIと58言語対応と明記）</td></tr>
@@ -177,8 +179,9 @@ https://rimo.app/pricing</code></pre>`},
 <h2>用途別の選び方</h2><ul><li><b>SNSのショート動画を手早く編集・字幕入れ</b>：CapCut</li><li><b>顔出しせずに解説・研修動画を作る</b>：HeyGen</li><li><b>イメージ映像・短いカットを生成</b>：Runway（まず無料の125クレジットで試す）、Luma</li><li><b>話した内容を文字で編集したい（ポッドキャスト・トーク動画）</b>：Descript</li></ul>
 <h2>使い方のコツ</h2><ol><li>生成系（Runway・Luma）は、1回で長い動画を作るより、数秒のカットを作ってつなぐほうがクレジットを無駄にしにくいです。</li><li>指示文には「被写体・動き・カメラ（寄り／引き）・雰囲気」を入れます。</li><li>仕上げの字幕・BGM・つなぎは編集系（CapCut・Descript）で行うと手早く整います。</li></ol>
 <h2>注意点</h2><ul><li>無料枠は透かし（ウォーターマーク）や商用利用の制限がつく場合があります。各社の規約を確認してください。</li><li>Runwayの無料125クレジットは1回限りで、毎月は戻りません（公式料金ページの表記）。</li><li>実在の人物の顔や声を本人の許可なく使うことは避けてください。</li><li>ドル表記の料金は為替や税で日本円の支払額が変わります。</li></ul>
+<h2>文章から動画を作るなら：Fliki</h2><p>台本やブログ記事を貼るだけで、AIナレーション・素材・字幕付きの動画にしたい場合は<a href="https://fliki.ai/?via=marui" rel="sponsored nofollow noopener" target="_blank">Fliki</a><span class="pr">PR</span>という選択肢もあります。無料プラン（月3クレジット・720p・透かし入り）で試せ、商用利用権は有料のStandard以上の項目です（公式料金ページの表記）。詳しくは<a href="../../tools/fliki/">Flikiのページ</a>へ。</p><p class="muted">PR：上のFlikiのリンクはアフィリエイトリンク（広告）です。</p>
 <h2>関連</h2><p><a href="../../category/${encodeURIComponent('動画')}/">動画のAIツール一覧</a>／<a href="../../free/">無料で使えるAIツール一覧</a>／<a href="../mojiokoshi-ai-hikaku/">文字起こしAIの比較</a></p>
-<h2>出典（公式）</h2><ul><li><a href="https://runwayml.com" rel="noopener">https://runwayml.com</a></li><li><a href="https://lumalabs.ai/dream-machine" rel="noopener">https://lumalabs.ai/dream-machine</a></li><li><a href="https://www.heygen.com" rel="noopener">https://www.heygen.com</a></li><li><a href="https://www.capcut.com" rel="noopener">https://www.capcut.com</a></li><li><a href="https://www.descript.com" rel="noopener">https://www.descript.com</a></li></ul>`},
+<h2>出典（公式）</h2><ul><li><a href="https://runwayml.com" rel="noopener">https://runwayml.com</a></li><li><a href="https://lumalabs.ai/dream-machine" rel="noopener">https://lumalabs.ai/dream-machine</a></li><li><a href="https://www.heygen.com" rel="noopener">https://www.heygen.com</a></li><li><a href="https://www.capcut.com" rel="noopener">https://www.capcut.com</a></li><li><a href="https://www.descript.com" rel="noopener">https://www.descript.com</a></li><li><a href="https://fliki.ai/pricing" rel="noopener">https://fliki.ai/pricing</a></li></ul>`},
 {slug:'chatgpt-igai-ai-hikaku',tools:['gemini','copilot','felo','genspark','notebooklm','chatgpt'],date:'2026-10-20',title:'ChatGPT以外のAIチャット比較｜Gemini・Copilotなど無料版の違い',updated:'2026-10-20',desc:'ChatGPTの代わりやセカンドオピニオンに使えるAIを、公式サイトで確認した無料版・有料プラン・日本語対応で比較。調べもの、資料の読み込み、Office連携など目的別の選び方を紹介します。',body:`<h1>ChatGPT以外のAIチャット比較：無料版と使い分け</h1>${note2}
 <p>「ChatGPT 代わり」「ChatGPT 以外」で探す人向けに、無料で始められるAIを目的別に整理しました。1つに絞るより、<b>得意分野で使い分ける</b>のがおすすめです。</p>
 <h2>比較表</h2><table><tr><th>ツール</th><td><b>無料版</b>／<b>有料の例</b>／<b>日本語</b>／<b>向いている使い方</b></td></tr>
