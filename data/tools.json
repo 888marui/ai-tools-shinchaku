@@ -870,5 +870,28 @@
   "checked": "2026-10-20",
   "description": "国産AIライティングツールCatchy（キャッチー）の料金と使い道。100種類以上の生成ツールでキャッチコピーや記事、メールを作成。無料プランは毎月10クレジット、Proは月9,800円で無制限。",
   "affiliate": null
+ },
+ {
+  "slug": "plaud",
+  "name": "Plaud（プラウド）",
+  "category": "議事録・文字起こし",
+  "url": "https://jp.plaud.ai/",
+  "summary": "会話・通話・オンライン会議を録音し、AIが文字起こし・要約するAIボイスレコーダー。カード型のPlaud Note／Note Proと、身につけるPlaud NotePin／NotePin Sがあり、112ヶ国語の文字起こしと話者ラベルに対応しています（公式サイトの記載）。",
+  "uses": [
+   "対面の会議・商談・取材の録音と文字起こし",
+   "録音内容のAI要約・議事録作成",
+   "ランニング中や移動中などのハンズフリー音声メモ（NotePin）"
+  ],
+  "pricing": "デバイス：Plaud Note Pro ¥30,800／Plaud NotePin S ¥28,600／Plaud Note ¥27,500／Plaud NotePin ¥27,500（いずれも税込）。無料Starterプランで毎月300分の文字起こし。Proプラン 毎月1,200分（年間 ¥16,800 税込）／Unlimitedプラン 文字起こし無制限（年間 ¥40,000 税込）。追加の文字起こしパッケージ 600分 ¥2,000・3000分 ¥10,000・6000分 ¥15,000（公式サイト 2026/10/20確認）。月払いの料金は未確認",
+  "japanese": "対応（日本語の公式サイト・日本語のサポート窓口 support-jp@plaud.ai あり。112ヶ国語の文字起こしに対応と記載）",
+  "added": "2026-10-20",
+  "checked": "2026-10-20",
+  "description": "AIボイスレコーダーPlaud（プラウド）の本体価格、無料Starterプランの毎月300分の文字起こし、Pro・Unlimitedプランの年額、日本語対応を公式サイトの情報で整理。",
+  "affiliate": {
+   "url": "https://px.a8.net/svt/ejp?a8mat=3ZFOPI+E0A8H6+5J4W+5YZ76",
+   "pixel": "https://www14.a8.net/0.gif?a8mat=3ZFOPI+E0A8H6+5J4W+5YZ76",
+   "label": "Plaud公式ストアで見る（広告）",
+   "disclosure": "PR：上のボタンはA8.netのアフィリエイトリンク（広告）です。リンク先で購入があると、運営者が報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
+  }
  }
 ]
