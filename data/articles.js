@@ -74,7 +74,7 @@ https://pepabo.com/news/information/202607311100/</code></pre>`},
 <h2>ラクリン：作成と投稿をまとめて楽にしたい人</h2><p>ブログ記事づくりに特化したAIライティングツールです。「超ワンクリック」でキーワードからタイトル・本文・パーマリンクを作り、WordPressへの公開・予約投稿・下書きができます。複数キーワードの記事もまとめて作れます。リライトや誤字脱字チェックの機能もあります。くわしくは<a href="../../tools/rakurin/">ラクリンのツールページ</a>をご覧ください。</p>
 <h2>ConoHa AI Canvas：記事の画像を自分で作りたい人</h2><p>Stable Diffusionをブラウザから使えるGMOの画像生成サービスです。記事は書きませんが、アイキャッチや図の素材を作るときに使えます。くわしくは<a href="../conoha-ai-canvas-tsukaikata-ryoukin/">ConoHa AI Canvasの使い方・料金</a>をご覧ください。</p>
 <h2>自動化するときの注意点は？</h2><ul><li>AIが書いた記事には誤りが入ることがあります。公開前に人が事実を確認しましょう。</li><li>中身の薄い記事を大量に公開すると、読者の役に立ちません。テーマと確認の手順を決めてから使いましょう。</li><li>アクセスや収入が増えるかどうかは、ツールでは決まりません。</li></ul>
-<h2>関連</h2><p><a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>／<a href="../conoha-ai-canvas-tsukaikata-ryoukin/">ConoHa AI Canvasの使い方・料金</a>／<a href="../../tools/rakurin/">ラクリンのツールページ</a>／<a href="../../tools/ai-blogkun-gold/">AIブログくんGOLDのツールページ</a></p>
+<h2>関連</h2><p><a href="../ai-blog-wordpress-jidoutoukou/">AIブログのWordPress自動投稿（3ツールの投稿機能）</a>／<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>／<a href="../conoha-ai-canvas-tsukaikata-ryoukin/">ConoHa AI Canvasの使い方・料金</a>／<a href="../../tools/rakurin/">ラクリンのツールページ</a>／<a href="../../tools/ai-blogkun-gold/">AIブログくんGOLDのツールページ</a></p>
 <p>投稿までは任せず、記事の下書きだけAIで作りたいなら、GMOの<a href="../../tools/value-ai-writer/">Value AI Writer byGMO</a>（月1記事まで無料のフリープランあり）も候補です。ブログを置くホームページから用意するなら、<a href="../ai-homepage-sakusei-hikaku/">AIホームページ作成ツールの比較</a>で<a href="../../tools/lolipop-ai-homepage/">ロリポップ！AIホームページ</a>なども並べています。</p>
 <h2>出典（公式）</h2><pre><code>https://ai-blogkun.com/
 https://rakurin.net/
@@ -350,8 +350,30 @@ https://rimo.app/pricing</code></pre>`},
 <h2>ほかのツールとどう違う？</h2><p>Value AI Writerは、SEO記事づくりとキーワード調査をまとめたい人向けです。議事録や翻訳まで1つの契約にしたいなら<a href="../doraverse-tsukaikata-ryoukin/">Doraverse</a>、ブログの自動投稿を中心に比べるなら<a href="../rakurin-hyouban-ryoukin/">ラクリン</a>や<a href="../ai-blogkun-hyouban-ryoukin/">AIブログくん</a>、まとめて比べたいなら<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>をご覧ください。</p>
 <h2>注意点は？</h2><ul><li>AIが書いた記事は、公開前に事実と合っているか必ず確かめましょう。第三者の著作権を侵害していないかも確認が必要だと公式に書かれています。</li><li>月の記事数は文字数の上限しだいで変わるため、長い記事を多く作るなら上のプランも比べて選びます。</li></ul>
 <p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+FHCTM+1JUK+1HL85U" rel="sponsored nofollow noopener" target="_blank">Value AI Writerを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
-<h2>関連</h2><p><a href="../../tools/value-ai-writer/">Value AI Writerのツールページ</a>／<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>／<a href="../doraverse-tsukaikata-ryoukin/">Doraverse 料金・評判と使い方</a>／<a href="../ai-blog-jidouka/">AIブログ自動化ツール比較</a></p>
+<h2>関連</h2><p><a href="../ai-blog-wordpress-jidoutoukou/">AIブログのWordPress自動投稿の比較</a>／<a href="../../tools/value-ai-writer/">Value AI Writerのツールページ</a>／<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>／<a href="../doraverse-tsukaikata-ryoukin/">Doraverse 料金・評判と使い方</a>／<a href="../ai-blog-jidouka/">AIブログ自動化ツール比較</a></p>
 <h2>出典（公式）</h2><pre><code>https://www.value-domain.com/value-aiwriter/</code></pre>`},
+
+{"slug":"ai-blog-wordpress-jidoutoukou","date":"2026-10-21","updated":"2026-10-21","tools":["ai-blogkun-gold","rakurin","value-ai-writer"],"title":"AIブログのWordPress自動投稿｜3ツールの投稿機能","desc":"AIで作った記事をWordPressへ投稿できるAIブログくん・ラクリン・Value AI Writerについて、自動投稿・予約投稿・下書き・複数サイトなど投稿機能の違いを公式サイトの情報だけでまとめました。","body":`<h1>AIブログのWordPress自動投稿：AIブログくん・ラクリン・Value AI Writer</h1><p class="muted">公開日：2026年10月21日。機能は2026年10月21日に各公式サイトで確認した内容です。変わることがあるため、申し込み前に公式サイトでお確かめください。</p>
+<p>この記事は「AIで作った記事をWordPressへどう投稿するか」に絞っています。キーワード調査から画像まで、自動化できる工程全体の比較は<a href="../ai-blog-jidouka/">AIブログ自動化ツール比較</a>をご覧ください。</p>
+<h2>WordPressへの投稿機能はどう違う？</h2><table><tr><th>項目</th><td><b>AIブログくん</b>／<b>ラクリン</b>／<b>Value AI Writer</b></td></tr>
+<tr><th>投稿のしかた</th><td>キーワードを設定すると、記事作成から投稿まで自動で続ける／作った記事をWordPressへ投稿（複数記事もまとめて）／ツール上で下書き・投稿まで</td></tr>
+<tr><th>公開・予約・下書き</th><td>公式ページで細かい指定は確かめられませんでした／公開・予約投稿・下書きを選べる／下書き・投稿</td></tr>
+<tr><th>投稿前に人が確認する流れ</th><td>自動で投稿される形（WordPressを使わずメールで記事を受け取る方法もある）／作成後に投稿の操作をする形／記事をチェックしてから投稿する流れを案内</td></tr>
+<tr><th>複数サイト・カテゴリ</th><td>公式ページでお確かめください／公式ページでお確かめください／複数のWordPressサイトの登録とカテゴリの指定ができる</td></tr>
+<tr><th>画像</th><td>記事に画像を自動で挿入／公式ページでお確かめください／文章だけ。画像と装飾は投稿前に足す（画像生成機能は別にある）</td></tr>
+<tr><th>ほかの投稿先</th><td>メールで受け取り／note用のコピー／公式ページでお確かめください</td></tr></table>
+<h2>投稿まで全部任せたいなら？：AIブログくん</h2><p>検索キーワードを設定すると、Google検索の分析、記事作成、画像の挿入、記事の投稿、Googleへの通知までを自動で行うと公式サイトに書かれています。WordPressと連携してキーワードを入れれば始められ、初期設定のあとは毎日動く仕組みです。記事づくりで参照したURLを確かめられるので、公開後の見直しにも使えます。当サイトのリンク先は上位版のAIブログくんGOLDです。GOLDの投稿機能や料金の細かい違いは、公式ページでお確かめください。</p>
+<p><a class="cta" href="https://af.moshimo.com/af/c/click?a_id=5855438&p_id=7624&pc_id=22031&pl_id=95151" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade" target="_blank">AIブログくんGOLDを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
+<h2>予約投稿や下書きを選びたいなら？：ラクリン</h2><p>「超ワンクリック」で、キーワードからタイトル・本文・パーマリンクを作り、WordPressへ「公開」「予約投稿」「下書き」のどれかで投稿できます。複数のキーワードで記事をまとめて作成・投稿することもできます。フリープランは無料で使えます。</p>
+<p><a class="cta" href="https://af.moshimo.com/af/c/click?a_id=5855437&p_id=5432&pc_id=14858&pl_id=70483" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade" target="_blank">ラクリンを無料で使う</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
+<h2>記事を見直してから投稿したいなら？：Value AI Writer</h2><p>WordPressと連携すると、Value AI Writerの画面上で下書き保存や投稿まで済ませられます。カテゴリの指定や、複数のWordPressサイトの登録もできます。ライター管理機能で、ライターごとにWordPress投稿の権限を分けることもできます。作られるのは文章だけなので、文字装飾や画像は投稿前に整えるよう公式で案内されています。料金や記事数は<a href="../value-ai-writer-ryoukin-hyouban/">Value AI Writer 料金・評判・使い方</a>にまとめています。</p>
+<p><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEL1J+FHCTM+1JUK+1HL85U" rel="sponsored nofollow noopener" target="_blank">Value AI Writerを無料で試す</a><span class="pr">PR</span></p><p class="muted">このリンクはアフィリエイト（広告）です。</p>
+<h2>どれを選べばいい？</h2><ul><li><b>キーワードを決めたら、あとは投稿まで任せたい</b>：AIブログくん（GOLD）</li><li><b>公開・予約投稿・下書きを記事ごとに選びたい</b>：ラクリン</li><li><b>複数サイトやライターで分担して、確認してから投稿したい</b>：Value AI Writer</li></ul>
+<h2>自動投稿で気をつけることは？</h2><ul><li>AIの文章には誤りが入ることがあります。いきなり公開するより、下書きで投稿して人が確かめてから公開する流れが安心です。</li><li>連携の設定方法（WordPress側で必要な設定など）は、各ツールの公式の手順でお確かめください。</li><li>アクセスや収入が増えるかどうかは、ツールでは決まりません。読者の役に立つテーマと確認の手順を先に決めておきましょう。</li></ul>
+<h2>関連</h2><p><a href="../ai-blog-jidouka/">AIブログ自動化ツール比較</a>／<a href="../ai-writing-tool-hikaku/">AIライティングツール比較</a>／<a href="../ai-blogkun-hyouban-ryoukin/">AIブログくんの評判・料金</a>／<a href="../rakurin-hyouban-ryoukin/">ラクリンの評判・料金</a>／<a href="../../tools/ai-blogkun-gold/">AIブログくんGOLDのツールページ</a>／<a href="../../tools/rakurin/">ラクリンのツールページ</a>／<a href="../../tools/value-ai-writer/">Value AI Writerのツールページ</a></p>
+<h2>出典（公式）</h2><pre><code>https://ai-blogkun.com/
+https://rakurin.net/
+https://www.value-domain.com/value-aiwriter/</code></pre>`},
 
 ];
 module.exports=module.exports.filter((a,i,arr)=>arr.findIndex(b=>b.slug===a.slug)===i);
