@@ -971,5 +971,22 @@ module.exports = {
         "無料プランで作ったクリップは、公式の説明では3日たつと書き出せなくなります。残したいクリップは早めに書き出してください。"
       ]
     ]
+  },
+  "claude-models-google-cloud": {
+    "lead": "Google CloudでClaudeを使う方法は、Anthropicが運用する「Anthropic managed」（2026年10月23日に一般提供）と、Googleが運用する「Google managed」の2つです。モデルと標準料金、Google Cloudでの請求は同じで、違いはデータの処理者とClaude Platformの新機能を使い始められる時期です。",
+    "faq": [
+      [
+        "Anthropic managedとGoogle managedで料金は違いますか？",
+        "Google Cloudの発表では、どちらも同じ標準料金で、Google Cloudの請求にまとまると書かれています。端点の種類やFast Modeなどで単価が変わる場合があるため、料金ページでお確かめください。"
+      ],
+      [
+        "Anthropic managedでAPIキーは使えますか？",
+        "使えません。Google Cloudの認証情報（Application Default Credentialsなど）で呼び出します。"
+      ],
+      [
+        "どちらを選べばいいですか？",
+        "Claude Platformの新機能やベータを当日に使いたいならAnthropic managed、データの処理者をGoogle Cloudにしたい・データの所在要件やVPC Service Controls・CMEKが必要ならGoogle managedが向いています。"
+      ]
+    ]
   }
 };
