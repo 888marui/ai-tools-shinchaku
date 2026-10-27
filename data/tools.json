@@ -1028,5 +1028,23 @@
   "checked": "2026-10-21",
   "description": "bravesoftのAIチャットボット「OKamAI」。URLや資料から案内用AIを作り、Web埋め込みやタブレットでの現地案内に使えます。60日間50会話まで無料。",
   "affiliate": null
+ },
+ {
+  "slug": "opusclip",
+  "name": "OpusClip",
+  "category": "動画",
+  "url": "https://www.opus.pro/",
+  "summary": "長い動画をAIが短いクリップに切り出し、字幕付けや縦長への画面調整まで行う動画ツールです。YouTubeショート、TikTok、Instagramリール向けのショート動画づくりに使えます。",
+  "uses": [
+   "長い動画やライブ配信からショート動画を切り出す",
+   "アニメーション字幕を付ける",
+   "横長の動画を9:16の縦長に合わせる"
+  ],
+  "pricing": "Free 0ドル（月60クレジット・透かしあり）／Starter 月15ドル／Pro 月29ドル（年払いなら月14.5ドル）／Business 個別見積もり",
+  "japanese": "字幕は20以上の言語に対応（公式表示）",
+  "added": "2026-10-27",
+  "checked": "2026-10-27",
+  "description": "長い動画からショート動画を作るOpusClip。AI字幕と縦長への自動調整に対応し、無料プランは月60クレジットです。",
+  "affiliate": null
  }
 ]
