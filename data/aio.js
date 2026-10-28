@@ -988,5 +988,21 @@ module.exports = {
         "Claude Platformの新機能やベータを当日に使いたいならAnthropic managed、データの処理者をGoogle Cloudにしたい・データの所在要件やVPC Service Controls・CMEKが必要ならGoogle managedが向いています。"
       ]
     ]
+  },
+  "claude-code-mcp-tasks": {
+    "faq": [
+      [
+        "MCP Tasksと自動バックグラウンドの違いは？",
+        "自動バックグラウンドは約2分かかるMCP呼び出しをセッション内で後ろに回す仕組みで、セッションを抜けると続きません。MCP Tasksはサーバー側で仕事を引き受け、リモートならセッション退出後も続き、同じセッションを再開すれば再び追えます。"
+      ],
+      [
+        "どの環境で使えますか？",
+        "パブリックベータで、Claude Code v2.1.304以降のターミナルCLI・Agent SDK・GitHub Actionsが対象です。VS Code拡張とデスクトップアプリでは使えません。Tasks対応のMCPサーバーと、プロトコル改訂2026-07-28での接続なども必要です。"
+      ],
+      [
+        "料金は別途かかりますか？",
+        "MCP Tasks単体の追加料金は公式ドキュメントに記載がありません。Claude CodeはPro（月20ドル、年払いなら年200ドル）やMaxなどの有料プランに含まれます。最新の料金は公式ページでご確認ください。"
+      ]
+    ]
   }
 };
