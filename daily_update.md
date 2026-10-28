@@ -8,7 +8,7 @@
 2. OG画像（新記事・新ツールがあるとき）: `python3 og.py`
 3. ビルド: `node build.js`  → dist/
 4. デプロイ（トークンは表示しない）:
-   `CLOUDFLARE_ACCOUNT_ID=6deec0878d763367266ed69fe82a793d WRANGLER_CACHE_DIR=/tmp/wcache npx wrangler pages deploy dist --project-name ai-tools-shinchaku --branch main`
+   `/workspace/agentic_biz/deploy_ai_site.sh`（functions/込み＋pages.dev 301確認まで自動。wrangler直接実行は禁止）
 5. 確認: トップと新ページが200を返すこと
    `curl -s -o /dev/null -w '%{http_code}' https://ai-shinchaku.com/`
 6. IndexNow: `node indexnow.js`（`--dry` で送信せず確認）

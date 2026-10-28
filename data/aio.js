@@ -1,4 +1,24 @@
 module.exports = {
+  "muryou-ai-tool-ichiran": {
+    "faq": [
+      [
+        "無料で使えるAIツールはどれですか？",
+        "公式ページで無料プラン・無料版の記載を確かめたのは25件です。チャットはChatGPT・Google Gemini、リサーチはFelo、画像・デザインはNapkin AI・Krea・イルシル、動画はHeyGen・Runway・Descript・Fliki・OpusClip・CapCut、音楽・音声はSuno・ElevenLabs、業務効率化はNotion AI・Manus・スブリ、議事録・文字起こしはNotta・tl;dv、開発はCursor・v0、文章作成はラクリン・Catchy・PLaMo翻訳・Value AI Writerです。"
+      ],
+      [
+        "無料プランの上限や金額は載っていますか？",
+        "料金は変わりやすいため、この一覧には金額や上限を載せていません。無料枠の中身や条件は変わることがあるので、使う前に各ツールの公式ページでお確かめください。"
+      ],
+      [
+        "NotebookLMやMicrosoft Copilotが載っていないのはなぜですか？",
+        "今回開いた公式ページで無料プランの記載を読み取れなかったため、一覧に入れていません。"
+      ],
+      [
+        "会議の議事録・文字起こしを無料で試せるAIは？",
+        "この一覧では、Nottaとtl;dvの公式ページで無料プランの記載を確かめました。くわしい違いは各ツールの解説記事をご覧ください。"
+      ]
+    ]
+  },
   "chatgpt-muryou-dekirukoto": {
     "lead": "ChatGPTの無料版は、GPT-6でのテキストチャットが無制限（不正利用対策あり）で、画像の作成・音声チャット・Deep Research・ファイルのアップロードも上限付きで使えます。スケジュールタスクやサイト作成は有料プラン向けです。",
     "faq": [
