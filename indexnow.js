@@ -1,7 +1,7 @@
 // デプロイ後に実行：前回送信時から内容が変わったページのURLを IndexNow に送る
 // 使い方：node indexnow.js（dist を build 済み・デプロイ済みであること）。--dry で送信せず表示だけ
 const fs=require('fs'),path=require('path'),crypto=require('crypto'),https=require('https');
-const BASE='https://ai-tools-shinchaku.pages.dev',HOST='ai-tools-shinchaku.pages.dev',STATE='.indexnow_state.json';
+const BASE='https://ai-shinchaku.com',HOST='ai-shinchaku.com',STATE='.indexnow_state.json';
 const keyFile=fs.readdirSync('static').find(f=>/^[0-9a-f]{32}\.txt$/.test(f));const key=keyFile.replace('.txt','');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
 const cur={};for(const f of walk('dist'))if(f.endsWith('index.html')){const u=BASE+'/'+path.relative('dist',f).replace(/index\.html$/,'');cur[u]=crypto.createHash('sha1').update(fs.readFileSync(f)).digest('hex')}

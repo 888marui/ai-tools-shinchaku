@@ -10,7 +10,7 @@
 4. デプロイ（トークンは表示しない）:
    `CLOUDFLARE_ACCOUNT_ID=6deec0878d763367266ed69fe82a793d WRANGLER_CACHE_DIR=/tmp/wcache npx wrangler pages deploy dist --project-name ai-tools-shinchaku --branch main`
 5. 確認: トップと新ページが200を返すこと
-   `curl -s -o /dev/null -w '%{http_code}' https://ai-tools-shinchaku.pages.dev/`
+   `curl -s -o /dev/null -w '%{http_code}' https://ai-shinchaku.com/`
 6. IndexNow: `node indexnow.js`（`--dry` で送信せず確認）
 7. コミットとプッシュ: `git add -A && git commit -m "..." && git push`
 

@@ -1,0 +1,1 @@
+export async function onRequest(ctx){const u=new URL(ctx.request.url);if(u.hostname!=='ai-shinchaku.com'&&(u.hostname.endsWith('.pages.dev')||u.hostname==='www.ai-shinchaku.com')){u.hostname='ai-shinchaku.com';u.protocol='https:';u.port='';return Response.redirect(u.toString(),301);}return ctx.next();}

@@ -1,5 +1,5 @@
 // GitHub Pages用：dist の全HTMLページを Cloudflare Pages の同じパスへ転送するページに置き換えて gh-redirect/ に出力
-const fs=require('fs'),path=require('path');const NEW='https://ai-tools-shinchaku.pages.dev';const SRC='dist',OUT='gh-redirect';
+const fs=require('fs'),path=require('path');const NEW='https://ai-shinchaku.com';const SRC='dist',OUT='gh-redirect';
 fs.rmSync(OUT,{recursive:true,force:true});
 (function walk(d){for(const f of fs.readdirSync(d)){const p=path.join(d,f);if(fs.statSync(p).isDirectory()){walk(p);continue}
 const rel=path.relative(SRC,p).split(path.sep).join('/');if(!rel.endsWith('.html'))continue;
