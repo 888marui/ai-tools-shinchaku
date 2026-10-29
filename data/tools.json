@@ -28,10 +28,10 @@
    "旅行・予定の計画",
    "ブレスト"
   ],
-  "pricing": "無料（￥0）／Google AI Plus ￥725／Pro ￥2,900／Ultra ￥14,500（AI Proの5倍の上限）・￥32,000（20倍）（月額・公式料金ページ 2026/10/22確認）",
+  "pricing": "無料（￥0）／Google AI Plus ￥725／Pro ￥2,900／Ultra ￥14,500（AI Proの5倍の上限）・￥32,000（20倍）（月額・公式料金ページ 2026/10/29確認）",
   "japanese": "日本語の料金ページあり（日本円表示）",
   "added": "2026-10-16",
-  "checked": "2026-10-22",
+  "checked": "2026-10-29",
   "affiliate": null,
   "cheapest": "Google AI Plus ￥725/月"
  },
@@ -212,12 +212,12 @@
    "画像の高画質化",
    "動画生成"
   ],
-  "pricing": "Free（1日100ユニット）／有料 $9〜$200（月額・年払い割引あり・公式料金ページ確認）",
-  "japanese": "未確認",
+  "pricing": "Free（1日100ユニット）／Basic $9／Pro $35／Max $105（月払いの月額。年払いは40%割引の表示あり）／Business $200〜（公式料金ページ確認）",
+  "japanese": "公式サイトに日本語対応の記載なし",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-29",
   "affiliate": null,
-  "cheapest": "$9/月〜"
+  "cheapest": "Basic $9/月（月払い）"
  },
  {
   "slug": "capcut",
@@ -341,12 +341,12 @@
    "コード修正",
    "コードの理解"
   ],
-  "pricing": "Free $0／有料 $8〜$200（月額・公式料金ページ 2026/10/16確認）",
+  "pricing": "Free $0（リクエスト数に制限あり）／Plus $8／Premium $30／Super $100／Ultra $200（月額・税別。年払いはPlus $80／Premium $300／Super $1,000／Ultra $2,000）／Teams 1席$30〜（公式料金ページ・ドキュメント確認）",
   "japanese": "日本語の料金ページあり",
   "added": "2026-10-16",
-  "checked": "2026-10-16",
+  "checked": "2026-10-29",
   "affiliate": null,
-  "cheapest": "$8/月〜"
+  "cheapest": "Plus $8/月"
  },
  {
   "slug": "v0",
