@@ -1,11 +1,11 @@
 // 海外AIニュース（AI関連のみ。暗号資産は扱わない）。出典は公式・一次情報のURLを必ず入れる。新しい順に先頭へ追加。
-// 項目: slug, date(元発表日), added(掲載日), title, source(発表元), url(出典), summary(3〜5文), comment(一言), links([[href(サイト内の絶対パス), ラベル]]), article(詳しい記事のslug・任意)
+// 項目: slug, date(元発表日), added(掲載日), title, source(発表元), url(出典), summary(3〜5文), comment(一言), links([[href(サイト内の絶対パス), ラベル]]), merged(true なら記事に統合：ニュースのURLは記事へ301。functions/_middleware.js の REDIRECTS にも追加する), article(詳しい記事のslug・任意)
 module.exports=[
 {slug:'claude-google-cloud-anthropic-managed-2026-10',date:'2026-10-23',added:'2026-10-27',source:'Google Cloud',url:'https://cloud.google.com/blog/products/ai-machine-learning/expanding-claude-availability-on-google-cloud',
 title:'Google Cloudで「Anthropic managed」のClaudeが一般提供',
 summary:['Google Cloudは10月23日、Anthropicが運用する「Claude Models on Google Cloud（Anthropic managed）」の一般提供を発表しました。','これまでのGoogleが運用する「Google managed」と合わせて、Google Cloud上でClaudeを使う方法が2つになりました。','どちらも同じモデルを公開当日から使え、標準料金とGoogle Cloudの請求も同じです。','違いはデータの処理者で、Anthropic managedではClaude Managed Agents（ベータ）やコード実行などClaude Platformの機能も当日から使えます。'],
 comment:'すでにGoogle Cloudを使っている会社なら、請求と権限管理をまとめたままClaudeの新機能を試せます。',
-links:[['/articles/claude-models-google-cloud/','Google CloudでClaudeを使う2つの方法'],['/articles/claude-haiku-5-5/','Claude Haiku 5.5とは？']],article:'claude-models-google-cloud'},
+links:[['/articles/claude-models-google-cloud/','Google CloudでClaudeを使う2つの方法'],['/articles/claude-haiku-5-5/','Claude Haiku 5.5とは？']],article:'claude-models-google-cloud',merged:true},
 {slug:'muse-spark-open-2026-10',date:'2026-10-15',added:'2026-10-21',source:'Meta',url:'https://research.meta.ai/blog/muse-spark-open',
 title:'Meta「Muse Spark Open」を公開',
 summary:['Metaは10月15日、大型言語モデル「Muse Spark Open」の重み（モデル本体）を公開しました。','パラメータは全体で8,160億、1トークンごとに使うのは420億で、画像なども扱えるマルチモーダル対応、一度に読める長さは100万トークンです。','コーディングや、何段階も続くエージェント作業に向けたモデルだと説明しています。','Baseten、Groq、OpenRouter、Together AIなどのAPIで使えるほか、Hugging Faceなどから重みをダウンロードでき、Apple M5 UltraのMac Studio 2台でも動かせるとしています。','ライセンスは「Muse Model License」で、商用利用には一部条件がありますが、多くの開発者は無料で使えるとしています。'],
@@ -20,5 +20,5 @@ links:[['/articles/claude-haiku-5-5/','小型で安いモデルならClaude Haik
 title:'Claude Haiku 5.5公開、料金は値下げ',
 summary:['Anthropicは10月7日、小型で速いモデル「Claude Haiku 5.5」を公開しました。','要約、分類、データベースへの問い合わせのような、数が多く手早く済ませたい作業に向けたモデルです。','10万トークンまでの入力なら、100万トークンあたり入力0.10ドル、出力0.50ドルで、前の世代のHaiku 4.5より9割安くなっています。','あわせてSonnet 5.5のキャッシュ読み込みの料金を半分にし、MaxプランとTeamプランの利用者にはAPIで使える毎月のクレジットを配ると発表しました。'],
 comment:'APIでAIを大量に回している人ほど、コストの下がり方が大きいアップデートです。',
-links:[['/articles/chatgpt-igai-ai-hikaku/','ChatGPT以外のAIチャット比較']],article:'claude-haiku-5-5'}
+links:[['/articles/chatgpt-igai-ai-hikaku/','ChatGPT以外のAIチャット比較']],article:'claude-haiku-5-5',merged:true}
 ];
