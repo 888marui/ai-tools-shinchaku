@@ -6,8 +6,8 @@
    - 1x1トラッキング画像（pixel / width="1" height="1"）は入れない
    - アフィリエイトリンクは rel="sponsored nofollow" + PR表示
 2. OG画像（新記事・新ツールがあるとき）: `python3 og.py`
-3. ビルド: `node build.js`  → dist/
-4. デプロイ（トークンは表示しない）:
+3. ビルド: `node build.js`  → dist/ のあと `node check.js`（JSON-LD・サイト内リンク・404.html の検査）
+4. デプロイ: `main` へのマージで GitHub Actions が自動で公開する（README「デプロイ（GitHub Actions）」。本番URLの確認と IndexNow も自動）。Mac から手動で出すときは（トークンは表示しない）:
    `/workspace/agentic_biz/deploy_ai_site.sh`（functions/込み＋pages.dev 301確認まで自動。wrangler直接実行は禁止）
 5. 確認: トップと新ページが200を返すこと
    `curl -s -o /dev/null -w '%{http_code}' https://ai-shinchaku.com/`

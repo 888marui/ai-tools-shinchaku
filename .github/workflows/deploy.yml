@@ -1,0 +1,146 @@
+# AIツール新着便：main への push（マージ）と手動実行で Cloudflare Pages に公開する。
+# pull_request ではビルドと検査だけ（シークレットは使わない・公開しない）。
+# 運営者が一度だけ行う設定は README の「デプロイ（GitHub Actions）」を参照。
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  WRANGLER_VERSION: "4.154.0"
+  PILLOW_VERSION: "12.3.0"
+  # Cloudflare Pages のプロジェクト名はリポジトリ内に記載がないため、リポジトリ変数 CF_PAGES_PROJECT で渡す（未設定ならデプロイを省略）
+  CF_PROJECT: ${{ vars.CF_PAGES_PROJECT }}
+  SITE: https://ai-shinchaku.com
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # build.js が最初に python3 og.py を呼ぶ（失敗しても「og.py skipped」と出して既存の static/og を使う）。
+      # フォントは Mac と同じ /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc を入れる。作った画像はコミットしない（公開物にだけ入る）
+      - name: Install og.py dependencies (Pillow, Noto Sans CJK)
+        run: |
+          python -m pip install --disable-pip-version-check "pillow==${PILLOW_VERSION}"
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends fonts-noto-cjk
+          test -f /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
+      - name: Build (og.py → dist/)
+        run: |
+          node build.js 2>&1 | tee build.log
+          if grep -q 'og.py skipped' build.log; then echo "::warning::og.py が失敗したため既存の OG 画像で公開します"; fi
+      - name: Check (JSON-LD・サイト内リンク・404.html)
+        run: node check.js
+      - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          name: dist
+          path: dist
+          retention-days: 3
+          if-no-files-found: error
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4   # functions/（_middleware.js）と indexnow.js のため
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - name: Check secrets
+        id: secrets
+        env:
+          HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+          HAS_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+        run: |
+          skip() { echo "ok=false" >> "$GITHUB_OUTPUT"; echo "::notice::$1"; echo "$1" >> "$GITHUB_STEP_SUMMARY"; exit 0; }
+          if [ "$HAS_TOKEN" != "true" ] || [ "$HAS_ACCOUNT" != "true" ]; then
+            skip "シークレット未設定のためデプロイを省略（CLOUDFLARE_API_TOKEN と CLOUDFLARE_ACCOUNT_ID の両方が必要）"
+          fi
+          [ -n "$CF_PROJECT" ] || skip "リポジトリ変数 CF_PAGES_PROJECT 未設定のためデプロイを省略"
+          printf '%s' "$CF_PROJECT" | grep -Eq '^[a-z0-9][a-z0-9-]{0,57}$' || { echo "::error::プロジェクト名 CF_PAGES_PROJECT が不正です"; exit 1; }
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          node-version: "22"
+      - name: Deploy to Cloudflare Pages (dist + functions/)
+        if: steps.secrets.outputs.ok == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          COMMIT_MSG: ${{ github.event.head_commit.message || 'workflow_dispatch' }}
+        run: |
+          npx --yes "wrangler@${WRANGLER_VERSION}" pages deploy dist \
+            --project-name="$CF_PROJECT" --branch=main \
+            --commit-hash="$GITHUB_SHA" --commit-message="$(printf '%s' "$COMMIT_MSG" | head -c 200)" --commit-dirty=true
+      # 本番の確認。失敗してもデプロイは取り消さない（ジョブが失敗になり、通知で気づける）
+      - name: Smoke test production URLs
+        if: steps.secrets.outputs.ok == 'true'
+        env:
+          PAGES_DEV_HOST: ${{ vars.CF_PAGES_DEV_HOST }}
+        run: |
+          code() { curl -sS -o /dev/null -w '%{http_code}' --max-time 20 "$1" || echo 000; }
+          expect() { # $1=URL $2=期待するHTTPコード。反映待ちで最大5回やり直す
+            for _ in 1 2 3 4 5; do
+              c=$(code "$1"); [ "$c" = "$2" ] && { echo "OK   $c $1"; return 0; }; sleep 10
+            done
+            echo "::error::$1 が $c（期待 $2）"; return 1
+          }
+          fail=0
+          expect "$SITE/" 200 || fail=1
+          expect "$SITE/sitemap.xml" 200 || fail=1
+          expect "$SITE/articles/muryou-ai-tool-ichiran/" 200 || fail=1
+          expect "$SITE/no-such-page-$GITHUB_RUN_ID/" 404 || fail=1
+          expect "$SITE/free/" 301 || fail=1
+          loc=$(curl -sS -o /dev/null -w '%{redirect_url}' --max-time 20 "$SITE/free/" || true)
+          if [ "$loc" = "$SITE/articles/muryou-ai-tool-ichiran/" ]; then echo "OK   /free/ → $loc"; else echo "::error::/free/ の転送先が $loc"; fail=1; fi
+          # *.pages.dev → 独自ドメインの301（functions/_middleware.js）。プロジェクトの pages.dev のホスト名は
+          # プロジェクト名と同じとは限らない（名前が取られていると xxx-abc.pages.dev になる）ため、
+          # リポジトリ変数 CF_PAGES_DEV_HOST（例: xxx.pages.dev）があるときだけ確かめる
+          if [ -n "$PAGES_DEV_HOST" ]; then expect "https://$PAGES_DEV_HOST/" 301 || fail=1; else echo "skip: CF_PAGES_DEV_HOST 未設定のため pages.dev の301確認を省略"; fi
+          exit $fail
+      # IndexNow：キーは公開前提のファイル（static/<key>.txt としてサイトに置かれている）なのでシークレット不要。
+      # 送信済みの記録（.indexnow_state.json）は Actions キャッシュで次回に引き継ぐ（無ければリポジトリ内の記録を使う）
+      - uses: actions/cache/restore@v4
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          path: .indexnow_state.json
+          key: indexnow-state-${{ github.run_id }}
+          restore-keys: indexnow-state-
+      - name: IndexNow
+        if: steps.secrets.outputs.ok == 'true'
+        run: node indexnow.js
+      - uses: actions/cache/save@v4
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          path: .indexnow_state.json
+          key: indexnow-state-${{ github.run_id }}
