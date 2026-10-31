@@ -19,7 +19,7 @@
   "articles/notebooklm-muryou-jougen/": "NotebookLM（Gemini Notebook）の無料版はノートブック100件、1件あたりソース50件まで。ファイルサイズの上限と2026年9月からの変更点をGoogle公式ヘルプとブログで整理。",
   "articles/conoha-ai-canvas-tsukaikata-ryoukin/": "ConoHa AI Canvasの料金は月額の基本料金とWebUI従量課金の合計です。ブラウザでStable Diffusionを使える仕組み、無料時間、支払い方法、使い始めの流れを公式情報で整理。",
   "articles/ai-yomiage-elevenlabs-voicevox/": "AI音声読み上げは、無料で日本語なら VOICEVOX、自然な声や多言語ナレーションならElevenLabsが向いています。料金・商用利用の条件・日本語対応と使い方を公式情報で比較。",
-  "articles/ai-gijiroku-tool-hikaku/": "AI議事録ツール4つを比較。Zoom・Meet・Teamsをまず無料で記録するならtl;dvかNotta、使った分だけ払うならWITH TEAM、対面の会議や取材ならPlaud。料金と無料枠も整理。",
+  "articles/ai-gijiroku-tool-hikaku/": "AI議事録ツール7つ（tl;dv・Notta・NotebookLM・Fathom・Fireflies・WITH TEAM・Plaud）の無料枠・日本語・会議ツール対応・データの学習利用を公式ページで確認し、1つの表で比較。",
   "articles/mojiokoshi-ai-hikaku/": "文字起こしAIをまず無料で試すならNottaのフリー（月120分・1回3分まで）かOtterのBasic（月300分）。会社の日本語会議ならRimoやNottaのビジネス。主要4ツールを比較。",
   "articles/muryou-mojiokoshi-ai/": "無料で文字起こしするなら、Nottaのフリー（月120分・1回3分まで）かOtterのBasic（月300分）が候補です。無料プランの上限と、無料でできること・できないことを公式情報で整理。",
   "articles/gazou-seisei-ai-muryou/": "無料の画像生成AIは、日本語ですぐ作るならGemini、毎日少しずつ試すならKrea（1日100ユニット）、資料の図解ならNapkin AI。Canvaも含め無料枠と商用利用の注意点を整理。",
