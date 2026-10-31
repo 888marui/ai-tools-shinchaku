@@ -21,10 +21,11 @@ function splitP(html){
 module.exports=function postfix(html,extraCss){
   if(extraCss)html=html.replace('</style>',extraCss+'</style>');
   const parts=html.split(/(<pre[\s\S]*?<\/pre>|<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<head[\s\S]*?<\/head>|<[^>]+>)/);
-  let inA=0;
+  let inA=0,keep=0;
   for(let i=0;i<parts.length;i++){const p=parts[i];if(!p)continue;
-    if(p[0]==='<'){if(/^<a[\s>]/.test(p))inA++;else if(/^<\/a>/.test(p))inA=Math.max(0,inA-1);continue}
-    parts[i]=fixText(p,inA>0);}
+    if(p[0]==='<'){if(/^<a[\s>]/.test(p)){inA++;if(/class="src-url"/.test(p))keep=1}else if(/^<\/a>/.test(p)){inA=Math.max(0,inA-1);keep=0}continue}
+    // 出典リンク（class="src-url"）はURLをそのまま見せる
+    if(!keep)parts[i]=fixText(p,inA>0);}
   html=parts.join('');
   const b=html.indexOf('<body');return html.slice(0,b)+splitP(html.slice(b));
 };
