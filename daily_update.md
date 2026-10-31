@@ -21,3 +21,11 @@
 - 大きな新ツールや大型アップデートは、data/articles.js に詳しい記事（何か・できること・公式の料金・使い方・向いている人・出典）を書き、ニュースの article にそのslugを入れる。
 - 1x1トラッキング画像は入れない。アフィリエイトリンクは rel="sponsored nofollow" + PR表示。
 - そのあと通常どおり og.py → build → deploy → 200確認 → IndexNow → commit/push。
+
+## 2026-10-31 に足した仕組み（README の「運用の方針」もあわせて読む）
+- 記事の冒頭に「この記事の調べ方」が自動で入る（出典の `<pre><code>` のURLの数とドメイン・最終確認日・AIの利用）。人が確認した範囲を書くときは、記事に `"method": {"human": "…"}` を入れる（事実だけ）。
+- 記事に出てくる用語（トークン・クレジット・API・従量課金・商用利用・MCP）の定義が冒頭近くに自動で入る。定義は build.js の `GLOSSARY`。違う意味で使う記事は skip に slug を足す。
+- ツールページの追加の欄：data/tools.json の `more`（`fit` 向いている人／`notFit` 向かない人／`diff` 似たツールとの違い／`tried` 無料枠で実際に試したこと／`sources` 確認した公式ページ／`checked` 確認日）。公式ページで確認できたことだけを書き、確認できない欄は空のままにする。見本：notta・tldv。
+- 出典は `<pre><code>` にURLを1行ずつ書く（ビルドでリンクの箇条書きになる）。
+- 記事を書いてニュースが要らなくなったら、ニュースに `merged: true` を付け、`functions/_middleware.js` の `REDIRECTS` に足す。
+- 記事の title（build.js の STO）・description（data/seo_fix.json の meta）の「Nつ」が見出しと食い違うと、ビルドで `[要確認]` の警告が出る。
