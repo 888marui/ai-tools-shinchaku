@@ -62,3 +62,6 @@ Search Console のデータが手に入らない時期に、データなしで�
 ### 確認
 - `node build.js && node check.js`：OK（120 html、内部リンク 3,937、JSON-LD 306、エラー0）
 - 変更前後の dist を比べ、変わったのは上の12ページだけ（内部リンク 3,918 → 3,937 で +19）。増えた href は上の表のとおりで、消えたリンクはない。
+
+## 2026-11-02：記事の末尾に「この話題のまとめ記事」
+- 上のハブと同じ組み合わせを `build.js` の `HUBS` に入れ、記事の末尾に理由つきで出すようにした（スライド作成 `ai-slide-sakusei-hikaku`・音声読み上げ `ai-yomiage-elevenlabs-voicevox` を足した）。ハブを足すときは `HUBS` も直す。くわしくは `docs/ctr-changes.md`。
