@@ -188,3 +188,11 @@ Search Console の実データ（過去28日・実データは 2026-10-27〜10-3
 
 ### 気づいたこと（今回は直していない）
 - `isFree()` は `フリー[：: ]\s*0円` のように区切りのある書き方だけを無料プランとみなす。ラクリンの料金欄「フリー0円/月（…）」は無料プランなしと判定され、ラベル・`priceNote`・自動タイトルに影響している。Plaud の「無料Starterプラン」も同じく無料とは判定されない。直すと無料の件数や一覧が変わるため、別の作業で確かめてから直す。
+
+## 2026-11-03：ツールページの「向いている人・向かない人」「似たツールとの違い」を充実（#8）
+
+- `data/tools.json` の `more`（`fit`・`notFit`・`diff`・`sources`）を17ツールに足した：runway・luma・heygen・suno・elevenlabs・descript・opusclip・cursor・v0・napkin・irusiru・rakurin・value-ai-writer・plaud・withteam-ai-mojiokoshi・fliki・invideo（invideo は違いだけ）。
+- 中身は、`data/tools.json` の summary・pricing・japanese・uses と、既存の記事（Suno・ElevenLabs の商用、Flikiの商用など）にある、公式情報で確かめた事実だけ。「実際に使ってみた」などの体験の記述は書いていない（#9 の利用検証は人の作業が必要なので見送り）。
+- `more.checked` は付けていない。各ツールの確認日が違うため（ページ上部の情報確認日を見る）。出典は `sources` に公式ページを入れた。
+- 料金が未確認のツールには `offers` を足していない（`OFFERS` は変えていない）。
+- 比べる相手は同じカテゴリや同じ記事で扱っているツール。違いの欄でリンクしたツールは、末尾の「似たツール」から外れる（PR #10 の変更）。
