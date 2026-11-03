@@ -544,7 +544,20 @@
   "added": "2026-10-16",
   "checked": "2026-10-16",
   "affiliate": null,
-  "cheapest": "未確認"
+  "cheapest": "未確認",
+  "more": {
+   "checked": "2026-11-03",
+   "diff": [
+    [
+     "okamai",
+     "マドレスは手続き業務に特化したAIエージェント基盤で、相談内容から当てはまる手続きを導き、必要書類と入力内容を根拠とともに示します（第一弾は公共機関・金融機関向け。料金は未確認）。OKamAIはWebサイトのURLや資料を読み込ませて、案内や問い合わせに答えるAIチャットボットを作るサービスで、60日間・50会話の無料お試しと月額の料金プランが公開されています。"
+    ]
+   ],
+   "sources": [
+    "https://corp.opro.net/news/2026/10/madoless.html",
+    "https://okamai.ai/"
+   ]
+  }
  },
  {
   "slug": "chatgpt",
@@ -634,7 +647,20 @@
   "added": "2026-10-17",
   "checked": "2026-10-17",
   "affiliate": null,
-  "cheapest": "従量課金（Agent・Browser機能）"
+  "cheapest": "従量課金（Agent・Browser機能）",
+  "more": {
+   "checked": "2026-11-03",
+   "diff": [
+    [
+     "treg-free-webaccess",
+     "TinyFish Search / FetchはTinyFishのAPIを直接呼び出します（Search・Fetchは無料、カード登録不要）。Free WebAccess（treg）は、まずTinyFishで試し、空振りやブロックのときは次の提供元に自動で切り替える仕組みで、どの提供元が答え、いくらかかったかも結果と一緒に返します。"
+    ]
+   ],
+   "sources": [
+    "https://www.tinyfish.ai/free-search-fetch",
+    "https://treg.to/web-access"
+   ]
+  }
  },
  {
   "slug": "treg-free-webaccess",
@@ -652,7 +678,20 @@
   "added": "2026-10-17",
   "checked": "2026-10-17",
   "affiliate": null,
-  "cheapest": "従量課金"
+  "cheapest": "従量課金",
+  "more": {
+   "checked": "2026-11-03",
+   "diff": [
+    [
+     "tinyfish-search-fetch",
+     "Free WebAccessはtregの仕組みで、まず無料のTinyFishで検索・ページ読み取りを試し、空振りやブロックのときは次の提供元に自動で切り替えます（切り替え先は従量課金）。TinyFish Search / Fetchを直接使う場合は、TinyFishのAPIを自分で呼び出します（Search・Fetchは無料、カード登録不要）。"
+    ]
+   ],
+   "sources": [
+    "https://treg.to/web-access",
+    "https://www.tinyfish.ai/free-search-fetch"
+   ]
+  }
  },
  {
   "slug": "japan-ai-search-3",
@@ -1083,7 +1122,20 @@
   "added": "2026-10-21",
   "checked": "2026-10-21",
   "description": "bravesoftのAIチャットボット「OKamAI」。URLや資料から案内用AIを作り、Web埋め込みやタブレットでの現地案内に使えます。60日間50会話まで無料。",
-  "affiliate": null
+  "affiliate": null,
+  "more": {
+   "checked": "2026-11-03",
+   "diff": [
+    [
+     "madoless",
+     "OKamAIはWebサイトのURLや資料を読み込ませて、案内や問い合わせに答えるAIチャットボットを作るサービスです（無料お試しは60日間・50会話）。マドレスは手続き業務に特化したAIエージェント基盤で、相談内容から当てはまる手続きと必要書類を示します（第一弾は公共機関・金融機関向け。料金は未確認）。"
+    ]
+   ],
+   "sources": [
+    "https://okamai.ai/",
+    "https://corp.opro.net/news/2026/10/madoless.html"
+   ]
+  }
  },
  {
   "slug": "opusclip",
