@@ -65,3 +65,56 @@ Search Console のデータが手に入らない時期に、データなしで�
 
 ## 2026-11-02：記事の末尾に「この話題のまとめ記事」
 - 上のハブと同じ組み合わせを `build.js` の `HUBS` に入れ、記事の末尾に理由つきで出すようにした（スライド作成 `ai-slide-sakusei-hikaku`・音声読み上げ `ai-yomiage-elevenlabs-voicevox` を足した）。ハブを足すときは `HUBS` も直す。くわしくは `docs/ctr-changes.md`。
+
+## 2026-11-03：Search Console のクエリに合わせた内部リンク
+
+Search Console のデータが入ったので、表示のあるクエリごとに、対象ページへクエリの言葉を含む文言でリンクを足した。2〜4週間後（2026-11-17〜12-01ごろ）に下の基準値と比べる。
+
+### 基準値（Search Console、過去28日・実データは 2026-10-27〜10-31、2026-11-03 取得）
+平均掲載順位は約21位。
+
+| クエリ | クリック | 表示 |
+|---|---|---|
+| マドレス | 1 | 10 |
+| treg webaccess | 1 | 1 |
+| ラクリン 評判 | 0 | 8 |
+| plaud | 0 | 4 |
+| okamai | 0 | 2 |
+
+| ページ | クリック | 表示 |
+|---|---|---|
+| `/tools/madoless/` | 1 | 10 |
+| `/tools/treg-free-webaccess/` | 1 | 2 |
+| `/tools/rakurin/` | 0 | 12 |
+| `/articles/rakurin-hyouban-ryoukin/` | 0 | 6 |
+| `/tools/elevenlabs/` | 0 | 5 |
+
+### 変更前の状態（変更前の dist から数えた、対象ページへのリンク）
+- `/tools/madoless/`：トップとカテゴリの一覧だけ（本文・ほかのツールページからは0本）。「似たツール」が同じカテゴリの先頭4件（新しいツール）で埋まるため、業務効率化の12件のうちマドレスはどこにも出ていなかった。
+- `/tools/treg-free-webaccess/`：開発カテゴリのツールページ5つの「似たツール」から「Free WebAccess（treg）」でリンクあり。本文の説明つきのリンクはなし。
+- `/articles/rakurin-hyouban-ryoukin/`：本文から4ページ（ai-blogkun・value-ai-writer・ai-blog-wordpress・muryou-ai-tool-ichiran）、自動の「次に読む記事」・ツールページから。`/articles/ai-writing-tool-hikaku/` は本文でラクリンを紹介しているのに評判記事へのリンクがなかった。
+- `/tools/plaud/`・`/articles/plaud-tsukaikata-ryoukin/`：どちらも「Plaud」を含む文言で、記事3本・ツールページ数本からリンク済み（足していない）。
+- `/tools/okamai/`：業務効率化のツールページ11個の「似たツール」から「OKamAI（オカマイ）」でリンク済み。
+
+### 足したリンク（4本・4ページ）
+
+| リンク元 | リンク先 | 文言 | 置いた場所 |
+|---|---|---|---|
+| `/articles/ai-writing-tool-hikaku/` | `/articles/rakurin-hyouban-ryoukin/` | ラクリンの評判と料金のまとめ | ラクリンの段落の「詳しくは〜へ」 |
+| `/tools/okamai/` | `/tools/madoless/` | マドレス（との違い） | 新しい欄「似たツールとの違い」（`data/tools.json` の `more.diff`） |
+| `/tools/madoless/` | `/tools/okamai/` | OKamAI（オカマイ）（との違い） | 同上 |
+| `/tools/tinyfish-search-fetch/` | `/tools/treg-free-webaccess/` | Free WebAccess（treg）（との違い） | 同上 |
+| `/tools/treg-free-webaccess/` | `/tools/tinyfish-search-fetch/` | TinyFish Search / Fetch（との違い） | 同上 |
+
+- `more.diff` の文は、`data/tools.json` の summary・pricing にある事実だけで書き、2026-11-03 に公式ページ（`more.sources` の2つ）で中身を確かめた。マドレスの料金は「未確認」のまま。
+- マドレス⇔OKamAI は「案内・問い合わせに答えるAI」という点が近い組み合わせ、treg⇔TinyFish は「tregがまず無料のTinyFishを使う」関係。
+- 同じページで同じリンク先を2本にしないため、`build.js` の `toolNext()`（末尾の「似たツール」）から、`more.diff` で違いを書いたツールを外すようにした。これで `/tools/notta/`⇔`/tools/tldv/` の「似たツール」の重複も消えた（違いの欄のリンクは残る。空いた枠には同じカテゴリ・同じ記事のツールが入る：notta・tldv に OpusClip、madoless にロリポップ！AIホームページ、tinyfish・treg に Muse Spark Open）。
+- 本文に新しくツール名は足していない（`artTools` の判定は変わらない）。広告リンク（`rel="sponsored nofollow"` 240本）と PR 表記（`class="pr"`）は変更前後で同じ数。
+
+### 足さなかったもの
+- マドレス・OKamAI・treg を本文で自然に紹介できる記事はまだない（業務効率化・AIエージェント向けAPIの記事がない）。記事に無理に名前を足すと「紹介したツール」やボタンも増えるため、ツールページの「似たツールとの違い」にとどめた。
+- 「ラクリン 評判」：`ai-blog-jidouka` は自動の「次に読む記事」にすでに評判記事があるので、本文には足していない（同じページで2本になるため）。`ai-blogkun-hyouban-ryoukin`・`value-ai-writer-ryoukin-hyouban` は本文の「ラクリン」の文言のまま（同じページに自動のリンクもすでにある）。
+- `/tools/rakurin/` と `/articles/rakurin-hyouban-ryoukin/` は互いにリンクしている（記事の「関連」→ツールページ、ツールページの「ラクリンを紹介している記事」→記事）。変更なし。
+
+### 確認
+- `node build.js && node check.js`：OK（121 html、内部リンク 3,885、JSON-LD 309、エラー0）。変更前は内部リンク 3,880。

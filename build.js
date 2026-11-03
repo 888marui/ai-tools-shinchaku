@@ -165,7 +165,7 @@ const crumbs=items=>({'@context':'https://schema.org','@type':'BreadcrumbList',i
 const cut=(s,n=120)=>{s=String(s).replace(/\s+/g,' ').trim();return s.length>n?s.slice(0,n-1)+'…':s};
 const SEOFIX=require('./data/seo_fix.json');
 const last=tools.map(t=>t.checked&&t.checked>t.added?t.checked:t.added).sort().pop();
-const STO={"ai-gijiroku-tool-hikaku": "AI議事録ツール比較｜tl;dv・Notta・NotebookLMなど7つ", "ai-slide-sakusei-hikaku": "AIスライド作成ツール比較｜イルシル・Gamma・Felo", "ai-writing-tool-hikaku": "AIライティングツール比較｜Value AI Writerなど5つ", "ai-yomiage-elevenlabs-voicevox": "AI音声読み上げ｜ElevenLabsとVOICEVOXの料金・商用", "chatgpt-igai-ai-hikaku": "ChatGPT以外のAIチャット比較｜Gemini・Copilot", "douga-seisei-ai-hikaku": "動画生成AI比較｜Runway・Luma・HeyGenの料金と無料枠", "gazou-seisei-ai-muryou": "無料で使える画像生成AI｜Gemini・Krea・Napkin AI", "mojiokoshi-ai-hikaku": "文字起こしAI比較｜Notta・Rimo・Otter・tl;dvの料金", "notebooklm-muryou-jougen": "NotebookLM無料版の上限まとめ｜ソース数・回数", "tools/gemini-agent-workspace": "Gemini agentとは？使い方・料金", "tools/notebooklm": "NotebookLM（Gemini Notebook）とは？使い方"};function ST(x,k){if(STO[k])x=STO[k];x=x.replace('（2026年10月版）','');return (x+'｜'+SITE).length<=35?x+'｜'+SITE:x}
+const STO={"ai-gijiroku-tool-hikaku": "AI議事録ツール比較｜tl;dv・Notta・NotebookLMなど7つ", "ai-slide-sakusei-hikaku": "AIスライド作成ツール比較｜イルシル・Gamma・Felo", "ai-writing-tool-hikaku": "AIライティングツール比較｜Value AI Writerなど5つ", "ai-yomiage-elevenlabs-voicevox": "AI音声読み上げ｜ElevenLabsとVOICEVOXの料金・商用", "chatgpt-igai-ai-hikaku": "ChatGPT以外のAIチャット比較｜Gemini・Copilot", "douga-seisei-ai-hikaku": "動画生成AI比較｜Runway・Luma・HeyGenの料金と無料枠", "gazou-seisei-ai-muryou": "無料で使える画像生成AI｜Gemini・Krea・Napkin AI", "mojiokoshi-ai-hikaku": "文字起こしAI比較｜Notta・Rimo・Otter・tl;dvの料金", "notebooklm-muryou-jougen": "NotebookLM無料版の上限まとめ｜ソース数・回数", "rakurin-hyouban-ryoukin": "ラクリンの評判・料金｜無料で毎月約2記事・有料は4,980円/月〜", "plaud-tsukaikata-ryoukin": "Plaudの使い方・料金｜本体¥27,500〜・無料プランは毎月300分", "tools/gemini-agent-workspace": "Gemini agentとは？使い方・料金", "tools/notebooklm": "NotebookLM（Gemini Notebook）とは？使い方"};function ST(x,k){if(STO[k])x=STO[k];x=x.replace('（2026年10月版）','');return (x+'｜'+SITE).length<=35?x+'｜'+SITE:x}
 // 検索結果に出るタイトル・説明文（2026-11-02。記録は docs/ctr-changes.md）：開く前に「何が分かるか」が見えるよう、データにある事実だけで組み立てる。
 // 長さの目安はタイトル30〜35字前後・説明文70〜110字前後。サイト名は入るときだけ付ける（ST と同じ）。「未確認」の値はタイトルに出さない
 const TMAX=36,DMAX=110;
@@ -179,11 +179,17 @@ const shortName=t=>t.name.replace(/（[^）]*）/g,'').trim();
 const freeLimit=t=>{const m=tagText(t).match(/（([^）]*)）/);return m?m[1].split(/[、・]/).map(x=>x.trim()).find(x=>/\d/.test(x)&&x.length<=16&&!/[（）「」]|は/.test(x)&&!/^[￥¥$€]?\s?[\d,.]+円?$/.test(x))||'':''};
 // 最安の有料プランの金額だけ（例：1,185円/月〜）。月・年の単位が付いた金額で、注記（※・別途・従量・限定など）がないときだけ。「〜」は最安からの意味
 const priceShort=t=>{const s=String(t.cheapest||'');if(!okv(s)||/※|別途|従量|トークン|API|限定|未確認/.test(s))return '';const m=s.match(/([￥¥$€]\s?[\d,.]+|[\d,]+円)\s*\/\s*(月|年)/);return m?m[1].replace(/\s/g,'')+'/'+m[2]+'〜':''};
-const toolTitle=t=>{const N=[t.name,shortName(t)],lim=freeLimit(t),p=priceShort(t),ch=okv(t.cheapest)?String(t.cheapest).trim():'',f=isFree(t);
+// 表示はあるのにクリックがないツールページ（Search Console 2026-11-03）は、検索意図（料金・無料で使えるか・商用）を先に出す個別のタイトル・説明文にする。中身は data/tools.json と記事にある事実だけ（料金・無料枠は 2026-11-03 に公式サイトで再確認）。料金を直したらここも直す。記録は docs/ctr-changes.md
+const TSO={
+ rakurin:['ラクリンの料金｜無料で毎月約2記事・有料4,980円/月〜','ラクリン（Rakurin）はフリープラン0円/月で毎月約2記事（クレカ登録不要）。有料はシルバー4,980円/月（税込）から。ブログ記事の作成からWordPress投稿まで自動化できるAIライティングツール。'],
+ elevenlabs:['ElevenLabsの料金｜無料プランは非商用・商用は$6/月〜','ElevenLabsは無料プラン（Free $0）で試せますが、無料は非商用の目的だけ。商用ライセンスが付く最安の有料プランはStarter $6/月。90以上の言語・5,000以上の声に対応したAI音声生成。'],
+ plaud:['Plaud（プラウド）の料金｜本体¥27,500〜・無料枠は毎月300分','Plaud（プラウド）は本体（¥27,500〜¥30,800 税込）を買えば、無料のStarterプランで毎月300分文字起こしできます。有料はPro 年間¥16,800・Unlimited 年間¥40,000（税込）。'],
+ okamai:['OKamAI（オカマイ）の料金｜60日間無料・有料は月¥8,000〜','OKamAI（オカマイ）は無料お試し（60日間・50会話）で試せます。有料はエントリー月¥8,000から（税抜）。URLや資料を読み込ませて、案内や問い合わせに答えるAIチャットボットを作れます。']};
+const toolTitle=t=>{if(TSO[t.slug])return withSite(TSO[t.slug][0]);const N=[t.name,shortName(t)],lim=freeLimit(t),p=priceShort(t),ch=okv(t.cheapest)?String(t.cheapest).trim():'',f=isFree(t);
  const C=[n=>f&&lim&&p&&`${n}の料金｜無料は${lim}・有料${p}`,n=>f&&p&&`${n}の料金｜無料プランあり・有料${p}`,n=>f&&lim&&`${n}の料金と無料枠｜無料は${lim}`,n=>f&&`${n}の料金と無料枠｜無料プランあり`,n=>!f&&p&&`${n}の料金｜有料プランは${p}`,n=>!f&&ch&&`${n}の料金｜最安の有料プランは${ch}`,n=>`${n}とは？料金・無料枠・使い方`];
  return withSite(fit(...C.flatMap(c=>N.map(c)))||`${shortName(t)}の料金と無料枠`)};
 const freeShort=t=>{const s=tagText(t);if(!s)return '無料プランあり（内容は料金欄）';if(s.length<=40)return s;const l=freeLimit(t);return s.split('（')[0]+(l?`（${l}など）`:'')};
-const toolDesc=t=>cutS(`${shortName(t)}の料金${isFree(t)?'と無料枠':''}${t.checked?`（${jd(t.checked)}に公式サイトで確認）`:''}。${isFree(t)?`無料枠：${freeShort(t)}。`:''}${okv(t.cheapest)?`最安の有料プラン：${t.cheapest}。`:''}${t.summary}`);
+const toolDesc=t=>TSO[t.slug]?TSO[t.slug][1]:cutS(`${shortName(t)}の料金${isFree(t)?'と無料枠':''}${t.checked?`（${jd(t.checked)}に公式サイトで確認）`:''}。${isFree(t)?`無料枠：${freeShort(t)}。`:''}${okv(t.cheapest)?`最安の有料プラン：${t.cheapest}。`:''}${t.summary}`);
 // 比較・一覧の記事：タイトルに「何件を比べたか」と「確認した月」を入れる。件数は見出し（h1）・タイトルにある数か、h1 の「：A・B・C」の並び（「など」がないとき）から数える
 const COMPARE=a=>/比較|一覧/.test(STO[a.slug]||a.title)&&!a.noindex;
 const compareCount=a=>{const h1=(a.body.match(/<h1>([\s\S]*?)<\/h1>/)||[])[1]||'';for(const s of [STO[a.slug]||'',a.title,h1]){const m=s.match(/(\d+)(つ|件)/);if(m)return m[1]}const l=h1.split('：')[1];return l&&!/など/.test(l)&&l.split('・').length>=2?String(l.split('・').length):''};
@@ -245,8 +251,9 @@ const isCompareArt=a=>/比較|違い|一覧|選び方/.test(a.title);
 const priceNote=x=>[isFree(x)?'無料プランあり':'',okv(x.cheapest)?'有料 '+x.cheapest:''].filter(Boolean).join('・');
 const toolNext=t=>{let h='';const ra=[...toolArts(t)].sort((x,y)=>isCompareArt(y)-isCompareArt(x)||(y.updated||y.date||'').localeCompare(x.updated||x.date||''));
  if(ra.length){const top=ra.slice(0,4),rest=ra.slice(4);h+=`<h2>${esc(t.name)}を${top.some(isCompareArt)?'比べている':'紹介している'}記事</h2><ul class="nextlist">${top.map(a=>`<li><a href="../../articles/${a.slug}/">${esc(a.title)}</a><span class="why">${isCompareArt(a)?'比較・違いの記事':'使い方・料金の記事'}／更新 ${a.updated||a.date||''}</span></li>`).join('')}</ul>${rest.length?`<details class="more-arts"><summary>ほかに${esc(t.name)}が出てくる記事（${rest.length}本）</summary><ul>${rest.map(a=>`<li><a href="../../articles/${a.slug}/">${esc(a.title)}</a></li>`).join('')}</ul></details>`:''}`}
- const pick=new Map(),add=(x,r)=>{if(x&&x.slug!==t.slug&&!pick.has(x.slug)&&pick.size<4)pick.set(x.slug,[x,r])};
- for(const [sl] of ((t.more||{}).diff||[]))add(tools.find(y=>y.slug===sl),'このページで違いを説明');
+ // 「似たツールとの違い」（more.diff）で本文からリンクしたツールは、同じページで2本目のリンクにしないよう外す（2026-11-03）
+ const inDiff=new Set(((t.more||{}).diff||[]).map(([sl])=>sl));
+ const pick=new Map(),add=(x,r)=>{if(x&&x.slug!==t.slug&&!inDiff.has(x.slug)&&!pick.has(x.slug)&&pick.size<4)pick.set(x.slug,[x,r])};
  for(const x of tools)if(x.category===t.category)add(x,'同じカテゴリ（'+x.category+'）');
  const co=new Set(ra.flatMap(a=>artTools(a)));for(const x of tools)if(co.has(x.slug))add(x,'同じ記事で紹介');
  if(pick.size)h+=`<h2>${esc(t.name)}に似たツール</h2><ul class="nextlist">${[...pick.values()].map(([x,r])=>`<li><a href="../${x.slug}/">${esc(x.name)}</a><span class="why">${esc(r)}${priceNote(x)?'／'+esc(priceNote(x)):''}</span></li>`).join('')}</ul>`;
