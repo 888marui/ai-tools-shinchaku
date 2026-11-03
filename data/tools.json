@@ -33,12 +33,17 @@
    "旅行・予定の計画",
    "ブレスト"
   ],
-  "pricing": "無料（￥0）／Google AI Plus ￥725／Pro ￥2,900／Ultra ￥14,500（AI Proの5倍の上限）・￥32,000（20倍）（月額・公式料金ページ 2026/10/29確認）",
+  "pricing": "無料（￥0）／Google AI Plus ￥725／Pro ￥2,900／Ultra ￥14,500（AI Proの5倍の上限）・￥32,000（20倍）（月額・公式料金ページ 2026/11/03確認）",
   "japanese": "日本語の料金ページあり（日本円表示）",
   "added": "2026-10-16",
-  "checked": "2026-10-29",
+  "checked": "2026-11-03",
   "affiliate": null,
-  "cheapest": "Google AI Plus ￥725/月"
+  "cheapest": "Google AI Plus ￥725/月",
+  "fit": [
+   "Googleアカウントを持っていて、まず無料（￥0）で文章の下書きや調べものを試したい人",
+   "Gmail・Googleドキュメント・Googleドライブなど、Googleのサービスをふだん使っている人"
+  ],
+  "diff": "料金ページによると、有料プランにはGmail・Googleドライブ・Googleフォトで使えるクラウドストレージが付きます（無料15GB、AI Plus 400GB、AI Pro 5TB）。AI Plus以上ではGmailなどのGoogleツールからGeminiを直接使えると記載されています。資料を読み込ませて要約したいときは、同じGoogleのNotebookLMも候補になります。"
  },
  {
   "slug": "copilot",
