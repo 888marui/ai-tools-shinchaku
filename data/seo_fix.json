@@ -4,7 +4,7 @@
   "news/nvidia-nemotron-3-5-2026-10/": "NVIDIAは10月14日、オープンモデル「Nemotron 3.5 Super」「Nemotron 3.5 Lightning」を発表。Superは全体1,200億パラメータ（動くのは120億）で文章・画像・動画を扱えます。",
   "articles/gemini-muryou-dekirukoto/": "Geminiは無料でも画像生成・編集、Deep Research、Gemini Live、Canvas、Gemを使えます。5時間ごとにリセットされる上限と、AI Plus・Pro・Ultraとの違いを公式情報で確認。",
   "articles/ai-writing-tool-hikaku/": "AIライティングツール5つを料金・無料枠・日本語対応で比較。ブログやSEO記事ならValue AI Writer、議事録や翻訳もならDoraverse、Notion派はNotion AI。目的別の選び方を紹介。",
-  "articles/fliki-tsukaikata-shouyou/": "Flikiの動画を商用利用するなら有料プラン（Standard 年払い$21/月〜）が必要です。無料プランの制限（月3クレジット・720p・透かし）と使い方を公式情報でまとめました。",
+  "articles/fliki-tsukaikata-shouyou/": "Flikiは台本やブログ記事からAIナレーション付き動画を作れるツール。無料プランは月3クレジット・720p・透かし入り、商用利用は有料のStandard（年払い$21/月〜）から。使い方の流れと料金をまとめました。",
   "articles/withteam-mojiokoshi-hyouban/": "WITH TEAM AI文字起こしは月額なし、音源1分33円（税込・最低66円）の従量課金。無料お試し、対応形式、評判の調べ方を公式サイトの情報だけでまとめました。",
   "articles/rakurin-hyouban-ryoukin/": "ラクリンの評判と料金を公式情報で整理。無料のフリープランは毎月約2記事（クレカ登録不要）、有料はシルバー4,980円/月（税込・約20記事）から。プランの違い、評判の調べ方、AIブログくんとの違いも。",
   "articles/ai-blogkun-hyouban-ryoukin/": "AIブログくんは無料で3記事まで試せ、有料はLite（年間4,900円/月・月間8,200円/月、月15記事）から。Starterとの違い、GOLDとの違い、評判の調べ方を公式情報で整理。",
@@ -42,6 +42,7 @@
   "articles/mojiokoshi-ai-hikaku/": "Nottaの無料プラン（月120分・1回3分まで）と有料プランの違いは、<a href=\"https://ai-shinchaku.com/articles/notta-tsukaikata-ryoukin/\">Nottaの使い方と料金</a>で詳しくまとめています。",
   "category/議事録・文字起こし/": "まず無料で文字起こしを試したい人は、<a href=\"https://ai-shinchaku.com/articles/notta-tsukaikata-ryoukin/\">Nottaの使い方と料金</a>から読むと選びやすくなります。",
   "tools/rimo/": "無料プランから試したい場合は、<a href=\"https://ai-shinchaku.com/tools/notta/\">Notta</a>も候補です。料金の違いは<a href=\"https://ai-shinchaku.com/articles/notta-tsukaikata-ryoukin/\">Nottaの使い方と料金</a>にまとめています。",
+  "tools/rakurin/": "<b>評判を知りたい方へ：</b>評判の調べ方や、無料のフリープランで作れる記事数・プランの違いは<a href=\"https://ai-shinchaku.com/articles/rakurin-hyouban-ryoukin/\">ラクリンの評判・料金</a>にまとめています。",
   "tools/plaud/": "録音機を買わずにスマホやPCで文字起こししたいなら、<a href=\"https://ai-shinchaku.com/articles/notta-tsukaikata-ryoukin/\">Nottaの使い方と料金</a>も比べてみてください。",
   "tools/withteam-ai-mojiokoshi/": "使った分だけ払う形より、月額の無料プランから始めたい人は<a href=\"https://ai-shinchaku.com/articles/notta-tsukaikata-ryoukin/\">Nottaの使い方と料金</a>が参考になります。"
  },
