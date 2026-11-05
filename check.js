@@ -32,6 +32,24 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
 // ハブ⇔個別記事：個別記事からハブへ、ハブから個別記事へ、どちらもリンクがあること（noindex・存在しない記事は対象外）
 {const HUBS=require('./data/hubs.json');const page=s=>`dist/articles/${s}/index.html`;const has=(s,to)=>new RegExp(`href="(\\.\\./|/articles/|${BASE.replace(/[.]/g,'\\.')}articles/)${to}/"`).test(fs.readFileSync(page(s),'utf8'));const idx=s=>fs.existsSync(page(s))&&!/<meta name="robots" content="noindex/.test(fs.readFileSync(page(s),'utf8'));
  for(const [h,[,ms]] of Object.entries(HUBS)){if(!idx(h)){err('hubs.json','ハブの記事がない: '+h);continue}for(const m of ms){if(!idx(m))continue;if(!has(m,h))err(`articles/${m}/`,'ハブへのリンクがない: '+h);if(!has(h,m))err(`articles/${h}/`,'個別記事へのリンクがない: '+m)}}}
+// 7) 広告リンク（2026-11-06）：data/tools.json の affiliate.url は許可した提供元のドメインだけ。
+//    出力HTMLでは、広告リンクに rel="sponsored nofollow"、広告リンクのあるページに「PR」表記があること
+{const AD_HOSTS=[/^px\.a8\.net$/,/^af\.moshimo\.com$/,/^[a-z0-9-]+\.cello\.so$/,
+  // 以下は 2026-11-05 時点で tools.json にすでに入っていた紹介リンク（提供元は運営者が確認する）
+  /^try\.elevenlabs\.io$/,/^invideo\.sjv\.io$/,
+  // 楽天アフィリエイトの短縮リンク（noindex の rakuyoko-rakuten-ichiba-shoukai で使用。tools.json には使わない）
+  /^a\.r10\.to$/];
+ const isAd=u=>{try{const x=new URL(u.replace(/&amp;/g,'&'));return AD_HOSTS.some(r=>r.test(x.hostname))||x.hostname==='fliki.ai'&&x.searchParams.has('via')}catch(e){return false}};
+ for(const t of require('./data/tools.json')){if(!t.affiliate)continue;const a=t.affiliate;
+  if(!a.url||!isAd(a.url))err('tools.json',`${t.slug}: affiliate.url が許可した提供元のドメインではない: ${a.url}`);
+  if(!a.asp)err('tools.json',`${t.slug}: affiliate.asp（提供元）がない`);}
+ for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);let ad=0;
+  for(const m of h.matchAll(/<a\s[^>]*>/g)){const tag=m[0],href=(tag.match(/href="([^"]*)"/)||[])[1]||'',r=(tag.match(/rel="([^"]*)"/)||[])[1]||'';
+   const sp=/\bsponsored\b/.test(r);if(!sp&&!isAd(href))continue;ad++;
+   if(!isAd(href))err(rel,'sponsored のリンク先が許可した提供元ではない: '+href);
+   if(!sp||!/\bnofollow\b/.test(r))err(rel,'広告リンクに rel="sponsored nofollow" がない: '+href);}
+  if(ad&&!/<span class="pr">PR<\/span>/.test(h))err(rel,'広告リンクがあるのに PR 表記がない');
+  if(ad&&rel.startsWith('tools/')&&!/class="prnote"/.test(h))err(rel,'広告リンクがあるのに PR の宣言（prnote）がない');}}
 console.log(`checked ${files.length} html, ${links} internal links, ${ld} JSON-LD blocks`);
 if(errs.length){console.error(errs.slice(0,50).join('\n'));console.error(errs.length+' errors');process.exit(1)}
 console.log('OK');
