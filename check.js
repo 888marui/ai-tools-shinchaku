@@ -50,6 +50,12 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
    if(!sp||!/\bnofollow\b/.test(r))err(rel,'広告リンクに rel="sponsored nofollow" がない: '+href);}
   if(ad&&!/<span class="pr">PR<\/span>/.test(h))err(rel,'広告リンクがあるのに PR 表記がない');
   if(ad&&rel.startsWith('tools/')&&!/class="prnote"/.test(h))err(rel,'広告リンクがあるのに PR の宣言（prnote）がない');}}
+// 8) 料金は「金額＋確認日」（2026-11-06）：広告リンクのあるツールは、金額のある料金欄に checked（確認日）が必要。ツールページの料金欄に確認日が出ていること
+{const H=/\d[\d,]*(\.\d+)?\s*(円|ドル)|[$¥€£]\s?\d/;
+ for(const t of require('./data/tools.json')){if(!t.affiliate)continue;
+  if((H.test(t.pricing||'')||H.test(t.cheapest||''))&&!/^\d{4}-\d{2}-\d{2}$/.test(t.checked||''))err('tools.json',`${t.slug}: 金額があるのに checked（確認日）がない`);
+  const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f))continue;
+  if(H.test(t.pricing||'')&&!/<th>料金<\/th><td>[^]*?に公式サイトで確認）/.test(fs.readFileSync(f,'utf8')))err(`tools/${t.slug}/`,'料金欄に確認日がない');}}
 console.log(`checked ${files.length} html, ${links} internal links, ${ld} JSON-LD blocks`);
 if(errs.length){console.error(errs.slice(0,50).join('\n'));console.error(errs.length+' errors');process.exit(1)}
 console.log('OK');
