@@ -234,6 +234,7 @@
   "checked": "2026-10-17",
   "affiliate": {
    "url": "https://try.elevenlabs.io/q37bimm1e1ov",
+   "asp": "ElevenLabs Creator Affiliate Program",
    "label": "ElevenLabsを無料で試す",
    "disclosure": "PR：当サイト（AIツール新着便）はElevenLabsの独立したアフィリエイト（ElevenLabs Creator Affiliate Program参加者）です。上のリンクから登録・有料プラン契約があると、運営者が紹介報酬を受け取ることがあります。"
   },
@@ -455,6 +456,7 @@
   "checked": "2026-10-20",
   "affiliate": {
    "url": "https://notta.cello.so/poV7STKwa5L",
+   "asp": "Cello（公式の紹介プログラム）",
    "label": "Nottaを無料で試す"
   },
   "cheapest": "プレミアム 1,185円/月（年払い・税込）",
@@ -946,6 +948,7 @@
   "japanese": "対応（国産サービス、日本語表示に標準対応）",
   "affiliate": {
    "url": "https://px.a8.net/svt/ejp?a8mat=4BEL1J+D3MEI+50+7RTY1E",
+   "asp": "A8.net",
    "label": "ConoHa AI Canvasの公式サイトを見る",
    "disclosure": "このリンクはアフィリエイト（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。"
   },
@@ -967,6 +970,7 @@
   "japanese": "対応（日本語サービス）",
   "affiliate": {
    "url": "https://px.a8.net/svt/ejp?a8mat=4BEL1J+FHCTM+1JUK+1HL85U",
+   "asp": "A8.net",
    "label": "Value AI Writerの公式サイトを見る",
    "disclosure": "このリンクはアフィリエイト（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。"
   },
@@ -1008,6 +1012,7 @@
   "japanese": "対応（日本語の公式サイトあり）",
   "affiliate": {
    "url": "https://px.a8.net/svt/ejp?a8mat=4BEL1J+GO816+5UU0+5YJRM",
+   "asp": "A8.net",
    "label": "Doraverseの公式サイトを見る",
    "disclosure": "このリンクはアフィリエイト（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。"
   },
@@ -1029,6 +1034,7 @@
   "japanese": "対応（日本語サービス）",
   "affiliate": {
    "url": "https://px.a8.net/svt/ejp?a8mat=4BEL1J+H9NMY+348+4SNX5E",
+   "asp": "A8.net",
    "label": "ロリポップ！AIホームページの公式サイトを見る",
    "disclosure": "このリンクはアフィリエイト（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。"
   },
@@ -1054,6 +1060,7 @@
   "checked": "2026-10-20",
   "affiliate": {
    "url": "https://fliki.ai/?via=marui",
+   "asp": "未確認",
    "label": "Flikiを無料で試す",
    "disclosure": "PR：上のボタンはアフィリエイトリンク（広告）です。リンク先で登録・有料プラン契約があると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
@@ -1096,6 +1103,7 @@
   "checked": "2026-10-22",
   "affiliate": {
    "url": "https://af.moshimo.com/af/c/click?a_id=5855431&p_id=5515&pc_id=15110&pl_id=71207",
+   "asp": "もしもアフィリエイト",
    "label": "イルシルを無料ではじめる",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
@@ -1136,6 +1144,7 @@
   "checked": "2026-10-20",
   "affiliate": {
    "url": "https://af.moshimo.com/af/c/click?a_id=5855433&p_id=4456&pc_id=11583&pl_id=60038",
+   "asp": "もしもアフィリエイト",
    "label": "WITH TEAM AI文字起こしを試す",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
@@ -1178,6 +1187,7 @@
   "checked": "2026-10-20",
   "affiliate": {
    "url": "https://af.moshimo.com/af/c/click?a_id=5855437&p_id=5432&pc_id=14858&pl_id=70483",
+   "asp": "もしもアフィリエイト",
    "label": "ラクリンを無料で使う",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
@@ -1224,6 +1234,7 @@
   "checked": "2026-10-20",
   "affiliate": {
    "url": "https://af.moshimo.com/af/c/click?a_id=5855438&p_id=7624&pc_id=22031&pl_id=95151",
+   "asp": "もしもアフィリエイト",
    "label": "AIブログくんGOLDを無料で試す",
    "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
@@ -1247,6 +1258,7 @@
   "description": "tl;dvはZoom・Meet・Teams・対面会議を録画して文字起こしし、要約やタスクをAIで自動作成する会議AI。無料プランの範囲、プロ・ビジネスの年額料金、日本語対応を公式情報で整理。",
   "affiliate": {
    "url": "https://tldv.cello.so/hWETXPHvSAc",
+   "asp": "Cello（公式の紹介プログラム）",
    "label": "tl;dvを無料ではじめる（紹介リンク）",
    "disclosure": "PR：上のボタンはtl;dvの紹介プログラムのリンク（広告）です。リンク先で有料プランの申し込みがあると、運営者が紹介報酬を受け取ることがあります。紹介プログラムの案内では、このリンクから登録した人は30%割引を受けられるとされています（適用条件は未確認・リンク先でご確認ください）。掲載内容は報酬で変えていません。"
   },
@@ -1309,6 +1321,7 @@
   "description": "AIボイスレコーダーPlaud（プラウド）の本体価格、無料Starterプランの毎月300分の文字起こし、Pro・Unlimitedプランの年額、日本語対応を公式サイトの情報で整理。",
   "affiliate": {
    "url": "https://px.a8.net/svt/ejp?a8mat=3ZFOPI+E0A8H6+5J4W+5YZ76",
+   "asp": "A8.net",
    "label": "Plaud公式ストアで見る（広告）",
    "disclosure": "PR：上のボタンはA8.netのアフィリエイトリンク（広告）です。リンク先で購入があると、運営者が報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
@@ -1351,6 +1364,7 @@
   "description": "AI動画作成ツールinvideo AIの料金プラン（Starter・Plus・Max）、月ごとのクレジット、年払いの金額を公式料金ページの情報で整理。",
   "affiliate": {
    "url": "https://invideo.sjv.io/0G7OgN",
+   "asp": "未確認",
    "label": "invideo AI公式サイトで見る（広告）",
    "disclosure": "PR：上のボタンはアフィリエイトリンク（広告）です。リンク先で有料プランの契約があると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
   },
