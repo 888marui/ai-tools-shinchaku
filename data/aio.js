@@ -78,7 +78,7 @@ module.exports = {
     "faq": [
       [
         "無料で使えるAIツールはどれですか？",
-        "公式ページで無料プラン・無料版の記載を確かめたのは25件です。チャットはChatGPT・Google Gemini、リサーチはFelo、画像・デザインはNapkin AI・Krea・イルシル、動画はHeyGen・Runway・Descript・Fliki・OpusClip・CapCut、音楽・音声はSuno・ElevenLabs、業務効率化はNotion AI・Manus・スブリ、議事録・文字起こしはNotta・tl;dv、開発はCursor・v0、文章作成はラクリン・Catchy・PLaMo翻訳・Value AI Writerです。"
+        "公式ページで無料プラン・無料版の記載を確かめたのは26件です。チャットはChatGPT・Google Gemini・Muse、リサーチはFelo、画像・デザインはNapkin AI・Krea・イルシル、動画はHeyGen・Runway・Descript・Fliki・OpusClip・CapCut、音楽・音声はSuno・ElevenLabs、業務効率化はNotion AI・Manus・スブリ、議事録・文字起こしはNotta・tl;dv、開発はCursor・v0、文章作成はラクリン・Catchy・PLaMo翻訳・Value AI Writerです。"
       ],
       [
         "無料プランの上限や金額は載っていますか？",

@@ -39,7 +39,7 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
   /^try\.elevenlabs\.io$/,/^invideo\.sjv\.io$/,
   // 楽天アフィリエイトの短縮リンク（noindex の rakuyoko-rakuten-ichiba-shoukai で使用。tools.json には使わない）
   /^a\.r10\.to$/];
- const isAd=u=>{try{const x=new URL(u.replace(/&amp;/g,'&'));return AD_HOSTS.some(r=>r.test(x.hostname))||x.hostname==='fliki.ai'&&x.searchParams.has('via')}catch(e){return false}};
+ const isAd=u=>{try{const x=new URL(u.replace(/&amp;/g,'&'));return AD_HOSTS.some(r=>r.test(x.hostname))||x.hostname==='fliki.ai'&&x.searchParams.has('via')||x.hostname==='muse.ai'&&x.pathname.startsWith('/join')/* Muse 紹介プログラム（運営者の紹介リンクは /join のみ。2026-11-08 追加） */}catch(e){return false}};
  for(const t of require('./data/tools.json')){if(!t.affiliate)continue;const a=t.affiliate;
   if(!a.url||!isAd(a.url))err('tools.json',`${t.slug}: affiliate.url が許可した提供元のドメインではない: ${a.url}`);
   if(!a.asp)err('tools.json',`${t.slug}: affiliate.asp（提供元）がない`);}
