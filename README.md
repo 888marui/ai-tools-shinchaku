@@ -8,10 +8,15 @@
 - **301リダイレクト**：Cloudflare Pages の `_redirects` は Functions が処理するリクエストに効かないため（全パスに `functions/_middleware.js` がある）、`functions/_middleware.js` の `REDIRECTS` で行う。`build.js` の `moved()` と組が合わないとビルド時に警告が出る。
 - **日付**：記事の表示の更新日・JSON-LD の `dateModified`・sitemap の `lastmod` は、どれも `data/articles.js` の `updated`（なければ `date`）から作る。内容を直したら `updated` を変える。
 
+## アクセス解析（GA4・2026-11-09）
+- 測定IDは `build.js` の `GA4_ID`（G-2FG56R9HJ7。公開してよい値）だけ。全ページの head で gtag.js を非同期で読み込む。外部リンクのクリックは GA4 の拡張計測（離脱クリック）で自動計測される。
+- 広告リンク（`rel="sponsored"`）のクリックは、あわせて `aff_click` イベント（`tool`＝tools.json の slug、`asp`、`position`＝cta_top / cta_box / cta_sticky / inline、`link_url`）を送る。`data-tool` はビルド時に付く（A8 は a8mat のプログラム部分、もしもは p_id で tools.json の `affiliate.url` と照合）。
+- プライバシーポリシーに GA4・Cookie・Google のポリシー・オプトアウト アドオンの記載がある（`check.js` で検査）。
+
 ## デプロイ（GitHub Actions）
 `main` に push（PR のマージ）すると `.github/workflows/deploy.yml` が自動で公開する。Actions タブの「deploy」→「Run workflow」で手動実行もできる。
 
-1. ビルド：`node build.js`（最初に `python3 og.py` を呼ぶ。Pillow と Noto Sans CJK は Actions で入れる。作った OG 画像はコミットされず、公開物にだけ入る）→ `node check.js`（JSON-LD が読める・サイト内リンク切れ0・404.html が noindex・sitemap.xml がある）
+1. ビルド：`node build.js`（最初に `python3 og.py` を呼ぶ。Pillow と Noto Sans CJK は Actions で入れる。作った OG 画像はコミットされず、公開物にだけ入る）→ `node check.js`（JSON-LD が読める・サイト内リンク切れ0・404.html が noindex・sitemap.xml がある・GA4 の測定IDが1つだけで全ページに gtag.js がある・プライバシーポリシーに GA4 の記載がある）
 2. 公開：`wrangler pages deploy dist --project-name <CF_PAGES_PROJECT> --branch main`（wrangler は 4.154.0 に固定。リポジトリ直下で実行するので `functions/_middleware.js` も一緒に上がる）
 3. 確認：`https://ai-shinchaku.com/`・`/sitemap.xml`・`/articles/muryou-ai-tool-ichiran/` が 200、存在しないURLが 404、`/free/` が `/articles/muryou-ai-tool-ichiran/` へ 301。リポジトリ変数 `CF_PAGES_DEV_HOST`（このプロジェクトの `xxx.pages.dev`）を設定すると、そこが独自ドメインへ 301 になることも確かめる。どれかが違うとジョブが失敗になる（公開は取り消さない）
 4. IndexNow：確認が通ったら `node indexnow.js`。送信済みの記録は Actions のキャッシュで引き継ぐ（コミットはしない）
