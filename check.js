@@ -56,6 +56,17 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
   if((H.test(t.pricing||'')||H.test(t.cheapest||''))&&!/^\d{4}-\d{2}-\d{2}$/.test(t.checked||''))err('tools.json',`${t.slug}: 金額があるのに checked（確認日）がない`);
   const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f))continue;
   if(H.test(t.pricing||'')&&!/<th>料金<\/th><td>[^]*?に公式サイトで確認）/.test(fs.readFileSync(f,'utf8')))err(`tools/${t.slug}/`,'料金欄に確認日がない');}}
+// 9) GA4（2026-11-09）：測定IDは1つだけ。リダイレクト用のページ以外の全ページで gtag.js を読み込み、config は1回。プライバシーポリシーに GA4 の記載があること
+{const ids=new Set();
+ for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);
+  for(const m of h.matchAll(/\bG-[A-Z0-9]{6,}\b/g))ids.add(m[0]);
+  if(/<meta http-equiv="refresh"/.test(h))continue;
+  if(!/<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-[A-Z0-9]+"><\/script>/.test(h))err(rel,'GA4 の gtag.js（非同期）がない');
+  if((h.match(/gtag\('config',/g)||[]).length!==1)err(rel,"gtag('config') が1回ではない");}
+ if(ids.size!==1)err('dist',`GA4 の測定IDが1つではない: ${[...ids].join(', ')||'なし'}`);
+ const pv=fs.existsSync('dist/privacy/index.html')?fs.readFileSync('dist/privacy/index.html','utf8'):'';
+ for(const [re,m] of [[/Google アナリティクス/,'Google アナリティクスの利用'],[/Cookie/,'Cookie'],[/href="https:\/\/policies\.google\.com\/technologies\/partner-sites/,'Google のポリシーへのリンク'],[/href="https:\/\/tools\.google\.com\/dlpage\/gaoptout/,'オプトアウト アドオンへのリンク']])
+  if(!re.test(pv))err('privacy/index.html','プライバシーポリシーに記載がない: '+m);}
 console.log(`checked ${files.length} html, ${links} internal links, ${ld} JSON-LD blocks`);
 if(errs.length){console.error(errs.slice(0,50).join('\n'));console.error(errs.length+' errors');process.exit(1)}
 console.log('OK');
