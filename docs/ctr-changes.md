@@ -2,6 +2,68 @@
 
 Search Console のデータがない時期に、一般に効果が確かめられている方法で変えた記録。あとで Search Console の数字（表示回数・クリック数・CTR・掲載順位）と比べるために残す。**効果はまだ確かめていない**（変更前後の比較は、公開から4週間以上たってから、同じ曜日の並びの期間でページごとに見る）。
 
+## 2026-11-09：キーワードプランナーの実測に合わせたタイトル・見出し、記事2本
+
+データ：`888marui/claude` の requests ブランチ `requests/data/kw/2026-11_keyword-planner.csv` の「AIツール新着便」の行（Google 広告のキーワードプランナー。検索数は月平均の範囲表示）。「取得できず」の行は数えていない。Search Console の数字ではないので、ここでの検索数は「どの言い回しで探されているか」の目安として使った。
+
+### 対応表（検索数の多い順）
+
+| 検索語（関連語） | 月間検索数 | 競合 | 推移（CSVのまま） | 対応するページ | 今回 |
+|---|---|---|---|---|---|
+| 生成AI 無料 | 1万〜10万 | 中 | 3か月 -90%・前年比 -90% | `/articles/muryou-ai-tool-ichiran/` | title・h1・説明文を変更 |
+| スピーク 料金（スピークアプリ料金・speak料金） | 1000〜1万 | 中 | 3か月 0% | なし（`/tools/speak-phone/` は新機能「スピーク電話」のページ） | 記事を追加（広告リンクなし） |
+| スピークバディ料金・エルサスピーク料金ほか | 10〜1万 | 低〜中 | 関連語 | なし（別のサービス） | 扱わない。スピークの記事で「別のサービス」と書いただけ |
+| AI 議事録 無料（議事録ai無料・議事録自動作成無料） | 1000〜1万（関連 100〜1000） | 高・中 | 3か月 -90%・前年比 -90% | `/articles/ai-gijiroku-tool-hikaku/` | title・h1・説明文を変更 |
+| 文字起こしai無料（AI 文字起こし 無料） | 1000〜1万（100〜1000） | 高 | 3か月 0%・前年比 -90% | `/articles/muryou-mojiokoshi-ai/` | title・h1・説明文を変更 |
+| Muse AI | 1000〜1万 | 低 | 3か月 +9,900%・前年比 +9,900% | `/tools/muse/` | title・説明文を変更（h1 は変えない。下の理由） |
+| ボイスレコーダー議事録自動作成無料・音声議事録無料 | 100〜1000・10〜100 | 高 | 関連語 | なし（`/tools/plaud/`・`/tools/automemo/` はツール単体） | 記事を追加（Plaud・AutoMemo は提携済み） |
+| スピーク 無料体験（スピークバディ無料体験） | 10〜100 | 中 | 3か月 +900% | なし | スピークの記事で扱う |
+| ラクリン 評判 | 10〜100 | 低 | 3か月 0% | `/articles/rakurin-hyouban-ryoukin/`・`/tools/rakurin/` | 変更なし（測定中。下の理由） |
+| 文字起こしオンライン無料・ai音声認識無料ほか | 10〜100 | 高・中 | 関連語 | `/articles/muryou-mojiokoshi-ai/` | 上の変更に含む |
+
+### 変えたページ（`dist` から取った値。サイト名を含む）
+
+| ページ | title（前） | title（後） | h1（前 → 後） |
+|---|---|---|---|
+| `/articles/muryou-ai-tool-ichiran/` | 無料で使えるAIツール一覧（2026年10月確認）｜AIツール新着便 | 無料で使える生成AI・AIツール一覧（2026年10月確認） | 無料で使えるAIツール一覧｜… → 無料で使える生成AI・AIツール一覧｜公式ページで無料プランを確かめた25件 |
+| `/articles/ai-gijiroku-tool-hikaku/` | AI議事録ツール7つ比較（2026年11月確認）｜無料枠と料金 | AI議事録ツール7つの無料枠を比較（2026年11月確認） | AI議事録ツール7つ比較（2026年10月確認）｜無料枠と料金 → AI議事録ツール7つの無料枠を比較（2026年10月確認）｜無料でどこまで使えるか |
+| `/articles/muryou-mojiokoshi-ai/` | 無料で使える文字起こしAI｜無料プランの上限を公式サイトで確認 | 文字起こしAIを無料で使う｜Notta月120分・Otter月300分の上限 | 無料で使える文字起こしAI → 文字起こしAIを無料で使う｜無料プランの上限まとめ |
+| `/tools/muse/` | Muse（ミューズ）の料金と無料枠｜無料プランあり｜AIツール新着便 | Muse AI（Meta）とは｜無料枠・料金・使い方｜AIツール新着便 | 変更なし（Muse（ミューズ）） |
+
+説明文：
+- `muryou-ai-tool-ichiran`：「…確かめたAIツール25件…」→「…確かめた生成AI・AIツール25件…」（`data/articles.js` の `desc`）。
+- `ai-gijiroku-tool-hikaku`：先頭を「AI議事録は無料でどこまで使える？」にした（`data/seo_fix.json` の `meta`。7ツールの並びと中身は同じ）。
+- `muryou-mojiokoshi-ai`：先頭を「無料で文字起こしするなら」→「文字起こしAIを無料で使うなら」（`meta`。数字は同じ）。
+- `muse`：`build.js` の `TSO` に足した。「Muse AI（muse.ai）はMetaのパーソナルAIエージェント「Muse（ミューズ）」。2026年10月23日に日本で提供開始。無料 0円（週ごとのトークン枠あり）。調べものや予約、下書きを任せられます。」（106字。中身は `data/tools.json` の muse の summary・pricing だけ）
+
+やり方と決めごと：
+- title は既存どおり、記事は `build.js` の `STO`、ツールは `TSO`。h1 は記事本文の `<h1>`。本文の事実・`updated` は変えていない（h1 の「2026年10月確認」もそのまま）。
+- 「AI議事録ツール7つの無料枠を比較」：7つのうち WITH TEAM は無料プランがなく（冒頭の無料お試しのみ）、Plaud は本体の購入が前提なので、「無料で使える7つ」とは書かなかった。比較記事のタイトルは40字までで後半が落ちるため、title の後半（無料でどこまで使えるか）は h1 だけに残った。
+- 「生成AI・AIツール一覧」：一覧には生成AIでないものも入りうるので、「生成AI」だけにはしなかった。件数（25件）は記事のまま。
+- Muse の h1 は `tools.json` の `name`（Muse（ミューズ））から作る。公式サイト（muse.ai）の名前は「Muse」で「Muse AI」ではないため、名前は変えず、title と説明文だけ検索語に寄せた。
+- `/articles/ai-gijiroku-tool-hikaku/`・`/articles/muryou-ai-tool-ichiran/` は 2026-11-02 に title を変えたページ（効果は未測定）。今回は 11-03〜11-08 の測定対象ではないが、11-02 の変更の効果を見るときは 2026-11-09 の変更も重なっていることに注意する。
+- 11-03〜11-08 に変えて測定中のページ（rakurin・rakurin-hyouban-ryoukin・elevenlabs・plaud・plaud-tsukaikata-ryoukin・okamai・canly-aio・japan-ai-search-3・fliki-tsukaikata-shouyou）は変えていない。「ラクリン 評判」は2ページとも title にすでに「評判」が入っていて、11-03・11-04・11-08 の変更を測る前にまた変えると比べられなくなるため。「ボイスレコーダー…無料」は Plaud のツールページ・記事を変えず、新しい記事で受けた。
+- （記録漏れ）`/tools/rakurin/` の title・説明文は 2026-11-08 に `TSO` で「ラクリンの評判・料金｜無料で毎月約2記事・有料4,980円/月〜」に変わっている（`build.js` のコメントに「GSCで『ラクリン 評判』が順位5.5・表示11・クリック0」）。このファイルには記録がなかったので、ここに残す。
+
+### 足した記事（2本）
+- `/articles/speak-ryoukin-muryou-taiken/`「スピークの料金｜プレミアムとプレミアムプラスの違い・7日間無料体験」：プランの種類・月額/年額・7日間無料体験（終了24時間前までに解約）・解約・返金・プラン変更・払い方を、2026-11-09 に speak.com/jp と help.speak.com/ja で確認。**金額は公式の公開ページに載っていないので書いていない。** スピークの広告は審査中のため、広告リンクは入れていない（承認後に設置。`tools.json` の `speak-phone` に `affiliate` を入れれば、記事にも自動でボタンが入る）。
+- `/articles/voice-recorder-gijiroku-muryou/`「ボイスレコーダーで議事録を自動作成｜無料で使える範囲（Plaud・AutoMemo）」：Plaud の本体価格・Starter（毎月300分）・Pro・無制限・文字起こしパッケージを jp.plaud.ai、AutoMemo のお試し（毎月1時間）・プレミアム・追加購入を automemo.com/pricing-plans/ で 2026-11-09 に確認。Notta は `tools.json`（確認日 2026-11-09）。広告はビルドが `tools` の `affiliate` から入れるボタン（PR 表記つき）だけで、本文に手で入れていない。`data/hubs.json` の議事録ハブにも足した。
+
+### 2026-11-18〜12-02 に比べる語
+Search Console（クエリ×ページ）で、表示・クリック・CTR・掲載順位を見る。11-09 より前の数字がないページは、公開後の数字を基準にする（新しい2記事・Muse）。
+
+| 検索語 | 見るページ |
+|---|---|
+| 生成AI 無料／無料 生成AI | `/articles/muryou-ai-tool-ichiran/` |
+| AI 議事録 無料／議事録 ai 無料／議事録 自動作成 無料 | `/articles/ai-gijiroku-tool-hikaku/` |
+| 文字起こし ai 無料／AI 文字起こし 無料 | `/articles/muryou-mojiokoshi-ai/` |
+| Muse AI／muse ai meta／ミューズ AI | `/tools/muse/` |
+| スピーク 料金／スピーク 無料体験／speak 料金 | `/articles/speak-ryoukin-muryou-taiken/`（と `/tools/speak-phone/`） |
+| ボイスレコーダー 議事録 自動作成 無料／音声 議事録 無料 | `/articles/voice-recorder-gijiroku-muryou/`（と `/tools/plaud/`・`/tools/automemo/`） |
+| ラクリン 評判（参考・今回は変えていない） | `/tools/rakurin/`・`/articles/rakurin-hyouban-ryoukin/` |
+
+`node build.js && node check.js` は OK（134 HTML・JSON-LD エラー0・内部リンク切れ0）。
+
 ## 2026-11-02：タイトル・説明文、最初の画面、次の行動への導線
 
 ### 比べ方の目安
