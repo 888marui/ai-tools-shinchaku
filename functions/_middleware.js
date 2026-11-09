@@ -2,6 +2,7 @@
 // build.js の moved() と同じ組を書く（足りないとビルド時に警告が出る）
 const REDIRECTS={
 '/free/':'/articles/muryou-ai-tool-ichiran/',
+'/free-ai-tools/':'/',
 '/news/claude-haiku-5-5-2026-10/':'/articles/claude-haiku-5-5/',
 '/news/claude-google-cloud-anthropic-managed-2026-10/':'/articles/claude-models-google-cloud/',
 };
