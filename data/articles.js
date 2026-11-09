@@ -1,5 +1,24 @@
 module.exports = [
   {
+    "slug": "ai-gadget-erabikata",
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "tools": [
+      "plaud",
+      "notta-memo-pro",
+      "automemo",
+      "pocketalk-s2",
+      "timekettle-w4",
+      "ray-ban-meta"
+    ],
+    "title": "AIガジェット6つを比較｜ボイスレコーダー・翻訳機・AIグラスの選び方",
+    "desc": "AIボイスレコーダー・AI翻訳機・AIグラスなどAIガジェット6つの本体価格と月額サブスクの有無を、公式サイトで確認（2026年11月9日）。選び方の4つの軸と、目的別の候補をまとめました。",
+    "method": {
+      "human": "本体価格・月額プラン・対応アプリは2026年11月9日に各公式サイト・公式ストア（jp.plaud.ai、shop.notta.ai、automemo.com、pocketalk.jp、jp.store.timekettle.co、meta.com/jp）で確認。広告リンクは新たに入れていない（Plaud・AutoMemoのボタンはtools.jsonの既存値からビルド時に自動で入るもの）。"
+    },
+    "body": "<h1>AIガジェット6つを比較（2026年11月確認）｜ボイスレコーダー・翻訳機・AIグラス</h1>\n<p class=\"muted\">更新日：2026年11月9日。本体価格と月額サブスクの有無は、2026年11月9日に各社の公式サイト・公式ストアで確認した内容です。価格はセールや色・レンズの違いで変わることがあるので、購入前に公式サイトも見てください。</p>\n<p><b>結論：</b>AIガジェットは、本体価格だけでなく<b>月額サブスクがいるかどうか</b>で総額が変わります。会議の録音ならPlaud・Notta Memo Pro・AutoMemo、海外での会話ならポケトーク S2・Timekettle W4、ハンズフリーで撮影や質問をしたいならRay-Ban Metaが候補です。順位づけはしていません。</p>\n<h2>比較表（6製品・2026年11月9日確認）</h2>\n<table><thead><tr><th>製品</th><th>種類</th><th>本体価格</th><th>月額サブスク</th><th>スマホ・アプリ</th><th>日本語</th></tr></thead><tbody>\n<tr><td><a href=\"../../tools/plaud/\">Plaud</a></td><td>AIボイスレコーダー（カード型・身につける型）</td><td>¥27,500〜¥44,000（税込・機種による）</td><td>任意。無料のStarterプランで毎月300分。Pro 年間¥16,800・Unlimited 年間¥40,000</td><td>Plaudアプリと連携</td><td>112ヶ国語の文字起こしに対応と記載</td></tr>\n<tr><td><a href=\"../../tools/notta-memo-pro/\">Notta Memo Pro</a></td><td>AIボイスレコーダー（カード型）</td><td>¥29,700（税込）</td><td>必須ではない。本体の登録で無料のハードウェアプラン（毎月600分）。プレミアム1年分つき¥41,800・ビジネス1年分つき¥56,100（税込）</td><td>Nottaアプリと連携</td><td>日本語の公式ストアあり。データは東京リージョンに保存と記載</td></tr>\n<tr><td><a href=\"../../tools/automemo/\">AutoMemo</a></td><td>AIボイスレコーダー（専用機は任意）</td><td>オートメモ R 13,860円・オートメモ S 19,800円（税込）</td><td>任意。お試しプラン（無料・毎月1時間）。プレミアム 1,480円/月または14,800円/年（税込）</td><td>Webアプリ・オートメモアプリ</td><td>日本語の国内サービス（ソースネクスト）</td></tr>\n<tr><td><a href=\"../../tools/pocketalk-s2/\">ポケトーク S2</a></td><td>AI翻訳機（端末型）</td><td>36,300円（税込・SIM通信2年込み）</td><td>なし（2年間は月額利用料なしと記載。2年後は通信の延長あり）</td><td>本体だけで使える</td><td>対応（90以上の言語）</td></tr>\n<tr><td><a href=\"../../tools/timekettle-w4/\">Timekettle W4</a></td><td>AI翻訳イヤホン</td><td>¥41,600（セール表示。通常価格 ¥52,000）</td><td>任意。既存の翻訳機能はサブスクなし。マルチメディア翻訳・音声通話翻訳は月額14.99ドル</td><td>Timekettleアプリと連携が必要</td><td>対応言語に日本語あり（52言語）</td></tr>\n<tr><td><a href=\"../../tools/ray-ban-meta/\">Ray-Ban Meta</a></td><td>AIグラス（カメラ・スピーカー内蔵）</td><td>¥50,600〜（フレーム・レンズによる）</td><td>製品ページに月額料金の記載なし</td><td>スマホのアプリで管理と記載</td><td>リアルタイムの会話の対応言語に日本語あり</td></tr>\n</tbody></table>\n<p class=\"muted\">金額は公式サイト・公式ストアの表示どおりです。税込と書かれていないもの（Timekettle W4・Ray-Ban Meta）は、税込かどうかを公式ページで確かめられませんでした。</p>\n<h2>選ぶときに見る4つの軸</h2>\n<ul><li><b>何をしたいか</b>：会議を文字にしたいならボイスレコーダー、外国語で会話したいなら翻訳機・翻訳イヤホン、手を使わずに撮影やAIへの質問をしたいならAIグラス。</li><li><b>本体価格と月額の合計</b>：ボイスレコーダーは無料の文字起こし枠（Plaud 毎月300分・Notta Memo Pro 毎月600分・AutoMemo 毎月1時間）を超えると有料プランが必要です。1年間の合計で比べてください。</li><li><b>スマホが必要か</b>：ポケトーク S2は本体だけで使えます。Timekettle W4はアプリとの連携が必要です。ボイスレコーダーも文字起こし結果はアプリやWebで見ます。</li><li><b>日本語と国内での使い方</b>：日本語に対応しているか、日本語のサポート窓口があるかを公式サイトで確かめましょう。今回確認した公式ページには、技適（電波法の技術基準適合証明）についての記載は見つかりませんでした。気になる場合は購入前にメーカーへ確認してください。</li></ul>\n<h2>どれを選ぶ？</h2>\n<ul><li><b>対面の会議・商談を専用機で録音して文字にしたい</b>：Plaud または Notta Memo Pro（どちらも本体を買うと無料の文字起こし枠つき）</li><li><b>まずスマホやPCで無料で試し、あとから専用機を足したい</b>：AutoMemo（専用機なしでも毎月1時間まで無料）</li><li><b>海外旅行や窓口で、端末を相手に向けて翻訳したい</b>：ポケトーク S2（通信2年込み）</li><li><b>イヤホンで聞きながら顔を見て話したい</b>：Timekettle W4</li><li><b>スマホを出さずに写真・動画を撮りたい、歩きながらAIに聞きたい</b>：Ray-Ban Meta</li></ul>\n<h2>使うときの注意</h2>\n<p>会話を録音・撮影するときは、相手に伝えて同意をとりましょう。AIの文字起こしや翻訳には誤りが入ることがあるので、大事な内容は人が確認してください。ボイスレコーダーの無料枠の違いは<a href=\"../voice-recorder-gijiroku-muryou/\">ボイスレコーダーで議事録を自動作成</a>、会議ツール全体の比較は<a href=\"../ai-gijiroku-tool-hikaku/\">AI議事録ツール7つの無料枠を比較</a>にまとめています。</p>\n<h2>関連</h2><p><a href=\"../plaud-tsukaikata-ryoukin/\">Plaudの使い方・料金</a>／<a href=\"../voice-recorder-gijiroku-muryou/\">ボイスレコーダーで議事録を自動作成</a>／<a href=\"../../category/AIガジェット/\">AIガジェットのカテゴリ</a></p>\n<h2>出典（公式）</h2><pre><code>https://jp.plaud.ai/\nhttps://shop.notta.ai/ja-jp/products/notta-memo-pro\nhttps://automemo.com/device/\nhttps://automemo.com/pricing-plans/\nhttps://pocketalk.jp/pocketalk\nhttps://pocketalk.jp/pocketalk/lineup\nhttps://jp.store.timekettle.co/products/w4-ai-interpreter-earbuds\nhttps://www.meta.com/jp/ai-glasses/\nhttps://www.meta.com/jp/ai-glasses/ray-ban-meta-wayfarer-gen-2/</code></pre>"
+  },
+  {
     "slug": "speak-ryoukin-muryou-taiken",
     "date": "2026-11-09",
     "updated": "2026-11-09",

@@ -67,6 +67,15 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
  const pv=fs.existsSync('dist/privacy/index.html')?fs.readFileSync('dist/privacy/index.html','utf8'):'';
  for(const [re,m] of [[/Google アナリティクス/,'Google アナリティクスの利用'],[/Cookie/,'Cookie'],[/href="https:\/\/policies\.google\.com\/technologies\/partner-sites/,'Google のポリシーへのリンク'],[/href="https:\/\/tools\.google\.com\/dlpage\/gaoptout/,'オプトアウト アドオンへのリンク']])
   if(!re.test(pv))err('privacy/index.html','プライバシーポリシーに記載がない: '+m);}
+// 10) AIガジェット（2026-11-09）：category が「AIガジェット」のものは gadget（メーカー・本体価格・確認日・月額サブスク・アプリ）が必要。
+//     広告リンクがない機器のページには PR 表記・sponsored のリンクを出さない（CTA は公式サイトへの直リンク）
+{for(const t of require('./data/tools.json')){if(t.category!=='AIガジェット'&&!t.gadget)continue;const g=t.gadget||{};
+  for(const k of ['maker','price','priceShort','subscription','apps'])if(!g[k])err('tools.json',`${t.slug}: gadget.${k} がない`);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(g.priceChecked||''))err('tools.json',`${t.slug}: gadget.priceChecked（本体価格の確認日）がない`);
+  if(g.offer!=null&&!(Number.isInteger(g.offer)&&g.offer>0))err('tools.json',`${t.slug}: gadget.offer は円の整数`);
+  const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f)){err('dist',`tools/${t.slug}/ がない`);continue}const h=fs.readFileSync(f,'utf8');
+  if(!/<th>本体価格<\/th>/.test(h))err(`tools/${t.slug}/`,'製品情報の欄（本体価格）がない');
+  if(!t.affiliate&&(/rel="[^"]*\bsponsored\b/.test(h)||/<span class="pr">PR<\/span>/.test(h)))err(`tools/${t.slug}/`,'広告リンクがないのに PR 表記・sponsored がある');}}
 console.log(`checked ${files.length} html, ${links} internal links, ${ld} JSON-LD blocks`);
 if(errs.length){console.error(errs.slice(0,50).join('\n'));console.error(errs.length+' errors');process.exit(1)}
 console.log('OK');
