@@ -78,7 +78,7 @@ module.exports = {
     "faq": [
       [
         "無料で使えるAIツールはどれですか？",
-        "公式ページで無料プラン・無料版の記載を確かめたのは26件です。チャットはChatGPT・Google Gemini・Muse、リサーチはFelo、画像・デザインはNapkin AI・Krea・イルシル、動画はHeyGen・Runway・Descript・Fliki・OpusClip・CapCut、音楽・音声はSuno・ElevenLabs、業務効率化はNotion AI・Manus・スブリ、議事録・文字起こしはNotta・tl;dv、開発はCursor・v0、文章作成はラクリン・Catchy・PLaMo翻訳・Value AI Writerです。"
+        "公式ページで無料プラン・無料版の記載を確かめたのは28件です。チャットはChatGPT・Google Gemini・Muse、リサーチはFelo、画像・デザインはNapkin AI・Krea・イルシル、動画はHeyGen・Runway・Descript・Fliki・OpusClip・CapCut、音楽・音声はSuno・ElevenLabs、業務効率化はNotion AI・Manus・スブリ・Notta Brain、議事録・文字起こしはNotta・tl;dv・AutoMemo、開発はCursor・v0、文章作成はラクリン・Catchy・PLaMo翻訳・Value AI Writerです。"
       ],
       [
         "無料プランの上限や金額は載っていますか？",
@@ -90,7 +90,7 @@ module.exports = {
       ],
       [
         "会議の議事録・文字起こしを無料で試せるAIは？",
-        "この一覧では、Nottaとtl;dvの公式ページで無料プランの記載を確かめました。くわしい違いは各ツールの解説記事をご覧ください。"
+        "この一覧では、Notta・tl;dv・AutoMemoの公式ページで無料プランの記載を確かめました。くわしい違いは各ツールの解説記事をご覧ください。"
       ]
     ]
   },
