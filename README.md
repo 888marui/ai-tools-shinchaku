@@ -8,6 +8,11 @@
 - **301リダイレクト**：Cloudflare Pages の `_redirects` は Functions が処理するリクエストに効かないため（全パスに `functions/_middleware.js` がある）、`functions/_middleware.js` の `REDIRECTS` で行う。`build.js` の `moved()` と組が合わないとビルド時に警告が出る。
 - **日付**：記事の表示の更新日・JSON-LD の `dateModified`・sitemap の `lastmod` は、どれも `data/articles.js` の `updated`（なければ `date`）から作る。内容を直したら `updated` を変える。
 
+## AIガジェット（物理製品・2026-11-09）
+- `data/tools.json` の `category: "AIガジェット"` で扱う。機器の項目は `gadget`：`maker`・`price`（本体価格の表記）・`priceShort`（一覧のラベル）・`priceChecked`（確認日）・`subscription`（月額サブスクの有無）・`apps`（対応OS・アプリ）。任意で `released`（発売日）・`spec`・`offer`（JSON-LD の価格・円）・`giteki`（技適など国内利用の可否。公式に記載があるときだけ）・`sources`。
+- 既存のツール（Plaud・AutoMemo）は主カテゴリのまま、`extraCategories: ["AIガジェット"]` でカテゴリページにも出す。`gadget` があれば、ツールページの表に製品情報の行が付く。
+- `affiliate` がない機器の CTA は「公式サイトを見る」（直リンク・PR表記なし）。Amazon（もしも）のリンクは提携承認後に `affiliate` へ入れる（既存の CTA・PR・開示の仕組みに載る）。構造化データは `Product`。`check.js` の 10) で必須項目と PR 表記を検査する。
+
 ## アクセス解析（GA4・2026-11-09）
 - 測定IDは `build.js` の `GA4_ID`（G-2FG56R9HJ7。公開してよい値）だけ。全ページの head で gtag.js を非同期で読み込む。外部リンクのクリックは GA4 の拡張計測（離脱クリック）で自動計測される。
 - 広告リンク（`rel="sponsored"`）のクリックは、あわせて `aff_click` イベント（`tool`＝tools.json の slug、`asp`、`position`＝cta_top / cta_box / cta_sticky / inline、`link_url`、`utm_source`、`utm_medium`）を送る。ランディングの UTM は sessionStorage に残し、サイト内遷移後も動画流入を切り分けられる。`data-tool` はビルド時に付く（A8 は a8mat のプログラム部分、もしもは p_id で tools.json の `affiliate.url` と照合）。見方は team_kb `projects/GA4_aff_clickのUTM切り分け.md`。

@@ -1355,6 +1355,20 @@
         "https://jp.plaud.ai/",
         "https://www.notta.ai/"
       ]
+    },
+    "extraCategories": [
+      "AIガジェット"
+    ],
+    "gadget": {
+      "maker": "Plaud",
+      "price": "Plaud Note ¥27,500／Plaud NotePin ¥27,500／Plaud NotePin S ¥28,600／Plaud Note Pro ¥30,800／Plaud One ¥44,000（いずれも税込）",
+      "priceShort": "本体 ¥27,500〜（税込）",
+      "priceChecked": "2026-11-09",
+      "subscription": "任意。無料のStarterプランで毎月300分の文字起こし。多く使うならProプラン 年間¥16,800・Unlimitedプラン 年間¥40,000（税込）",
+      "apps": "Plaudアプリ（公式サイトに「プラットフォーム & アプリ」の案内あり。対応OSの一覧は未確認）",
+      "sources": [
+        "https://jp.plaud.ai/"
+      ]
     }
   },
   {
@@ -1669,6 +1683,222 @@
       "sources": [
         "https://automemo.com/",
         "https://automemo.com/pricing-plans/"
+      ]
+    },
+    "extraCategories": [
+      "AIガジェット"
+    ],
+    "gadget": {
+      "maker": "ソースネクスト",
+      "price": "専用ボイスレコーダー：オートメモ R 13,860円／オートメモ S 19,800円（税込）。本体なしでもPCのブラウザ・スマホアプリで使えます",
+      "priceShort": "本体 13,860円〜（税込）",
+      "priceChecked": "2026-11-09",
+      "subscription": "任意。お試しプラン（無料・文字起こし1時間/月）／プレミアム 1,480円/月または14,800円/年（税込）",
+      "apps": "Webアプリ（ブラウザ）・スマホアプリ「オートメモアプリ」（App Store・Google Playで無料と記載）",
+      "sources": [
+        "https://automemo.com/device/"
+      ]
+    }
+  },
+  {
+    "slug": "notta-memo-pro",
+    "name": "Notta Memo Pro（ノッタメモ プロ）",
+    "category": "AIガジェット",
+    "url": "https://shop.notta.ai/ja-jp/products/notta-memo-pro",
+    "summary": "文字起こしサービスNottaのカード型AIボイスレコーダー。録音した会話をNottaアプリに送り、話者識別つきの文字起こしとAI要約ができます。本体を登録すると、毎月600分の文字起こしができる「ハードウェアプラン」が追加料金なしで付きます（公式ストアの記載）。",
+    "uses": [
+      "対面の会議・商談の録音と文字起こし",
+      "通話の録音（通話／対面を自動で識別と記載）",
+      "録音内容のAI要約・翻訳の確認（Nottaアプリと連携）"
+    ],
+    "pricing": "本体のみ ¥29,700（税込・ハードウェアプラン 毎月600分つき）／本体＋Notta プレミアムプラン1年分 ¥41,800（税込・毎月1,800分）／本体＋Notta ビジネスプラン1年分 ¥56,100（税込・文字起こし無制限）",
+    "japanese": "日本語の公式ストアあり。録音と文字起こしは日本（東京リージョン）のサーバーに保存と記載",
+    "added": "2026-11-09",
+    "checked": "2026-11-09",
+    "affiliate": null,
+    "cheapest": "本体 ¥29,700（税込）",
+    "gadget": {
+      "maker": "Notta",
+      "price": "本体のみ ¥29,700（税込）",
+      "priceShort": "本体 ¥29,700（税込）",
+      "offer": 29700,
+      "priceChecked": "2026-11-09",
+      "subscription": "必須ではありません。本体をNottaアプリで登録すると、無料のハードウェアプラン（文字起こし 毎月600分・AI要約 月100回）が付きます。もっと使うならプレミアム（毎月1,800分）・ビジネス（無制限）を1年分セットで購入できます",
+      "apps": "Nottaアプリと連携（スマホ・PCで同期と記載。対応OSの一覧は未確認）。接続はBluetooth 5.4・Wi-Fi・USB Type-C",
+      "spec": "77.2×56×3.9mm・30g／ストレージ 64GB／連続録音 最大50時間（1回の録音は最長5時間）／保証 24か月",
+      "sources": [
+        "https://shop.notta.ai/ja-jp/products/notta-memo-pro"
+      ]
+    },
+    "more": {
+      "checked": "2026-11-09",
+      "fit": [
+        "対面の会議や商談が多く、スマホを出さずに録音したい人",
+        "すでにNottaを使っていて、録音を同じアカウントでまとめたい人"
+      ],
+      "notFit": [
+        "月600分を大きく超えて文字起こしする人（プレミアムかビジネスの購入が必要）"
+      ],
+      "diff": [
+        [
+          "plaud",
+          "Plaudも本体を買うと無料のStarterプランで毎月300分です。Notta Memo Proは本体の登録で毎月600分のハードウェアプランが付きます。"
+        ],
+        [
+          "notta",
+          "NottaはスマホやPCだけで使える文字起こしサービス（フリーは月120分・1回3分まで）。Notta Memo Proはその専用の録音機です。"
+        ]
+      ],
+      "sources": [
+        "https://shop.notta.ai/ja-jp/products/notta-memo-pro"
+      ]
+    }
+  },
+  {
+    "slug": "pocketalk-s2",
+    "name": "ポケトーク S2",
+    "category": "AIガジェット",
+    "url": "https://pocketalk.jp/pocketalk",
+    "summary": "ボタンを押して話すと、AIが翻訳して画面表示と音声で返すポケットサイズの翻訳機。90以上の言語に対応し、eSIMを内蔵しているので回線契約なしで2年間通信できます（公式サイトの記載）。",
+    "uses": [
+      "海外旅行・出張での会話の翻訳",
+      "店舗・窓口でのインバウンド対応",
+      "カメラで撮った文字の翻訳（カメラ翻訳 56言語と記載）"
+    ],
+    "pricing": "ポケトーク S2（SIM通信2年）36,300円（税込）／ポケトーク S2＋アクセサリセット 38,300円（税込）／SIM通信5年＋延長保証3年のセットあり。2年間は月額利用料なし",
+    "japanese": "対応（日本の会社の製品。日本語の公式サイト・サポートあり）",
+    "added": "2026-11-09",
+    "checked": "2026-11-09",
+    "affiliate": null,
+    "cheapest": "本体 36,300円（税込・通信2年込み）",
+    "gadget": {
+      "maker": "ポケトーク株式会社",
+      "price": "ポケトーク S2（SIM通信2年）36,300円（税込）",
+      "priceShort": "本体 36,300円（税込）",
+      "offer": 36300,
+      "priceChecked": "2026-11-09",
+      "subscription": "なし。本体価格に2年間の通信費が含まれ、月額利用料はかからないと記載。2年後は通信の延長ができます（延長の料金は公式サイトでご確認ください）。Wi-Fiでも使えます",
+      "apps": "本体だけで使えます（スマホは不要）。別にスマホ用の「ポケトークApp」もあります",
+      "spec": "翻訳 90以上の言語／170以上の国と地域で通信できるグローバルSIM（eSIM）内蔵",
+      "sources": [
+        "https://pocketalk.jp/pocketalk",
+        "https://pocketalk.jp/pocketalk/lineup"
+      ]
+    },
+    "more": {
+      "checked": "2026-11-09",
+      "fit": [
+        "スマホを貸し借りせずに、相手に端末を向けて翻訳したい人",
+        "海外で回線の契約やWi-Fiの設定をせずに使いたい人"
+      ],
+      "notFit": [
+        "イヤホンで聞きながら話したい人（翻訳イヤホンのほうが向いています）"
+      ],
+      "diff": [
+        [
+          "timekettle-w4",
+          "Timekettle W4はスマホのアプリとつなぐイヤホン型。ポケトーク S2は本体だけで使える手のひらサイズの端末です。"
+        ]
+      ],
+      "sources": [
+        "https://pocketalk.jp/pocketalk",
+        "https://pocketalk.jp/pocketalk/lineup"
+      ]
+    }
+  },
+  {
+    "slug": "timekettle-w4",
+    "name": "Timekettle W4（AI翻訳イヤホン）",
+    "category": "AIガジェット",
+    "url": "https://jp.store.timekettle.co/products/w4-ai-interpreter-earbuds",
+    "summary": "耳に着けて使うAI翻訳イヤホン。スマホのTimekettleアプリとつないで、52言語・106種類のアクセントの会話を翻訳します。英語⇔日本語などの一部の言語ペアは、オフライン翻訳パッケージもあります（公式ストアの記載）。",
+    "uses": [
+      "対面の会話の翻訳（相手と片方ずつイヤホンを着ける使い方など）",
+      "海外旅行・出張での会話",
+      "オンラインの音声・動画の翻訳（マルチメディア翻訳はサブスクの機能）"
+    ],
+    "pricing": "W4 AI 翻訳イヤホン：販売価格 ¥41,600（通常価格 ¥52,000・公式ストアのセール表示。税込かどうかは公式ストアに記載なし）。マルチメディア翻訳・音声通話翻訳は月額14.99ドルのプランに含まれる（各機能10分の無料トライアルあり）。対面の翻訳など既存の機能はサブスクなしで使えると記載",
+    "japanese": "対応（日本語の公式ストアあり。対応言語に日本語あり）",
+    "added": "2026-11-09",
+    "checked": "2026-11-09",
+    "affiliate": null,
+    "cheapest": "本体 ¥41,600（セール表示の販売価格）",
+    "gadget": {
+      "maker": "Timekettle",
+      "price": "販売価格 ¥41,600（通常価格 ¥52,000・セール表示）",
+      "priceShort": "本体 ¥41,600（セール表示）",
+      "offer": 41600,
+      "priceChecked": "2026-11-09",
+      "subscription": "任意。既存の翻訳機能はサブスクなしで使えると記載。マルチメディア翻訳・音声通話翻訳は月額14.99ドルのプラン（各機能10分の無料トライアルあり）",
+      "apps": "Timekettleアプリとの連携が必要（iOS版・Android版の案内あり）",
+      "spec": "52言語・106種類のアクセントに対応／オフライン翻訳パッケージ（英語⇔日本語・中国語⇔日本語など）",
+      "sources": [
+        "https://jp.store.timekettle.co/products/w4-ai-interpreter-earbuds"
+      ]
+    },
+    "more": {
+      "checked": "2026-11-09",
+      "fit": [
+        "イヤホンで翻訳を聞きながら、相手の顔を見て話したい人",
+        "オフラインでも英語⇔日本語を翻訳したい人"
+      ],
+      "notFit": [
+        "スマホを使わずに翻訳したい人（アプリとの連携が必要）"
+      ],
+      "diff": [
+        [
+          "pocketalk-s2",
+          "ポケトーク S2は本体だけで使える端末型で、2年間の通信費込み。W4はスマホのアプリとつなぐイヤホン型です。"
+        ]
+      ],
+      "sources": [
+        "https://jp.store.timekettle.co/products/w4-ai-interpreter-earbuds"
+      ]
+    }
+  },
+  {
+    "slug": "ray-ban-meta",
+    "name": "Ray-Ban Meta（AIグラス）",
+    "category": "AIガジェット",
+    "url": "https://www.meta.com/jp/ai-glasses/ray-ban-meta/",
+    "summary": "カメラ・オープンイヤースピーカー・マイクを内蔵したメガネ型のAIグラス。「Hey Meta」と話しかけてMeta AIに質問したり、ハンズフリーで写真・動画を撮ったりできます。日本語を含む言語でリアルタイムに会話できると記載されています（公式サイトの記載）。",
+    "uses": [
+      "ハンズフリーでの写真・動画の撮影（1,200万画素カメラ・3K動画と記載）",
+      "Meta AIへの質問",
+      "会話の翻訳・音楽や通話"
+    ],
+    "pricing": "AIグラスの比較ページで Ray-Ban Meta は最低価格 ¥50,600（フレーム・レンズにより異なり、Wayfarer (Gen 2) のクリアレンズは ¥73,700。税込かどうかは記載なし）",
+    "japanese": "日本向けの公式ストアあり。リアルタイムの会話（翻訳）の対応言語に日本語ありと記載",
+    "added": "2026-11-09",
+    "checked": "2026-11-09",
+    "affiliate": null,
+    "cheapest": "最低価格 ¥50,600",
+    "gadget": {
+      "maker": "Meta・Ray-Ban",
+      "price": "最低価格 ¥50,600（フレーム・レンズにより異なる）",
+      "priceShort": "本体 ¥50,600〜",
+      "offer": 50600,
+      "priceChecked": "2026-11-09",
+      "subscription": "未確認（製品ページに月額料金の記載なし）",
+      "apps": "スマホのアプリでグラスの管理・設定・写真のシェアを行うと記載（アプリ名と対応OSは製品ページで未確認）",
+      "spec": "1,200万画素の超広角カメラ／5マイク／ストレージ 32GB／バッテリー 最大8時間（充電ケースでさらに最大48時間）※Wayfarer (Gen 2) の記載",
+      "sources": [
+        "https://www.meta.com/jp/ai-glasses/",
+        "https://www.meta.com/jp/ai-glasses/ray-ban-meta-wayfarer-gen-2/"
+      ]
+    },
+    "more": {
+      "checked": "2026-11-09",
+      "fit": [
+        "スマホを出さずに写真・動画を撮りたい人",
+        "歩きながらAIに質問したい・音楽や通話をしたい人"
+      ],
+      "notFit": [
+        "文字起こしや議事録が目的の人（ボイスレコーダーのほうが向いています）"
+      ],
+      "sources": [
+        "https://www.meta.com/jp/ai-glasses/",
+        "https://www.meta.com/jp/ai-glasses/ray-ban-meta-wayfarer-gen-2/"
       ]
     }
   }
