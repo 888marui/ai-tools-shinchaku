@@ -10,7 +10,7 @@
 
 ## アクセス解析（GA4・2026-11-09）
 - 測定IDは `build.js` の `GA4_ID`（G-2FG56R9HJ7。公開してよい値）だけ。全ページの head で gtag.js を非同期で読み込む。外部リンクのクリックは GA4 の拡張計測（離脱クリック）で自動計測される。
-- 広告リンク（`rel="sponsored"`）のクリックは、あわせて `aff_click` イベント（`tool`＝tools.json の slug、`asp`、`position`＝cta_top / cta_box / cta_sticky / inline、`link_url`）を送る。`data-tool` はビルド時に付く（A8 は a8mat のプログラム部分、もしもは p_id で tools.json の `affiliate.url` と照合）。
+- 広告リンク（`rel="sponsored"`）のクリックは、あわせて `aff_click` イベント（`tool`＝tools.json の slug、`asp`、`position`＝cta_top / cta_box / cta_sticky / inline、`link_url`、`utm_source`、`utm_medium`）を送る。ランディングの UTM は sessionStorage に残し、サイト内遷移後も動画流入を切り分けられる。`data-tool` はビルド時に付く（A8 は a8mat のプログラム部分、もしもは p_id で tools.json の `affiliate.url` と照合）。見方は team_kb `projects/GA4_aff_clickのUTM切り分け.md`。
 - プライバシーポリシーに GA4・Cookie・Google のポリシー・オプトアウト アドオンの記載がある（`check.js` で検査）。
 
 ## デプロイ（GitHub Actions）
