@@ -197,7 +197,7 @@ const toolTitle=t=>{if(isGadget(t))return withSite(fit(`${shortName(t)}の価格
  const C=[n=>f&&lim&&p&&`${n}の料金｜無料は${lim}・有料${p}`,n=>f&&p&&`${n}の料金｜無料プランあり・有料${p}`,n=>f&&lim&&`${n}の料金と無料枠｜無料は${lim}`,n=>f&&`${n}の料金と無料枠｜無料プランあり`,n=>!f&&p&&`${n}の料金｜有料プランは${p}`,n=>!f&&ch&&`${n}の料金｜最安の有料プランは${ch}`,n=>`${n}とは？料金・無料枠・使い方`];
  return withSite(fit(...C.flatMap(c=>N.map(c)))||`${shortName(t)}の料金と無料枠`)};
 const freeShort=t=>{const s=tagText(t);if(!s)return '無料プランあり（内容は料金欄）';if(s.length<=40)return s;const l=freeLimit(t);return s.split('（')[0]+(l?`（${l}など）`:'')};
-const toolDesc=t=>isGadget(t)?cutS(`${shortName(t)}の本体価格（${jd(t.gadget.priceChecked)}に公式サイトで確認）：${t.gadget.price}。月額サブスク：${t.gadget.subscription.split('。')[0]}。${t.summary}`):TSO[t.slug]?TSO[t.slug][1]:cutS(`${shortName(t)}の料金${isFree(t)?'と無料枠':''}${t.checked?`（${jd(t.checked)}に公式サイトで確認）`:''}。${isFree(t)?`無料枠：${freeShort(t)}。`:''}${okv(t.cheapest)?`最安の有料プラン：${t.cheapest}。`:''}${t.summary}`);
+const toolDesc=t=>isGadget(t)?cutS(`${shortName(t)}の本体価格${t.gadget.priceChecked?`（${jd(t.gadget.priceChecked)}に公式サイトで確認）`:''}：${t.gadget.price}。月額サブスク：${t.gadget.subscription.split('。')[0]}。${t.summary}`):TSO[t.slug]?TSO[t.slug][1]:cutS(`${shortName(t)}の料金${isFree(t)?'と無料枠':''}${t.checked?`（${jd(t.checked)}に公式サイトで確認）`:''}。${isFree(t)?`無料枠：${freeShort(t)}。`:''}${okv(t.cheapest)?`最安の有料プラン：${t.cheapest}。`:''}${t.summary}`);
 // 比較・一覧の記事：タイトルに「何件を比べたか」と「確認した月」を入れる。件数は見出し（h1）・タイトルにある数か、h1 の「：A・B・C」の並び（「など」がないとき）から数える
 const artH1=a=>{const m=String(a.body||'').match(/<h1>([\s\S]*?)<\/h1>/);return m?m[1].replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim():(a.title||'')};
 const COMPARE=a=>/比較|一覧/.test(STO[a.slug]||a.title)&&!a.noindex;
