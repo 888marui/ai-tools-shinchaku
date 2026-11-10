@@ -1387,10 +1387,10 @@
       "SNS向けショート動画・解説動画の作成",
       "チームでの動画編集（マルチプレイヤー編集）"
     ],
-    "pricing": "Starter 月$20（年払いなら月$10相当）・月400クレジット／Plus 月$60（年払いなら月$30相当）・月2,000クレジット／Max 年払いなら月$250相当（年$3,000・月5,000クレジット）（いずれも1シートあたり・USD、公式料金ページ https://invideo.io/pricing 2026/11/09確認）。Enterpriseは個別相談。無料プランの有無は案内あり（有料解約後はFreeプランに戻ると記載）だが、無料枠の内容は未確認。円での金額・税の扱いは未確認",
+    "pricing": "Starter 月$20（年払いなら月$10相当）・月400クレジット／Plus 月$60（年払いなら月$30相当）・月2,000クレジット／Max 年払いなら月$250相当・月8,000クレジット（いずれも1シートあたり・USD、公式料金ページ https://invideo.io/pricing 2026/11/10確認）。Enterpriseは個別相談。Freeプランあり（公式FAQ：エディターでの手作業の編集と書き出しは無料・透かしなし、AIエージェントや生成はクレジットを使用）。無料のクレジット数・円での金額は最新の料金は公式ページでご確認ください",
     "japanese": "未確認（公式サイトは英語表記。日本語での動画生成・管理画面の日本語表示は未確認）",
     "added": "2026-10-20",
-    "checked": "2026-11-09",
+    "checked": "2026-11-10",
     "description": "AI動画作成ツールinvideo AIの料金プラン（Starter・Plus・Max）、月ごとのクレジット、年払いの金額を公式料金ページの情報で整理。",
     "affiliate": {
       "url": "https://invideo.sjv.io/0G7OgN",
@@ -1408,7 +1408,9 @@
       ],
       "sources": [
         "https://invideo.io/",
-        "https://fliki.ai/pricing"
+        "https://fliki.ai/pricing",
+        "https://invideo.io/pricing",
+        "https://invideo.io/faq/is-invideo-editor-free-when-i-use-an-ai-editing-agent/"
       ]
     }
   },
