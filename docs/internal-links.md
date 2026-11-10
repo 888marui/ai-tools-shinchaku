@@ -131,3 +131,53 @@ Search Console のデータが入ったので、表示のあるクエリごと�
 - トップの HTML には新着10件のカードだけを出す（これまでは55件すべてを HTML に入れ、11件目以降を隠していた）。検索とカテゴリの絞り込みは、全件の軽いデータ（slug・名前・カテゴリ・概要・値札）からカードを描くので、絞り込み結果の件数は変更前と同じ（「文字起こし」7件、「無料」32件、動画8件で確認）。絞り込み時のカードには、日本語対応のラベルと追加日・確認日は出さない。
 - 一覧の下に「カテゴリから探す」（9カテゴリへのリンクと件数）と、無料で使えるAIツール一覧へのリンクを置いた。トップから個別のツールページへのリンクは55本→10本になり、残りはカテゴリページ経由でたどれる。
 - トップの HTML：87,761 → 68,747 バイト。
+
+## 2026-11-10：週次（Search Console の検索語から）
+
+データ：`888marui/claude` の requests ブランチ `requests/data/gsc/2026-11-10_queries_ai-shinchaku.csv`・`_pages_ai-shinchaku.csv`（過去28日）。ページ×検索語の組み合わせは無いので、検索語の言葉と各ページのタイトル・本文から対応を推定した。対象は平均掲載順位4〜15で、表示があってクリックが少ない検索語。
+
+### 対応表
+
+| 検索語 | クリック/表示 | 順位 | 答えになっているページ（ページの表示・順位） | 今回 |
+|---|---|---|---|---|
+| マドレス | 3/17 | 14.7 | `/tools/madoless/`（21・13.9） | 0本（下の「足さなかったもの」） |
+| ラクリン 評判 | 0/16 | 5.3 | `/articles/rakurin-hyouban-ryoukin/`・`/tools/rakurin/`（14・32／32・13.7） | 0本（言及のある記事はすべてリンク済み） |
+| deep review 使い方／ディープレビュー／deep review 日本語／deep review | 0/6 | 5〜15 | `/tools/deep-review/`（11・7.6） | 0本 |
+| claude gpt | 0/2 | 10.5 | `/articles/claude-chatgpt-muryou-chigai/`（5・8.2） | **4本** |
+| チャット gpt gemini 無料 | 0/2 | 10 | `/articles/gemini-chatgpt-muryou-chigai/`（13・6.3） | 0本（言及のある記事は本文か自動の「次に読む記事」でリンク済み） |
+| ノートブックlm／ノートブック ジェミニ | 0/3 | 13〜15 | `/tools/notebooklm/`（5・18.8） | **2本** |
+| 生成ai chatgpt以外 | 0/2 | 15 | `/articles/chatgpt-igai-ai-hikaku/`（7・16.1） | 0本（ハブ。リンク済み） |
+| okamai | 0/2 | 8.5 | `/tools/okamai/`（4・6.3） | 0本 |
+| インビデオウズ | 0/2 | 8.5 | `/tools/invideo/`（8・15） | 0本（言及のある記事はリンク済み） |
+| hitotas | 0/2 | 9 | `/tools/hitotas-ai/`（4・8.3） | 0本 |
+| スブリ | 0/1 | 8 | `/tools/suburi/`（3・6.7） | 0本 |
+| カンリー aio | 0/1 | 9 | `/tools/canly-aio/`（11・8） | 0本 |
+| japan ai 使い方 | 0/1 | 10 | `/tools/japan-ai-browser-assistant/`（14・6.5） | 0本 |
+| プラウドとは／phoud | 0/2 | 10 | `/tools/plaud/`（20・19.9） | 0本（リンク済み） |
+
+対象外：treg webaccess（3位）、ディープフェイク 電話（1/3・6.3。クリックあり。ほかに言及する記事なし）、site: 付きの検索語、順位15より下の検索語。
+
+### 足したリンク（6本・6ページ）
+
+| リンク元 | リンク先 | 文言 | 置いた場所 |
+|---|---|---|---|
+| `/articles/claude-haiku-5-5/` | `/articles/claude-chatgpt-muryou-chigai/` | ClaudeとChatGPTの違い | 「どんな人に向いている？」の、ChatGPT以外の比較への案内の後ろに1文 |
+| `/articles/claude-code-mcp-tasks/` | `/articles/claude-chatgpt-muryou-chigai/` | ClaudeとChatGPTの違い（無料版と有料プラン） | 「料金」の表の説明（FreeではClaude Codeなし）の後ろに1文 |
+| `/articles/ai-tool-neage-plan-kirikae/` | `/articles/claude-chatgpt-muryou-chigai/` | ClaudeとChatGPTの無料版の違い | 料金ページの表の下、無料AIツール一覧への案内の後ろに1文 |
+| `/articles/chatgpt-igai-ai-hikaku/` | `/articles/claude-chatgpt-muryou-chigai/` | ClaudeとChatGPT、どっちがいい？ | 末尾の「AIライティングツール比較」への案内の後ろに1文 |
+| `/articles/ai-gijiroku-tool-hikaku/` | `/tools/notebooklm/` | NotebookLM（Gemini Notebook）のツールページ | 「NotebookLM」の節の最後に1文 |
+| `/articles/gijiroku-ai-jidouka/` | `/tools/notebooklm/` | NotebookLM | 既存の文「たまった議事録に質問して振り返るならNotebookLMも使えます」の語にリンク（文言は変えていない） |
+
+- どのリンク元も、変更前はそのリンク先へのリンクが0本（自動の欄を含む）。自己リンクなし。見出し・導入・既存リンクは変えていない。足した文は、そのページにすでにあるツール名（Claude・ChatGPT・NotebookLM）だけを使ったので、`artTools` の「紹介したツール」やPRボタンは変わっていない（変更前後の dist で、増えた href は上の6本だけ、消えた href は無し）。
+- `/articles/claude-chatgpt-muryou-chigai/` は、変更前は記事一覧と `/tools/chatgpt/` からしかリンクされていなかった。
+
+### 足さなかったもの
+- マドレス・Deep Review・OKamAI・HITOTAS・スブリ・カンリー AIO・JAPAN AI は、ツールページ以外で名前が出てくる記事がない。名前を記事に新しく足すと「紹介したツール」やボタンが変わるため、今回は足していない。業務効率化・AI検索対策（AIO）の記事ができたら、そこからリンクする。
+- `muryou-ai-tool-ichiran` の「今回載せなかったツール」の NotebookLM は、無料プランの記載を読み取れなかった、という文脈なのでツールページ（無料で利用可と記載）へのリンクは付けていない。なお同じ段落の「無料で使えるAIツール一覧」のリンクは自分自身へのリンクになっている（既存リンクのため、今回は触っていない）。
+
+### 質問文の検索語（とは・使い方）の確認
+- 「プラウドとは」：`/tools/plaud/` の概要の1文目が「会話・通話・オンライン会議を録音し、AIが文字起こし・要約するAIボイスレコーダー」で、名前に「（プラウド）」もあり、答えになっている。変更なし。
+- 「deep review 使い方」「japan ai 使い方」：`/tools/deep-review/`・`/tools/japan-ai-browser-assistant/` は概要と「主な使い方」（uses）はあるが、使い始めの手順は書かれていない。手順は公式ページで確かめてから足す必要があり、今回は確認していないので足していない（次回以降の候補）。
+
+### 確認
+- `node build.js && node check.js`：OK（141 html、内部リンク 4,586 → 4,592、JSON-LD 358、エラー0）
