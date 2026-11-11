@@ -76,6 +76,9 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
   const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f)){err('dist',`tools/${t.slug}/ がない`);continue}const h=fs.readFileSync(f,'utf8');
   if(!/<th>本体価格<\/th>/.test(h))err(`tools/${t.slug}/`,'製品情報の欄（本体価格）がない');
   if(!t.affiliate&&(/rel="[^"]*\bsponsored\b/.test(h)||/<span class="pr">PR<\/span>/.test(h)))err(`tools/${t.slug}/`,'広告リンクがないのに PR 表記・sponsored がある');}}
+// 11) 応答ヘッダー（2026-11-11）：dist/_headers が出力されていて、必須のヘッダーがそろい、強制の CSP が混ざっていない
+{const hp='dist/_headers';if(!fs.existsSync(hp))err('dist','_headers がない（セキュリティヘッダーが出力されていない）');
+ else for(const m of require('./headers.js').problems(fs.readFileSync(hp,'utf8')))err('dist/_headers',m);}
 console.log(`checked ${files.length} html, ${links} internal links, ${ld} JSON-LD blocks`);
 if(errs.length){console.error(errs.slice(0,50).join('\n'));console.error(errs.length+' errors');process.exit(1)}
 console.log('OK');
