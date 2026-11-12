@@ -6,6 +6,10 @@ description: |
   DO NOT trigger for: backend (SQL, ORMs, API routes), infra/scripts (CI/CD, Docker, Actions, Python/Go, Git), or tooling/trivial (Vite, tsconfig, ESLint, tests, copy/renames, 3P docs), etc.
 ---
 
+<!-- LOCAL-NOTES: ここから「ここまで」の印までは、このリポジトリで足した行(配布物には無い) -->
+> **このリポジトリでは、先に [LOCAL-NOTES.md](LOCAL-NOTES.md) を読むこと。** 下の `npx` コマンドは実行せず、`guides/` の Markdown を直接読む。
+<!-- LOCAL-NOTES: ここまで -->
+
 # Modern Web Guidance
 
 Search and retrieve standardized modern web best practices at the **start** of implementing or updating any web UI, CSS layout/animation, or client-side JS logic (dates/timezones, sanitization, performance, accessibility, UX fixes) before writing ad-hoc solutions or adding dependencies.
