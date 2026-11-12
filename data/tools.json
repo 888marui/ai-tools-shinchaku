@@ -152,10 +152,10 @@
       "研修動画",
       "SNS動画"
     ],
-    "pricing": "Free $0／Creator $29／Pro $49／Business $149（月額・公式料金ページ確認）",
-    "japanese": "動画翻訳の対応言語に日本語あり（公式ヘルプ）。画面表示は英語",
+    "pricing": "Free $0（月3本・1本1分まで・透かし入り）／Creator $29（年払いなら月$24）／Pro $49〜／Business $149＋1人月$20（月額・米ドル。2026-11-12公式料金ページ確認）",
+    "japanese": "動画翻訳の対応言語に日本語（Japanese (Japan)）あり（公式ヘルプ）。料金ページは英語表示",
     "added": "2026-10-16",
-    "checked": "2026-10-21",
+    "checked": "2026-11-12",
     "affiliate": null,
     "cheapest": "Creator $29/月",
     "more": {
@@ -174,7 +174,9 @@
       ],
       "sources": [
         "https://www.heygen.com",
-        "https://fliki.ai/"
+        "https://fliki.ai/",
+        "https://www.heygen.com/pricing",
+        "https://help.heygen.com/en/articles/11391941-video-translation-languages-we-support"
       ]
     }
   },
