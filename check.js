@@ -43,8 +43,36 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
  for(const t of require('./data/tools.json')){if(!t.affiliate)continue;const a=t.affiliate;
   if(!a.url||!isAd(a.url))err('tools.json',`${t.slug}: affiliate.url が許可した提供元のドメインではない: ${a.url}`);
   if(!a.asp)err('tools.json',`${t.slug}: affiliate.asp（提供元）がない`);}
- for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);let ad=0;
+ // Amazonアソシエイト（直接・2026-11-13）：AD_HOSTS とは別に、amazon.co.jp/dp/<ASIN>?tag=aishinchaku-22 の形だけを許可する。短縮URL・検索結果・他のパラメータは不可
+const AMZ_TAG='aishinchaku-22',AMZ_SENT='Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。',AMZ_NOTE='価格・在庫はAmazonの商品ページで確認してください。';
+const isAmzHost=u=>{try{const x=new URL(u.replace(/&amp;/g,'&'));return /(^|\.)(amazon\.[a-z.]+|amzn\.[a-z]+|a\.co|amazon-adsystem\.com)$/.test(x.hostname)}catch(e){return false}};
+const amzErrs=(rel,tag,href,r)=>{let x;try{x=new URL(href.replace(/&amp;/g,'&'))}catch(e){return err(rel,'Amazon リンクが読めない: '+href)}
+ if(x.protocol!=='https:'||x.hostname!=='www.amazon.co.jp'||!/^\/dp\/[A-Z0-9]{10}$/.test(x.pathname))err(rel,'Amazon リンクは https://www.amazon.co.jp/dp/<ASIN> だけ（短縮URL・検索結果・他ドメインは不可）: '+href);
+ else if([...x.searchParams.keys()].join()!=='tag'||x.searchParams.get('tag')!==AMZ_TAG||x.hash)err(rel,'Amazon リンクは ?tag='+AMZ_TAG+' だけ必要（他のパラメータは不可）: '+href);
+ for(const w of ['sponsored','nofollow','noopener'])if(!new RegExp('\\b'+w+'\\b').test(r))err(rel,`Amazon リンクに rel="${w}" がない: ${href}`)};
+// Amazon 由来の表示（価格・在庫・評価・画像・タグ）の検出。ボタンの注記ブロック（t-amz / amzbox）の中は、固定の注記だけにする
+const AMZ_BAD=/[¥￥]|\$\s?\d|\d\s*円|★|☆|在庫(あり|なし|切れ|残り|わずか|状況)|残り\s*\d+\s*(点|個)|レビュー|カスタマー|評価|\d(\.\d)?\s*(点|つ星)|ポイント|OFF|セール|割引|%|ランキング|ベストセラー|No\.?\s?1/i;
+const AMZ_ASSET=/m\.media-amazon\.com|images-(na|fe|eu)\.ssl-images-amazon\.com|amazon-adsystem\.com|assoc-amazon\.|data-amazon|data-asin/i;
+for(const t of require('./data/tools.json')){if(!t.amazon)continue;
+  if(!/^[A-Z0-9]{10}$/.test(t.amazon.asin||''))err('tools.json',`${t.slug}: amazon.asin は10桁の英数字`);
+  const extra=Object.keys(t.amazon).filter(k=>k!=='asin'&&k!=='verified');if(extra.length)err('tools.json',`${t.slug}: amazon に asin・verified 以外の項目（Amazon の価格・在庫などは保存しない）: ${extra.join(',')}`);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(t.amazon.verified||''))err('tools.json',`${t.slug}: amazon.verified（商品ページで製品名・型番を確認した日）がない`);}
+{const ph=fs.existsSync('dist/privacy/index.html')?fs.readFileSync('dist/privacy/index.html','utf8'):'';let any=0;
+ for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);if(!/<a\s[^>]*href="https?:\/\/(www\.)?amazon\./.test(h))continue;any++;
+  const blocks=[...h.matchAll(/<div class="(?:t-amz|amzbox)">([\s\S]*?)<\/div>/g)].map(m=>m[1]);
+  const total=(h.match(/<a\s[^>]*href="https?:\/\/www\.amazon\./g)||[]).length,inBlk=blocks.reduce((n,b)=>n+(b.match(/<a\s[^>]*href="https?:\/\/www\.amazon\./g)||[]).length,0);
+  if(total!==inBlk)err(rel,'Amazon リンクが、注記つきのブロック（t-amz / amzbox）の外にある');
+  for(const b of blocks){const tx=b.replace(/<[^>]+>/g,' ');
+   if(!tx.includes(AMZ_NOTE))err(rel,'Amazon ボタンの近くに「'+AMZ_NOTE+'」がない');
+   if(!tx.includes(AMZ_SENT))err(rel,'Amazon ボタンの近くに関係の明記（'+AMZ_SENT+'）がない');
+   if(!/<span class="pr">PR<\/span>/.test(b))err(rel,'Amazon ボタンの近くに PR バッジがない');
+   if(AMZ_BAD.test(tx.replace(AMZ_NOTE,'').replace(AMZ_SENT,'')))err(rel,'Amazon ボタンのブロックに価格・在庫・評価などの表示がある: '+tx.replace(/\s+/g,' ').trim().slice(0,80));}
+  if(AMZ_ASSET.test(h))err(rel,'Amazon 由来の画像・タグ・属性がある（価格・在庫・画像は表示・保存しない）');
+  for(const m of h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))if(/amazon/i.test(m[1]))err(rel,'構造化データに Amazon 由来の値がある');}
+ if(any&&!ph.includes(AMZ_SENT))err('privacy/index.html','Amazon リンクがあるのにプライバシーポリシーに関係の明記がない');}
+for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);let ad=0,amz=0;
   for(const m of h.matchAll(/<a\s[^>]*>/g)){const tag=m[0],href=(tag.match(/href="([^"]*)"/)||[])[1]||'',r=(tag.match(/rel="([^"]*)"/)||[])[1]||'';
+   if(isAmzHost(href)){ad++;amz++;amzErrs(rel,tag,href,r);continue}
    const sp=/\bsponsored\b/.test(r);if(!sp&&!isAd(href))continue;ad++;
    if(!isAd(href))err(rel,'sponsored のリンク先が許可した提供元ではない: '+href);
    if(!sp||!/\bnofollow\b/.test(r))err(rel,'広告リンクに rel="sponsored nofollow" がない: '+href);}
@@ -75,7 +103,7 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
   if(g.offer!=null&&!(Number.isInteger(g.offer)&&g.offer>0))err('tools.json',`${t.slug}: gadget.offer は円の整数`);
   const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f)){err('dist',`tools/${t.slug}/ がない`);continue}const h=fs.readFileSync(f,'utf8');
   if(!/<th>本体価格<\/th>/.test(h))err(`tools/${t.slug}/`,'製品情報の欄（本体価格）がない');
-  if(!t.affiliate&&(/rel="[^"]*\bsponsored\b/.test(h)||/<span class="pr">PR<\/span>/.test(h)))err(`tools/${t.slug}/`,'広告リンクがないのに PR 表記・sponsored がある');}}
+  if(!t.affiliate&&!t.amazon&&(/rel="[^"]*\bsponsored\b/.test(h)||/<span class="pr">PR<\/span>/.test(h)))err(`tools/${t.slug}/`,'広告リンクがないのに PR 表記・sponsored がある');}}
 // 11) 応答ヘッダー（2026-11-11）：dist/_headers が出力されていて、必須のヘッダーがそろい、強制の CSP が混ざっていない
 {const hp='dist/_headers';if(!fs.existsSync(hp))err('dist','_headers がない（セキュリティヘッダーが出力されていない）');
  else for(const m of require('./headers.js').problems(fs.readFileSync(hp,'utf8')))err('dist/_headers',m);}
