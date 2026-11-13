@@ -1412,6 +1412,10 @@
       "sources": [
         "https://jp.plaud.ai/"
       ]
+    },
+    "amazon": {
+      "asin": "B0D1XZWHD6",
+      "verified": "2026-11-14"
     }
   },
   {
@@ -1813,6 +1817,10 @@
       "sources": [
         "https://shop.notta.ai/ja-jp/products/notta-memo-pro"
       ]
+    },
+    "amazon": {
+      "asin": "B0HFM1D1ZG",
+      "verified": "2026-11-14"
     }
   },
   {
@@ -1865,6 +1873,10 @@
         "https://pocketalk.jp/pocketalk",
         "https://pocketalk.jp/pocketalk/lineup"
       ]
+    },
+    "amazon": {
+      "asin": "B0DJSFLDGV",
+      "verified": "2026-11-14"
     }
   },
   {
@@ -1915,6 +1927,10 @@
       "sources": [
         "https://jp.store.timekettle.co/products/w4-ai-interpreter-earbuds"
       ]
+    },
+    "amazon": {
+      "asin": "B0FGX9C7S4",
+      "verified": "2026-11-14"
     }
   },
   {
@@ -1961,6 +1977,10 @@
         "https://www.meta.com/jp/ai-glasses/",
         "https://www.meta.com/jp/ai-glasses/ray-ban-meta-wayfarer-gen-2/"
       ]
+    },
+    "amazon": {
+      "asin": "B0FLYDJHB4",
+      "verified": "2026-11-14"
     }
   }
 ]
