@@ -683,7 +683,19 @@
     "added": "2026-10-16",
     "checked": "2026-10-16",
     "affiliate": null,
-    "cheapest": "API 入力100万トークンあたり$2・出力$10（導入価格）"
+    "cheapest": "API 入力100万トークンあたり$2・出力$10（導入価格）",
+    "more": {
+      "diff": [
+        [
+          "gemini-4-carbon",
+          "同じGoogleのGemini 4 Carbonは、Argonに続いて公開されたモデルです。Geminiアプリでの提供はGoogle AI Ultraの利用者向け、APIの導入価格はArgonと同額（入力$2・出力$10）と公式ブログに記載されています。"
+        ]
+      ],
+      "sources": [
+        "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-carbon/"
+      ],
+      "checked": "2026年11月13日"
+    }
   },
   {
     "slug": "gemini-agent-workspace",
@@ -1981,6 +1993,95 @@
     "amazon": {
       "asin": "B0FLYDJHB4",
       "verified": "2026-11-14"
+    }
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "category": "チャットAI",
+    "url": "https://claude.com",
+    "summary": "Anthropic（アンソロピック）の対話型AI。文章の作成・要約、資料の読み込み、コードの作成などに使えます。Web・デスクトップ・モバイルで使えます。当サイトの運営者はAnthropicと関係のない第三者で、公式サイトの情報をもとに紹介しています。",
+    "uses": [
+      "長い文章や資料の要約・質問",
+      "文章の下書きと推敲",
+      "Artifacts（その場で作る文書や小さなツール）の作成",
+      "プログラミングの相談（Claude Codeは有料プランから）"
+    ],
+    "pricing": "Free $0／Pro 月払い$20・年払いは月$17（$200を一括請求）／Max $100／Ultra $200（いずれも月額・米ドル・税別）／法人向け Team（標準シート 年払い$20・月払い$25、プレミアムシート 年払い$100・月払い$125、1シートあたり・2〜150名）・Enterprise（US$20/シート〜＋利用料、最低20シート）。日本円での価格は公式ページに記載なし。無料プランの上限は「5時間ごと・毎週」で、具体的な回数は公開されていません（公式料金ページ https://claude.com/ja-jp/pricing 2026/11/13確認）",
+    "japanese": "対応（日本語の公式料金ページあり。画面表示の言語に日本語があり、日本語でも会話できると公式ヘルプに記載）",
+    "added": "2026-11-13",
+    "checked": "2026-11-13",
+    "affiliate": null,
+    "more": {
+      "fit": [
+        "まず無料（$0）で、文章の下書きや資料の要約を試したい人（Freeでもチャット・Web検索・ファイル作成・Artifactsが使えると公式料金ページに記載）",
+        "長い文章や資料を読み込ませて、要点を整理してほしい人",
+        "有料にして、プログラミングをClaude Codeに任せたい人（Claude CodeはProから）"
+      ],
+      "notFit": [
+        "無料のまま長時間・大量にやりとりしたい人（Freeは5時間ごと・毎週の利用上限があり、具体的な回数は公式に未掲載）",
+        "日本円で金額を確かめて契約したい人（公式の料金ページはドル表記で、円建ての価格は掲載なし）",
+        "Opusなど上位モデルを使いたい人（Freeに含まれるのはSonnetとHaikuで、Opusは含まれない）"
+      ],
+      "diff": [
+        [
+          "chatgpt",
+          "ChatGPTも無料で始められるチャットAIです。公式ページによると、Claudeの無料プランは5時間ごと・毎週の上限があり、Claude Codeは含まれません。ChatGPTは日本円の料金が未確認です。無料版の具体的な違いは記事「ClaudeとChatGPTの違い」で比べています。"
+        ],
+        [
+          "gemini",
+          "GeminiはGoogleのAIで、GmailなどGoogleのサービスと合わせて使いたい人向けです。日本円（￥）の料金ページがあります。ClaudeはAnthropicが提供し、料金ページはドル表記です。"
+        ]
+      ],
+      "sources": [
+        "https://claude.com/ja-jp/pricing",
+        "https://claude.com/pricing",
+        "https://support.claude.com/en/articles/8461763-where-can-i-use-claude-ai",
+        "https://support.claude.com/en/articles/10769299-using-claude-in-your-preferred-language"
+      ],
+      "checked": "2026年11月13日"
+    }
+  },
+  {
+    "slug": "gemini-4-carbon",
+    "name": "Gemini 4 Carbon",
+    "category": "チャットAI",
+    "url": "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-carbon/",
+    "summary": "Googleのモデル。公式ブログでは、サイバーセキュリティと長時間かかる作業に強いとされています（Gemini 4 Argonに続くモデルとして2026年11月に提供開始）。Geminiアプリ・AIモードはGoogle AI Ultraの利用者向け、APIはGoogle AI StudioとGemini for businessで有料の開発者・企業向けです。",
+    "uses": [
+      "複雑な質問への回答",
+      "コーディング・長い作業の自動化（Antigravityなど）",
+      "セキュリティ関連の作業（「Carbon for cyber」は別途申請制）"
+    ],
+    "pricing": "Geminiアプリ・Google 検索のAIモードはGoogle AI Ultraの利用者向け。APIは入力100万トークンあたり$2・出力$10（導入価格、Gemini 4 Argonと同額）。2026年11月30日以降は入力$4・出力$20（公式ブログの注記。一般公開向けのCarbonに適用）",
+    "japanese": "対応（日本語の公式ブログで案内。日本向けの個別の提供条件の記載は未確認）",
+    "added": "2026-11-13",
+    "checked": "2026-11-13",
+    "affiliate": null,
+    "more": {
+      "fit": [
+        "Google AI Ultraを使っていて、最新のモデルをGeminiアプリで試したい人",
+        "APIやGemini for businessで、推論やコーディングに最新のモデルを使いたい開発者・企業"
+      ],
+      "notFit": [
+        "無料のGeminiアプリで使いたい人（公式ブログでは、GeminiアプリはGoogle AI Ultraの利用者向けと記載）",
+        "APIの料金を長期の予算で見積もりたい人（導入価格は2026年11月30日まで。以降は価格が上がると公式に記載）"
+      ],
+      "diff": [
+        [
+          "gemini-4-argon",
+          "Argonに続いて公開されたモデルです。導入価格はArgonと同額（入力$2・出力$10）で、2026年11月30日以降は入力$4・出力$20になると公式に記載されています。"
+        ],
+        [
+          "gemini",
+          "Googleの対話型AI「Gemini」アプリ本体の料金は、こちらのページにまとめています（無料プランあり）。"
+        ]
+      ],
+      "sources": [
+        "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-carbon/",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+      ],
+      "checked": "2026年11月13日"
     }
   }
 ]
