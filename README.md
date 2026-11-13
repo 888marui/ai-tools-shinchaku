@@ -11,7 +11,13 @@
 ## AIガジェット（物理製品・2026-11-09）
 - `data/tools.json` の `category: "AIガジェット"` で扱う。機器の項目は `gadget`：`maker`・`price`（本体価格の表記）・`priceShort`（一覧のラベル）・`priceChecked`（確認日）・`subscription`（月額サブスクの有無）・`apps`（対応OS・アプリ）。任意で `released`（発売日）・`spec`・`offer`（JSON-LD の価格・円）・`giteki`（技適など国内利用の可否。公式に記載があるときだけ）・`sources`。
 - 既存のツール（Plaud・AutoMemo）は主カテゴリのまま、`extraCategories: ["AIガジェット"]` でカテゴリページにも出す。`gadget` があれば、ツールページの表に製品情報の行が付く。
-- `affiliate` がない機器の CTA は「公式サイトを見る」（直リンク・PR表記なし）。Amazon（もしも）のリンクは提携承認後に `affiliate` へ入れる（既存の CTA・PR・開示の仕組みに載る）。構造化データは `Product`。`check.js` の 10) で必須項目と PR 表記を検査する。
+- `affiliate` がない機器の CTA は「公式サイトを見る」（直リンク・PR表記なし）。Amazon は、もしも経由が否認されたため Amazonアソシエイト（直接・ID `aishinchaku-22`）に変更。`affiliate` ではなく専用の `amazon: {asin, verified}` に入れる（下の「Amazonアソシエイト」参照）。構造化データは `Product`。`check.js` の 10) で必須項目と PR 表記を検査する。
+
+## Amazonアソシエイト（直接・2026-11-13）
+- `data/tools.json` のツールに `amazon: {"asin": "<10桁>", "verified": "YYYY-MM-DD"}` を入れると、`build.js` がツールページと、そのツールを紹介する記事に「Amazonで見る」の**副ボタン**（買えるお店）を出す。主な CTA（`affiliate` や公式サイトへの直リンク）は変えない。リンクは `https://www.amazon.co.jp/dp/<ASIN>?tag=aishinchaku-22` だけ。
+- **ASIN は、Amazon の商品ページを開いて製品名・型番が一致することを確認したものだけ**入れる（`verified` はその確認日）。検索結果ページ・短縮URL（amzn.to など）・メールやSNS・オフラインでの利用は禁止。自己購入での報酬も禁止。
+- Amazon の価格・在庫・レビュー点数・画像は、表示も `tools.json` への保存もしない（Product Advertising API を使わない限り不可）。本体価格は従来どおり公式サイトで確認した値と確認日。ボタンの近くに「価格・在庫はAmazonの商品ページで確認してください。」と、関係の明記（「Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。」）、PR バッジを出す。
+- `check.js` の 7) で、Amazon リンクの形（dp/ASIN と tag のみ）・rel（sponsored nofollow noopener）・注記ブロック内の PR/注記・価格や在庫らしい表示がないこと・Amazon 由来の画像やタグがないこと・プライバシーポリシーの関係明記を検査する。他の広告ドメインの許可リスト（`AD_HOSTS`）は変えていない。
 
 ## アクセス解析（GA4・2026-11-09）
 - 測定IDは `build.js` の `GA4_ID`（G-2FG56R9HJ7。公開してよい値）だけ。全ページの head で gtag.js を非同期で読み込む。外部リンクのクリックは GA4 の拡張計測（離脱クリック）で自動計測される。
