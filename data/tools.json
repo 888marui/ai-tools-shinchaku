@@ -10,10 +10,10 @@
       "社内資料への質問",
       "学習ノート作り"
     ],
-    "pricing": "無料で利用可（1ノートブックあたりソース50件まで）／Google AI Plus・Pro・Ultraで利用上限とソース数が拡大（Plus 100件・Pro 300件・Ultra 600件、AIプランの料金はGoogle Geminiの項目を参照・公式プランページ 2026/11/03確認）",
+    "pricing": "無料で利用可（1ノートブックあたりソース50件まで、ノートブックは100件まで）／Google AI Plus・Pro・Ultraで利用上限とソース数が拡大（1ノートブックあたりのソース数：Plus 100件・Pro 300件・Ultraは20TBプランで500件、30TBプランで600件。AIプランの料金はGoogle Geminiの項目を参照・公式ヘルプ「プランに関する詳細」を2026-11-15に確認）",
     "japanese": "日本語の公式ページあり",
     "added": "2026-10-16",
-    "checked": "2026-11-03",
+    "checked": "2026-11-15",
     "affiliate": null,
     "cheapest": "Google AI Plus（金額はGoogle Geminiの項目を参照）",
     "fit": [
