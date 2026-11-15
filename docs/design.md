@@ -36,7 +36,7 @@
 - ゴシック1書体（Hiragino Sans → Noto Sans JP/CJK → Yu Gothic → Meiryo のシステムフォント）。外部フォント・CDN は使わない。明朝はやめた。
 - 本文 16.5px（スマホ 16px）、行間 1.85。見出しは 800 の太字、`palt` は見出しだけ。
 - 数字は `tabular-nums`（等幅の数字）。「料金ひと目で」の有料プランは 21px の太字。
-- 改行は `line-break:strict`、見出しは `text-wrap:balance` と `word-break:auto-phrase`、段落は `text-wrap:pretty`。
+- 改行は `line-break:strict`、見出しは `text-wrap:balance`、段落は `text-wrap:pretty`。日本語の折り返しは `word-break:keep-all` と、ビルド時に文節の切れ目へ入れる `<wbr>`（`tools/wbr.js`。BudouX の日本語モデルを使う。ライセンスは `tools/budoux/`）。`auto-phrase` は iPhone Safari で効かないため使わない。`<wbr>` は本文の text ノードだけ（属性・script・JSON-LD・head・pre/code・URL の文字列には入れない。`check.js` が検査）。長い英数字・URL だけ `overflow-wrap:anywhere`。
 
 ## 部品
 

@@ -1,0 +1,13 @@
+BudouX (日本語モデル)
+
+このフォルダの ja.json と LICENSE は、Google の BudouX から取得したものです。
+  プロジェクト: https://github.com/google/budoux
+  取得元: budoux/models/ja.json（main ブランチ、2026-11-15 に取得）
+  著作権: Copyright 2021 Google LLC
+  ライセンス: Apache License, Version 2.0（同じフォルダの LICENSE）
+
+使い方: ビルド時（node build.js）だけに使い、文節の切れ目に <wbr> を入れます。
+公開するサイトには、モデルも文節分けのコードも含まれません（実行時には何も足しません）。
+
+parser.js は、BudouX の javascript/src/parser.ts（Apache-2.0）の文節分けの手順を、
+このサイトのビルド用に JavaScript（CommonJS）で書き写したものです（元の挙動を変えていません）。

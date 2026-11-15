@@ -4,6 +4,8 @@
 // 6) data/hubs.json のハブ記事と個別記事が互いにリンクしている（2026-11-03）
 const fs=require('fs'),path=require('path');
 const BASE=(process.env.BASE_URL||'https://ai-shinchaku.com')+'/';
+// <wbr>（文節の切れ目・ゼロ幅）は文面の照合のじゃまになるので、読み込み時に外す。<wbr> 自体の検査は 12) で生のHTMLを読む
+const rd=f=>fs.readFileSync(f,'utf8').replace(/<wbr>/g,'');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
 const errs=[];const err=(f,m)=>errs.push(`${f}: ${m}`);
 if(!fs.existsSync('dist/index.html')){console.error('dist/index.html がない（ビルド失敗？）');process.exit(1)}
@@ -11,7 +13,7 @@ if(!fs.existsSync('dist/sitemap.xml'))err('dist','sitemap.xml がない');
 const files=walk('dist').filter(f=>f.endsWith('.html'));
 let links=0,ld=0;
 for(const f of files){
-  const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);
+  const h=rd(f);const rel=path.relative('dist',f);
   if(/\{\{[A-Z]+\}\}/.test(h))err(rel,'未置換のプレースホルダ');
   if(/href=""/.test(h))err(rel,'空の href');
   for(const m of h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)){
@@ -30,7 +32,7 @@ for(const f of files){
 }
 if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
 // ハブ⇔個別記事：個別記事からハブへ、ハブから個別記事へ、どちらもリンクがあること（noindex・存在しない記事は対象外）
-{const HUBS=require('./data/hubs.json');const page=s=>`dist/articles/${s}/index.html`;const has=(s,to)=>new RegExp(`href="(\\.\\./|/articles/|${BASE.replace(/[.]/g,'\\.')}articles/)${to}/"`).test(fs.readFileSync(page(s),'utf8'));const idx=s=>fs.existsSync(page(s))&&!/<meta name="robots" content="noindex/.test(fs.readFileSync(page(s),'utf8'));
+{const HUBS=require('./data/hubs.json');const page=s=>`dist/articles/${s}/index.html`;const has=(s,to)=>new RegExp(`href="(\\.\\./|/articles/|${BASE.replace(/[.]/g,'\\.')}articles/)${to}/"`).test(rd(page(s)));const idx=s=>fs.existsSync(page(s))&&!/<meta name="robots" content="noindex/.test(rd(page(s)));
  for(const [h,[,ms]] of Object.entries(HUBS)){if(!idx(h)){err('hubs.json','ハブの記事がない: '+h);continue}for(const m of ms){if(!idx(m))continue;if(!has(m,h))err(`articles/${m}/`,'ハブへのリンクがない: '+h);if(!has(h,m))err(`articles/${h}/`,'個別記事へのリンクがない: '+m)}}}
 // 7) 広告リンク（2026-11-06）：data/tools.json の affiliate.url は許可した提供元のドメインだけ。
 //    出力HTMLでは、広告リンクに rel="sponsored nofollow"、広告リンクのあるページに「PR」表記があること
@@ -57,8 +59,8 @@ for(const t of require('./data/tools.json')){if(!t.amazon)continue;
   if(!/^[A-Z0-9]{10}$/.test(t.amazon.asin||''))err('tools.json',`${t.slug}: amazon.asin は10桁の英数字`);
   const extra=Object.keys(t.amazon).filter(k=>k!=='asin'&&k!=='verified');if(extra.length)err('tools.json',`${t.slug}: amazon に asin・verified 以外の項目（Amazon の価格・在庫などは保存しない）: ${extra.join(',')}`);
   if(!/^\d{4}-\d{2}-\d{2}$/.test(t.amazon.verified||''))err('tools.json',`${t.slug}: amazon.verified（商品ページで製品名・型番を確認した日）がない`);}
-{const ph=fs.existsSync('dist/privacy/index.html')?fs.readFileSync('dist/privacy/index.html','utf8'):'';let any=0;
- for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);if(!/<a\s[^>]*href="https?:\/\/(www\.)?amazon\./.test(h))continue;any++;
+{const ph=fs.existsSync('dist/privacy/index.html')?rd('dist/privacy/index.html'):'';let any=0;
+ for(const f of files){const h=rd(f);const rel=path.relative('dist',f);if(!/<a\s[^>]*href="https?:\/\/(www\.)?amazon\./.test(h))continue;any++;
   const blocks=[...h.matchAll(/<div class="(?:t-amz|amzbox)">([\s\S]*?)<\/div>/g)].map(m=>m[1]);
   const total=(h.match(/<a\s[^>]*href="https?:\/\/www\.amazon\./g)||[]).length,inBlk=blocks.reduce((n,b)=>n+(b.match(/<a\s[^>]*href="https?:\/\/www\.amazon\./g)||[]).length,0);
   if(total!==inBlk)err(rel,'Amazon リンクが、注記つきのブロック（t-amz / amzbox）の外にある');
@@ -70,7 +72,7 @@ for(const t of require('./data/tools.json')){if(!t.amazon)continue;
   if(AMZ_ASSET.test(h))err(rel,'Amazon 由来の画像・タグ・属性がある（価格・在庫・画像は表示・保存しない）');
   for(const m of h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))if(/amazon/i.test(m[1]))err(rel,'構造化データに Amazon 由来の値がある');}
  if(any&&!ph.includes(AMZ_SENT))err('privacy/index.html','Amazon リンクがあるのにプライバシーポリシーに関係の明記がない');}
-for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);let ad=0,amz=0;
+for(const f of files){const h=rd(f);const rel=path.relative('dist',f);let ad=0,amz=0;
   for(const m of h.matchAll(/<a\s[^>]*>/g)){const tag=m[0],href=(tag.match(/href="([^"]*)"/)||[])[1]||'',r=(tag.match(/rel="([^"]*)"/)||[])[1]||'';
    if(isAmzHost(href)){ad++;amz++;amzErrs(rel,tag,href,r);continue}
    const sp=/\bsponsored\b/.test(r);if(!sp&&!isAd(href))continue;ad++;
@@ -83,16 +85,16 @@ for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative(
  for(const t of require('./data/tools.json')){if(!t.affiliate)continue;
   if((H.test(t.pricing||'')||H.test(t.cheapest||''))&&!/^\d{4}-\d{2}-\d{2}$/.test(t.checked||''))err('tools.json',`${t.slug}: 金額があるのに checked（確認日）がない`);
   const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f))continue;
-  if(H.test(t.pricing||'')&&!/<th>料金<\/th><td>[^]*?に公式サイトで確認）/.test(fs.readFileSync(f,'utf8')))err(`tools/${t.slug}/`,'料金欄に確認日がない');}}
+  if(H.test(t.pricing||'')&&!/<th>料金<\/th><td>[^]*?に公式サイトで確認）/.test(rd(f)))err(`tools/${t.slug}/`,'料金欄に確認日がない');}}
 // 9) GA4（2026-11-09）：測定IDは1つだけ。リダイレクト用のページ以外の全ページで gtag.js を読み込み、config は1回。プライバシーポリシーに GA4 の記載があること
 {const ids=new Set();
- for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);
+ for(const f of files){const h=rd(f);const rel=path.relative('dist',f);
   for(const m of h.matchAll(/\bG-[A-Z0-9]{6,}\b/g))ids.add(m[0]);
   if(/<meta http-equiv="refresh"/.test(h))continue;
   if(!/<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-[A-Z0-9]+"><\/script>/.test(h))err(rel,'GA4 の gtag.js（非同期）がない');
   if((h.match(/gtag\('config',/g)||[]).length!==1)err(rel,"gtag('config') が1回ではない");}
  if(ids.size!==1)err('dist',`GA4 の測定IDが1つではない: ${[...ids].join(', ')||'なし'}`);
- const pv=fs.existsSync('dist/privacy/index.html')?fs.readFileSync('dist/privacy/index.html','utf8'):'';
+ const pv=fs.existsSync('dist/privacy/index.html')?rd('dist/privacy/index.html'):'';
  for(const [re,m] of [[/Google アナリティクス/,'Google アナリティクスの利用'],[/Cookie/,'Cookie'],[/href="https:\/\/policies\.google\.com\/technologies\/partner-sites/,'Google のポリシーへのリンク'],[/href="https:\/\/tools\.google\.com\/dlpage\/gaoptout/,'オプトアウト アドオンへのリンク']])
   if(!re.test(pv))err('privacy/index.html','プライバシーポリシーに記載がない: '+m);}
 // 10) AIガジェット（2026-11-09）：category が「AIガジェット」のものは gadget（メーカー・本体価格・確認日・月額サブスク・アプリ）が必要。
@@ -101,12 +103,28 @@ for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative(
   for(const k of ['maker','price','priceShort','subscription','apps'])if(!g[k])err('tools.json',`${t.slug}: gadget.${k} がない`);
   if(!/^\d{4}-\d{2}-\d{2}$/.test(g.priceChecked||''))err('tools.json',`${t.slug}: gadget.priceChecked（本体価格の確認日）がない`);
   if(g.offer!=null&&!(Number.isInteger(g.offer)&&g.offer>0))err('tools.json',`${t.slug}: gadget.offer は円の整数`);
-  const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f)){err('dist',`tools/${t.slug}/ がない`);continue}const h=fs.readFileSync(f,'utf8');
+  const f=`dist/tools/${t.slug}/index.html`;if(!fs.existsSync(f)){err('dist',`tools/${t.slug}/ がない`);continue}const h=rd(f);
   if(!/<th>本体価格<\/th>/.test(h))err(`tools/${t.slug}/`,'製品情報の欄（本体価格）がない');
   if(!t.affiliate&&!t.amazon&&(/rel="[^"]*\bsponsored\b/.test(h)||/<span class="pr">PR<\/span>/.test(h)))err(`tools/${t.slug}/`,'広告リンクがないのに PR 表記・sponsored がある');}}
 // 11) 応答ヘッダー（2026-11-11）：dist/_headers が出力されていて、必須のヘッダーがそろい、強制の CSP が混ざっていない
 {const hp='dist/_headers';if(!fs.existsSync(hp))err('dist','_headers がない（セキュリティヘッダーが出力されていない）');
  else for(const m of require('./headers.js').problems(fs.readFileSync(hp,'utf8')))err('dist/_headers',m);}
+// 12) 日本語の折り返し用の <wbr>（2026-11-15）：入れてよいのは本文の text ノードだけ。属性値・script（JSON-LD を含む）・style・head（title・meta）・pre/code・svg には入れない。BudouX（Apache-2.0）のモデルとライセンス表示があること
+{let wb=0;const NOGO=/<(pre|code|kbd|samp|script|style|svg|textarea|noscript|template|title|option|select)\b[^>]*>[\s\S]*?<\/\1>/g;
+ for(const f of files){const h=fs.readFileSync(f,'utf8');const rel=path.relative('dist',f);const n=(h.match(/<wbr>/g)||[]).length;wb+=n;if(!n)continue;
+  const b=h.indexOf('<body');if(/<wbr\b/i.test(b<0?h:h.slice(0,b)))err(rel,'<wbr> が head（title・meta・JSON-LD など）の中にある');
+  const body=b<0?'':h.slice(b);
+  for(const m of body.matchAll(/<(?!\/?wbr\b)(?:[^>"']|"[^"]*"|'[^']*')*>/g))if(/wbr/i.test(m[0]))err(rel,'<wbr> が属性値の中にある: '+m[0].slice(0,80));
+  for(const m of body.matchAll(NOGO))if(/<wbr\b/i.test(m[0]))err(rel,'<'+m[1]+'> の中に <wbr> がある');
+  for(const m of body.matchAll(/<a\b[^>]*class="[^"]*\bsrc-url\b[^>]*>([\s\S]*?)<\/a>/g))if(/<wbr\b/i.test(m[1]))err(rel,'出典のURLの文字列に <wbr> がある');
+  if(/&[#A-Za-z0-9]*<wbr>[#A-Za-z0-9]*;/.test(body))err(rel,'文字参照の途中に <wbr> がある');
+  if(/<wbr\s[^>]|<\/wbr>|<wbr\/>/.test(body))err(rel,'<wbr> の書き方が <wbr> ではない');}
+ if(!wb)err('dist','<wbr> が1つも入っていない（tools/wbr.js が動いていない？）');
+ for(const f of ['tools/budoux/ja.json','tools/budoux/LICENSE','tools/budoux/NOTICE','tools/budoux/parser.js'])if(!fs.existsSync(f))err(f,'BudouX のモデル・ライセンス表示のファイルがない');
+ if(fs.existsSync('tools/budoux/LICENSE')&&!/Apache License[\s\S]*Version 2\.0/.test(fs.readFileSync('tools/budoux/LICENSE','utf8')))err('tools/budoux/LICENSE','Apache License 2.0 の本文ではない');
+ if(fs.existsSync('tools/budoux/NOTICE')&&!/Copyright 2021 Google LLC/.test(fs.readFileSync('tools/budoux/NOTICE','utf8')))err('tools/budoux/NOTICE','Google LLC の著作権表示がない');
+ // 公開物にはモデルを含めない（ビルド時だけに使う）
+ if(walk('dist').some(f=>/budoux/i.test(f)))err('dist','BudouX のファイルが公開物に入っている');}
 console.log(`checked ${files.length} html, ${links} internal links, ${ld} JSON-LD blocks`);
 if(errs.length){console.error(errs.slice(0,50).join('\n'));console.error(errs.length+' errors');process.exit(1)}
 console.log('OK');
