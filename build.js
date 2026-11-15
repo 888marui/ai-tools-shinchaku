@@ -16,8 +16,6 @@ const isFree=t=>{if(isGadget(t))return false;const p=String(t.pricing||'').repla
 const css=`:root{--bg:#fff;--tx:#15171C;--mu:#5A606B;--ac:#2346C8;--ac-h:#1A3599;--ac-visited:#5536A8;--ac-soft:#EEF1FB;--tag:#FFE14D;--sf:#F3F5F8;--bd:#E1E5EB;--ui:#878E99;--line:#06C755;--r:10px;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--f-sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","Yu Gothic UI","Yu Gothic",Meiryo,system-ui,-apple-system,sans-serif;--measure:42em}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
 body{margin:0;font-family:var(--f-sans);font-size:16.5px;line-height:1.85;color:var(--tx);background:var(--bg);letter-spacing:.02em;line-break:strict;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
-p,li,dd{text-wrap:pretty}
-td,.box,.howto,.terms,.glance{text-wrap:pretty}
 .cta,.nextlist li,.pcard span{text-wrap:balance}
 a{color:var(--ac);text-decoration-thickness:1px;text-underline-offset:.22em;overflow-wrap:anywhere}a:hover{color:var(--ac-h);text-decoration-thickness:2px}a:visited{color:var(--ac-visited)}
 :focus-visible{outline:3px solid var(--ac);outline-offset:2px;border-radius:3px}
@@ -27,7 +25,6 @@ a{color:var(--ac);text-decoration-thickness:1px;text-underline-offset:.22em;over
 .logo{font-weight:800;font-size:19px;letter-spacing:.02em;text-decoration:none;color:var(--tx)}.logo b{font-weight:800}.logo:visited,.logo:hover{color:var(--tx)}
 .gnav{display:flex;gap:0 var(--s5)}.gnav a{text-decoration:none;color:var(--mu);font-size:14px;font-weight:600;padding:var(--s2) 0;white-space:nowrap}.gnav a:visited{color:var(--mu)}.gnav a:hover{color:var(--tx);text-decoration:underline;text-decoration-thickness:2px}
 main.w{padding-top:var(--s5);padding-bottom:var(--s7)}
-/* 折り返し：日本語は文節の切れ目（ビルド時に tools/wbr.js が wbr 要素を入れる）で折る。word-break:keep-all で単語の途中では折らず、長い英数字・URL だけ overflow-wrap:anywhere */
 h1,h2,h3{font-feature-settings:"palt" 1;letter-spacing:.02em}
 h1{font-size:clamp(25px,3.4vw,34px);line-height:1.45;margin:var(--s3) 0 var(--s4);text-wrap:balance;font-weight:800}
 h2{font-size:21px;line-height:1.5;margin:var(--s7) 0 var(--s3);font-weight:800;text-wrap:balance}

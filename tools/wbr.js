@@ -7,6 +7,8 @@ const parser=new Parser(require('./budoux/ja.json'));
 const TAG=/(<!--[\s\S]*?-->|<(?:[^>"']|"[^"]*"|'[^']*')*>)/;
 const SKIP=new Set(['pre','code','kbd','samp','script','style','svg','math','textarea','noscript','template','title','option','select','head']);
 const VOID=new Set(['br','wbr','img','hr','input','meta','link','source','area','col','embed','param','track']);
+// 切れ目のしきい値は公式の既定（0）のまま。負にするとカタカナ語・数字と単位まで割れるため使わない（測定はPR説明）
+const THR=0;
 const JA=/[぀-ヿ㐀-鿿]/;
 const ENT=/&(?:#\d+|#x[0-9a-fA-F]+|[A-Za-z][A-Za-z0-9]*);/g;
 // 切れ目を入れない位置：行頭に来てはいけない文字の前（閉じ括弧・句読点・小書き仮名・長音）、行末に来てはいけない文字（開き括弧）の後、空白の前後
@@ -17,7 +19,7 @@ const isAscii=c=>c.charCodeAt(0)<128;
 function wbrText(t){
   if(!JA.test(t))return t;
   const ents=[];const s=t.replace(ENT,m=>{ents.push(m);return ''});
-  const cut=parser.parseBoundaries(s);if(!cut.length)return t;
+  const cut=parser.parseBoundaries(s,THR);if(!cut.length)return t;
   const set=new Set(cut);let out='',k=0;
   const chars=Array.from(s);let off=0;
   for(let i=0;i<chars.length;i++){
