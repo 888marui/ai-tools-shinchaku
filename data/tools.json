@@ -1624,7 +1624,7 @@
     "name": "ConoHa AI Canvas",
     "category": "画像・デザイン",
     "url": "https://www.conoha.jp/ai/canvas/",
-    "summary": "Stable Diffusionをブラウザから使えるGMOのAI画像生成サービス。AUTOMATIC1111とComfyUIを選べ、動画生成やLoRA作成（スタンダード／アドバンス限定）にも対応。国内データセンターを利用。",
+    "summary": "【新規申し込み受付を一時停止中】2026年11月14日16:55から、緊急メンテナンスのため新規申し込みの受付が一時停止されています（再開時期は未定。ConoHa公式お知らせで2026年11月16日に確認）。再開まではリンク先から申し込めません。Stable Diffusionをブラウザから使えるGMOのAI画像生成サービス。AUTOMATIC1111とComfyUIを選べ、動画生成やLoRA作成（スタンダード／アドバンス限定）にも対応。国内データセンターを利用。",
     "uses": [
       "画像生成（Stable Diffusion）",
       "動画生成",
@@ -1639,13 +1639,21 @@
       "disclosure": "PR：上のボタンはもしもアフィリエイト経由のアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。"
     },
     "added": "2026-10-20",
-    "checked": "2026-11-09",
+    "checked": "2026-11-16",
     "cheapest": "エントリー 1,100円/月（税込）",
     "more": {
       "sources": [
         "https://www.conoha.jp/ai/canvas/",
-        "https://ai.conoha.jp/canvas/pricing/"
-      ]
+        "https://ai.conoha.jp/canvas/pricing/",
+        "https://www.conoha.jp/news/?btn_id=wing-news--news_news&ap=2015055013"
+      ],
+      "faq": [
+        [
+          "ConoHa AI Canvasは今すぐ申し込めますか？",
+          "申し込めません。2026年11月14日16:55から緊急メンテナンスのため、ConoHa AI Canvasを含むConoHa全サービスの新規申し込み受付が一時停止されています。再開時期は未定で、決まり次第ConoHa公式お知らせで案内されるとのことです（2026年11月16日に公式お知らせで確認）。"
+        ]
+      ],
+      "checked": "2026年11月16日"
     }
   },
   {
