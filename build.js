@@ -142,8 +142,10 @@ const linkSources=h=>h.replace(/<pre><code>([\s\S]*?)<\/code><\/pre>/g,(m,inner)
 // 統合したページの旧URL用：本番では functions/_middleware.js の REDIRECTS で301。ミドルウェアが動かないときの予備として、canonical と自動転送だけのページを置く
 const MOVED={};const moved=(from,to)=>{MOVED['/'+from]='/'+to;fs.mkdirSync(path.join(OUT,from),{recursive:true});fs.writeFileSync(path.join(OUT,from,'index.html'),`<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>移動しました</title><link rel="canonical" href="${BASE}/${to}"><meta http-equiv="refresh" content="0; url=/${to}"></head><body><p>このページは<a href="/${to}">${BASE}/${to}</a>に移動しました。</p></body></html>`)};
 // ツールページの追加の欄（data/tools.json の more）。値があるときだけ表示する。公式ページで確認できたことだけを書き、確認できない欄は空のままにする
-// more: {checked:'YYYY-MM-DD', fit:[向いている人], notFit:[向かない人], diff:[[比べるツールのslug, 違い]], tried:{date, text}（実際に無料枠で試したこと）, sources:[確認した公式ページのURL]}
+// more: {checked:'YYYY-MM-DD', fit:[向いている人], notFit:[向かない人], steps:{title, items:[文, または[見出し, 本文]]}, diff:[[比べるツールのslug, 違い]], tried:{date, text}（実際に無料枠で試したこと）, sources:[確認した公式ページのURL]}
 const toolMore=t=>{const m=t.more;if(!m)return '';let h='';
+ const steps=m.steps&&(Array.isArray(m.steps)?m.steps:m.steps.items);const stepTitle=(m.steps&&m.steps.title)||(t.name+'の使い方');
+ if(steps&&steps.length)h+=`<h2>${esc(stepTitle)}</h2><ol>${steps.map(x=>Array.isArray(x)?`<li><b>${esc(x[0])}</b>：${esc(x[1])}</li>`:`<li>${esc(x)}</li>`).join('')}</ol>`;
  if((m.fit||[]).length||(m.notFit||[]).length)h+=`<h2>${esc(t.name)}が向いている人・向かない人</h2>${(m.fit||[]).length?`<p><b>向いている人</b></p><ul>${m.fit.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${(m.notFit||[]).length?`<p><b>向かない人</b></p><ul>${m.notFit.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`;
  if((m.diff||[]).length)h+=`<h2>似たツールとの違い</h2><ul>${m.diff.map(([sl,x])=>{const o=tools.find(y=>y.slug===sl);return `<li>${o?`<a href="../${o.slug}/">${esc(o.name)}</a>との違い：`:''}${esc(x)}</li>`}).join('')}</ul>`;
  if(m.tried&&m.tried.text)h+=`<h2>無料枠で実際に試したこと</h2><p>${esc(m.tried.text)}</p><p class="muted">試した日：${esc(m.tried.date||'')}</p>`;
@@ -202,7 +204,7 @@ const TSO={
  'japan-ai-search-3':['JAPAN AI Search 3.0｜出典付き社内検索・追加月額なし','JAPAN AI Search 3.0は、SlackやGoogleドライブなどの社内文書から根拠を探し、文ごとに出典を付けて答える検索基盤。エンタープライズ3プランの契約者は追加の月額なし、利用に応じてクレジット消費。'],
  'japan-ai-browser-assistant':['JAPAN AIブラウザの使い方｜要約・操作の代行','JAPAN AIブラウザアシスタントの使い方。Chrome・Edgeのサイドパネルで、開いているページやPDFの要約、返信の下書き、入力やクリックの代行ができる。送信・購入・削除は毎回確認。追加費用なし（JAPAN AI利用者向け）。'], // 2026-11-10：GSC「japan ai 使い方」6.5位
  'deep-review':['Deep Reviewの使い方｜技術文書を検証するAI','Deep Reviewの使い方と概要。Google Researchが公開した技術文書の検証AI。論文の査読支援からGoogleドキュメント等へ対応を広げていると公式ブログに記載。日本語UIの案内は公式ブログになし。'], // 2026-11-10：GSC「deep review 使い方／日本語」（「未確認」はsoftenerが長くするので避ける）
- madoless:['マドレスとは｜手続きAIの概要・料金の確認先','マドレスは手続き業務向けのAIエージェント基盤（オプロ、2026年10月13日提供開始）。相談から手続き・必要書類を根拠つきで示す。第一弾は公共機関・金融機関向け。料金は公式で要確認。'], // 2026-11-10：軽微（既存クリックあり）
+ madoless:['マドレスとは｜手続きAIの概要・料金の確認先','マドレスはオプロの手続き業務向けAI（2026年10月13日提供開始）。相談から該当手続き・必要書類を根拠つきで示す。第一弾は公共機関・金融機関向け（個人の手続き代行ではない）。料金は公式に記載なし。'], // 2026-11-10：軽微（既存クリックあり）。2026-11-17：説明文のみ修正（タイトルは維持）
  invideo:['invideo AI（インビデオ）の使い方｜料金と無料枠','invideo AI（インビデオ）の使い方と料金。テキスト指示から動画を作りブラウザで編集。無料プランあり（内容は料金欄）。有料はStarter $20/月〜（年払いなら月$10相当）。'], // 2026-11-10：GSC「インビデオウズ」
  muse:['Muse（ミューズ）とは｜無料枠・料金・使い方','Muse AI（muse.ai）はMetaのパーソナルAIエージェント「Muse（ミューズ）」。2026年10月23日に日本で提供開始。無料 0円（週ごとのトークン枠あり）。調べものや予約、下書きを任せられます。'], // 2026-11-09：キーワードプランナーで「Muse AI」が月1000〜1万・3か月+9,900%のため、検索語の言い回しに寄せた
  okamai:['OKamAI（オカマイ）とは｜料金・60日間無料','OKamAI（オカマイ）は、URLや資料を読み込ませて案内・問い合わせに答えるAIチャットボットを作るサービス。無料お試しは60日間・50会話、有料はエントリー月¥8,000〜（税抜）。向く人・向かない人も整理。'],
