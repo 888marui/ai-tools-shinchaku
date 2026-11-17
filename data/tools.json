@@ -585,10 +585,10 @@
       "映像編集",
       "クリエイティブ制作"
     ],
-    "pricing": "Free $0（125クレジット・1回限り）／Standard $12／Pro $28／Max $76（年払い時の月額。月払いは$15／$35／$95・公式料金ページ確認）",
+    "pricing": "Free $0（125クレジット・1回限り・透かし入り）／Standard $12／Pro $28／Max $76（年払い時の月額。月払いは$15／$35／$95・公式料金ページ 2026-11-17確認）",
     "japanese": "対応（日本語の公式サイト・料金ページあり）",
     "added": "2026-10-16",
-    "checked": "2026-10-20",
+    "checked": "2026-11-17",
     "affiliate": null,
     "cheapest": "Standard $12/月（年払い時。月払いは$15）",
     "more": {
@@ -610,7 +610,8 @@
         ]
       ],
       "sources": [
-        "https://runwayml.com",
+        "https://runwayml.com/pricing",
+        "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details",
         "https://lumalabs.ai/dream-machine",
         "https://www.heygen.com"
       ]
@@ -2073,7 +2074,7 @@
     "pricing": "フリー無料（AIデザイン生成3枚/月・資料3個まで）／パーソナル1,848円/月（税込・AIデザイン生成40枚/月）／パーソナルプラス66,000円/年（税込・月あたり5,500円）／法人は応相談。年間プランの新規申し込みに限り3日間の無料トライアルあり",
     "japanese": "対応（日本で開発している国産サービス）",
     "added": "2026-10-20",
-    "checked": "2026-11-09",
+    "checked": "2026-11-17",
     "affiliate": {
       "url": "https://af.moshimo.com/af/c/click?a_id=5855431&p_id=5515&pc_id=15110&pl_id=71207",
       "asp": "もしもアフィリエイト",
