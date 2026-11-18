@@ -1310,11 +1310,11 @@
     "pricing": "無償ベータ版（レート制限あり）",
     "japanese": "対応（国産AI・日本語の公式発表）",
     "added": "2026-10-16",
-    "checked": "2026-10-16",
+    "checked": "2026-11-18",
     "affiliate": null,
     "cheapest": "未確認",
     "more": {
-      "checked": "2026年11月14日",
+      "checked": "2026年11月18日",
       "diff": [
         [
           "chatgpt",
@@ -1338,6 +1338,24 @@
       "sources": [
         "https://www.sbintuitions.co.jp/news/press/20261013_01/",
         "https://sarashina.ai"
+      ],
+      "faq": [
+        [
+          "Sarashinaサービスの始め方は？",
+          "サービスページ（sarashina.ai）にアクセスし、Googleアカウントでログインするだけです。事前の申し込みは不要で、ウェブ上でAIとの対話や翻訳を体験できるチャット機能と、開発者向けのAPI機能の両方を試せます（SB Intuitions公式発表を2026-11-18に確認）。"
+        ],
+        [
+          "料金はかかりますか？",
+          "無償ベータ版のため、利用料金は無料です。ただし、一定時間あたりのリクエスト数の上限があるレート制限がかかります。なお、無償ベータ版の提供終了時期は未定とされています（SB Intuitions公式発表を2026-11-18に確認）。"
+        ],
+        [
+          "APIではどのモデルが使えますか？",
+          "6つのモデルが使えます。文章生成・対話向けの「Sarashina3 mini」、単純なタスクを大量に高速処理する「Sarashina3 nano」、文章やFAQの検索（RAG）に使う「Sarashina3 embedding」、検索結果の精度を上げる「Sarashina3 rerank」、入力テキストの安全性を判定する「Sarashina3 guard」、日英・英日翻訳の「Sarashina3 translate」です（SB Intuitions公式発表を2026-11-18に確認）。"
+        ],
+        [
+          "入力したデータはどう扱われますか？",
+          "無償ベータ版では、AIモデルおよびサービスの品質向上・改善を目的として、利用データを活用する場合があると案内されています。取り扱いの詳細は、サービスページ内の利用規約およびプライバシーポリシーを確認してください（SB Intuitions公式発表を2026-11-18に確認）。"
+        ]
       ]
     }
   },
@@ -1355,7 +1373,7 @@
     "pricing": "GeminiアプリはGoogle AI Pro／Ultraの利用者向け。APIは入力100万トークンあたり$2・出力$10（2026年11月30日までの導入価格、公式発表）",
     "japanese": "対応（日本語の公式ブログで案内）",
     "added": "2026-10-16",
-    "checked": "2026-10-16",
+    "checked": "2026-11-18",
     "affiliate": null,
     "cheapest": "API 入力100万トークンあたり$2・出力$10（導入価格）",
     "more": {
@@ -1366,9 +1384,29 @@
         ]
       ],
       "sources": [
-        "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-carbon/"
+        "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-carbon/",
+        "https://blog.google/intl/ja-jp/company-news/technology/gemini-4-argon-gemini/",
+        "https://ai.google.dev/gemini-api/docs/pricing"
       ],
-      "checked": "2026年11月13日"
+      "checked": "2026年11月18日",
+      "faq": [
+        [
+          "Gemini 4 Argonの始め方は？",
+          "Geminiアプリでは、Google AI ProおよびGoogle AI Ultraの利用者が2026年10月14日から利用できます。開発者は、Google AI Studioでモデル「gemini-4-argon」を選んで試すか、Gemini APIから利用します（Google公式ブログ・公式料金ページを2026-11-18に確認）。"
+        ],
+        [
+          "APIの料金は？導入価格はいつまでですか？",
+          "Standardでは、入力が100万トークンあたり$2.00、出力（思考トークンを含む）が$10.00です。これは2026年11月30日までの導入価格で、2026年12月1日からは入力$4.00、出力$20.00になります（公式料金ページを2026-11-18に確認）。"
+        ],
+        [
+          "無料で使えますか？",
+          "Gemini APIのFree TierではGemini 4 Argonは利用できません。有料Tierでも、思考トークンを含め、モデルが処理したすべてのトークンが課金対象として数えられます（公式料金ページを2026-11-18に確認）。"
+        ],
+        [
+          "「タスク」機能とは何ですか？",
+          "チャットからタスクへ切り替えると、パソコンの前にいない間もGeminiが代わりに作業を進めてくれる機能です。長時間かかるタスクでは、進捗状況をこまめに共有してくれるため、状況を把握しながら任せられます（Google公式ブログを2026-11-18に確認）。"
+        ]
+      ]
     }
   },
   {
@@ -1385,11 +1423,11 @@
     "pricing": "未確認",
     "japanese": "未確認",
     "added": "2026-10-16",
-    "checked": "2026-10-16",
+    "checked": "2026-11-18",
     "affiliate": null,
     "cheapest": "未確認",
     "more": {
-      "checked": "2026年11月14日",
+      "checked": "2026年11月18日",
       "diff": [
         [
           "copilot",
@@ -1412,6 +1450,24 @@
       ],
       "sources": [
         "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026"
+      ],
+      "faq": [
+        [
+          "Gemini agentはどこで使えますか？",
+          "Gmail・ドライブ・ドキュメント・スプレッドシート・スライド・チャット・カレンダーといったGoogle Workspaceの画面の中で直接使えます。ほかにも、ウェブ、iOS・Androidアプリ、Windows・Macのデスクトップ、SlackやMicrosoft 365からもアクセスできます。1つの入力欄に目的を伝えると、計画を立て、ツールやスキルを使って作業を進めます（Google Cloud公式ブログを2026-11-18に確認）。"
+        ],
+        [
+          "AIの利用料に上限を設けられますか？",
+          "Cloud Billing Consoleでプロジェクトごとに支出の上限を設定でき、上限に達するとそのプロジェクトのエージェントは一時停止し、コンソールからワンクリックで再開できます。あわせて、仕事の内容に応じて性能とコストのバランスが合うモデルへ自動で振り分けるSmart Routingも用意されています（Google Cloud公式ブログを2026-11-18に確認）。"
+        ],
+        [
+          "エージェントの権限や操作履歴は管理できますか？",
+          "すべてのエージェントに固有のIDが割り当てられ、最小権限のアクセス許可を与えて運用します。エージェントの操作は監査証跡に記録され、実行はネットワーク境界を持つAgent Sandboxの中で行われ、通信はAgent Gatewayを通して組織のポリシーが適用されます（Google Cloud公式ブログを2026-11-18に確認）。"
+        ],
+        [
+          "使われるAIモデルは決まっていますか？",
+          "エージェントと、その下で動くモデルは別々に選べる設計で、仕事ごとに最適なモデルが自動で選ばれます。対象にはGeminiファミリーのモデルに加えて、AnthropicのClaudeモデルも含まれます（Google Cloud公式ブログを2026-11-18に確認）。"
+        ]
       ]
     }
   },
@@ -1429,11 +1485,11 @@
     "pricing": "未確認",
     "japanese": "未確認",
     "added": "2026-10-16",
-    "checked": "2026-10-16",
+    "checked": "2026-11-18",
     "affiliate": null,
     "cheapest": "未確認",
     "more": {
-      "checked": "2026年11月14日",
+      "checked": "2026年11月18日",
       "diff": [
         [
           "notebooklm",
@@ -1456,6 +1512,24 @@
       ],
       "sources": [
         "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
+      ],
+      "faq": [
+        [
+          "Deep Reviewの始め方は？",
+          "Google Research Portalから利用します。技術文書をアップロードすると、文書を論理的な区間に分けて複数のエージェントが並行して検証し、論理の整合性や数式、主張の裏づけをチェックしたフィードバックが返ります（Google Research公式ブログを2026-11-18に確認）。"
+        ],
+        [
+          "無料で使えますか？",
+          "すべてのユーザーに、週2件まで無料のドキュメントレビューが付きます。より多くの件数を扱いたい場合は、自分のGemini APIキーを接続すると利用上限が広がり、Deep Review APIを使ったプログラム連携もできます（Google Research公式ブログを2026-11-18に確認）。"
+        ],
+        [
+          "どんな形式の文書に対応していますか？",
+          "当初はPDFとプレーンテキストに対応しています。複数のファイルをまとめて入力する機能は、近日対応予定と案内されています（Google Research公式ブログを2026-11-18に確認）。"
+        ],
+        [
+          "アップロードした文書は学習に使われますか？",
+          "アップロードした文書が、Googleのモデルの学習、ファインチューニング、改善に使われることはありません。文書は、Deep Reviewの画面でユーザーに表示する目的でのみ、1年間保存されます（Google Research公式ブログを2026-11-18に確認）。"
+        ]
       ]
     }
   },
@@ -1473,11 +1547,11 @@
     "pricing": "未確認（重みは公開、API利用は各事業者の料金）",
     "japanese": "未確認",
     "added": "2026-10-16",
-    "checked": "2026-10-16",
+    "checked": "2026-11-18",
     "affiliate": null,
     "cheapest": "未確認",
     "more": {
-      "checked": "2026年11月14日",
+      "checked": "2026年11月18日",
       "diff": [
         [
           "chatgpt",
@@ -1496,6 +1570,24 @@
       "sources": [
         "https://research.meta.ai/blog/muse-spark-open",
         "https://huggingface.co/collections/meta-models/muse-spark-open"
+      ],
+      "faq": [
+        [
+          "Muse Spark Openの始め方は？",
+          "重みが公開されている開発者向けのモデルで、Hugging Faceの公式コレクションから重みをダウンロードして自前環境で動かします。ダウンロードせずに使う場合は、Baseten、Fireworks AI、Groq、OpenRouter、Together AIなど、対応するAPI事業者経由でも利用できます（公式ブログ・公式コレクションを2026-11-14に確認）。"
+        ],
+        [
+          "料金はかかりますか？",
+          "重み自体は公開されており、ダウンロードして使うことができます。API事業者経由で利用する場合は、各事業者の料金がかかります（公式ブログを2026-11-14に確認）。"
+        ],
+        [
+          "手元のPCで動かせますか？",
+          "総パラメータ数は816Bと大きく、公式ブログで案内されているデスクトップ実行は、Apple M5 Ultra搭載のMac Studio 2台構成です。一般的なPC単体での実行は現実的ではありません。なお、文脈は100万トークンに対応します（公式ブログを2026-11-14に確認）。"
+        ],
+        [
+          "商用利用できますか？",
+          "Muse Model Licenseという独自ライセンスで、商用条件には制限があると公式に案内されています。商用で使う場合は、事前にライセンス内容の確認が必要です（公式ブログを2026-11-14に確認）。"
+        ]
       ]
     }
   },
