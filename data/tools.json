@@ -3021,11 +3021,11 @@
       "録音内容のAI要約・議事録作成",
       "ランニング中や移動中などのハンズフリー音声メモ（NotePin）"
     ],
-    "pricing": "デバイス：Plaud Note Pro ¥30,800／Plaud NotePin S ¥28,600／Plaud Note ¥27,500／Plaud NotePin ¥27,500／Plaud One ¥44,000（いずれも税込・公式トップ確認）。文字起こしパッケージ（600分・3000分・6000分）の金額と、Pro／Unlimitedのサブスク料金は本日の公開ページで未確認（公式サイトでご確認ください）",
+    "pricing": "デバイス：Plaud Note Pro ¥30,800（Flow Edition ¥29,700）／Plaud NotePin S ¥28,600／Plaud Note ¥27,500／Plaud NotePin ¥27,500／Plaud One ¥44,000（ウェイトリスト受付中）（いずれも税込）。AIプラン（個人向け）：Starter 無料（毎月300分の文字起こし）／Pro 月額請求¥3,000/月・年額一括¥16,800（月あたり¥1,400、毎月1,200分）／Unlimited 月額請求¥5,000/月・年額一括¥40,000（月あたり約¥3,333、文字起こし無制限・1日最大24時間）。法人向けTeam 1ユーザー月額¥6,270（月額請求）・月あたり¥4,216.67（年額一括）、2026年11月30日までの申込みは特典価格あり。追加の文字起こしパッケージ：600分 ¥2,000／3000分 ¥10,000／6000分 ¥15,000（税込）。公式料金ページ・公式ストアで確認",
     "japanese": "対応（日本語の公式サイト・日本語のサポート窓口 support-jp@plaud.ai あり。112ヶ国語の文字起こしに対応と記載）",
     "added": "2026-10-20",
-    "checked": "2026-11-09",
-    "description": "AIボイスレコーダーPlaud（プラウド）の本体価格、無料Starterプランの毎月300分の文字起こし、Pro・Unlimitedプランの年額、日本語対応を公式サイトの情報で整理。",
+    "checked": "2026-11-20",
+    "description": "AIボイスレコーダーPlaud（プラウド）の本体価格、無料Starterの毎月300分、Pro（¥3,000/月・年¥16,800）・Unlimited（¥5,000/月・年¥40,000）の料金、追加パッケージ、日本語対応を公式サイトの情報で整理。",
     "affiliate": {
       "url": "https://px.a8.net/svt/ejp?a8mat=3ZFOPI+E0A7PE+5J4W+5YZ76",
       "asp": "A8.net",
@@ -3036,20 +3036,38 @@
     "more": {
       "fit": [
         "対面の会議・商談・取材が多く、スマホやPCを出さずに録音したい人",
-        "本体を買ったあと、無料で毎月300分まで文字起こししたい人（無料Starterプラン）"
+        "本体を買ったあと、無料で毎月300分まで文字起こししたい人（無料Starterプラン）",
+        "毎月の文字起こしが300分を超える人（Proは毎月1,200分、Unlimitedは無制限・1日最大24時間）",
+        "チームで録音データやデバイスをまとめて管理したい組織（法人向けTeamプラン）"
       ],
       "notFit": [
-        "機器を買わずにすぐ始めたい人（デバイスの購入が必要。本体は¥27,500〜¥30,800・税込）"
+        "機器を買わずにすぐ始めたい人（デバイスの購入が必要。本体は¥27,500〜¥30,800・税込、Plaud Oneは¥44,000でウェイトリスト受付中）",
+        "請求書払い（後払い）で契約したい法人（Teamプランは現時点で請求書払いに未対応と公式料金ページに記載）"
       ],
       "diff": [
         [
           "notta",
           "Nottaは会議・対面・電話・音声ファイルの会話を文字起こしするサービスで、専用の機器はいりません（フリーは文字起こし120分/月・1回3分まで）。Plaudは専用の録音機を使います。"
+        ],
+        [
+          "notta-memo-pro",
+          "Notta Memo ProはNottaのカード型AIボイスレコーダーで、本体のみ¥29,700（税込）に毎月600分のハードウェアプランが付きます（公式ストアの記載・2026-11-18確認）。Plaudは本体¥27,500〜（税込）で、無料のStarterプランは毎月300分です。"
+        ],
+        [
+          "automemo",
+          "オートメモはソースネクストの文字起こしAIで、専用レコーダーがなくてもPCのブラウザやスマホアプリで使えます（お試しプランは文字起こし1時間/月・2026-11-18確認）。Plaudは自社のデバイスで録音して使う前提です。"
         ]
       ],
       "sources": [
         "https://jp.plaud.ai/",
-        "https://www.notta.ai/"
+        "https://www.notta.ai/",
+        "https://jp.plaud.ai/pages/plaud-ai-plan-pricing",
+        "https://jp.plaud.ai/products/plaud-ai-membership",
+        "https://jp.plaud.ai/products/plaud-ai-unlimited-plan",
+        "https://jp.plaud.ai/products/plaud-ai-transcription-quota-600-mins",
+        "https://jp.plaud.ai/pages/app-faq",
+        "https://automemo.com/",
+        "https://shop.notta.ai/ja-jp/products/notta-memo-pro"
       ],
       "faq": [
         [
@@ -3058,22 +3076,37 @@
         ],
         [
           "Plaud（プラウド）は無料で使えますか？",
-          "本体の購入が前提です。公式トップでは、対象の本体（Plaud Note Pro・Plaud Note・Plaud NotePin S・Plaud NotePin・Plaud One）で、無料のStarterプランは「毎月300分の文字起こしを利用可能」と記載されています（2026-11-15確認）。"
+          "本体の購入が前提です。対象の本体（Plaud Note Pro・Plaud Note・Plaud NotePin S・Plaud NotePin・Plaud One）では、無料のStarterプランで毎月300分の文字起こしが使えます。無料の300分を使い切った場合は、次の月のリセット日時まで待つか、Proプランにアップグレードすると公式FAQに記載されています（2026-11-20確認）。"
+        ],
+        [
+          "ProとUnlimitedの料金と違いは？",
+          "Proは毎月1,200分の文字起こしで、月額請求なら¥3,000/月、年額一括なら¥16,800（月あたり¥1,400）です。Unlimitedは文字起こし無制限（1日最大24時間）で、月額請求なら¥5,000/月、年額一括なら¥40,000（月あたり約¥3,333）です。年額プランの¥16,800・¥40,000は公式ストアで税込と表示されています。Unlimitedは、著しく過度な利用が確認された場合に利用制限を行う場合があると公式ストアに記載されています（2026-11-20確認）。"
+        ],
+        [
+          "文字起こし時間が足りなくなったら？",
+          "プランをそのままに、追加の文字起こしパッケージを買えます。600分 ¥2,000、3000分 ¥10,000、6000分 ¥15,000（いずれも税込・公式ストア、2026-11-20確認）。"
+        ],
+        [
+          "アプリで契約したサブスクの解約方法は？",
+          "公式FAQでは、iPhoneはApp Storeのアカウント→「サブスクリプション」→PLAUDを選んで解約、AndroidはGoogle Playのプロフィール→「お支払いとサブスクリプション」→「サブスクリプション」→PLAUDを選んで解約、と案内されています。Proにアップグレードした場合、Starterは一時的に「停止」され、Proが終わると自動でStarterに戻ります（2026-11-20確認）。"
         ]
-      ]
+      ],
+      "checked": "2026-11-20"
     },
     "extraCategories": [
       "AIガジェット"
     ],
     "gadget": {
       "maker": "Plaud",
-      "price": "Plaud Note ¥27,500／Plaud NotePin ¥27,500／Plaud NotePin S ¥28,600／Plaud Note Pro ¥30,800／Plaud One ¥44,000（いずれも税込）",
+      "price": "Plaud Note ¥27,500／Plaud NotePin ¥27,500／Plaud NotePin S ¥28,600／Plaud Note Pro ¥30,800（Flow Edition ¥29,700）／Plaud One ¥44,000（いずれも税込）",
       "priceShort": "本体 ¥27,500〜（税込）",
-      "priceChecked": "2026-11-09",
-      "subscription": "任意。無料のStarterプランで毎月300分の文字起こし。多く使うならProプラン 年間¥16,800・Unlimitedプラン 年間¥40,000（税込）",
-      "apps": "Plaudアプリ（公式サイトに「プラットフォーム & アプリ」の案内あり。対応OSの一覧は未確認）",
+      "priceChecked": "2026-11-20",
+      "subscription": "任意。無料のStarterプランで毎月300分の文字起こし。多く使うならPro（¥3,000/月・年額¥16,800）・Unlimited（¥5,000/月・年額¥40,000）。年額は税込",
+      "apps": "Plaudアプリ（App Store・Google Playで配布）、Plaud Web、Plaud Desktop（Plaudデバイス購入者のみ）",
       "sources": [
-        "https://jp.plaud.ai/"
+        "https://jp.plaud.ai/",
+        "https://jp.plaud.ai/pages/plaud-ai-plan-pricing",
+        "https://jp.plaud.ai/pages/app-faq"
       ]
     },
     "amazon": {
