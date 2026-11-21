@@ -4297,6 +4297,11 @@
     "category": "画像・デザイン",
     "url": "https://imagesvg.com/ja/",
     "summary": "PNG・JPEG・WebPのロゴやアイコン、平面的なイラストを、編集できるSVGに変換するツール。ChatGPTに接続するMCPアプリ版もあり、会話から変換パネルを開いて結果を確認できる。利用にはアカウント登録が必要。",
+    "image": {
+      "src": "/imagesvg-example.svg",
+      "alt": "ImageSVGでラスター画像から変換したキツネのエンブレム（変換例）",
+      "caption": "変換例：ラスター画像を編集可能なSVGに変換したエンブレム（出典：ImageSVG公式サイト）"
+    },
     "uses": [
       "ロゴやアイコンの画像をSVGに変換する",
       "ChatGPTの会話から変換パネルを開いてSVG化する",
