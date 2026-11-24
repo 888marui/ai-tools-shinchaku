@@ -1967,11 +1967,11 @@
     "pricing": "追加費用なし（JAPAN AIの利用者向け。利用分はWeb版と同じくクレジットを消費・公式発表）",
     "japanese": "日本語に対応しています（日本企業の日本語サービスです）。",
     "added": "2026-10-17",
-    "checked": "2026-11-18",
+    "checked": "2026-11-24",
     "affiliate": null,
     "cheapest": "追加費用なし（JAPAN AI利用者向け）",
     "more": {
-      "checked": "2026年11月18日",
+      "checked": "2026年11月24日",
       "diff": [
         [
           "manus",
@@ -2032,7 +2032,8 @@
             "表示中のページやPDFの要約、メール返信の下書き、ページ上の入力やクリックの代行ができます。送信・購入・削除・投稿などの操作は、自動実行の設定にかかわらず毎回確認が入ると案内されています。"
           ]
         ]
-      }
+      },
+      "lead": "JAPAN AIを利用中の人が、Google ChromeまたはMicrosoft Edgeに拡張機能を入れて使います。入手先はChromeウェブストア、または公式のダウンロードページです。使い方は、メールやグループウェア、顧客管理システムなどの業務画面を開いたまま、サイドパネルから指示することです。表示中のページやPDFの要約、メール返信の下書き、ページ上の入力やクリックの代行ができます。拡張機能自体に追加費用はなく、利用分はWeb版と同じくクレジットを消費します。送信・購入・削除・投稿は、自動実行の設定にかかわらず毎回確認が入ります（公式発表を2026年11月24日に確認）。"
     }
   },
   {
@@ -3113,7 +3114,10 @@
         "https://jp.plaud.ai/products/plaud-ai-transcription-quota-600-mins",
         "https://jp.plaud.ai/pages/app-faq",
         "https://automemo.com/",
-        "https://shop.notta.ai/ja-jp/products/notta-memo-pro"
+        "https://shop.notta.ai/ja-jp/products/notta-memo-pro",
+        "https://jp.plaud.ai/pages/plaud-desktop",
+        "https://jp.plaud.ai/pages/plaud-intelligence",
+        "https://jp.plaud.ai/blogs/news/plaud-desktop"
       ],
       "faq": [
         [
@@ -3135,6 +3139,10 @@
         [
           "アプリで契約したサブスクの解約方法は？",
           "公式FAQでは、iPhoneはApp Storeのアカウント→「サブスクリプション」→PLAUDを選んで解約、AndroidはGoogle Playのプロフィール→「お支払いとサブスクリプション」→「サブスクリプション」→PLAUDを選んで解約、と案内されています。Proにアップグレードした場合、Starterは一時的に「停止」され、Proが終わると自動でStarterに戻ります（2026-11-20確認）。"
+        ],
+        [
+          "Plaud DesktopやPlaud Webはありますか？",
+          "あります。公式サイトの「プラットフォーム & アプリ」では、Plaud Mobile App、Plaud Web、Plaud Desktopが案内されています。Plaud Webは、どのブラウザからでも使えるAIワークスペースです。Plaud Desktopは、ボットを会議に参加させず、デスクトップのシステム音声を記録してオンライン会議（Zoom・Google Meet・Microsoft Teamsなど）を残すアプリで、Plaud Webからダウンロードできます。公式お知らせでは、Plaud Note、Plaud Note Pro、Plaud NotePinなどのPlaud AIボイスレコーダーをお持ちのユーザー限定で、追加費用なしで利用できると記載されています。利用時に本体の接続や起動は不要ですが、新規ユーザーは先にPlaudアプリでデバイスの紐付けが必要です（公式のPlaud Desktopページ、Plaud Intelligenceページ、公式お知らせを2026年11月24日に確認）。"
         ]
       ],
       "checked": "2026-11-20"
