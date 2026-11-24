@@ -2415,7 +2415,7 @@
       "krea",
       "nano-banana-2-1"
     ],
-    "notes": "【受付再開の確認手順】次の公式ページを開く。サービスページ https://www.conoha.jp/ai/canvas/ および https://ai.conoha.jp/canvas/、ConoHaのお知らせ https://www.conoha.jp/news/?btn_id=wing-news--news_news&ap=2015055013、AI Canvasのお知らせ https://ai.conoha.jp/canvas/news/?btn_id=news--news_ai-canvas-news&ap=2015055029。見る箇所は、新規申し込みの受付停止（2026年11月14日16:55開始の緊急メンテナンス）の案内が残っているか、案内が消えて申し込みやプラン選択ができる表示になっているか、再開を知らせる公式お知らせが出ているか。再開を確認したら、このツールの signup_paused を false（または削除）にする。ビルドすると、もしもアフィリエイトのCTAボタンが元の位置に戻る。広告表記（PR）と免責の文面は変えない。Krea と Nano Banana 2.1 の料金は、次に各ページを触るときに公式で確かめ直す。"
+    "notes": "【受付再開の確認手順】次の公式ページを開く。サービスページ https://www.conoha.jp/ai/canvas/ および https://ai.conoha.jp/canvas/、ConoHaのお知らせ https://www.conoha.jp/news/?btn_id=wing-news--news_news&ap=2015055013、AI Canvasのお知らせ https://ai.conoha.jp/canvas/news/?btn_id=news--news_ai-canvas-news&ap=2015055029。見る箇所は、新規申し込みの受付停止（2026年11月14日16:55開始の緊急メンテナンス）の案内が残っているか、案内が消えて申し込みやプラン選択ができる表示になっているか、再開を知らせる公式お知らせが出ているか。再開を確認したら、このツールの signup_paused を false（または削除）にする。ビルドすると、ツールページのもしもアフィリエイトのCTAボタンと、記事本文に直書きしたConoHaのもしもリンクが元の位置に戻る。広告表記（PR）と免責の文面は変えない。Krea と Nano Banana 2.1 の料金は、次に各ページを触るときに公式で確かめ直す。"
   },
   {
     "slug": "value-ai-writer",
