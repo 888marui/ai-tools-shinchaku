@@ -240,7 +240,7 @@ const tagAff=html=>html.replace(/<a\s[^>]*rel="[^"]*\bsponsored\b[^"]*"[^>]*>/g,
 function page(file,title,desc,body,rel,ld=[],extra=''){const om=file.match(/^(articles|tools)\/([^/]+)\/index\.html$/);const ogn=om?(om[1]==='tools'?'tool-':'')+om[2]:'';const OGI=om&&fs.existsSync(`static/og/${ogn}.png`)?`${BASE}/og/${ogn}.png`:BASE+'/ogp.png';{const k=file.replace(/index\.html$/,'');if(String(desc).replace(/\s+/g,' ').trim().length>120&&SEOFIX.meta[k])desc=SEOFIX.meta[k];const nl=[SEOFIX.notta[k],(SEOFIX.links||{})[k]].filter(Boolean).join('</p><p>')||'';if(nl&&!/^tools\//.test(k)&&!body.includes(nl)){const i=body.lastIndexOf('<h2>');body=i>0?body.slice(0,i)+'<p>'+nl+'</p>'+body.slice(i):body+'<p>'+nl+'</p>';}}desc=cut(desc);ld=[...ld].filter(o=>o&&o['@type']!=='SoftwareApplication'&&o['@type']!=='FAQPage');if(file==='index.html')ld.push({'@context':'https://schema.org',...ORG});if(file==='about/index.html')ld.push({'@context':'https://schema.org','@type':['AboutPage','ProfilePage'],name:'このサイトについて',url:BASE+'/about/',inLanguage:'ja',mainEntity:PERSON,about:ORG,publisher:ORG});
  const url=BASE+'/'+file.replace(/index\.html$/,'');
  const html=`<!doctype html><html lang="ja"><head><meta charset="utf-8">${GA4}<meta name="google-site-verification" content="-RhR2AgKD_cLSTma99Py4nnyhNmMMy9uCjkd0DmdD20"><meta name="google-site-verification" content="jRwNMWpjNxDdulg9i2yasgvBqFTl-UyN7DpNPl6p4aM" />${MSVALIDATE?`<meta name="msvalidate.01" content="${esc(MSVALIDATE)}">`:''}<meta name='impact-site-verification' value='b002e19d-f967-4cdd-98f3-9cc81d70bd96'><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><link rel="canonical" href="${url}"><meta property="og:type" content="${file==='index.html'?'website':'article'}"><meta property="og:site_name" content="${SITE}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${url}"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="${OGI}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${OGI}"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(desc)}"><meta property="og:image:alt" content="${SITE}">${extra}${ld.map(LD).join('')}<link rel="alternate" type="application/rss+xml" title="${SITE}" href="${BASE}/rss.xml"><link rel="alternate" type="application/atom+xml" title="${SITE}" href="${BASE}/atom.xml"><style>${css}</style></head><body><header class="site-h"><div class="w"><a class="logo" href="${rel}"><b>AI</b>ツール新着便</a><nav class="gnav" aria-label="サイト内"><a href="${rel}categories/">カテゴリ</a><a href="${rel}articles/">比較記事</a><a href="${rel}news/">海外AIニュース</a><a href="${rel}articles/muryou-ai-tool-ichiran/">無料で使える</a><a href="${rel}submit/">掲載申し込み</a><a href="${rel}about/">このサイトについて</a></nav></div></header>${file==='index.html'?body:`<main class="w">${body.replace(/<table(?=[^>]*>\s*<thead)/g,'<div class="tw wide"><table').replace(/<table(?![^>]*>\s*<thead)/g,'<div class="tw"><table').replace(/<\/table>/g,'</table></div>')}</main>`}<script>document.querySelectorAll('.tw').forEach(function(e){if(e.scrollWidth>e.clientWidth+4)e.classList.add('wide')})</script><footer class="site-f"><div class="w"><div class="links"><a href="${rel}about/">運営者情報</a><a href="${rel}privacy/">プライバシーポリシー</a><a href="${rel}contact/">お問い合わせ</a><a href="${rel}newsletter/">メール</a><a href="${BASE}/rss.xml">RSS</a><a href="${BASE}/atom.xml">Atom</a><a href="https://note.com/rakusensei24" rel="me noopener" target="_blank">運営者のnote</a><a href="https://www.threads.com/@rakusensei24" rel="me noopener" target="_blank">運営者のThreads</a><a href="https://x.com/888marui" rel="me noopener" target="_blank">運営者のX</a></div><small>© ${SITE}｜当サイトはアフィリエイトプログラムを利用しています。掲載情報は公式サイトをもとにしています。最新の内容は必ず公式サイトでご確認ください。｜ElevenLabs and the ElevenLabs logo are registered trademarks or trademarks of ElevenLabs, Inc. Used with permission. AIツール新着便 is not sponsored by, endorsed by, or affiliated with ElevenLabs except as an independent participant in the ElevenLabs Creator Affiliate Program.</small></div></footer></body></html>`;
- fs.mkdirSync(path.dirname(path.join(OUT,file)),{recursive:true});fs.writeFileSync(path.join(OUT,file),require('./postfix.js')(tagAff(html),''));
+ fs.mkdirSync(path.dirname(path.join(OUT,file)),{recursive:true});fs.writeFileSync(path.join(OUT,file),require('./postfix.js')(replacePausedInlineAff(tagAff(html)),''));
 }
 // カテゴリの説明文：件数・無料プランありの件数・最終確認日・ツール名（データから数える）
 const catDesc=c=>{const L=inCat(c),d=L.map(t=>t.checked||t.added).sort().pop();if(c===GADGET)return cut(`AIガジェット${L.length}件の一覧（AIボイスレコーダー・翻訳機・AIグラスなど）。本体価格と月額サブスクの有無を、${jd(d)}までに公式サイトで確認しています。${L.map(shortName).join('、')}`,DMAX);return cut(`${c}のAIツール${L.length}件の一覧（うち無料プランあり${L.filter(isFree).length}件）。無料枠を値札で示し、${jd(d)}までに公式サイトで料金を確認しています。${L.map(shortName).join('、')}`,DMAX)};
@@ -257,6 +257,34 @@ const pausedNotice=(t,rel='../../')=>{
   const alts=pausedAlts(t);
   const links=alts.length?`<p class="paused-alts">似たツール：${alts.map(x=>`<a href="${rel}tools/${x.slug}/">${esc(x.name)}</a>`).join('、')}</p>`:'';
   return `<div class="box paused-signup"><p>${esc(t.signup_paused_notice||'現在、新規申し込みは受付停止中です（再開日は未定）')}</p>${links}</div>`;
+};
+// 記事本文に直書きされた、受付停止中ツールのアフィリエイトリンクを案内文に差し替える。フラグを戻せば元のリンクが戻る。広告表記・免責の文面は触らない。
+const pausedByAffKey=(()=>{const m={};for(const x of tools){if(isSignupPaused(x)&&x.affiliate&&x.affiliate.url){const k=affKey(x.affiliate.url);if(k)m[k]=x}}return m})();
+const replacePausedInlineAff=html=>{
+  if(!Object.keys(pausedByAffKey).length)return html;
+  let out=html.replace(/<a\s[^>]*href="([^"]*)"[^>]*>[\s\S]*?<\/a>/gi,(full,href)=>{
+    const x=pausedByAffKey[affKey(href)];
+    return x?`<!--paused-signup:${x.slug}-->`:full;
+  });
+  out=out.replace(/<p\b([^>]*)>([\s\S]*?)<\/p>/g,(whole,attrs,inner)=>{
+    if(!inner.includes('<!--paused-signup:'))return whole;
+    const parts=[];const re=/<!--paused-signup:([a-z0-9-]+)-->/g;
+    let last=0,m;
+    while((m=re.exec(inner))){
+      const before=inner.slice(last,m.index);
+      if(before.trim())parts.push(`<p${attrs}>${before}</p>`);
+      const x=tools.find(z=>z.slug===m[1]);
+      parts.push(x?pausedNotice(x):m[0]);
+      last=m.index+m[0].length;
+    }
+    const after=inner.slice(last);
+    if(after.trim())parts.push(`<p${attrs}>${after}</p>`);
+    return parts.join('');
+  });
+  return out.replace(/<!--paused-signup:([a-z0-9-]+)-->/g,(_,slug)=>{
+    const x=tools.find(z=>z.slug===slug);
+    return x?pausedNotice(x):'';
+  });
 };
 const toolCta=t=>{const a=t.affiliate;
   if(a&&isSignupPaused(t))return `<div class="t-cta">${pausedNotice(t)}<span class="pr">PR</span><p class="muted">${esc(a.disclosure||'PR：上のボタンはアフィリエイトリンク（広告）です。リンク先で申し込みがあると、運営者が紹介報酬を受け取ることがあります。掲載内容は報酬で変えていません。')}</p></div>`;
