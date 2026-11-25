@@ -1201,6 +1201,10 @@ module.exports = {
     ],
     "faq": [
       [
+        "ChatGPTとGeminiとは？どこの会社のサービス？",
+        "ChatGPTはOpenAI、GeminiはGoogleが提供する、質問すると文章で答えを返すAIサービスです。どちらも無料版があり（GeminiはGoogleアカウントがあれば0円）、違いは無料版の上限の決め方、画像生成、GmailやドライブなどGoogleサービスとの連携、有料プランの内容です（2026年11月5日に公式ページで確認）。"
+      ],
+      [
         "GeminiとChatGPT、無料ならどっちがいい？",
         "回数を気にせずテキストチャットしたいならChatGPT（GPT-6テキストは無制限・乱用防止あり）。Google連携や無料での画像生成・Deep Researchを重視するならGeminiが候補です（2026年11月5日確認）。"
       ],
