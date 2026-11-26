@@ -4050,7 +4050,12 @@
     "japanese": "日本語に対応しています（日本語の公式ストアがあり、対応言語に日本語があります）。",
     "added": "2026-11-09",
     "checked": "2026-11-18",
-    "affiliate": null,
+    "affiliate": {
+      "url": "https://www.awin1.com/cread.php?awinmid=97799&awinaffid=3167918&ued=https%3A%2F%2Fjp.store.timekettle.co%2Fproducts%2Fw4-ai-interpreter-earbuds",
+      "asp": "Awin",
+      "label": "Timekettle W4を公式ストアで見る",
+      "disclosure": "PR：上のボタンはAwinのアフィリエイトリンク（広告）です。リンク先で購入があると、運営者が報酬を受け取ることがあります。掲載内容は報酬で変えていません。専用コード AWIN05 で5%オフ（Timekettleの承認メールに記載）。"
+    },
     "cheapest": "本体 ¥41,600（セール表示の販売価格）",
     "gadget": {
       "maker": "Timekettle",
