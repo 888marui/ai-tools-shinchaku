@@ -361,6 +361,23 @@ Search Console（直近28日、2026-11-10書き出し）を受けた軽い修正
 
 再確認：2026-12-14 ごろ（公開から約3週間）。
 
+## 2026-11-26：評判クエリの受け皿を記事に寄せ、Deep Review の使い方を先頭へ
+
+Search Console（2026-10-30〜11-26）で、同じ「評判」クエリが複数ページに分かれていた。体験談や口コミ点数は足していない。料金の確認日は変えていない。
+
+| ページ | 役割 | 変更 |
+|---|---|---|
+| `/articles/rakurin-hyouban-ryoukin/` | 「ラクリン 評判」の受け皿 | 冒頭にまとめと「良い点と気になる点」（公式の料金表・機能・FAQの範囲）。H1を評判向けに変更 |
+| `/tools/rakurin/` | 概要・料金 | 見出し「評判について」を「無料枠の記事数」に変更。評判のFAQ見出しを外し、概要の直後から「ラクリンの評判」へリンク |
+| `/articles/rakurin-tsukaikata-tejun/` | 使い方 | タイトルは使い方のまま。結論の直後に「ラクリンの評判」へのリンク |
+| `/articles/value-ai-writer-ryoukin-hyouban/` | 「Value AI Writer 評判」の受け皿 | 冒頭にまとめと良い点・気になる点。タイトルから「使い方」を外し評判を先頭に |
+| `/tools/value-ai-writer/` | 概要・料金 | タイトルと説明文から「評判」を外し「とは｜料金」。概要の直後から評判記事へリンク |
+| `/articles/ai-writing-tool-hikaku/` | 比較 | Value AI Writerの節と選び方から、評判記事へ「Value AI Writerの評判」でリンク |
+| `/articles/ai-blogkun-hyouban-ryoukin/` | 「AIブログくん 評判」の受け皿 | 冒頭にまとめと良い点・気になる点。H1を評判向けに変更 |
+| `/tools/ai-blogkun-gold/` | 概要・料金 | タイトルは概要のまま（評判は入れない）。概要の直後から評判記事へリンク |
+| `/articles/ai-blog-jidouka/` | 自動化の比較 | AIブログくんの節から「AIブログくんの評判」へリンク |
+| `/tools/deep-review/` | 「deep review 使い方」 | 見出しの直後に結論と「Deep Reviewの使い方」の手順（公式ブログで2026年11月18日に確認済みの範囲） |
+
 ## 2026-11-26：Value AI Writer byGMO に「料金は高いですか？」のFAQ
 
 - 根拠：GSC（2026-10-27〜11-23、28日）`/tools/value-ai-writer/` の「value ai writer 高い」表示11・平均71.9位、「value ai writer 評判」表示13・51.7位、クリック0。
