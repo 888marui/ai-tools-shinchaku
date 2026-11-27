@@ -42,7 +42,9 @@ if(!fs.existsSync('dist/404.html'))err('dist','404.html がない');
   // 楽天アフィリエイトの短縮リンク（noindex の rakuyoko-rakuten-ichiba-shoukai で使用。tools.json には使わない）
   /^a\.r10\.to$/,
   // afb（カスペルスキー。2026-11-17 に記事本文の広告リンクとして追加。tools.json には未掲載）
-  /^t\.afi-b\.com$/];
+  /^t\.afi-b\.com$/,
+  // Awin（Timekettle W4。2026-11-27 に tools.json へ追加）
+  /^www\.awin1\.com$/];
  const isAd=u=>{try{const x=new URL(u.replace(/&amp;/g,'&'));return AD_HOSTS.some(r=>r.test(x.hostname))||x.hostname==='fliki.ai'&&x.searchParams.has('via')||x.hostname==='muse.ai'&&x.pathname.startsWith('/join')/* Muse 紹介プログラム（運営者の紹介リンクは /join のみ。2026-11-08 追加） */}catch(e){return false}};
  for(const t of require('./data/tools.json')){if(!t.affiliate)continue;const a=t.affiliate;
   if(!a.url||!isAd(a.url))err('tools.json',`${t.slug}: affiliate.url が許可した提供元のドメインではない: ${a.url}`);
