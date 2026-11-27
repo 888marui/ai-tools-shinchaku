@@ -2094,42 +2094,64 @@
       "記事やドキュメントのページを本文だけ取り出してAIに読ませる",
       "JavaScriptで表示されるページの内容を取得する"
     ],
-    "pricing": "Search・Fetchは無料（カード登録不要、要アカウント登録とAPIキー）。無料枠はSearch 1分30回・1日12,000回、Fetch 1分150URL・1日1,000URL。Agent・Browser機能は従量課金（公式ブログ・ドキュメント・料金ページ 2026/10/17確認）",
-    "japanese": "検索APIは言語指定で日本語（ja）に対応すると公式ドキュメントに記載されています。サイトと管理画面の日本語版は未確認です。",
+    "pricing": "TinySearch（Search）・TinyFetch（Fetch）は無料（月額・最低利用額なし、カード登録不要、要アカウント登録とAPIキー）。無料枠はSearch 1分30回・1時間500回（ドキュメントでは1日12,000回まで）、Fetch 1分150URL・1日1,000URL（読み取りに成功したURLだけ数える。日次の枠は00:00 UTC＝日本時間9時にリセット）。TinyAgent（サイトを操作して目的を達成）1ステップ$0.016、TinyBrowser（クラウドのChromium）1分$0.002などはウォレット残高から従量課金。新規アカウントにはウォレット$8分が付き、入金は$10から（公式料金ページ・ドキュメント 2026/11/27確認）",
+    "japanese": "検索APIは言語指定で日本語（ja）に対応し、languageにjaだけを指定すると地域は日本（JP）になると公式ドキュメントに記載されています。公式サイト・ドキュメントは英語です。",
     "added": "2026-10-17",
-    "checked": "2026-11-18",
+    "checked": "2026-11-27",
     "affiliate": null,
-    "cheapest": "従量課金（Agent・Browser機能）",
+    "cheapest": "Search・Fetchは無料（TinyAgentは1ステップ$0.016の従量課金）",
     "more": {
-      "checked": "2026年11月18日",
+      "checked": "2026年11月27日",
       "diff": [
         [
           "treg-free-webaccess",
           "TinyFish Search / FetchはTinyFishのAPIを直接呼び出します（Search・Fetchは無料、カード登録不要）。Free WebAccess（treg）は、まずTinyFishで試し、空振りやブロックのときは次の提供元に自動で切り替える仕組みで、どの提供元が答え、いくらかかったかも結果と一緒に返します。"
+        ],
+        [
+          "orcarouter-agent-tools",
+          "OrcaRouterは1,400以上のデータツールを1つのAPIキーとウォレットで使えるツール集で、実行した分だけの従量課金です。TinyFish Search / FetchはWeb検索とページ読み取りの2つに絞ったAPIで、この2つは無料枠の範囲なら料金がかかりません。"
         ]
       ],
       "sources": [
         "https://www.tinyfish.ai/free-search-fetch",
+        "https://www.tinyfish.ai/pricing",
+        "https://docs.tinyfish.ai/tinysearch/reference",
+        "https://docs.tinyfish.ai/tinyfetch/reference",
         "https://treg.to/web-access",
         "https://www.tinyfish.ai/blog/search-and-fetch-are-now-free-for-every-agent-everywhere"
       ],
       "faq": [
         [
           "TinyFish Search / Fetchの始め方は？",
-          "agent.tinyfish.aiでアカウント登録をしてAPIキーを取得します。クレジットカードの登録は不要です。使い方は、REST API（Searchはapi.search.tinyfish.ai、Fetchはapi.fetch.tinyfish.aiへ、APIキーをヘッダーで送ります）のほか、MCPサーバー、CLI、Python／TypeScript SDK、スキルからも呼び出せます（公式ページ・公式ブログを2026-11-18に確認）。"
+          "agent.tinyfish.aiでアカウント登録をしてAPIキーを取得します。クレジットカードの登録は不要です。使い方は、REST API（Searchはapi.search.tinyfish.ai、Fetchはapi.fetch.tinyfish.aiへ、APIキーをヘッダーで送ります）のほか、MCPサーバー、CLI、Python／TypeScript SDK、スキルからも呼び出せます（公式ページ・公式ブログを2026-11-27に確認）。"
         ],
         [
           "無料枠の上限はどれくらいですか？",
-          "Searchは1分あたり30回まで、Fetchは1分あたり150URLまでが無料です。ウォレットの残高が$0でもこの範囲は無料で使え、月額料金や最低利用額もありません。なお、Fetchで読み取りに失敗したURLは利用枠に数えられません（公式ブログを2026-11-18に確認）。"
+          "料金ページでは、Searchは1分30回・1時間500回、Fetchは1分150URL・1日1,000URLまでが無料と案内されています。ドキュメントでは、Searchは1日12,000回、Fetchは1日1,000URL（読み取りに成功したURLだけ数える）までが無料で、日次の枠は00:00 UTC（日本時間9時）にリセットされます。ウォレットの残高が$0でもこの範囲は無料で、月額料金や最低利用額もありません（公式料金ページ・ドキュメントを2026-11-27に確認）。"
         ],
         [
           "SearchとFetchはどう使い分けますか？",
-          "Searchは、検索語に対してタイトル・要約・URLをJSONで返す「ページを探す」ためのAPIです。Fetchは、URLを渡すと実際のブラウザでページを表示してから本文だけを取り出し、Markdown・JSON・HTMLで返す「ページを読む」ためのAPIです。Searchで見つけたページをFetchで読む、という組み合わせが想定されています（公式ブログを2026-11-18に確認）。"
+          "Searchは、検索語に対してタイトル・要約・URLをJSONで返す「ページを探す」ためのAPIです。Fetchは、URLを渡すと実際のブラウザでページを表示してから本文だけを取り出し、Markdown・JSON・HTMLで返す「ページを読む」ためのAPIです。Searchで見つけたページをFetchで読む、という組み合わせが想定されています（公式ブログを2026-11-27に確認）。"
         ],
         [
           "JavaScriptで表示されるページも読めますか？",
-          "Fetchは実際のブラウザでページを描画してから本文を取り出すため、JavaScriptやSPAで動的に表示されるページにも対応します。ナビゲーションや広告など本文以外の部分は取り除かれて返ります（公式ページ・公式ブログを2026-11-18に確認）。"
+          "Fetchは実際のブラウザでページを描画してから本文を取り出すため、JavaScriptやSPAで動的に表示されるページにも対応します。ナビゲーションや広告など本文以外の部分は取り除かれて返ります（公式ページ・公式ブログを2026-11-27に確認）。"
+        ],
+        [
+          "有料になるのはどの機能ですか？",
+          "サイトを操作して目的を達成するTinyAgent（1ステップ$0.016）、CDPで操作するクラウドのChromium「TinyBrowser」（1分$0.002）、ページの定期チェックをするTinyMonitor（1回$0.005）、TinyResearch（1回$2.00）などは、前払いのウォレット残高から引かれます。新規アカウントにはウォレット$8分が付き、入金はカード登録のうえ$10からです。サブスクリプションや席ごとの料金はありません（公式料金ページを2026-11-27に確認）。"
         ]
+      ],
+      "fit": [
+        "AIエージェントにWeb検索とページ読み取りを無料で持たせたい開発者（Search・Fetchはウォレット残高が$0でも無料枠の範囲で使え、月額料金や最低利用額もない）",
+        "ページ本文だけをAIに渡してトークンを節約したい人（Fetchは広告・メニュー・クッキーバナーなどを取り除き、本文をMarkdown・HTML・JSONで返す）",
+        "JavaScriptで表示されるページも読ませたい人（Fetchは実際のブラウザでページを描画してから本文を取り出す）",
+        "Claude Code・Cursor・CodexなどからMCPやスキルで呼び出したい人（REST API・MCPサーバー・CLI・Python／TypeScript SDK・スキルが用意されている）"
+      ],
+      "notFit": [
+        "プログラムやAPIを使わずに調べものをしたい人（APIキーを使って呼び出す開発者向けのサービスで、検索画面を使うツールではない）",
+        "大量の検索・読み取りを続けて行いたい人（無料枠はSearch 1分30回・Fetch 1分150URLなどの上限があり、上限を上げるのは有料の追加オプション）",
+        "日本語の管理画面やサポートで使いたい人（公式サイトとドキュメントは英語）"
       ]
     }
   },
