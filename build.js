@@ -201,7 +201,7 @@ const TSO={
  rakurin:['ラクリンとは｜無料は月約2記事・料金4,980円〜','ラクリン（Rakurin）の概要と料金を公式情報で整理。無料は毎月約2記事・クレカ不要、有料は月4,980円（税込）から。向いている人・向かない人も掲載。'], // 2026-11-18：GSC直す案(B-1)。ツールページは概要・料金・向いている人、評判の要点は記事側
  elevenlabs:['ElevenLabsの料金｜無料プランは非商用・商用は$6/月〜','ElevenLabsは無料プラン（Free $0）で試せますが、無料は非商用の目的だけ。商用ライセンスが付く有料プランはStarter $6/月〜。90以上の言語・5,000以上の声に対応したAI音声生成。'],
  plaud:['Plaud（プラウド）とは｜使い方・料金・無料300分','Plaud（プラウド）の使い方と料金。本体（¥27,500〜¥30,800税込）を買えば無料Starterで毎月300分の文字起こし。有料はPro年間¥16,800・Unlimited年間¥40,000（税込）。日本語公式・サポートあり。'], // 2026-11-10：GSC「plaud」「プラウドとは」向けに「とは・使い方」を前へ
- 'canly-aio':['カンリーAIOとは｜AI検索での見え方と使い方','カンリーAIO分析（β版）は、ChatGPTやGeminiなどの生成AIの回答で自社がどう扱われているかを分析し、スコア推移や競合比較をダッシュボードで確認できます。料金は問い合わせ制。'], // 2026-11-10：軽微。検索語「カンリー aio」に「とは・使い方」を寄せた
+ 'canly-aio':['カンリーAIO分析（β版）とは｜できること・料金・使い方','カンリーAIO分析（β版）は、ChatGPTやGeminiなどの生成AIの回答で自社がどう扱われているかを分析し、スコア推移や競合比較をダッシュボードで確認できます。料金は問い合わせ制。'], // 2026-11-10：軽微。検索語「カンリー aio」に「とは・使い方」を寄せた／2026-11-27：GSC（10/28〜11/24）で表示28・クリック1。製品名クエリなので正式名「AIO分析（β版）」と「料金」を足した
  'japan-ai-search-3':['JAPAN AI Search 3.0とは｜出典付きの社内検索・追加月額なし','社内のSlackやGoogleドライブなどから、出典付きで答える検索基盤。エンタープライズ3プランの契約者は追加の月額なし、利用に応じてクレジット消費。'], // 2026-11-18：GSC直す案(B-2)。「とは」と「の」を追加。説明文の先頭を何をするツールかに寄せた
  'japan-ai-browser-assistant':['JAPAN AIブラウザの使い方｜要約・操作の代行','JAPAN AIブラウザアシスタントの使い方。Chrome・Edgeのサイドパネルで、開いているページやPDFの要約、返信の下書き、入力やクリックの代行ができる。送信・購入・削除は毎回確認。追加費用なし（JAPAN AI利用者向け）。'], // 2026-11-10：GSC「japan ai 使い方」6.5位
  'deep-review':['Deep Reviewの使い方｜技術文書を検証するAI','Deep Reviewの使い方と概要。Google Researchが公開した技術文書の検証AI。論文の査読支援からGoogleドキュメント等へ対応を広げていると公式ブログに記載。日本語UIの案内は公式ブログになし。'], // 2026-11-10：GSC「deep review 使い方／日本語」（「未確認」はsoftenerが長くするので避ける）
@@ -398,7 +398,9 @@ if(ctaBox){const t1=h.indexOf('</table>');if(t1>0)h=h.slice(0,t1+8)+ctaBox+h.sli
 if(amzBox){const e=h.indexOf('</table>')+8;if(e>8){const c2=ctaBox&&h.startsWith(ctaBox,e)?ctaBox.length:0;h=h.slice(0,e+c2)+amzBox+h.slice(e+c2)}else h=h.replace('</h1>','</h1>'+amzBox)}
 if(x.recommend){const rec=`<h2>こんな人におすすめ</h2><ul>${x.recommend.map(([n,w])=>`<li><b>${esc(n)}</b>：向いている人は${esc(w)}</li>`).join('')}</ul>`;const t=h.indexOf('</table>'),k=t<0?-1:h.indexOf('<h2>',t);h=k<0?h+rec:h.slice(0,k)+rec+h.slice(k);}
 h=h.replace(/<p class="muted">PR：[^<]*<\/p>/g,'');
-if(endBox){const t2=h.lastIndexOf('</table>');const m=/<h2>(関連|この記事の更新履歴|出典)/g;m.lastIndex=Math.max(t2,0);const r=m.exec(h);h=r?h.slice(0,r.index)+endBox+h.slice(r.index):h+endBox;}
+// まとめで結論を先に言ってから公式サイトのボタンを置く（2026-11-27 なべたろ氏の比較記事の型）。recommend（向いている人）がある記事で、本文に「まとめ」「結論」の見出しがないときだけ、向いている人ごとの結論を読み終えた位置（最後のボタンの直前）にもう一度出す
+const endVerdict=(endBox&&x.recommend&&x.recommend.length&&!/<h2>(まとめ|結論)/.test(h))?`<h2>${x.recommend.length>=2?'まとめ：結局どれを選ぶ？':'まとめ：向いている人'}</h2><p>この記事の結論を、向いている人ごとにまとめます。</p><ul>${x.recommend.map(([n,w])=>`<li><b>${esc(n)}</b>：${esc(w)}</li>`).join('')}</ul>`:'';
+if(endBox){const t2=h.lastIndexOf('</table>');const m=/<h2>(関連|この記事の更新履歴|出典)/g;m.lastIndex=Math.max(t2,0);const r=m.exec(h);h=r?h.slice(0,r.index)+endVerdict+endBox+h.slice(r.index):h+endVerdict+endBox;}
 if(x.faq)h+=`<h2>よくある質問</h2>${x.faq.map(([q,an])=>`<h3>Q. ${esc(q)}</h3><p>A. ${esc(an)}</p>`).join('')}`;
 return h+sticky;};
 
