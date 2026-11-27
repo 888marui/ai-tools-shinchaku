@@ -15,7 +15,7 @@ const isFree=t=>{if(isGadget(t))return false;const p=String(t.pricing||'').repla
 // デザインの方針は docs/design.md。色・文字・余白はここの CSS 変数で管理する
 const css=`:root{--bg:#fff;--tx:#15171C;--mu:#5A606B;--ac:#2346C8;--ac-h:#1A3599;--ac-visited:#5536A8;--ac-soft:#EEF1FB;--tag:#FFE14D;--sf:#F3F5F8;--bd:#E1E5EB;--ui:#878E99;--line:#06C755;--r:10px;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--f-sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","Yu Gothic UI","Yu Gothic",Meiryo,system-ui,-apple-system,sans-serif;--measure:42em}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
-body{margin:0;font-family:var(--f-sans);font-size:16.5px;line-height:1.85;color:var(--tx);background:var(--bg);letter-spacing:.02em;line-break:strict;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
+body{margin:0;font-family:var(--f-sans);font-size:16px;line-height:1.8;color:var(--tx);background:var(--bg);letter-spacing:.02em;line-break:strict;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
 .cta,.nextlist li,.pcard span{text-wrap:balance}
 a{color:var(--ac);text-decoration-thickness:1px;text-underline-offset:.22em;overflow-wrap:anywhere}a:hover{color:var(--ac-h);text-decoration-thickness:2px}a:visited{color:var(--ac-visited)}
 :focus-visible{outline:3px solid var(--ac);outline-offset:2px;border-radius:3px}
@@ -26,8 +26,8 @@ a{color:var(--ac);text-decoration-thickness:1px;text-underline-offset:.22em;over
 .gnav{display:flex;gap:0 var(--s5)}.gnav a{text-decoration:none;color:var(--mu);font-size:14px;font-weight:600;padding:var(--s2) 0;white-space:nowrap}.gnav a:visited{color:var(--mu)}.gnav a:hover{color:var(--tx);text-decoration:underline;text-decoration-thickness:2px}
 main.w{padding-top:var(--s5);padding-bottom:var(--s7)}
 h1,h2,h3{font-feature-settings:"palt" 1;letter-spacing:.02em}
-h1{font-size:clamp(25px,3.4vw,34px);line-height:1.45;margin:var(--s3) 0 var(--s4);text-wrap:balance;font-weight:800}
-h2{font-size:21px;line-height:1.5;margin:var(--s7) 0 var(--s3);font-weight:800;text-wrap:balance}
+h1{font-size:clamp(24px,3.4vw,26px);line-height:1.45;margin:var(--s3) 0 var(--s4);text-wrap:balance;font-weight:800}
+h2{font-size:20px;line-height:1.5;margin:var(--s7) 0 var(--s3);font-weight:800;text-wrap:balance}
 h3{font-size:17.5px;line-height:1.55;margin:var(--s5) 0 var(--s2);font-weight:700}
 p,ul,ol{margin:0 0 var(--s4)}li{margin:var(--s1) 0}ul,ol{padding-left:1.4em}li::marker{color:var(--mu)}
 b,strong{font-weight:700}
@@ -73,7 +73,7 @@ h1+.card,p+.card,h2+.card{border-top:2px solid var(--tx)}
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 var(--s5);border:1px solid var(--bd);border-radius:var(--r)}
 table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.7;background:#fff;font-variant-numeric:tabular-nums}th,td{border-bottom:1px solid var(--bd);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:break-word}tr:last-child>th,tr:last-child>td{border-bottom:0}
 tbody th,table:not(:has(thead)) th{background:var(--sf);font-weight:700;white-space:nowrap;width:8.5em;color:var(--tx)}
-thead th{background:var(--sf);color:var(--tx);font-weight:700;font-size:13.5px;white-space:nowrap;word-break:keep-all}
+thead th{background:var(--sf);color:var(--tx);font-weight:700;font-size:13.5px;white-space:nowrap;}
 .prose>table,article>table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}.prose td a{overflow-wrap:anywhere}
 .tw.wide::before{content:'← 横にスクロールできます →';display:none;font-size:12.5px;color:var(--mu);padding:4px 12px;background:var(--sf)}@media(max-width:700px){.tw.wide::before{display:block}}
 /* ボタン */
@@ -466,6 +466,4 @@ const R=[
 [/>未確認</g,'>公式サイトに記載なし<'],
 [/未確認/g,'公式サイトに記載なし'],[/A\. 公式サイトに記載なし/g,'A. 公式サイトでは見つけられませんでした']];
 let n=0;for(const f of walk(path.join(__dirname,'dist')).filter(f=>/\.(html|txt|xml|json)$/.test(f))){let s=fs.readFileSync(f,'utf8'),t=s;for(const[a,b]of R)t=t.replace(a,b);if(t!==s){fs.writeFileSync(f,t);n++;}}console.log('softened',n);}
-// 日本語の文節の切れ目に <wbr> を入れる（2026-11-15）：上の言い回しの置き換えが済んだあと、最後に1回だけ。本文の text ノードだけが対象（tools/wbr.js）。iPhone Safari は word-break:auto-phrase に対応していないため
-{const fs=require('fs'),path=require('path');const {wbr}=require('./tools/wbr.js');const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
-let n=0;for(const f of walk(OUT).filter(f=>f.endsWith('.html'))){const s=fs.readFileSync(f,'utf8'),t=wbr(s);if(t!==s){fs.writeFileSync(f,t);n++}}console.log('wbr',n);}
+// 日本語の文節の切れ目に <wbr> を入れる（2026-11-15）：上
