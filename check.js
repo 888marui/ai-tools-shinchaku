@@ -123,7 +123,7 @@ for(const f of files){const h=rd(f);const rel=path.relative('dist',f);let ad=0,a
   for(const m of body.matchAll(/<a\b[^>]*class="[^"]*\bsrc-url\b[^>]*>([\s\S]*?)<\/a>/g))if(/<wbr\b/i.test(m[1]))err(rel,'出典のURLの文字列に <wbr> がある');
   if(/&[#A-Za-z0-9]*<wbr>[#A-Za-z0-9]*;/.test(body))err(rel,'文字参照の途中に <wbr> がある');
   if(/<wbr\s[^>]|<\/wbr>|<wbr\/>/.test(body))err(rel,'<wbr> の書き方が <wbr> ではない');}
- if(!wb)err('dist','<wbr> が1つも入っていない（tools/wbr.js が動いていない？）');
+ // 2026-11-27：PR #155 で <wbr> を廃止したので「1つも無い」はエラーにしない（入っている場合の書き方検査は残す）
  for(const f of ['tools/budoux/ja.json','tools/budoux/LICENSE','tools/budoux/NOTICE','tools/budoux/parser.js'])if(!fs.existsSync(f))err(f,'BudouX のモデル・ライセンス表示のファイルがない');
  if(fs.existsSync('tools/budoux/LICENSE')&&!/Apache License[\s\S]*Version 2\.0/.test(fs.readFileSync('tools/budoux/LICENSE','utf8')))err('tools/budoux/LICENSE','Apache License 2.0 の本文ではない');
  if(fs.existsSync('tools/budoux/NOTICE')&&!/Copyright 2021 Google LLC/.test(fs.readFileSync('tools/budoux/NOTICE','utf8')))err('tools/budoux/NOTICE','Google LLC の著作権表示がない');
