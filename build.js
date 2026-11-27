@@ -15,7 +15,7 @@ const isFree=t=>{if(isGadget(t))return false;const p=String(t.pricing||'').repla
 // デザインの方針は docs/design.md。色・文字・余白はここの CSS 変数で管理する
 const css=`:root{--bg:#fff;--tx:#15171C;--mu:#5A606B;--ac:#2346C8;--ac-h:#1A3599;--ac-visited:#5536A8;--ac-soft:#EEF1FB;--tag:#FFE14D;--sf:#F3F5F8;--bd:#E1E5EB;--ui:#878E99;--line:#06C755;--r:10px;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--f-sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","Yu Gothic UI","Yu Gothic",Meiryo,system-ui,-apple-system,sans-serif;--measure:42em}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
-body{margin:0;font-family:var(--f-sans);font-size:16.5px;line-height:1.85;color:var(--tx);background:var(--bg);letter-spacing:.02em;line-break:strict;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
+body{margin:0;font-family:var(--f-sans);font-size:16px;line-height:1.8;color:var(--tx);background:var(--bg);letter-spacing:.02em;line-break:strict;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
 .cta,.nextlist li,.pcard span{text-wrap:balance}
 a{color:var(--ac);text-decoration-thickness:1px;text-underline-offset:.22em;overflow-wrap:anywhere}a:hover{color:var(--ac-h);text-decoration-thickness:2px}a:visited{color:var(--ac-visited)}
 :focus-visible{outline:3px solid var(--ac);outline-offset:2px;border-radius:3px}
@@ -26,8 +26,8 @@ a{color:var(--ac);text-decoration-thickness:1px;text-underline-offset:.22em;over
 .gnav{display:flex;gap:0 var(--s5)}.gnav a{text-decoration:none;color:var(--mu);font-size:14px;font-weight:600;padding:var(--s2) 0;white-space:nowrap}.gnav a:visited{color:var(--mu)}.gnav a:hover{color:var(--tx);text-decoration:underline;text-decoration-thickness:2px}
 main.w{padding-top:var(--s5);padding-bottom:var(--s7)}
 h1,h2,h3{font-feature-settings:"palt" 1;letter-spacing:.02em}
-h1{font-size:clamp(25px,3.4vw,34px);line-height:1.45;margin:var(--s3) 0 var(--s4);text-wrap:balance;font-weight:800}
-h2{font-size:21px;line-height:1.5;margin:var(--s7) 0 var(--s3);font-weight:800;text-wrap:balance}
+h1{font-size:clamp(24px,3.4vw,26px);line-height:1.45;margin:var(--s3) 0 var(--s4);text-wrap:balance;font-weight:800}
+h2{font-size:20px;line-height:1.5;margin:var(--s7) 0 var(--s3);font-weight:800;text-wrap:balance}
 h3{font-size:17.5px;line-height:1.55;margin:var(--s5) 0 var(--s2);font-weight:700}
 p,ul,ol{margin:0 0 var(--s4)}li{margin:var(--s1) 0}ul,ol{padding-left:1.4em}li::marker{color:var(--mu)}
 b,strong{font-weight:700}
